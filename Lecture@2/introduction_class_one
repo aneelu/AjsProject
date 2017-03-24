@@ -1,0 +1,234 @@
+Introduction.
+
+1.What is AngularJS.
+
+2.What Are the Advantages of AngularJS.
+
+3.What Are the Disadvantages of AngularJS.
+
+4.Key Features Of AngularJS.
+
+5.Differences Between  AngularJS  -  Angular2
+
+                       AngularJS  - reactJS
+
+                       AngularJS  - NodeJS
+
+
+AngularJS.
+
+    - AngularJS is a Client Side Java Script MVC Framework
+
+        M - Model  (JavaScript Variables)
+
+        V - View   (HTML / HTML5).
+
+        C - Controller (JavaScript Functions).
+
+
+Library & Framework ?
+
+       - As a Developer we must call library to develop software Application.
+
+       Ex.
+
+                jQuery.
+
+
+        - Framework will call our Application.
+
+           Framework will call our Application , when ever we follow the Rules and Regulations
+
+           otherwise Framework Won't Call Our Application.
+
+           Ex.
+
+                AngularJS
+
+                reactJS
+
+                d3JS
+
+                    --
+                    --
+                    --
+
+- AngularJS Have a So Many Predefined Modules, As a Angular Developer we can use the Predefined Modules.
+
+
+Ex.
+
+    ngRoute
+
+    ngAnimate
+
+    ngMessages
+
+    ui.router   (3rd party Module)
+
+    ngStorage
+
+
+[Module . Collection of Implemetation of Classes & Interfaces ]
+
+
+ngAnimate.
+
+    used to develop the Animations in Angular Applications.
+
+
+ngMessages.
+
+    used to perform the client side form validations.
+
+
+ngStorage.
+
+    used to work with the Storages
+
+            1.localStorage
+
+            2.sessionStorage
+
+
+ngRoute.
+
+    used to implement the Routing in Single Page Application.
+
+    ngRoute Module is the Native Module.
+
+    now a days no body using ngRoute Module because of It's Limitations.
+
+
+           Limitations.
+
+                    1. it won't Supports JSON.
+
+                    2. it won't Supports Nested Routing.
+
+                    3.It won't Supports Named Views
+
+
+ui.router.
+
+    - used to Implement the Routing in Single Page Applications.
+
+    - Now a days almost all the projects they are using ui.router Module because of it's Advantages.
+
+
+Ex.
+
+    //Implement the Angular Application with the
+
+        1. Animations Supports
+
+        2. SPA (ui.router)
+
+        3. Storages
+
+        4. Validations
+
+index.html
+-
+<!DOCTYPE html>
+
+<html ng-app="app">
+
+    //Implement the Animations
+
+    //Implement the SPA (ui.router)
+
+    //Implement the Storages
+
+    //Implement the Validations
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+            angular.module("app" , ["ngAnimate" , "ui.router", "ngStorage" , "ngMessages"]);
+    </script>
+
+</html>
+
+
+- ng-app directive called as root directive for Angular Application
+- Angular Framework starts the execution from ng-app directive
+- ng-app directive used to assign the logical name for the Web Application.
+- "angular" is the predefined class in angular framework.
+- "module"  function used to add the Required Modules to Angular Application Development.
+-  we must load all the script files at the end of HTML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
