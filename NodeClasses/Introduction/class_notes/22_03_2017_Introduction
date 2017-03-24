@@ -1,0 +1,84 @@
+What is NodeJS ?
+
+    - NodeJS is the Server Side Scripting Language.
+
+    - NodeJS Implemented By using Google Chrome v8 Engine.
+
+    - Node Applications Acting as a Business Components as well as Servers.
+
+    - By using NodeJS we can create the Both http & tcp servers.
+
+    - As a Node Developer we Can Assign the Port Numbers to the Servers.
+
+    - Node Applications won't Buffer the Data because of CallBacks in NodeJS.
+
+        [Note.
+                Node will collect the Data 'packets by packets' and stores into a Node Engine ,
+
+                will flush the Data at a Time With the Help of Callbacks. ]
+
+    - Node Internally will manage the Requests Pool Mechanism (Object Name . Requests Queue).
+
+    - Node Will Identifies the Blocked & Non Blocked Requests
+
+    - Node Engine Will Assign the Threads to the Blocked Requests from the Thread Pool Mechanism.
+
+    Ex.
+
+        Blocked Request  -   Reading the Data From the DataBase.
+
+        Non Blocked Request - Evaluation Of Expression , Returning the Static Data.
+
+    - Node Engine Internally have a so many predefined Modules , As a Node Developer we can use the Predefined Modules.
+
+
+    1.http
+
+        used to develop the Http Servers with our own port numbers.
+
+    Ex.
+
+        server.js
+        -
+        var http = require("http");  // Importing the http module
+        http.createServer(my_fun);   // Creating the http server , "my_fun" is the "callback/Handler"
+        function my_fun(req,res){   // Implementing the Call Back
+            //Code
+        }.listen(8080);             //Assigning the Port Number.
+        console.log("My Http Server Ready with the Port No . 8080");
+
+    2.fs
+
+        - "fs" stands for file system.
+        - "fs" module is the Predefined Module.
+        - This Module used to read the Data from the Static Data Files.
+
+            Ex.
+
+                    Static Text files
+                    Static XML Files
+                    Static JSON Files
+
+                    --
+                    --
+                    --
+
+            var fs = require("fs");
+            var http = require("http");
+            http.createServer(function(req,res){
+                fs.readFileSync("https://www.w3schools.com/angular/customers.php",my_fun);
+                function my_fun(err,data){
+                        res.send(data);
+                }
+            }).listen(8080);
+            console.log("Server Listening the Port No.8080");
+
+
+
+
+
+
+
+
+
+

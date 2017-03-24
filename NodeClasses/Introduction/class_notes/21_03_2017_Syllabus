@@ -1,0 +1,80 @@
+1.Introduction.
+
+    1.What is NodeJS
+    2.Architecture of NodeJS
+    3.Advantages of NodeJS
+    4.Disadvantages of NodeJS
+    5.Differences Between Traditional Servers with NodeServer
+    5.Differences Between AngularJS - NodeJS
+                         reactJS   - NodeJS
+
+
+
+2.Environmental Setup
+
+    1.GitHub
+        Staging
+        Unstaging
+        Commit
+        Branching
+        Merging
+        Push
+        Pull
+
+    2.IDE'S
+        1.WebStrom
+        2.Ecilipse
+        3.Visual Studio
+        4.Sublime Text Editor
+
+
+3.Introduction http module
+
+    Practical Examples
+
+
+4. Introduction to "fs" module   (file system)
+
+    Practical Examples
+
+
+5. Call Backs in NodeJS
+
+    Practical Examples
+
+
+6. Event Emittors In NodeJS
+
+     Practical Examples
+
+7.Cookies in NodeJS
+
+    Practical Examples
+
+
+8.Restful WebServices
+
+    by using express module
+
+
+9.Node Server --  MongoDB
+
+10.Node Server  -- MySQL
+
+11. MeanStack Development
+
+    Java -- NodeJS -- MySQL
+
+12.Connection Pooling Mechanism
+
+13.JADE
+
+14.Grunt
+
+15.POC
+
+16.Authentication & Secuirity With Node Application (POC)
+
+17.Interview Q&A
+
+18.Test Cases with Node Application
