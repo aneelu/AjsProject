@@ -1,3 +1,8 @@
 Architecture Of NodeJS.
 
     Internal Components Of Node Engine Called as Architecture
+
+
+Components Are.
+
+1.Thread Pool Mechanism
