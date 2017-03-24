@@ -1,0 +1,121 @@
+Advantages Of AngularJS.
+
+1.We Can Directly work with the HTML DOM.
+
+ DOM Stands for Document Object Model.
+
+Ex 1.
+
+  Copy the Data From One Division to Another Div by using HTML & JavaScript.
+
+index.html
+-
+<!DOCTYPE html>
+<html>
+	<div id="div_one">Hello</div>
+	<div id="div_two"></div>
+	<script>
+		document.getElementByid("div_two").innerHTML = 
+		document.getElementBYid("div_one").value;
+	</script>
+</html>
+
+[Note . We Can work with the HTML DOM By using JavaScript ] 
+
+
+Ex 2.
+
+	Copy the Data From One Div to Another Div By using AngularJS.
+
+<!DOCTYPE html>
+<html ng-app="app">
+	<div ng-model="model_one">Hello</div>
+	<div ng-bind="model_one"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>
+
+	- We Can Copy the Data From One Div to Another Div without depending on JavaScript.
+
+	- we Can work with the HTML DOM by using Angular Directives.
+
+		1.ng-app
+
+		2.ng-model
+
+		3.ng-bind
+
+	- Angular Framework starts the Execution from ng-app directive.
+
+	- ng-model directive internally creates the Object with the Element Data.
+	 
+	- ng-bind directives binds the model data to the HTML Output Elements.
+
+2.AngularJS Supports the Two Way Data Binding.
+
+	TwoWay DataBinding.
+
+		Automatic Data Syncronization Between Model and View
+
+		with the super vision of controller called as 
+
+		Two Way Data Binding.
+
+
+In the Above Diagram we have 3 server calls.
+
+1.Fetch Request   (http get request)
+
+2.Delete Request  (http post request)
+
+3.Sync Request    (Ajax Server Call)
+
+
+Fetch Request.
+
+	this call used to fetch the data from server to the View.
+
+
+Delete Request.
+
+	this call used to delete the data from DataBase with the 
+	
+	post parameters.
+
+
+Sync Request.
+
+	this call used to sync the Data Between DataBase and View.
+
+
+[Note.
+
+	if we are programming languages developers we must make all the 
+
+	3 server calls to meet our project requirement ]
+
+	
+[ Note .
+
+	we can make only 2 server calls to meet above project requirement
+
+	with the two way data binding in AngularJS. ]
+
+
+[Note.
+
+	Two Way data binding reduces the burden on the server ]
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
