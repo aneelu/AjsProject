@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <!--
+        1. Create three controllers in relation of parent and child
+            @parent
+            @child
+            @sub
+        2. "parent controller" should bind the "parent" variable with the message as "I am from Parent Controller"
+        3. "child controller" should bind the "child" variable with the message as "I am from Child Controller"
+        4. "sub controller" should bind the "sub" variable with the message as "I am from Sub Controller"
+        5. Create the Inheritance CSS Style to the div.
+    -->
+
+    <style type="text/css">
+        div.my_class div{
+            border: 2px solid tomato;
+            padding: 10px;
+            text-align: center;
+            color: green;
+        }
+    </style>
+
+    <div class="my_class">
+        <div ng-controller="parent">
+            <h1>{{parent}}</h1>
+            <div ng-controller="child">
+                <h1>{{child}}</h1>
+                <div ng-controller="sub">
+                    <h1>{{sub}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent",parent);
+        parent.$inject=["$scope"];
+        function parent($scope) {
+            $scope.parent="I am from parent controller";
+        }
+
+        app.controller("child",child);
+        child.$inject=["$scope"];
+        function child($scope) {
+            $scope.child="I am from child controller";
+        }
+
+        app.controller("sub",sub);
+        sub.$inject=["$scope"];
+        function sub($scope) {
+            $scope.sub="I am from sub controller";
+        }
+    </script>
+
+
+</html>

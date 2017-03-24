@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<!--
+    Create three Controller @1.ctrl_one
+                             2.ctrl_two
+                             3.ctrl_three
+
+    ctrl_one should bind var_one
+    ctrl_two should bind var_two
+    ctrl_three should bind var_three
+-->
+
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red" ng-bind="var_one"></h1>
+    </div>
+
+    <br><br>
+    <div ng-controller="ctrl_two">
+        <h1 style="color: green" ng-bind="var_two"></h1>
+    </div>
+
+
+
+    <br><br>
+    <div ng-controller="ctrl_three">
+        <h1 style="color: blue" ng-bind="var_three"></h1>
+    </div>
+
+
+    <style type="text/css">
+        div{
+            width: 300px;
+            height: 200px;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid;
+        }
+    </style>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one="Data From MongoDB Soon...";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope){
+            $scope.var_two="Data From MySQL DB Soon...";
+        }
+
+        app.controller("ctrl_three",ctrl_three);
+        ctrl_three.$inject=["$scope"];
+        function ctrl_three($scope) {
+            $scope.var_three="Data From Cassandra DB Soon...";
+        }
+
+    </script>
+
+
+</html>

@@ -1,0 +1,27 @@
+ng-repeat.
+
+    used to iterate the elements from an collection.
+
+Syntax.
+
+    ng-repeat = "x in collection"
+
+Ex.
+
+    ng-repeat = "x in [10,20,30,40,50]"
+
+    {{x}}
+
+
+Example_2.
+
+    Access the Data From Controller
+
+
+ng-init.
+
+    used to initilize the static data.
+
+    we can declare static data in the form of a "key&value pairs"
+
+    each "key&value" separated by usinh ";"
