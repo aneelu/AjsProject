@@ -1,0 +1,239 @@
+Named Views in Single Page Application By Using ui.router Module.
+
+    Creating the Main View (index.html) with the help of More Than
+
+    'One Sub View' called as NamedViews in Single Page Application.
+
+Step 1.
+
+    Download the ui.router module by using bower
+
+
+Step 2.
+
+       Add the ui.router Dependency
+
+Step 3.
+
+    Create the Templates
+
+------------------------------
+NamedViews_uiRouter
+
+        templates
+
+               page_one.html
+
+               page_two.html
+
+               calculations.html
+
+               graph.html
+--------------------------------
+
+Step 4.
+
+    Create the Controllers
+
+--------------------------
+NamedViews_uiRouter
+
+        controllers
+
+            page_one.js
+
+            page_two.js
+
+            calculationController.js
+
+            graphController.js
+---------------------------
+
+
+
+Step 5.
+
+    Done the Mapping.
+
+config.js
+-
+
+app.config(config);
+config.$inject = ["$stateProvider" , "$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+
+    $stateProvider.state("page_one",{
+        url:"/page_one",
+        views:{
+            '':{
+                    templateUrl:'templates/page_one.html',
+                    controller:'page_one'
+            },
+
+            'calc@page_one':{
+                    templateUrl:'templates/calculations.html',
+                    controller:'calculationController'
+            },
+
+            'graph@page_one':{
+                  templateUrl:'templates/graph.html',
+                  controller:'graphController'
+            }
+        }
+
+    });
+
+}
+
+
+Step 6.
+
+    Create the keys in main template
+
+
+Step 7.
+
+    Declare the ui-view directive
+
+
+
+
+
+
+GitHub.
+
+    GitHub is the Repository.
+
+    GitHub is the Open Source.
+
+
+GitHub Basic Operations.
+-
+
+1.Creating the local repository.
+
+    1.a configuring the user details (user credentials)
+
+
+2.Add the Files to the local Repository.
+
+3.Commit / save the Changes to the Repository.
+
+4.Create the Branch
+
+5.Merge the Branches
+
+6.Clone the Remote Repository
+
+7.Push the Changes to Remote Repository
+
+8.Pull the Changes from Remote Repository
+
+9.Merge Conflicts
+
+10.GitHub Integration with IDE'S (WebStrom)
+
+
+
+
+
+Creating the local repository.
+
+1.Download and Install the GIT.
+
+website : https://git-scm.com/download/win
+
+file    : Git-2.12.0-64-bit.exe
+
+
+2.Create the folder in any drive.
+
+Ex.
+
+    d:\demo
+
+
+    rigth click on the demo folder -- >
+
+                                    Git Bash Here --->
+
+                                            Execute the Following command
+
+                                             $git init
+
+
+
+
+1.a  Set the user credentials
+
+    $git config --global user.name "NareshIT"
+
+    $git config --global user.email "hr@nareshit.in"
+
+
+
+
+
+2.Add the files to the Repo
+
+    $touch ctrl.js
+
+
+3. Commit / Save Changes to the Repository
+
+    $git status
+
+        [Note. red color files indicating the unstaged files]
+
+    $git add ctrl.js
+
+    $git commit
+
+
+    in the new terminal we need to execute the following commands.
+
+    1.press i
+
+        type the ==> initial commit
+
+    2.press ESC
+
+        type the ==> :wq and press enter
+
+
+    From 2nd Commit Onwards we need to follow the same commands.
+
+    1.$git add .
+
+    2.$git commit -m "Two Lines of Controller Code Added"
+
+
+
+
+4.Create the Branch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
