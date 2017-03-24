@@ -1,0 +1,49 @@
+Mouse Events.
+
+    - when ever we perform mouse events automatically coresponding
+      directives will be executed by Angular Framework.
+
+Syntax.
+
+ng-mousedown /
+ng-mouseup   /
+
+ng-mouseover /      = "user defined function"
+ng-mouseout  /
+
+ng-mouseenter/
+ng-mouseleave
+
+
+ng-cloak.
+    used to avoid the flickering effect on web pages.
+
+[Note . ng-clock directive will work with Angular 1.6.3 with bower components ]
+
+
+----------------------
+ngCloakDemo
+
+    index.html
+
+    app.js
+
+    bower.json
+
+    .bowerrc.json
+
+    controllers
+
+        ctrl_one.js
+
+        ctrl_two.js
+----------------------
+
+
+
+
+
+
+
+
+
