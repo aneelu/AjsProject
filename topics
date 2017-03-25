@@ -1,5 +1,4 @@
 1.Introduction
-
     What is AngularJS.
     Advantages Of AngularJS.
     Disadvantages Of AngularJS.
@@ -401,8 +400,39 @@ Syntax.
                             "user defined function with optional parameters"
 
 
+ng-init.
+    used to declare the static data in the form of a key&value pair
+
+    each key&value pair separated with the help of ";"
 
 
+ng-class-odd.
+
+    - used to apply the css classes to the odd rows of table.
+
+ng-class-even.
+
+    - used to apply the css classes to the even rows of table.
+
+Ex.
+<style>
+    .even{
+        color:red;
+    }
+    .odd{
+        color:green;
+    }
+</style>
+
+<table>
+    ---
+    ---
+    <tr ng-repeat = "x in emp" ng-class-odd="'odd'" ng-class-even="'even'">
+            ---
+            ---
+            ---
+    </tr>
+</table>
 
 
 
