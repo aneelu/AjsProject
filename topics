@@ -1,0 +1,306 @@
+1.Introduction
+
+    What is AngularJS.
+    Advantages Of AngularJS.
+    Disadvantages Of AngularJS.
+
+2.Environmental Setup.
+    IDE'S - WebStrom , Ecilipse , Visual Studio
+    Bower
+
+3.Angular Applications
+
+    1.Static Angular Application.
+    2.Dynamic Angular Application.
+
+4.Directives
+
+    1.Predefined Directives.
+        1.ng-app
+        2.ng-controller
+        3.ng-repeat
+        4.ng-click
+        5.ng-options
+
+    2.Custom Directives
+
+5.Services
+
+    1.Predefined Services.
+    2.Custom Services.
+
+6.Single Page Applications
+
+7.NodeJS
+
+8.MongoDB / MySQL
+
+
+Introduction.
+
+    - AngularJS is a JavaScript MVC Framework.
+
+    - M - Model (JavaScript Variables)
+
+      V - View  (HTML / HTML5)
+
+      C - Controller (JavaScript Functions)
+
+
+Advantages Of AngularJS.
+
+    - AngularJS Reduces the Burden on the Server by implementing the
+
+      Business Components At Client Side By Using MVC.
+
+
+Drawbacks of AngularJS.
+-
+
+    - Secuirity.
+
+
+Environmental Setup.
+
+    - The Softwares Required to develop Angular Application
+
+      called as Environmental Setup.
+
+1.bower.
+
+    - Bower is a Automation tool used to download the
+
+      Required Resources to Develop Web Application.
+
+    - Bower is the Plugin Provided by NodeJS.
+
+bower components.
+
+1.bower.json
+
+2..bowerrc.json
+
+
+bower.json
+-
+    used to write the required resources to develop web application.
+{
+
+    "dependencies":{
+        "angular" : "~1.6.0",
+        "bootstrap": "~3.3.6"
+    }
+
+}
+
+.bowerrc.json
+-
+    used to indicate the path for resources.
+{
+    "directory":"bower_components"
+}
+
+
+
+Software Installation.
+
+1.Download and Install the NodeJS.
+
+    website : https://nodejs.org/en/download/
+
+    file    : node-v6.10.1-x64.msi
+
+
+2.Download and Install the GIT.
+
+    website : https://git-scm.com/download/win
+
+    file    : Git-2.12.1-64-bit.exe
+
+
+
+3.Download WebStrom IDE.
+
+    website : https://www.jetbrains.com/webstorm/download/#section=windows
+
+    file name : WebStrom-2017.1.exe
+
+4. Add the bower plugin
+
+    Open the Terminal in WebStrom (Alt+F12)
+
+    Execute the Following Node Command
+
+        npm install -g bower
+
+
+Angular Framework Work Path Given By Bower.
+    *****************************
+    BowerDemo
+
+        bower_components
+
+            angular
+
+                angular.min.js
+     ***************************-
+
+Bootstrap Framework path Given By Bower.
+
+    *****************
+    BowerDemo
+
+        bower_components
+
+            bootstrap
+
+                 dist
+
+                    bootstrap.min.css
+    *****************
+
+jQuery library path given by bower.
+
+    *****************
+    BowerDemo
+        bower_components
+                jquery
+                    dist
+                        jquery.min.js
+    ******************
+
+Angular Applications.
+
+        - By using AngularJS We Can Create Two Types Of Angular Applications.
+
+1.Static Angular Application
+
+2.Dynamic Angular Application
+
+Static Angular Application.
+
+    - View won't interacts with controller for dynamic data
+
+      called as Static Angular Application.
+
+Steps to Create the Static Angular Application.
+
+
+Step 1.
+
+    download angular by using bower.
+
+
+Step 2.
+
+    Create View.
+
+ Ex.
+     index.html
+
+<!DOCTYPE html>
+
+<html ng-app>
+    <input type="number" ng-model="model_one">
+    <input type="number" ng-model="model_two">
+    <h1 style="color:red" ng-bind="model_one+model_two"></h1>
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+
+Dynamic Angular Application.
+
+    - If view interacting with the controller for dynamic data,
+      then such type of Angular Application called as Dynamic Angular Application.
+
+  Steps to Create the Dynamic Angular Application.
+
+  1.Load the Angular Framework.
+
+  2.Declare the logical name of Application by using ng-app directive
+
+        [ Note . if our application is dynamic , we must give logical name of application
+
+          by using ng-app directive.]
+
+  3.Declare the controller by using 'ng-controller' directive.
+
+  4.Instantiate the Module.
+
+  5.Implement the controller.
+
+--------------------------------------
+DynamicAngularApplication
+
+    index.html
+
+    app.js
+
+    controllers
+
+        ctrl.js
+----------------------------------------
+
+
+Directives.
+
+    - Directives will enhance HTML Capabilities.
+
+    - We Have Two Types Of Directives.
+
+        1.Predefined Directives.
+
+        2.Custom Directives.
+
+Predefined Directives.
+
+    - The Directives Given by the Framework called as Predefined Directives.
+
+1.ng-app
+
+       - Angular Framework starts the execution from ng-app directive.
+
+       - we can logical name for dynamic application by using ng-app directive.
+
+       Ex.
+
+        ng-app = "myApp"
+
+            where myApp is the logical name of web application.
+
+        - we can have only one ng-app per application.
+
+        - Framework automatically identifies the ng-app directive
+
+          and Starts the Execution , called as AutoBootstrap.
+
+        - Running the Angular Application Forcefully without
+
+          ng-app called as Manual Bootstrap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
