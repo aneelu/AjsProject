@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+    <form name="myForm">
+        <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+        <input  type="text"
+                name="uname"
+                ng-model="uname"
+                ng-minlength="3"
+                ng-maxlength="6"
+                required>
+
+        <h5 ng-if="myForm.uname.$error.minlength">***Minimum 3 Characters Are Required</h5>
+        <h5 ng-if="myForm.uname.$error.maxlength">***Maximum 6 Characters Are Allowed****</h5>
+        <h5 ng-if="myForm.uname.$error.required">***Can't Left Blank***</h5>
+    </form>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+</html>
