@@ -279,16 +279,126 @@ Predefined Directives.
           ng-app called as Manual Bootstrap.
 
 
+2.ng-controller.
+
+    - we can take more than one controller per web application.
+
+    - in genaral we will declare controllers in View
+
+        Ex.
+
+            ng-controller="ctrl_one"
+
+    - in genaral we will implement controllers in JavaScript.
+
+        Ex.
+
+            app.controller("ctrl_one",ctrl_one);
+
+            ctrl_one.$inject=["$scope"];
+
+            function ctrl_one($scope){
+
+                //Logic Goes Here.
+            }
 
 
+3.ng-repeat.
+
+    - used to iterate the list of elements from an collection.
+
+Syntax.
+
+    ng-repeat =  "iteration_variable in collection"
 
 
+ng-options.
+
+    used to populate the values to the dropdown.
+
+    Syntax.
+
+    <select
+        ng-model="my_model"
+
+        ng-option="  'model_value' as
+
+                     'dropdown_value' for
+
+                     'iteration_variable' in
+
+                     'collection'">
+
+    </select>
+
+ Ex_1.
+
+    $scope.data = ["Hello_1","Hello_2","Hello_4","Hello_4","Hello_5"];
+
+    Dropdown - H_1  to  H_5
+    my_model  - H_1  to H_5
+
+    <select ng-model="my_model" ng-options="y as y for y in data">
+
+ Ex_2.
+
+   $scope.data = [  {id:1,name:'Hello_1'},
+                    {id:2,name:'Hello_2'},
+                    {id:3,name:'Hello_3'},
+                    {id:4,name:'Hello_4'},
+                    {id:5,name:'Hello_5'}
+                 ];
+
+    -----------------------
+    dropdown --- H_1 to H_5
+
+    my_model --- 1   to  5
+    -----------------------
+
+    <select ng-model="my_model" ng-options="x.id as x.name for x in data">
+
+    -----------------------
+    dropdown --- 1 to 5
+
+    my_model --- H_1 to H_5
+    -----------------------
+
+    <select ng-model="my_model" ng-options="x.name as x.id for x in data">
+
+    -----------------------
+    dropdown --- 1 to 5
+
+    my_model --- 1 to 5
+    -----------------------
+
+    <select ng-model="my_model" ng-options="x.id as x.id for x in data">
+
+   -----------------------
+   dropdown --- H_1 to H_5
+
+   my_model --- H_1 to H_5
+   -----------------------
+
+   <select ng-model="my_model" ng-options="x.name as x.name for x in dta">
 
 
+ng-click.
 
+    when ever we click the user interface elements automatically
 
+    ng-click directive executed by angular framework.
 
+ng-dblclick.
 
+   when ever we double click the user interface elements automatically
+
+   ng-dblclick directive executed by angular framework.
+
+Syntax.
+
+    ng-click / ng-dblclick ="Expression" /
+                            "user defined function" /
+                            "user defined function with optional parameters"
 
 
 

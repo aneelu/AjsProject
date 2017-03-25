@@ -1,0 +1,129 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+    <div ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_two}}</h1>
+    </div>
+
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one="I am from Controller One";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two="I am from Controller Two";
+        }
+
+    </script>
+
+</html>-->
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_two}}</h1>
+    </div>
+
+    <div ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_one}}</h1>
+    </div>
+
+
+<script src="../bower_components/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject=["$rootScope"];
+    function ctrl_one($rootScope) {
+        $rootScope.var_one="I am from Controller One";
+    }
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject=["$rootScope"];
+    function ctrl_two($rootScope) {
+        $rootScope.var_two="I am from Controller Two";
+    }
+
+</script>
+
+
+
+</html>
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    {{my_fun()}}
+
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red">{{my_fun()}}</h1>
+    </div>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$rootScope","$scope"];
+        function ctrl_one($rootScope,$scope) {
+           $scope.sub_one="AngularJS";
+           $scope.sub_two="Angular2";
+           $rootScope.my_fun = function () {
+             return $scope.sub_one+"..."+$scope.sub_two;
+           };
+        }
+</script>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
