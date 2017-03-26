@@ -1,0 +1,15 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "body-parser": "^1.17.1",
+    "mysql": "^2.13.0",
+    "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.25"
+  }
+}
