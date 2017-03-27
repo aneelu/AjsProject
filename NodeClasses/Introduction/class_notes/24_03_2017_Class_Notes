@@ -6,3 +6,76 @@ Architecture Of NodeJS.
 Components Are.
 
 1.Thread Pool Mechanism
+
+    - Thread Pool Mechanism Maintains the Number Of Threads.
+
+    - Thread Pool Mechanism will have the Threads Based on
+
+      the System Architecture.
+
+    - One Sys Architecture to Another Sys Architecture ,
+
+      thread count may change.
+
+2. Requests Queue Mechanism.
+
+    Node Engine Will Maintain Internally Requests Queue Mechanism.
+
+    All the Client Requests will Store into Requests Queue Mechanism.
+
+3. Event Driven Mechanism.
+
+    - It's a Special Mechanism in Node Engine.
+
+    - Event Driven Mechanism will Access all the Requests
+
+      from Requests Queue Mechanism.
+
+    - Event Driven Mechanism will identifies the type of request from client.
+
+    - Event Driven Mechanism have the capability to process the Non Blocking Requests.
+
+    - All the Blocked Requests Are Deligates to Helper Object.
+
+    - Helper Object will Assign the Threads from the
+
+      Thread Pool Mechanism to Blocked Request Based on the Availability.
+
+    - Helper Object will deligates the Response to the Event Driven Mechanism.
+
+    - Finally Event Driven Mechanism Responisible to
+
+      Dispatch the Response to the Client.
+
+
+Environmental Setup.
+
+    - The Softwares Required to Run the Node Application
+
+      called as Environmental Setup.
+
+1.Download and Install the NodeJS.
+
+Website :https://node.org/downloads
+
+file name : node-v6.10.1-64-bit.msi
+
+
+2. IDE'S  -- WebStrom, Sublime Text Editor, Brackets, Ecilipse,VS
+
+
+Steps to Create the First Node Application.
+
+Step 1.
+
+    
+
+
+
+    - The Name of the Node Configuration file is package.json.
+
+we can run the Node Configuration File By using following command
+
+1.npm install
+
+    npm stands for Node Packaging Manager.
