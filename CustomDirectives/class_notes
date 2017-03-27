@@ -1,0 +1,152 @@
+
+
+
+Ex.
+
+Directive .  "my_directive"
+
+<my_directive></my_directive>   // Element Level Usage.
+
+<div my_directive></div>        // Attribute Level Usage.
+
+<div class="my_directive"></div>  // CSS Class Leval Usage.
+
+
+Properties Of Custom Directive.
+
+
+1.restrict.
+
+    used to describe the usage of Custom Directive.
+
+Ex.
+
+    app.directive("my_directive",my_directive);
+
+    function my_directive(){
+
+        return{
+                restrict:'A'   // we can use like an Attribute
+                restrict:'E'   // we can use like an Element
+                restrict:'C'   // we can use like an CSS Class
+                restrict:'EA'  // we can use like an Either Element or Attribute
+                restrict:'EAC' // we can use in all types.
+        }
+
+    }
+
+2.template.
+
+    - used to add the Template language to the Custom Directive.
+     (HTML)
+
+Ex.
+
+    app.directive("attrType",attrType);
+
+    function attrType(){
+        return{
+            restrict:'A',
+            template:'<html>Attribute Type Custom Directive</html>'
+        }
+    }
+
+
+    index.html
+    -
+
+    <div attr-type></div>  //Attribute Type Custom Directive
+
+3.templateUrl.
+    - used to add the external templates to the Custom Directive.
+Ex.
+templates
+       sample.html
+
+<html>
+    <h1>Class Level Type Custom Directive</h1>
+</html>
+
+app.directive("classType",classType);
+function classType(){
+    return{
+        restrict:'C',
+        templateUrl:'templates/sample.html'
+    }
+}
+
+index.html
+-
+<div class='class-type'></div> // Class Level Type Custom Directive
+
+
+4.controller.
+    used to define the controller to the template of a custom directive.
+
+Ex.
+templates
+    sample.html
+
+<h1>{{var_one}}</h1>
+
+ctrl.js
+-
+app.controller("ctrl",ctrl);
+ctrl.$inject=["$scope"];
+function ctrl($scope){
+    $scope.var_one="Element Level Custom Directive Usage";
+}
+
+elemType.js
+-
+app.directive("elemType",elemType);
+function elemType(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/sample.html',
+        controller:'ctrl'
+    }
+}
+
+index.html
+-
+<elem-type></elem-type> //Element Level Custom Directive Usage
+
+
+--------------------
+CustomDirectives
+            Example_1
+                index.html
+                app.js
+                directives
+                    attrType.js
+                    classType.js
+                    elemType.js
+                bower.json
+                .bowerrc.json
+-----------------------
+
+index.html
+-
+
+<div class="container" attr-type></div>
+
+<br><br>
+
+<div class="container">
+    <elem-type></elem-type>
+</div>
+
+<br><br>
+
+<div class="container class-type"></div>
+
+
+
+
+
+
+
+
+
+
