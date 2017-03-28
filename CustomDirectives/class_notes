@@ -141,6 +141,78 @@ index.html
 
 <div class="container class-type"></div>
 
+Example_2
+-
+
+Create a Template which Representing dropdown by using Bootstrap & jQuery.
+------------
+templates
+    header.html
+------------
+header.html
+-
+<div class = "dropdown">
+    <button class="btn btn-primary" data-toggle="dropdown">
+        <ul class="dropdown-menu">
+            <li>Option_1</li>
+            <li>Option_2</li>
+            <li>Option_3</li>
+            <li>Option_4</li>
+            <li ng-click="logout()">Logout</li>
+        </ul>
+</div>
+
+
+Create the Controller to implement logout().
+
+---------------
+controllers
+        header.js
+---------------
+header.js
+-
+app.controller("header",header);
+header.$inject = ["$scope"];
+function header($scope){
+    $scope.logout = function(){
+        alert("Logged Out Successfully !");
+    }
+}
+
+Create the Custom Directive.
+-------------------
+directives
+    header.js
+------------------
+
+app.directive("header" , header);
+function header(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/header.html',
+        controller:'header'
+    }
+}
+
+use the custom directive.
+
+index.html
+-
+<html ng-app = "app">
+    <header></header>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/header.js"></script>
+    <script src="controllers/header.js"></script>
+</html>
+
+
+
+
+
 
 
 
