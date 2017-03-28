@@ -1,0 +1,40 @@
+Technologies.
+1.Single Page Applications (ui.router)
+2.localStorage
+3.Bootstrap
+4.jQuery
+5.Node Server
+6.MySQL / MongoDB / Cassandra / SQL Server
+7.Interceptors
+8.Token Based Authentication System
+9.Grunt
+10.JBOSS / Tomcat / Weblogic / IIS
+11.TestCases
+
+
+Modules in Mini_Project.
+
+1.login
+
+2.register
+
+3.home
+    login.
+           - login module will compare the user credentials
+
+              in mysql database with node server.
+
+    register.
+           - register module will save the user information in mysql
+
+             with node server.
+
+     home.
+
+            - will interacts with the end user and performs the Required
+              Opearations with Node / Tomcat / IIS with MySQL / MongoDB/ Cassandra
+
+
+
+
+
