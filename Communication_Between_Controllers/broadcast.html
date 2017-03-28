@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div ng-controller="parent_controller">
+        <button ng-click="clickMe({key_one:'For Child One',key_two:'For Child Two'})">BroadCast</button>
+        <div ng-controller="child_one">
+            <h1 style="color: red" ng-bind="var_one"></h1>
+        </div>
+        <div ng-controller="child_two">
+            <h1 style="color: green" ng-bind="var_two"></h1>
+        </div>
+    </div>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.clickMe = function (data) {
+                $scope.$broadcast("class_example",data);
+            };
+        };
+
+
+        app.controller("child_one",child_one);
+        child_one.$inject=["$scope"];
+        function child_one($scope) {
+            $scope.$on("class_example",function (e, res) {
+                $scope.var_one=res.key_one;
+            });
+        };
+
+
+        app.controller("child_two",child_two);
+        child_two.$inject=["$scope"];
+        function child_two($scope) {
+            $scope.$on("class_example",function (e, res) {
+                $scope.var_two=res.key_two;
+            });
+        };
+
+
+
+
+    </script>
+
+</html>

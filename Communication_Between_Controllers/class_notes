@@ -1,0 +1,9 @@
+1.broadcast
+2.emit
+3.rootScope
+4.custom services
+
+Communication Between Controllers by using broadcast.
+-
+    -Child Controllers Can listen the Data from the parent controller
+through broadcast communication.
