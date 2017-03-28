@@ -1,0 +1,146 @@
+Example_1.
+    Creating the http server with the port no.8080
+
+server.js
+-
+//import the http module.
+var http = require("http");
+
+       - require() is the predefined function used to import the modules
+
+//create the server.
+  var my_server = http.createServer(my_fun);
+
+      - createServer( - ) is a Predefined Function in http module
+
+//implement the handler (my_fun)
+function my_fun(req,res){
+    res.send("This is My First Http Server");
+};
+
+//Assign the Port No to the Server.
+my_server.listen(8080);
+
+    - listen() is the predefined function used to assign the port no.
+
+
+Start the Server.
+-
+npm start
+
+node server.js
+
+Check the Output.
+-
+
+Open the Browser.
+
+ http://localhost:8080/
+
+
+- Postman is the plugin used to check the Rest API'S
+
+Example_2.
+    Read the Data from the Static Files by using "fs" module.
+
+test.json
+-
+{
+    "emp":[
+            {"id":1,name:"Hello_1",age:20},
+            {"id":2,name:"Hello_2",age:22}
+    ]
+}
+var fs = require("fs");
+var http = require("http");
+var my_server = http.createServer(function(res,res){
+    fs.readFile("test.json",my_fun);
+    function my_fun(err,data){
+        if(err.statusCode==401){
+            res.send("File Not Found !");
+            return;
+        }else if(err.statusCode==501){
+            res.send("Please Restart the Server !");
+            return;
+        }
+
+        res.send(data);
+    }
+});
+
+my_server.listen(8080);
+
+Start the Server.
+npm start
+
+Open the Postman.
+http://localhost:8080/
+
+Example_3.
+    Develop the Sample Node Application with 3rd party Modules.
+
+package.json
+-
+{
+    "dependencies":{
+        "express":"^4.15.1",
+        "body-parser":"^2.11.1",
+        "jwt-simple":"^1.0.1"
+    }
+}
+
+npm install
+
+server.js
+-
+var express = require("express");
+
+var app = express();
+
+app.get("/",function(req,res){
+
+    res.json({"key1":"Default Output Of Server"});
+});
+
+
+app.get("/mongodb" , function(req,res){
+
+    res.send({"key1":"Data From MongoDB Soon...."});
+});
+
+
+app.get("/cassandra" , function(req,res){
+
+    res.send({"key1":"Data From Cassandra Soon...."});
+});
+
+
+app.post("/mysql" , function(req,res){
+
+    var u_name = req.body.uname;
+    var u_pwd = req.body.upwd;
+    res.send({"key1":"Result From the MySQL DB Soon...."});
+});
+
+app.listen(8080);
+
+
+http://localhost:8080/
+
+http://localhost:8080/mongodb
+
+http://localhost:8080/cassandra
+
+http://localhost:8080/mysql?uname='admin' & upwd='admin'
+
+
+
+
+
+
+
+
+
+
+
+
