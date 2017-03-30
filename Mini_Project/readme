@@ -35,6 +35,76 @@ Modules in Mini_Project.
               Opearations with Node / Tomcat / IIS with MySQL / MongoDB/ Cassandra
 
 
+Step 1.
+
+    Implement the SPA by using ui.router module.
+
+----------------
+templates
+    login.html
+    home.html
+    register.html
+----------------
+
+----------------------------
+controllers
+    loginController.js
+    homeController.JS
+    registerController.js
+-----------------------------
 
 
 
+Step 2.
+
+    Implement the login.html --->  register.html
+
+                  register.html --->  login.html
+
+login.html
+-
+
+    --
+    --
+    --
+
+    <a ui-sref="register">Register?</a>
+
+
+
+register.html
+-
+
+    ---
+    ---
+    ---
+
+    <a ui-sref="login">Login</a>
+
+
+
+
+Step 3.
+
+    Pass the Data From loginController to loginService.
+
+    "data"  --- > u_name : uname  && u_pwd:upwd
+
+------------
+services
+    loginService.js
+------------
+app.service("loginService",loginService);
+loginService.$inject=["$http"];
+function loginService($http){
+    this.authenicate = function(data){
+        console.log(data);
+    };
+};
+
+
+app.controller("loginController",loginController);
+loginController.$inject=["$scope","loginService"];
+function loginController($scope,loginService){
+    loginService.authenicate(data);
+}

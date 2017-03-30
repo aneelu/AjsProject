@@ -1,0 +1,46 @@
+<form ng-submit="register({u_name:uname,
+                           f_name:fname,
+                           l_name:lname,
+                           u_pwd:upwd,
+                           u_cpwd:ucpwd,
+                           u_phone:uphone,
+                           u_profile:uprofile})">
+    <label>User Name.</label>&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uname">
+
+    <br><br>
+    <label>First Name.</label>&emsp;&emsp;&emsp;
+    <input type="text" ng-model="fname">
+
+    <br><br>
+    <label>Last Name.</label>&emsp;&emsp;&emsp;
+    <input type="text" ng-model="lname">
+
+    <br><br>
+    <label>Password.</label>&emsp;&emsp;&emsp;
+    <input type="password" ng-model="upwd">
+
+
+    <br><br>
+    <label>Confirm Password.</label>&emsp;&emsp;&emsp;
+    <input type="text" ng-model="ucpwd">
+
+    <br><br>
+    <label>Phone.</label>&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uphone">
+
+
+    <br><br>
+    <label>Upload Profile.</label>&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uprofile">&emsp;&emsp;
+    <button ng-click="browse()">Browse</button>
+
+    <br><br>
+    <input type="submit">
+
+
+</form>
+
+<br><br>
+
+<a ui-sref="login"><b>Login</b></a>
