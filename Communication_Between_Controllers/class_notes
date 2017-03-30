@@ -7,3 +7,99 @@ Communication Between Controllers by using broadcast.
 -
     -Child Controllers Can listen the Data from the parent controller
 through broadcast communication.
+
+
+Communication Between Controllers by using emit.
+
+    - Parent Controllers can listen the Data from Child Controllers by using emit communication.
+
+
+Ex.
+
+      <div ng-controller="parent_controller">
+            {{var_one}}
+            <div ng-controller="child_controller">
+                <button ng-click="clickMe('For Parent Controller')">Emit</button>
+            </div>
+      </div>
+
+
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope){
+            $scope.clickMe = function(data){
+                $scope.$emit("class_example",data);
+            }
+        }
+
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope){
+            $scope.$on("class_example",function(event,res){
+                $scope.var_one = res;
+            }
+        }
+
+
+Communication Between Controllers by using rootScope.
+-
+
+    - we can provide the Communication Between Controllers by using $rootScope.
+
+    - in genaral we will use either rootScope or Custom Services Communication
+
+      for sibling controllers.
+
+
+app.controller("ctrl_one",ctrl_one);
+ctrl_one.$inject=["$scope"];
+function ctrl_one($scope){
+    $scope.my_fun("For Controller Two");
+}
+
+app.controller("ctrl_two",ctrl_two);
+ctrl_two.$inject=["$rootScope","$scope"];
+function ctrl_two($rootScope,$scope){
+    $rootScope.my_fun =  function(data){
+        $scope.var_one=data;
+    }
+}
+
+
+Communication Between Controllers by using custom services.
+
+my_service.js
+-
+app.service("my_service" , my_service);
+function my_service(){
+	this.var_one="";
+	this.setVarOne = function(data){
+		this.var_one = data;
+	}
+	this.getVarOne = function(){
+		return this.var_one;
+	}
+}
+
+ctrl_one.js
+-
+app.controller("ctrl_one",ctrl_one);
+ctrl_one.$inject=["$scope","my_service"];
+function ctrl_one($scope,my_service){
+    $scope.clickMe = function(){
+          my_service.setVarOne("For Controller Two");
+    }
+}
+ctrl_two.js
+-
+app.controller("ctrl_two",ctrl_two);
+ctrl_two.$inject=["$scope","my_service"];
+function ctrl_two($scope,my_service){
+    $scope.clickMe = function(){
+        $scope.var_one = my_service.getVarOne();
+    }
+}
+
+
+
