@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+
+    <div ng-controller="parent_controller">
+        <h1>{{var_one}}</h1>
+        <div ng-controller="child_one">
+            <button ng-click="clickMe('For Parent Controller')">Emit</button>
+        </div>
+    </div>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("child_one",child_one);
+        child_one.$inject=["$scope"];
+        function child_one($scope) {
+          $scope.clickMe = function (data) {
+                $scope.$emit("class_example",data);
+          };
+        };
+
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.$on("class_example",function (event, data) {
+               $scope.var_one=data;
+            });
+        }
+
+
+    </script>
+
+
+</html>
