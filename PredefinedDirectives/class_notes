@@ -1,0 +1,127 @@
+Directives.
+    - Directives in AngularJS Enhances the HTML Capabilities.
+
+    - we have two types of directives.
+
+    1.Predefined Directives.
+
+        - The Directives Given by the Framework called as Predefined Directives.
+
+        1. ng-app
+
+            - it is a root directive in Angular Application.
+
+            - we can give the logical name for the web application by using ng-app directive.
+
+            - if our application is static ,
+
+               then logical name is optional otherwise mandatory(Dynamic App).
+
+            - we can take only one ng-app directive per web application.
+
+       Autobootstrap.
+
+            Framework starts the execution from ng-app directive , this process
+
+            called as Autobootstrap.
+
+
+       Manual Bootstrap.
+
+            Running the Angular Application forcefully without ng-app directive
+
+            called as Manual Bootstrap.
+
+ngAppDemo_1.html
+-
+<!DOCTYPE html>
+<html>
+    <div ng-app>
+        <h1 style="color:red">Addition.{{10+10}}</h1>
+         <div>
+            <h1 style="color:green">Subtraction.{{20-10}}</h1>
+         </div>
+    </div>
+
+    <br><br>
+    <div>
+        <h1 style="color:blue">Multiplication.{{10*10}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+O/P:
+    Addition . 20
+
+    Subtraction . 10
+
+    Multiplication . {{10*10}}
+
+
+ngAppDemo_2.html
+-
+
+<!DOCTYPE html>
+<html>
+       <h1 style="color:red">Addition.{{10+10}}</h1>
+       <h1 style="color:green">Subtraction.{{20-10}}</h1>
+       <h1 style="color:blue">Multiplication.{{10*10}}</h1>
+       <script src="bower_components/angular/angular.min.js"></script>
+       <script>
+            angular.bootstrap(document);
+       </script>
+</html>
+
+O/P.
+
+    Addition . 20
+    Subtraction . 10
+    Multiplication .100
+
+ngAppDemo_3.html
+-
+<!DOCTYPE html>
+<html>
+    <div ng-controller="ctrl">
+        <h1 style="color:red">{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope){
+             $scope.var_one =  "I am from Manual Bootstrap";
+        }
+        angular.bootstrap(document,["app"]);
+    </script>
+</html>
+
+
+ngAppDemo_4.html
+-
+
+<div ng-app="app" ng-controller="ctrl_one">
+    <h1 style="color:red">{{var_one}}</h1>
+</div>
+
+<div ng-controller="ctrl_two" id="my_div">
+    <h1 style="color:green">{{var_two}}</h1>
+</div>
+
+
+var my_div= document.getElementById("my_div");
+angular.bootstrap(my_div,["app"]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <div ng-app="app" ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+
+    <div ng-controller="ctrl_two" id="my_div">
+        <h1 style="color: green">{{var_two}}</h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+                        // 'app' object will created
+                        // 'app' object won't available to ctrl_two
+
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "I am from Auto Bootstrap";
+        }
+
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two="I am from Manula Bootstrap";
+        }
+
+        var my_div=document.getElementById("my_div");
+        angular.bootstrap(my_div,["app"]);
+
+    </script>
+
+
+</html>
