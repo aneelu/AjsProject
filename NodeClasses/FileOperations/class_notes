@@ -1,0 +1,78 @@
+Ex.
+
+    text files
+    json files
+    xml files
+
+        --
+        --
+
+File Operations.
+
+1.Reading the File.
+-----------------------------
+FileOpearations
+    raw
+        sample.txt
+-----------------------------
+var fs = require("fs");
+//Async Read
+fs.readFile(__dirname+"/raw/sample.txt",function(err,data){
+    console.log(data.toString());
+});
+//Sync Read
+fs.readFileSync(__dirname+"/raw/"+__filename,function(err,data){
+    console.log(data.toString());
+});
+
+1.__dirname -  is a predefined property in NodeJS
+               used to read the Directory Path.
+
+2.__filename - is a Predefined Property in NodeJS used to
+               read the File Path.
+
+
+[Note.
+    If More Number Of Developers Acting on Single Resource , then
+    Asynchronus Communication Recomended
+
+    if Only One Developer Acting on Resource , then Syncronus Communication
+
+    Recomended]
+
+
+2. Open the File.
+
+Syntax.
+
+    fs.open(path,mode,callback)
+
+
+Ex.
+
+    fs.open(__dirname+"/raw/sample.txt","r+",function(err,data){
+          console.log(data);
+    });
+
+    console.log("File Opened Successfully ! with read and write mode");
+
+
+3.File Metadata.
+
+    fs.stat(__dirname+"/raw/sample.txt",function(err,stats){
+        console.log(stats.isFile);      //true
+
+        console.log(stats.isDirectory);  //false
+
+        console.log(stats.isCharacterStream);  //true
+
+                --
+                --
+    });
+
+
+
+    stat() is the predefined function in "fs" module
+    used to read the metadata of files.
+
+

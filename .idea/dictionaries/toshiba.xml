@@ -2,7 +2,10 @@
   <dictionary name="toshiba">
     <words>
       <w>api</w>
+      <w>dirname</w>
       <w>evealuate</w>
+      <w>recomended</w>
+      <w>syncronus</w>
     </words>
   </dictionary>
 </component>
