@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <h1 style="color: green">{{my_fun()}}</h1>
+    <div ng-controller="ctrl">
+        <h1 style="color: red">{{my_fun()}}</h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope","$rootScope"];
+        function ctrl($scope,$rootScope) {
+            $scope.var_one="AngularJS";
+            $scope.var_two="Angular2";
+            $scope.var_three="Angular3";
+            $rootScope.my_fun = function () {
+                return $scope.var_one+"...."+$scope.var_two+"..."+$scope.var_three;
+            };
+        }
+    </script>
+</html>
