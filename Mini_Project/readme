@@ -108,3 +108,67 @@ loginController.$inject=["$scope","loginService"];
 function loginController($scope,loginService){
     loginService.authenicate(data);
 }
+
+
+
+Step 4.
+    Pass the user credentials to the Server
+    a. Launch the index.html file By using NodeJS.
+
+    b.create post url to accept the user credentials from loginService
+
+    c.create the "user_details" table in "mini_project" schema in mysql
+
+        schema : mini_project
+        table : user_details
+
+
+        > create schema mini_project;
+        > use mini_project;
+        > create table user_details(uname varchar(50),
+                                    fname varchar(50),
+                                    lname varchar(50),
+                                    pwd varchar(20),
+                                    phone varchar(50),
+                                    profile_pic varchar(50),
+                                    gender varchar(20),
+                                    address varchar(100)
+                                    );
+        > insert into user_details values('admin',
+                                          'Naresh',
+                                          'IT',
+                                          'admin',
+                                          '123456',
+                                          'c:\images\logo.png',
+                                          'male',
+                                          'Ameerpet');
+
+
+        d. create the connection object in nodejs.
+
+            > npm install mysql --save
+
+            var mysql = require("mysql");
+            var connection = mysql.createConnection({
+                host:'localhost',
+                user:'root',
+                password:'root',
+                database:'mini_project'
+            });
+            connection.connect();
+
+        e.compare the "user credentials" with "user_details" table.
+
+        //create the post url.
+        app.post("/login/authenicate",function(req,res){
+            var uname = req.body.u_name;
+            connection.query("select uname from user_details where uname='"+uname+"'",
+            function (err,records,fields) {
+                if(records.length>0){
+                    res.send({login:"success"});
+                }else{
+                    res.send({login:"failure"});
+                };
+            });
+        });
+

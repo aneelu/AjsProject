@@ -2,6 +2,8 @@ app.service("loginService",loginService);
 loginService.$inject=["$http"];
 function loginService($http) {
     this.authenicate = function (data) {
-       console.log(data);
+       return $http.post("/login/authenicate",data).then(function (res) {
+           return res;
+       });
     };
 };
