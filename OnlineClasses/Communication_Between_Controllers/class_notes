@@ -17,3 +17,8 @@ emit.
     Sharing the Data From Child Controllers to parent controllers
 
     called as Emit Communication.
+
+
+Communication Between Controllers by using rootScope.
+
+Communication Between Controllers by using custom services.
