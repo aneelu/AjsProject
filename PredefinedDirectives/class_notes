@@ -202,10 +202,135 @@ ngControllerDemo_4.
     3. create the css class with the following name.
         "my_class"
 
+3.ng-repeat
+
+    - used to iterate the list of elements from an collection.
+
+Syntax.
+
+    ng-repeat = "'iteration_variable' in 'collection'"
+
+
+ngRepeatDemo_1
+
+    1. create the Array Statically and iterate by using
+       ng-repeat directive.
+
+
+<p ng-repeat = "x in [10,20,30,40,50]">
+    {{x}}
+</p>
+
+O/P:
+    10
+    20
+    30
+    40
+    50
+
+Predefined Services with ng-repeat Directive.
+
+1.$index
+    -used to return the indexes of an elements.
+
+2.$first
+    - will return first index of an collection as true.
+
+3.$last
+    - will return last index of an collection as true.
+
+4.$even
+    - will return even indexes of an collection as true.
+
+5.$odd
+    - will return odd indexes of an collection as true.
+
+6.$middle
+    - will return all the middle indexes of an collection as true.
 
 
 
+ngRepeatDemo_2.
+    Iterate the Collection from Controller
+
+    app.controller("ctrl",ctrl);
+    ctrl.$inject = ["$scope"];
+    function ctrl($scope){
+        $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+    }
+
+
+    <p ng-repeat = "x in data">
+        {{x}}
+    </p>
+
+O/P:
+    Hello_1
+    Hello_2
+    Hello_3
+    Hello_4
+    Hello_5
+
+
+ngRepeatDemo_3.
+    Create the JSON Array in Controller.
+    Read the Array by using ng-repeat directive.
+    Display the Array information in bootstrap table.
+
+
+app.controller("ctrl" , ctrl);
+ctrl.$inject = ["$scope"];
+function ctrl($scope){
+    $scope.data = [ {"id":1,"name":"Emp_1","age":20},
+                    {"id":2,"name":"Emp_2","age":22},
+                    {"id":3,"name":"Emp_3","age":24},
+                    {"id":4,"name":"Emp_4","age":26},
+                    {"id":5,"name":"Emp_5","age":28}
+                  ];
+}
+
+
+<p ng-repeat = "x in data">
+    {{x.id+"..."+x.name+"..."+x.age}}
+</p>
+
+<table class="table table-responsive">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+
+    <tr ng-repeat = "x in data">
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.age}}</td>
+    </tr>
+</table>
+
+
+ngRepeatDemo_4.
+
+    use thr latest directives like "ng-repeat-start" & "ng-repeat-end"
+
+    we can provide the simplified solutions for complex structures
+
+    by using "ng-repeat-start" & "ng-repeat-end"
+
+    these directives will compatible with HTML5.
 
 
 
+Code.
 
+    <header ng-repeat-start="x in data">
+        {{x.head}}
+    </header>
+
+    <div>
+        {{x.body}}
+    </div>
+
+    <div ng-repeat-end>
+        {{x.footer}}
+    </div>
