@@ -172,3 +172,68 @@ Step 4.
             });
         });
 
+
+Step 5.
+
+    Genarate the Token by using jwt-simple module.
+
+    npm install jwt-simple --save
+
+    var jwt = require("jwt-simple");
+    var token  = jwt.encode({"key1":"value1"},"tcs@admin.com");
+    console.log(token);  //unreadable object.
+
+    var obj = jwt.decode(token,"tcs@admin.com");
+    console.log(obj.key1);
+
+
+Step 6.
+
+    Store the token into localStorage.
+
+
+    - AngularJS Supports the two types of Storages.
+
+        1.localStorage
+        2.sessionStorage
+
+    - As a developer explicitely we must delete the data from the localStorage.
+
+    - when ever we close the browser, automatically session Storage will be erased.
+
+    - ngStorage module will provide the both local & session Storages.
+
+    - ngStorage Module have the following services.
+
+        1.$localStorage
+
+        2.$sessionStorage
+
+
+    - $localStorage used to work with the local Storage.
+
+    - $sessionStorage used to work with the session Storage
+
+    - we can persist the Data in the form of a key & value pairs
+
+
+
+Ex.
+    ***********************************************
+    $localStorage.mini_project = {"key1":"value1"};
+     (storage type)               (key)   (value)
+
+    console.log($localStorage.mini_project.key1);  //value1
+
+    delete $localStorage.mini_project;
+   ***********************************************
+
+   $sessionStorage.mini_project = "Hello";
+
+   console.log($sessionStorage.mini_project);  //Hello
+
+   delete $sessionStorage.mini_project;
+
+   ***********************************************
+
+

@@ -8,9 +8,9 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "jwt-simple": "^0.5.1",
     "mysql": "^2.13.0"
   },
-
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",

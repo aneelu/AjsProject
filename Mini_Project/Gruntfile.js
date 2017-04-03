@@ -4,13 +4,12 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             build: {
-                files: [{
-                    expand: true,
-                    src: '*.js',
-                    dest: 'build/scripts',
-                    cwd: 'public_html/app',
-                    ext: '.min.js'
-                }]
+                files: [
+                    {
+                        src: ['./Mini_Project/controllers/*.js'],
+                        dest: 'js/global.min.js'
+                    }
+                ]
             }
         }
     });

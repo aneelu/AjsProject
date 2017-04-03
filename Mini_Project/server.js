@@ -28,13 +28,16 @@ var connection = mysql.createConnection({
 connection.connect();
 
 
+var jwt = require("jwt-simple");
+
 
 //create the post url.
 app.post("/login/authenicate",function(req,res){
     var uname = req.body.u_name;
     connection.query("select uname from user_details where uname='"+uname+"'",function (err,records,fields) {
         if(records.length>0){
-            res.send({login:"success"});
+            var token = jwt.encode({uname:uname},"123456ABCDEF");
+            res.send({login:"success",token:token});
         }else{
             res.send({login:"failure"});
         };
