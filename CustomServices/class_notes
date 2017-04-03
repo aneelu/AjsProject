@@ -74,5 +74,43 @@ function my_service(){
 
 
 
+Creating Custom Service by using value().
 
+    we can create the services in the form of a key & value pairs.
+
+app.value("my_service","First Value");
+app.value("my_service","Second Value");
+
+
+O/P:
+
+    Second Value
+    Second Value
+
+
+Creating the Custom Service by using Constant.
+
+    app.constant("my_service","First Value");
+    app.constant("my_service","Second Value");
+
+
+O/P:
+
+    First Value
+    First Value
+
+
+Creating the custom service by using service()
+-
+app.service("my_service",my_service);
+function my_service(){
+    this.my_fun = function(){
+        return "I am from Service";
+    }
+}
+
+
+[Note. it will dependent on "user defined function" to
+
+       return values to controllers]
 

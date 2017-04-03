@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>fname</th>
+            <th>fsubject</th>
+        </tr>
+        <tr ng-repeat="x in var_one">
+            <td>{{x.post.id}}</td>
+            <td>{{x.post.fname}}</td>
+            <td>{{x.post.fsubject}}</td>
+        </tr>
+    </table>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.service("my_service",my_service);
+        my_service.$inject=["$http"];
+        function my_service($http) {
+           this.my_fun = function () {
+                return $http.get("http://demosoft.highgrowth.in/test/jsonexample.php").then(function (response) {
+                   return response.data.posts;
+                });
+           };
+        };
+
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope","my_service"];
+        function ctrl($scope,my_service) {
+            my_service.my_fun().then(function (response) {
+                $scope.var_one = response;
+            });
+        };
+    </script>
+
+</html>
