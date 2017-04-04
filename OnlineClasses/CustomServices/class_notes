@@ -1,0 +1,59 @@
+    - Services are used to share the common business logic to controllers.
+
+    - by using services we can achieve the re usability.
+
+    - we have two types of services.
+
+        1.Predefined Services
+
+        2.Custom Services
+
+Custom Services.
+
+    Creating our own services called as Custom Services.
+
+    In AngularJS we can create Custom Services in 5 ways.
+
+1.provider()
+2.factory()
+3.value()
+4.constant()
+5.service()
+
+
+Creating the Custom Service By using provider().
+    - Provider() will dependent on $get() predefined function to provide
+services to the controllers.
+
+
+Ex.
+
+app.config(config);
+config.$inject=["my_serviceProvider"];
+function my_serviceProvider(){
+     my_serviceProvider.db_password="root_two";
+}
+
+
+app.provider("my_service",my_service);
+function my_service(){
+    this.db_password="root_one";
+    this.$get = function(){
+        return this.db_password;
+    }
+}
+
+
+app.controller("ctrl_one",ctrl_one);
+ctrl_one.$inject=["$scope",my_service];
+function ctrl_one($scope,my_service){
+    $scope.var_one = my_service;
+}
+
+
+
+app.controller("ctrl_two",ctrl_two);
+ctrl_two.$inject=["$scope",my_service];
+function ctrl_two($scope,my_service){
+    $scope.var_two = my_service;
+}
