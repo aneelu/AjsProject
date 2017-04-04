@@ -334,3 +334,163 @@ Code.
     <div ng-repeat-end>
         {{x.footer}}
     </div>
+
+4.ng-class-odd
+
+    - used to apply the css classes to the odd rows of table.
+
+Syntax.
+
+    ng-class-odd=" 'css classes' "
+
+
+5.ng-class-even
+
+    - used to apply the css classes to the even rows of table.
+
+Syntax.
+
+    ng-class-even = " 'css classes' "
+
+
+[ Note. ng-class-odd & ng-class-even applicable with ng-repeat directive]
+
+
+Ex.
+
+    app.controller("ctrl" , ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl($scope){
+        $scope.data=[{"id":1,"name":"Hello_1","age":20},
+                      {"id":2,"name":"Hello_2","age":22},
+                       {"id":3,"name":"Hello_3","age":24},
+                       {"id":4,"name":"Hello_4","age":26},
+                       {"id":5,"name":"Hello_5","age":28}];
+    }
+
+
+
+    <style>
+        even{
+            color:red;
+            text-align:center;
+        }
+
+        odd{
+            color:green;
+            text-align:center;
+        }
+    </style>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr ng-repeat="x in data" ng-class-odd="'odd'" ng-class-even="'even'">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    </table>
+
+6.ng-options.
+
+    - used to populate the data to the dropdown.
+
+Syntax.
+
+    ng-options=" 'model_values'
+                    as
+                 'dropdown_values'
+                    for
+                 'iteration_variable'
+                     in
+                 'collection'  "
+
+
+Ex_1.
+
+    $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+
+model --->     [H_1 to H_5]
+dropdown --->  [H_1 to H_5]
+
+<select ng-model="my_model"
+        ng-options="y as y for y in data">
+        <option value="">--Select One--</option>
+</select>
+
+
+
+Ex_2.
+
+    $scope.data=[
+                    {"id":1,"name":"Hello_1"},
+                    {"id":2, "name":"Hello_2"},
+                    {"id":3, "name":"Hello_3"},
+                    {"id":4, "name":"Hello_4"},
+                    {"id":5, "name":"Hello_5"}
+                ];
+
+
+    use case 1.
+            dropdown ---[H_1 to H_5]
+            model    --- [1 to 5]
+
+    ng-options="x.id as x.name for x in data"
+
+
+
+    use case 2.
+                dropdown ---[1 to 5]
+                model    --- [H_1 to H_5]
+
+    ng-options="x.name as x.id for x in data"
+
+
+    use case 3.
+                    dropdown ---[1 to 5]
+                    model    --- [1 to 5]
+
+        ng-options="x.id as x.id for x in data"
+
+
+    use case 4.
+                    dropdown ---[H_1 to H_5]
+                    model    --- [H_1 to H_5]
+
+        ng-options="x.name as x.name for x in data"
+
+
+
+
+    $scope.data = [
+                    {"id":1,"sub":"English","marks":50},
+                    {"id":2,"sub":"Science","marks":60},
+                    {"id":3,"sub":"Maths","marks":70}
+                  ];
+
+    dropdown --- [1 to 3]
+    model    --- [English -- Maths & 50 -- 70]
+
+    ng-options="x.sub+"..."+x.marks as x.id for x in data"
+
+
+7.ng-init.
+
+        - used to declare the application data statically
+          in the form of a "key&value" pairs.
+
+        - each "key&value" pair separated with ";"
+
+        <div ng-init="db_user='root';
+                      db_password='root';
+                      frequent_changes=true;
+                      list_of_tables=['emp','student']"
+              {{db_user}}
+              {{db_password}}
+              {{frequent_changes}}
+              <p ng-repeat="x in list_of_tables">{{x}}</p>
+        </div>

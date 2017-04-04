@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Subject</th>
+        </tr>
+
+        <tr ng-repeat="x in data" ng-class-even="'even'" ng-class-odd="'odd'">
+            <td>{{x.id}}</td>
+            <td>{{x.sub}}</td>
+        </tr>
+    </table>
+
+
+
+    <style>
+        .odd{
+            color: red;
+            font-weight: bold;
+        }
+        .even{
+            color: green;
+            font-weight: lighter;
+        }
+    </style>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [{"id":1,"sub":"AngularJS"},
+                            {"id":2,"sub":"NodeJS"},
+                            {"id":3,"sub":"Angular2"},
+                            {"id":4,"sub":"reactJS"},
+                            {"id":5,"sub":"Angular3"}
+            ];
+        }
+    </script>
+
+
+</html>
