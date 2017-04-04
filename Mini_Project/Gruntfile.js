@@ -6,7 +6,7 @@ module.exports = function(grunt) {
             build: {
                 files: [
                     {
-                        src: ['./Mini_Project/controllers/*.js'],
+                        src: [__dirname+'/controllers/*.js'],
                         dest: 'js/global.min.js'
                     }
                 ]
