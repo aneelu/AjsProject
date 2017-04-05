@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <h1>Indian Currency.{{100 | my_currency:'₹': true}}</h1>
+    <h1>UK Currency.{{100 | my_currency:'£': false}}</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).filter("my_currency",function () {
+            return function (amount,symbol,position) {
+                if(position){
+                    return symbol+amount;
+                }else{
+                    return amount+symbol;
+                }
+            }
+        });
+    </script>
+</html>
