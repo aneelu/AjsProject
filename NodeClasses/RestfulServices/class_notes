@@ -108,20 +108,82 @@ app.post("/",function(req,res){
 
 
 
+Example.
+
+    Send the JSON Object as post parameter from AngularJS
+
+    to Node Server.
+
+post_server.js
+-
+var express = require("express");
+var fs = require("fs");
+var app = express();
+app.post("/authenticate",function(req,res){
+    //AngularJS ---> {"username":"admin","password":"admin"}
+    if( (req.body.username)=='admin' && (req.body.password)=='admin'){
+        fs.readFile(__dirname+"/emp.json",function(err,data){
+            res.send(data);
+        });
+    }else{
+        res.send({"error":404});
+    };
+});
 
 
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+    <form ng-submit="postUserDetails({"username":uname,"password":upwd})">
+        <label>Uname.</label>&emsp;
+        <input type="text" ng-model="uname">
+        <br><br>
+        <label>Password</label>
+        <input type="password" ng-model="upwd">
+        <br><br>
+        <input type="submit">
+    </form>
+    <h1>{{var_one}}</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function($scope,$http){
+            $scope.postUserDetails = function(data){
+                $http.post("/authenticate",data).then(function(response){
+                     $scope.var_one=response;
+                });
+            }
+        });
+    </script>
+</html>
+
+app.use(bodyparser.json());
+    - set the json as the MIME Type
+
+app.use(express.static(__dirname+"/../RestfulServices"));
+    - used to attach the "public accessing folder"(Restful Services)
+    - node server can access any resources from above folder.
 
 
+app.get("/" , function(req,res){
+   res.redirect("/post_example_one.html");
+});
+    - used to launch the default page when ever we start the server.
 
 
+Append the Post Parameters to the flat file(emp.json).
+AngularJS - {id:4,name:'Hello_4',age:26}
 
-
-
-
-
-
-
-
+app.post("/addEmp",function(req,res){
+    var id=req.body.id;
+    var name = req.body.name;
+    var age = req.body.age;
+    fs.readFile(__dirname+"/emp.json",function(err,data){
+        res.send(JSON.stringify(
+                    (JSON.parse(data))[3]=
+                        {"emp4":{'id':id,'name':name,'age':age}}
+                    )
+                );
+    });
+});
 
 
 

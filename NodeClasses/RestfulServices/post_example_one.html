@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+    <form ng-submit="postUserDetails({'username':uname,'password':upwd})">
+        <label>Uname.</label>&emsp;&emsp;&emsp;
+        <input type="text" ng-model="uname">
+
+        <br><br>
+        <label>Password</label>&emsp;
+        <input type="password" ng-model="upwd">
+
+        <br><br>
+        <input type="submit">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope,$http) {
+           $scope.postUserDetails = function(data){
+                $http.post("/authenticate",data).then(function (response) {
+                   console.log(response);
+                });
+           };
+        });
+    </script>
+
+
+</html>
