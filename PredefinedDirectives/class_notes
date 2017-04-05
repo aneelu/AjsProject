@@ -494,3 +494,116 @@ Ex_2.
               {{frequent_changes}}
               <p ng-repeat="x in list_of_tables">{{x}}</p>
         </div>
+
+
+8.ng-click
+
+    - when ever we click the user interface elements , automatically
+
+      ng-click directive executed by angular framework.
+
+
+Syntax.
+
+    ng-click = "Expression" /
+
+                "user defined function"
+
+                "user defined function with optional parameters"
+
+
+
+ngClickDemo_1.
+
+    Create three buttons.
+
+    1) + --->  glyphicon glyphicon-plus
+
+                count = count+1
+
+
+    2) blue shaded button  --->  btn btn-primary
+                                 {{count}}
+
+
+    3) - --> glyphicon glyphicon-minus
+
+             count = count-1
+
+
+ ngClickDemo_2.
+
+    - Declare the user defined function with ng-click directive.
+
+    - clickMe()
+
+    - display the alert message with button click
+
+
+ Ex.
+
+    <button ng-click="clickMe()">ClickMe</button> // declaration
+
+
+    app.controller("ctrl" , ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl($scope){
+        $scope.clickMe = function(){
+            alert("ngclick demo");    //impl
+        }
+    }
+
+
+ngClickDemo_3.
+
+    1.Create the two models
+        1.uname
+        2.upwd
+
+    2.declare the user defined function
+            login()
+
+    3.create the json object with model data.
+        {"u_name":uname,"u_pwd":upwd}
+
+    4. pass the json object to controller with login().
+        login({"u_name":uname,"u_pwd":upwd})
+
+
+9.ng-dblclick.
+
+    - when ever we double click the user interface elements ,
+
+      automatically ng-dblclick directive will be executed by angular
+
+      framework.
+
+
+Syntax.
+
+    ng-dblclick = "Expression" /
+
+                  "user defined function" /
+
+                  "user defined function with optional parameters"
+
+
+
+10.ng-if.
+
+    - used to write the conditions in view.
+
+Syntax.
+
+    ng-if = "true / false"
+
+
+ngIfDemo_1.
+
+    <lable>Uname.</label>
+    <input type="text" ng-model="uname">
+
+    <span ng-if="uname!=null && uname!=''">
+        <label>Password.</label>
+        <input type="password" ng-model="upwd">
+    </span>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <button ng-click="clickMe()">Click Me</button>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+           $scope.clickMe = function () {
+             alert("ngclick demo");
+           };
+        });
+    </script>
+
+</html>
