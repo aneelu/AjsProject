@@ -1,0 +1,10 @@
+The Services Provided by framework called as Predefined Services.
+
+1.$http
+2.$q
+3.$timeout
+4.$interval
+5.$location
+
+$http.
+    used to connect to servers by using http protocol.
