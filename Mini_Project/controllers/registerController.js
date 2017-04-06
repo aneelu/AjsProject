@@ -1,8 +1,9 @@
 app.controller("registerController",registerController);
-registerController.$inject=["$scope"];
-function registerController($scope) {
+registerController.$inject=["$scope","registerService"];
+function registerController($scope,registerService) {
     $scope.register = function (data) {
-        console.log(data);
+        registerService.register(data).then(function (response) {
+           console.log(response);
+        });
     };
-
 };

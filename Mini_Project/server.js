@@ -44,6 +44,21 @@ app.post("/login/authenicate",function(req,res){
     });
 });
 
+
+app.post("/register" , function (req,res) {
+    var uname = req.body.uname;
+    var fname = req.body.fname;
+    var lname = req.body.lname;
+    var upwd  = req.body.upwd;
+    var uphone = req.body.uphone;
+    var uaddress = req.body.uaddress;
+    var my_query="insert into user_details values("+"'"+uname+"'"+","+"'"+fname+"'"+","+"'"+lname+"'"+","+"'"+upwd+"'"+","+"'"+uphone+"'"+","+"'"+"xyx"+"'"+","+"'"+"male"+"'"+","+"'"+uaddress+"'"+")";
+    connection.query(my_query,function (err,res) {
+       console.log(err);
+    });
+
+});
+
 //Assign the Port No.
 app.listen(8080);
 console.log("Server Listening the Port No.8080");

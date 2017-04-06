@@ -1,3 +1,4 @@
+<!--
 <form ng-submit="register({u_name:uname,
                            f_name:fname,
                            l_name:lname,
@@ -43,4 +44,95 @@
 
 <br><br>
 
-<a ui-sref="login"><b>Login</b></a>
+<a ui-sref="login"><b>Login</b></a>-->
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home | VRSS</title>
+</head>
+
+<body>
+
+<!-- Document Wrapper
+============================================= -->
+<div class="wrap">
+    <div class="container">
+        <form class="form-horizontal register" ng-submit="register(
+                        {'uname':uname,
+                        'fname':fname,
+                        'lname':lname,
+                        'upwd':upwd,
+                        'ucpwd':ucpwd,
+                        'uphone':uphone,
+                        'uaddress':uaddress})">
+
+            <h3 class="mnone">Register</h3>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" ng-model="uname" class="form-control">
+                    </div>
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="username">First Name</label>
+                        <input type="text" ng-model="fname" class="form-control">
+                    </div>
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label for="username">Last Name</label>
+                        <input type="text" ng-model="lname" class="form-control">
+                    </div>
+                    <!-- Password-->
+                    <div class="form-group">
+                        <label class="control-label" for="password">Password</label>
+                        <input type="password" ng-model="upwd" class="form-control">
+                    </div>
+                    <!-- Password-->
+                    <div class="form-group">
+                        <label class="control-label" for="password">Confirm Password</label>
+                        <input type="password" ng-model="ucpwd" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" ng-model="uphone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Profile Image</label>
+                        <input type="file" ng-model="uprofile" class="form-control">
+                    </div>
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="Gender">Gender</label><br/>
+                        <input type="radio" ng-model="male"> Male&nbsp;&nbsp;
+                        <input type="radio" ng-model="female">Female
+                    </div>
+                    <!-- Username -->
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea  rows="5" cols="50" id="add" ng-model="uaddress" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group pull-right">
+                        <!-- Button -->
+                        <div class="controls">
+                            <button type="submit" class="btn btn-success">Register</button>
+                        </div>
+                    </div>
+                </div></div>
+        </form>
+    </div>
+</div>
+
+<!-- External JavaScripts
+============================================= -->
+<!--<script type="text/javascript" src="js/jquery.js"></script>-->
+
+
+</body></html>

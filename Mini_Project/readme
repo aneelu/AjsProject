@@ -236,4 +236,70 @@ Ex.
 
    ***********************************************
 
+Step 7.
+    Pass the data from register.html file to "registerController"
+Models in register.html.
+-
+1) uname
+2)fname
+3)lname
+4)upwd
+5)ucpwd
+6)uphone
+7)uaddress
 
+user defined function in register.html
+-
+    ng-submit="register({'uname':uname,
+                        'fname':fname,
+                        'lname':lname,
+                        'upwd':upwd,
+                        'ucpwd':ucpwd,
+                        'uphone':uphone,
+                        'uaddress':uaddress})"
+
+app.controller("registerController",registerController);
+registerController.$inject=["$scope","registerService"];
+function registerController($scope,registerService) {
+    $scope.register = function (data) {
+        registerService.register(data);
+    };
+};
+
+Step 8.
+    Pass the Data from registerController to registerService.
+
+    app.service("registerService",registerService);
+    registerService.$inject=["$http"];
+    function registerService($http) {
+        this.register = function (data) {
+            console.log(data);
+        };
+    };
+
+Step 9.
+    Create the Post Request in Node Server.
+    app.post("/register" , function(req,res){
+        var uname = req.body.uname;
+        var fname = req.body.fname;
+        var lname = req.body.lname;
+        var upwd  = req.body.upwd;
+        var uphone = req.body.uphone;
+        var uaddress = req.body.uaddress;
+    });
+
+
+Step 10.
+    Store the user details to the "login_details" table in "mini_project".
+
+
+    "insert into login_details values("'"+uname+"'",
+                                      "'"+fname+"'",
+                                      "'"+lname+"'",
+                                      "'"+upwd+"'",
+                                      "'"+uphone+"'",
+                                      'c:\images\logo.png',
+                                      'male',
+                                      "'"+uaddress+"'")";
+
+connection.query(""
