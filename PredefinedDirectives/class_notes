@@ -597,7 +597,6 @@ Syntax.
 
     ng-if = "true / false"
 
-
 ngIfDemo_1.
 
     <lable>Uname.</label>
@@ -607,3 +606,124 @@ ngIfDemo_1.
         <label>Password.</label>
         <input type="password" ng-model="upwd">
     </span>
+
+
+ngIfDemo_2
+-
+
+<h1 ng-repeat="x in data">
+        <!--<span ng-if="x!='Hello_1' && x!='Hello_5'">
+            {{x}}
+        </span>-->
+
+        <span ng-if="$middle">
+            {{x}}
+        </span>
+</h1>
+
+app.controller("ctrl",ctrl);
+ctrl.$inject=["$scope"];
+function ctrl($scope) {
+      $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+}
+
+    - framework will store all the form related errors in
+     "$error" object.
+
+ngIfDemo_3.
+    Display the form errors by using ng-if condition.
+
+<form name="myForm">
+    <label>Uname.</label>
+    <input type="text"
+           name="uname"
+           ng-model="uname"
+           ng-minlength="3"
+           ng-maxlength="6"
+           required>
+    <h1 ng-if="myForm.uname.$error.minlength">***Minimum 3 characters Are Required****</h1>
+    <h1 ng-if="myForm.uname.$error.maxlenggh">***Maximum 6 characters are allowed***</h1>
+    <h1 ng-if="myForm.uname.$error.required">***Can't Left Blank***</h1>
+</form>
+
+
+11.ng-switch
+    - used to write the switch cases in angular application.
+
+Syntax.
+    <div ng-switch="expression">
+        <div ng-switch-when="value_one">
+            ---
+            ---
+        </div>
+        <div ng-switch-when="value_two">
+            ---
+            ---
+        </div>
+            ---
+            ---
+        <div ng-switch-default>
+            ---
+            ---
+        </div>
+    </div>
+
+
+12. ng-submit.
+        - used to submit the form at a time to the controller.
+
+Syntax.
+
+<form ng-submit="login([parameters])">
+
+    ---
+    ---
+    ---
+    <input type="submit">
+</form>
+
+ - when ever we click the submit button automatically login() will executes
+
+<form ng-submit="login({'u_name':uname,'u_pwd':upwd})">
+        <label>Uname.</label>&emsp;&emsp;&emsp;
+        <input type="text" ng-model="uname">
+
+        <br><br>
+        <label>Upwd.</label>&emsp;&emsp;&emsp;
+        <input type="password" ng-model="upwd">
+
+        <br><br>
+        <input type="submit">
+</form>
+
+<script>
+     angular.module("app",[]).controller("ctrl",function ($scope) {
+        $scope.login = function (data) {
+             console.log(data.u_name+"..."+data.u_pwd);
+        };
+     });
+</script>
+
+13.ng-cloak
+   - used to avoid the flickering affect while displaying the output
+
+   <div ng-cloak ng-controller="ctrl_one">
+           <h1>{{var_one}}</h1>
+   </div>
+
+   <div ng-cloak ng-controller="ctrl_two">
+           <h1>{{var_two}}</h1>
+   </div>
+
+
+14.ng-show.
+    - used to show / hide the html elements based on condition.
+
+Syntax.
+    ng-show = "true" / "false"
+
+    <p ng-repeat = "x in [10,20,30,40,50]">
+         {{x}}
+        <button ng-show="$first">First</button>
+        <button ng-show="$last">Last</button>
+    </p>
