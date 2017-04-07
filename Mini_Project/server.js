@@ -59,6 +59,11 @@ app.post("/register" , function (req,res) {
 
 });
 
+
+var static = require("./server_files/static");
+app.use("/static",static);
+
+
 //Assign the Port No.
 app.listen(8080);
 console.log("Server Listening the Port No.8080");

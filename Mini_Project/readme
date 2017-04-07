@@ -302,4 +302,118 @@ Step 10.
                                       'male',
                                       "'"+uaddress+"'")";
 
-connection.query(""
+
+Home Module.
+
+1.Navigate to home page upto receiving the "success" response from server.
+
+loginController.js
+-
+$scope.login_details = function (data) {
+        loginService.authenicate(data).then(function (response) {
+            $localStorage.my_project=response; //AngularJS Storage
+            if(response.data.login=="success"){
+                $location.path("/home");
+            }else{
+                alert("Invalid Details !");
+            }
+        });
+};
+
+
+2. Implement the Nested Routing
+
+home.html
+-
+<a ui-sref=".emp">Static Data</a>&emsp;&emsp;&emsp;&emsp;
+<a ui-sref=".mysql">MySQL Data</a>&emsp;&emsp;&emsp;&emsp;
+<a ui-sref=".mongodb">MongoDB Data</a>&emsp;&emsp;&emsp;&emsp;
+<button ng-click="logout()">Logout</button>
+
+<br><br>
+
+<div ui-view>
+
+</div>
+
+
+------------------
+templates
+    static.html
+    mysql.html
+    mongo.html
+------------------
+
+--------------------
+controllers
+    staticController.js
+    mysqlController.js
+    mongoController.js
+---------------------
+
+
+
+$stateProvider.state("home.static",{
+    url:"/static",
+    templateUrl:"templates/static.html",
+    controller:"staticController"
+});
+
+
+
+
+3. read the Data from homeService.
+
+app.service("homeService",homeService);
+homeService.$inject=["$http","$localStorage"];
+function homeService($http,$localStorage) {
+    var token = $localStorage.my_project.data.token;
+    console.log(token);
+    this.readStatic = function () {
+        return "Data from Server Soon (Static)";
+    };
+    this.readMysql = function () {
+        return "Data from Server Soon (MySQl)";
+    };
+    this.readMongo = function () {
+        return "Data from Server Soon (MongoDB)";
+    };
+}
+
+
+
+4.read the data from the server
+
+    Ex.
+
+       static.json
+
+{
+    "subjects":[
+                    {"id":1,"sub":"AngularJS","rank":1},
+                    {"id":1,"sub":"Angular2","rank":2},
+                    {"id":1,"sub":"Angular4","rank":3}
+    ]
+}
+
+server_files / static.js
+-
+var express = require("express");
+var fs = require("fs");
+var router = express.Router();
+router.get("/",function (req,res) {
+    console.log(__dirname);
+    fs.readFile("D:\\AJS_Classes\\Mini_Project\\static.json"
+        ,function (err,data) {
+      res.send(data);
+   });
+});
+module.exports=router;
+
+
+var static = require("./server_files/static");
+app.use("/static",static);
+
+
+
+
