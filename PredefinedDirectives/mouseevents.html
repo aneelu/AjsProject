@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+    <div ng-mousedown="down()" ng-mouseup="up()">
+        ngMouseDown & ngMouseUp Events
+    </div>
+    <br><br>
+    <div ng-mouseover="over()" ng-mouseout="out()">
+        ngMouseOver & ngMouseOut Events
+    </div>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border: 2px solid red;
+            color: darkgreen;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+           $scope.down = function () {
+             console.log("Mouse Down Event Fired !");
+           };
+
+           $scope.up = function () {
+             console.log("Mouse Up Event Fired !");
+           };
+
+           $scope.over = function () {
+             console.log("Mouse Over Event !");
+           };
+
+           $scope.out = function () {
+             console.log("Mouse Out Event !");
+           };
+        });
+    </script>
+</html>

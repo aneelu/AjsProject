@@ -727,3 +727,52 @@ Syntax.
         <button ng-show="$first">First</button>
         <button ng-show="$last">Last</button>
     </p>
+
+15.ng-hide
+    - used to show / hide the html elements based on condition.
+
+Syntax.
+
+    ng-hide="true" / "false"
+
+
+16.ng-change
+    - this directive associates with input fields.
+
+    - when ever we change the data in input fields automatically this
+
+      directive executed by angular framework.
+
+Syntax.
+    ng-change = "user defined function"
+
+
+17.ng-include
+    - used to divide the view into number of sub views.
+    - when ever we divide view into number of sub views automatically
+      readability will be increased.
+
+Syntax.
+
+    ng-include = "name of the sub view"
+
+
+Mouse Events
+-
+
+18.ng-mousedown /
+
+   ng-mouseup   /
+
+   ng-mouseover /
+
+   ng-mouseout  /               "user defined function"
+
+   ng-mouseenter /
+
+   ng-mouseleave /
+
+   ng-mousemove
+
+    - when ever we performs the mouse events , automatically
+      user defined function will executed by angular framework.
