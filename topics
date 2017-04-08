@@ -126,3 +126,124 @@ Introduction.
                                       "ngAnimate"]);
             </script>
          </html>
+
+
+Environmental Setup.
+    - The Softwares Required to develop Angular Application
+      called  as Environmental Setup.
+
+
+1.bower.
+
+    bower is the automation plugin used to download the required
+    resources to develop web application.
+
+    bower is the plugin given by the NodeJS.
+
+
+bower components.
+-
+1.bower.json
+2. .bowerrc.json
+
+
+Software Installations.
+
+1.Download and Install the NodeJS.
+
+    website : https://nodejs.org/en/download/
+
+    file    : node-v6.10.2-x64.msi
+
+
+2.Download and Install the git.
+
+    website : https://git-scm.com/downloads
+
+    file    : Git-2.12.2.2-64-bit.exe
+
+
+3. Download the WebStrom IDE.
+
+    website : https://www.jetbrains.com/webstorm/
+              download/#section=windows
+
+    file    : Webstrom-2017.1.exe
+
+
+4. Add the bower plugin to the WebStrom IDE.
+
+    Open the terminal in WebStrom IDE.
+
+        (Alt+F12)
+
+    npm install -g bower
+
+
+Angular Frame work path given by bower.
+    bower_components / angular / angular.min.js
+
+Bootstrap Framework path given by bower.
+    bower_components/ bootstrap / dist / css / bootstrap.min.css
+
+jquery library path given by bower.
+    bower_components / jquery/ dist / jquery.min.js
+
+
+Angular Applications.
+
+    by using AngularJS We Can Create Two types of Angular Applications.
+
+    1.Static Angular Application
+
+    2.Dynamic Angular Application
+
+
+Static Angular Application.
+
+    If View won't interacts with the controller for dynamic data
+
+    then such type angular application called as Static Angular Application.
+
+Steps to Create the Static Angular Application.
+
+Step 1.
+    Download the Angular Framework by using bower.
+
+Step 2.
+    Load the Framework
+    <script src = "bower_components / angular / angular.min.js"></script>
+
+Step 3.
+    Create the View
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app>
+    <input type="number" ng-model="model_one"> <br><br>
+    <input type="number" ng-model="model_two">
+    <h1 style="color:red" ng-bind="model_one+model_two"></h1>
+    <script src = "bower_components / angular / angular.min.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
