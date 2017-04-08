@@ -1,0 +1,128 @@
+1.Introduction
+    1. AngularJS?
+    2. Why ?
+
+2.Environmental Setup
+    Bower
+    GitHub
+    IDE'S - WebStrom , Visual Studio , Ecilipse
+
+3.Angular Applications
+    1.Static Angular Application
+    2.Dynamic Angular Application
+
+4.Directives
+
+    Predefined Directives.
+
+    1.ng-app
+
+    2.ng-controller
+
+    3.ng-click
+
+    4.ng-repeat
+
+    5.ng-submit
+
+    6.ng-model
+
+    7.ng-bind
+
+            ---
+            ---
+            ---
+
+    Custom Directives
+
+
+5. Services.
+
+    1.Predefined Services
+
+    2.Custom Services
+
+
+6. Single Page Applications
+
+    1.ngRoute
+    2.ui.router
+
+
+7.NodeJS
+
+
+Introduction.
+    - AngularJS is a client side javascript MVC Framework.
+
+    - AngularJS Follows the MVC Design Pattern.
+
+        M - Model (javaScript Variables)
+        V - View  (HTML / HTML5)
+        C - Controller (JavaScript Functions)
+
+    - AngularJS have a so many predefined Modules ,
+      as a AngularJS Developer we can use the predefined Modules.
+
+      1.ngMessages
+      2.ngAnimate
+      3.ngStorage
+      4.ngRoute
+      5.ui.router
+
+        --
+        --
+        --
+
+      ngMessages.
+
+        - used to handle the client side validations.
+
+      ngAnimate.
+
+        - used to develop the Animations/
+
+      ngStorage.
+
+        - used to work with the Storages.
+
+            1.localStorage
+
+            2.sessionStorage
+
+      ngRoute.
+
+        - used to Achieve the Routing in Single Page Applications.
+
+        - ngRoute is the Native Module.
+
+        - ngRoute Have So many limitations
+
+
+      ui.router.
+
+        - used to Achieve the Routings in Single Page Applications.
+
+        - ui.router module the 3 rd party module.
+
+        - ui.router module have a so many advantages compared to ngRoute Module.
+
+      Ex.
+
+         index.html
+         -
+         <html ng-app="app">
+              //Client Side Validations
+              //Implement the Storages
+              //SPA - ui.router
+              //Animations
+          <script
+               src="https://ajax.googleapis.com/ajax/libs/
+                    angularjs/1.6.4/angular.min.js"></script>
+            <script>
+                angular.module("app",["ngMessages",
+                                      "ngStorage",
+                                      "ui.router",
+                                      "ngAnimate"]);
+            </script>
+         </html>
