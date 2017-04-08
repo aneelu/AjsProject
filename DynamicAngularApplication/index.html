@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="ctrl">
+        <h1>{{var_one}}<==>{{var_two}}<==>{{var_three}}</h1>
+    </div>
+    <script src="../Scripts/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+
+        app.controller("ctrl", function ($scope) {
+            $scope.var_one = "AngularJS";
+            $scope.var_two = "NodeJS";
+            $scope.var_three = "MongoDB";
+        });
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -227,10 +227,59 @@ index.html
     <script src = "bower_components / angular / angular.min.js"></script>
 </html>
 
+Dynamic Angular Application.
+
+    - If View Interacting with the Controller for dynamic data
+      then such type of Angular Application called as Dynamic
+      Angular Application.
 
 
+Step 1.
+    Load the Angular Framework
+
+Step 2.
+    Declare the ng-app directive with the logical name of the web application.
+
+Step 3.
+    Declare the controller.
+
+Step 4.
+    Instantiate the Module (Getting the whole page control)
+    var app = angular.module("app",[]);
 
 
+Step 5.
+    Implement the Controller
+
+    app.controller("ctrl",function(){
+
+
+    });
+
+
+Directives.
+    - used to enhance the HTML Capabilities.
+
+    - we have two types of directives.
+
+            Predefined Directives.
+
+                  - The Directives Given by the Framework
+
+    1.ng-app
+
+        - framework starts the execution from ng-app directive.
+
+        - we can have only one ng-app per application.
+
+        - running angular application forcefully without ng-app called as
+
+          manual bootstrap.
+
+
+     2.ng-controller
+
+        we can have more than one controller per web application.
 
 
 

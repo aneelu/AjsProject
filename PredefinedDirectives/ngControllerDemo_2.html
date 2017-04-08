@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    {{my_fun()}}
+    <div ng-controller="ctrl">
+        {{my_fun()}}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[])
+            .controller("ctrl",function ($scope,$rootScope) {
+            $scope.var_one="AngularJS";
+            $scope.var_two="Angular2";
+            $scope.var_three="Angular4";
+            $rootScope.my_fun = function () {
+                return $scope.var_one+"..."+$scope.var_two+"..."+$scope.var_three;
+            };
+        });
+    </script>
+</html>
