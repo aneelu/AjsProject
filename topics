@@ -281,18 +281,47 @@ Directives.
 
         we can have more than one controller per web application.
 
+    3.ng-click
+
+        - when ever we click the user interface elements , automatically
+          ng-click directive will executes by angular framework
+
+    Syntax.
+
+          ng-click = "Expression" /
+                     "user defined function" /
+                     "user defined function with parameters"
 
 
+    4.ng-repeat.
+            used to iterate the list of elements from an collection.
+
+    Syntax.
+        ng-repeat = "'iteration_variable' in 'collection'"
+
+    Ex.
+
+        ng-repeat = "x in [10,20,30,40,50]"
+
+        {{x}}
 
 
+5.ng-submit.
+    used to submit whole form at a time to the controller.
 
+Syntax.
 
+    <form ng-submit = "my_fun()">
 
+        ---
+        ---   Form Elements
+        ---
+       <input type="submit">
+    </form>
 
+    - when ever we click the "submit" button automatically
 
-
-
-
+      my_fun() will executes in controller
 
 
 

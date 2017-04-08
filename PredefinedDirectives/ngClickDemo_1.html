@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <button class="glyphicon glyphicon-plus" ng-click="count=count+1"></button>
+    <button class="btn btn-primary">{{count}}</button>
+    <button class="glyphicon glyphicon-minus" ng-click="count=count-1"></button>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject = ["$scope"];
+        function ctrl($scope) {
+            $scope.count = 0;
+        }
+    </script>
+</html>
