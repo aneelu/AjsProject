@@ -610,6 +610,140 @@ Modules in NodeJS.
 
 
 
+Custom Directives.
+
+    - Creating our own directive based on Application Requirement called as Custom Directive.
+
+    - In AngularJS We Can use the Custom Directives in 3 ways.
+
+        1.Element
+
+        2.Attribute
+
+        3.CSS Class
+
+    Ex.  name of the custom directive --> my_directive.
+
+    <my_directive></my_directive>
+
+    <h1 my_directive></h1>
+
+    <h1 class="my_directive"></h1>
+
+
+Properties Of Custom Directives.
+
+ 1.restrict.
+
+    Ex.
+
+        app.directive("my_directive" , my_directive);
+
+        function my_directive(){
+
+            return{
+
+                restrict:'EAC'
+
+            }
+        }
+
+
+ 2.template
+
+    Ex.
+
+            app.directive("my_directive" , my_directive);
+
+            function my_directive(){
+
+                return{
+
+                    restrict:'E'
+
+                    template:'<b>Welcome to Custom Directives</b>'
+
+                }
+            }
+
+
+            <my_directive></my_directive>  //Welcome to Custom Directives
+
+
+ 3.templateUrl.
+
+ sample.html
+ -
+  <b>Welcome to Custom Directives</b>
+
+  app.directive("my_directive" , my_directive);
+
+  function my_directive(){
+
+    return {
+        restrict:"A",
+        templateUrl:"sample.html"
+    }
+  }
+
+
+ <h1 my_directive></h1> //Welcome to Custom Directives
+
+
+ 4.controller.
+
+ sample.html
+ -
+
+ {{var_one}}
+
+
+ sample.js
+ -
+
+ $scope.var_one="Welcome to Custom Directives"
+
+
+ app.directive("my_directive" , my_directive);
+
+ function my_directive(){
+
+    return{
+        restrict:'C',
+        templateUrl:"templates/sample.html",
+        controller:"sample"
+    }
+
+ }
+
+ <h1 class="my_directive"></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
