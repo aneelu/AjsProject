@@ -575,6 +575,46 @@ Custom Services.
 
 
 
+NodeJS.
+    - NodeJS is a server scripting language.
+    - by using nodejs we can create both http & tcp servers
+    - As a node developer we can assign the port nunber to the server.
+    - Application itself acting as server as well as business component
+
+
+Modules in NodeJS.
+
+1.express
+    - used to implement rest api in node js.
+
+2.body-parser
+    - used to set the MIME Type.
+
+3.mysql
+    - used to connect with the mysql database.
+
+4.mongodb
+    - used to connect with the mongodb
+
+5.fs
+    - used to work with the flat files.
+    Ex.
+
+        text files
+        json files
+        xml files
+            --
+            --
+            --
+
+
+
+
+
+
+
+
+
 
 
 
