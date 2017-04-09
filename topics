@@ -521,6 +521,58 @@ Step 6.
 
 
 
+Services.
+    Services are meant for writing the common business logic in angular application.
+    Services are reusable components
+    Services Can provide the "common service" to the controllers.
+    we have two types of services.
+    1.Custom Services
+    2.Predefined Services
+
+Custom Services.
+    - Creating our own servuces based on application requirement called as
+      Custom Services
+
+    - In AngularJS We Can Create Custom Services by using following
+      Predefined functions.
+
+      1.provider()
+      2.factory()
+      3.value()
+      4.constant()
+      5.service()
+
+
+    Creating the Custom Services by using provider().
+    -
+    app.provider("my_service",my_service);
+                    //arg1  -  name of custom service
+                    //arg2  -  user defined function.
+    function my_service(){
+        this.$get = function(){
+            return "Data from Node Server....";
+        }
+    }
+
+
+    page_one.js
+    -
+    app.controller("page_one",page_one);
+    page_one.$inject=["$scope","my_service"];
+    function page_one($scope,my_service){
+        $scope.var_one = my_service;
+    }
+
+
+    page_two.js
+    -
+    app.controller("page_two",page_two);
+    page_two.$inject=["$scope","my_service"];
+    function page_two($scope,my_service){
+         $scope.var_two = my_service;
+    }
+
+
 
 
 
