@@ -1,0 +1,34 @@
+NodeJS.
+    - NodeJS is the Server Side Scripting Language.
+    - By using NodeJS We Can Create our own servers
+    - By using NodeJS We Can Create both http & tcp servers.
+    - We Can Assign the Port Numbers to the Node Servers.
+    - Application it self acting as server as well as business component.
+    - Node Applications we can create by using javascript.
+
+Modules in NodeJS.
+
+1.express
+    - it is a framework , used to develop the rest api.
+
+2.mysql
+    - used to connect with the mysql database.
+
+3.mongodb
+    - used to connect with the mongodb.
+
+4.body-parser
+    - used to set the MIME Type.
+
+5.http
+    - used to create the http servers.
+
+6.fs
+    - used to read the data from the flat files.
+
+7.cookie-parser.
+    - used to work with the cookies in browser.
+
+8.jwt-simple.
+    - used to maintain the token based authenication system.
+
