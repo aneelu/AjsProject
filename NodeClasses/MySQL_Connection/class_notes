@@ -1,0 +1,43 @@
+//import the mysql
+var mysql = require("mysql");
+
+//connection object
+mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"root",
+    database:"node"
+
+});
+
+//connect to DataBase.
+connection.connect();
+
+//CRUD Operations
+connection.query("***********************",function(arg1,arg2,......argn){
+
+    //Result
+});
+
+
+Creating the schema.
+
+    >create schema node;
+
+
+Switch to node.
+
+    >use node;
+
+
+Create the table in "node" schema.
+
+    >create table emp(eid integer,ename varchar(20),eage integer);
+
+insert the data into table.
+
+    >insert into emp values(1,'Hello_1',20);
+
+
+
+
