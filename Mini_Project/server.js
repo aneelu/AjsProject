@@ -63,6 +63,17 @@ app.post("/register" , function (req,res) {
 var static = require("./server_files/static");
 app.use("/static",static);
 
+var mongodb = require("./server_files/mongo");
+app.use("/mongodb",mongodb);
+
+
+app.get("/mysql",function (req,res) {
+    connection.query("select * from emp",function (err,records,fields) {
+        res.send(records);
+    });
+});
+
+
 
 //Assign the Port No.
 app.listen(8080);

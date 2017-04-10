@@ -14,11 +14,15 @@ function homeService($http,$localStorage) {
 
     this.readMysql = function () {
 
-        return "Data from Server Soon (MySQl)";
+        return $http.get("/mysql").then(function (response) {
+            return response;
+        });
     };
 
     this.readMongo = function () {
 
-        return "Data from Server Soon (MongoDB)";
+        return $http.get("/mongodb").then(function (response) {
+            return response;
+        });
     };
 }

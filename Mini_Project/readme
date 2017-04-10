@@ -415,5 +415,29 @@ var static = require("./server_files/static");
 app.use("/static",static);
 
 
+Reading the Data from MongoDB
+-
+
+1.Create the databse.
+
+    >use project;
+
+2.Create Collection.
+
+    >db.createCollection("demo");
+
+3.Insert the Objects.
+
+    >db.demo.insert({"id":1,"name":"Hello_1","age":20});
+
+
+4.Fetch the Objects from Collection.
+
+    >db.demo.find();
+
+
+
+Reading the Data From the MySQL.
+
 
 
