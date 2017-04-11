@@ -160,3 +160,103 @@ CustomDirectives
     <script src="directives/elemType.js"></script>
 </html>
 
+
+Example_2.
+
+----------------------
+templates
+    header.html
+----------------------
+
+header.html
+-
+
+<div class="dropdown">
+            -- makes the div as the dropdown
+
+    <button class = "btn btn-primary dropdown-caret"
+                    -- creating the style to the button
+
+            data-toggle="dropdown">ClickMe</button>
+            -- applying the jquery event
+
+    <ul class = "dropdown-menu">
+            - creating the menu.
+
+        <li>Option_1</li>
+        <li>Option_2</li>
+        <li>Option_3</li>
+        <li>Option_4</li>
+        <li ng-click="logout()">Logout</li>
+    </ul>
+</div>
+
+-----------------------
+controllers
+        header.js
+-----------------------
+
+app.controller("header" , header);
+header.$inject = ["$scope"];
+function header($scope){
+    $scope.logout = function(){
+        console.log("Logged Out Successfully !");
+    }
+}
+
+
+-------------------------
+directives
+    header.js
+-------------------------
+app.directive("header" , header);
+function header(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/header.html',
+        controller:'header'
+    }
+}
+
+
+index.html
+-
+
+<html ng-app="app">
+    <header></header>
+    <script src="bower_components / angular / angular.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/header.js"></script>
+    <script src="controllers / header.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
