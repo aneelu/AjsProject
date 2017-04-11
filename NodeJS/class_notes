@@ -32,3 +32,8 @@ Modules in NodeJS.
 8.jwt-simple.
     - used to maintain the token based authenication system.
 
+Example_1.
+    Launch the Angular Application By using Node Server.
+
+Example_2.
+    Reading the Data from Static file (emp.json)
