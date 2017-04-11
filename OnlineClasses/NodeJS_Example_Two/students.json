@@ -1,0 +1,9 @@
+{
+  "list_of_students":[
+                        {"name":"Vanishree","Subject":"UI"},
+                        {"name":"Pranitha" , "Subject":"Angular"},
+                        {"name":"Rajesh" , "Subject":"Angular2"},
+                        {"name":"Yakesh" , "Subject":"NodeJS"},
+                        {"name":"Naresh" , "Subject":"All Technologies"}
+  ]
+}
