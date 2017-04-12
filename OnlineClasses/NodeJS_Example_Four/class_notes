@@ -1,0 +1,17 @@
+MongoDB.
+
+Website : https://www.mongodb.com/
+file name : mongodb-win32-x86_64-2008plus-ssl-3.4.3-signed.msi
+
+Create the local DB for MongoDB.
+
+C:\data\db
+
+
+Start the Server.
+    >mongod
+
+Connect to Server.
+    >mongo
+
+Queries to work with the MongoDB.
