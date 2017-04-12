@@ -1,0 +1,43 @@
+
+    - Formating the data accroding to end user requirement.
+
+    - we have two types of filters.
+
+        1.Predefined Filters
+        2.Custom Filters
+
+
+1.Predefined Filters.
+    The Filters Given By the Framework called as Predefined Filters.
+
+1.uppercase
+    used to convert the lowercase characters to uppercase.
+
+    $scope.var_one = "hello";
+
+    {{var_one}} // hello
+
+    {{var_one | uppercase }}  //HELLO
+
+
+2.lowercase
+    used to convert the uppercase letters to lowercase.
+
+    $scope.var_two = "HELLO";
+
+    {{var_two}} //HELLO
+
+    <p ng-bind="var_two | lowercase"></p>  //hello
+
+
+3.currency
+    - used to add the "$" symbol to numerical values.
+
+    $scope.var_three=100;
+
+    {{var_three}} // 100
+
+    {{var_three | currency }} // $ 100.00
+
+    {{var_three | currency : "$" : 4}} // $100.0000
+
