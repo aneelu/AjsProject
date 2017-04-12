@@ -37,3 +37,96 @@ Example_1.
 
 Example_2.
     Reading the Data from Static file (emp.json)
+
+Example_3.
+    Reading the Data from MySQL.
+
+    - mysql is the module used to interact with the MySQL DataBase.
+
+DB Opearions.
+1.Create the Schema
+> create schema demo;
+
+2.switch to demo.
+>use demo;
+
+3.create the table.
+> create table subjects(sno integer,name varchar(20),marks integer);
+
+
+4.insert the data.
+> insert into subjects values(1,'AngularJS',80);
+
+
+5.Fetch data from DataBase.
+> select * from subjects;
+
+
+
+Example_4.
+    Reading the Data From MongoDB.
+
+    By using MongoDB we can perform DB Opearations on JSON.
+
+    1.We Can Store the JSON into MongoDB.
+
+    2.We Can update the JSON Objects.
+
+    3.We Can Delete the JSON Objects.
+
+            ---
+            ---
+
+MongoDB Installation.
+
+website : https://www.mongodb.com/
+
+file name : mongodb-win32-x86_64-2008plus-ssl-3.4.3-signed.msi
+
+
+Folder Structure.
+C:\data\db
+
+
+Set the Classpath.
+path = C:\Program Files\MongoDB\Server\3.4\bin
+
+
+Start the Mongo Server.
+>mongod
+
+
+Client Should Connect MongoServer
+>mongo
+
+
+DB Opearions.
+-
+1.Create the database & Switch to the DataBase.
+>use test;
+
+
+2.Create the Collection.
+>db.createCollection("subjects");
+
+
+3.Insert the JSON Object into "subjects" collection in "test" database.
+>db.subjects.insert({id:1,name:'Hello_1',age:20});
+
+
+4.Fetch the Objects from Collection.
+>db.subjects.find();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
