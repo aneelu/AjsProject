@@ -1,0 +1,60 @@
+HTML.
+
+    HTML Stands fro Hyper Text Mark up language.
+
+    HTML Used to Develop the Web Pages.
+
+
+HTML Strucure.
+
+    - Declaration
+
+    - Root Element
+
+    - Head Section
+
+    - Body Section
+
+
+    - HTML Pages we will develop by using Element
+
+        Ex.
+
+            <html></html>
+
+            <head></head>
+
+                --
+                --
+                --
+
+index.html
+-
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My First Web Page</title>
+    </head>
+
+    <body>
+        Welcome to First HTML Page
+    </body>
+</html>
+
+
+
+1.<b> </b>  -- (bold)  used to make the text as bold
+
+2.<i> </i>  --- (italic)  used to make the text as italic.
+
+3.<font> </font>
+
+4.<h1>......</h1>   to  <h6>.....</h6>    Headings
+
+5.&nbsp;   -- single line space
+
+6.&emsp;   -- tab space
+
+7.<br></br>  -- single line break
+
