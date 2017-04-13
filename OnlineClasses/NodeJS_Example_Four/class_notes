@@ -15,3 +15,20 @@ Connect to Server.
     >mongo
 
 Queries to work with the MongoDB.
+
+
+1.Create the database.
+>use online;
+
+
+2.Create the Collection.
+>db.createCollection("emp");
+
+3.Insert the Data into emp collection.
+>db.emp.insert({"id":1,"name":"Hello_1","age":20});
+
+
+4.fetch the data from the database.
+>db.emp.find()
+
+
