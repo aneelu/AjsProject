@@ -1,0 +1,9 @@
+.my_class{
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+    color: green;
+    font-size: inherit;
+    font-family: 'Times New Roman';
+    text-align: center
+}

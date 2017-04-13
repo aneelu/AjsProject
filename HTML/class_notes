@@ -5,7 +5,7 @@ HTML.
     HTML Used to Develop the Web Pages.
 
 
-HTML Strucure.
+HTML Structure.
 
     - Declaration
 
@@ -58,3 +58,40 @@ index.html
 
 7.<br></br>  -- single line break
 
+8. <input>   -- Create the Input Elements like User Names , passwords , Numbers , ...
+
+9.<label> </label>  -- used to create the labels in web application
+
+10.<button> </button>  -- to create the buttons in web application.
+
+11.<form></form>   -- used to create the form in web application.
+
+    Ex.
+
+        //Login Form.
+
+        <form action="http://localhost:8080/myserver" method="post">
+
+            <label>Email.</label>&emsp&emsp&emsp&emsp
+            <input type="email" name="my_email">
+
+            <br><br>
+            <label>Password.</label>
+            <input type="password" name="upwd">
+
+            <br><br>
+            <input type="submit"></input>
+
+        </form>
+
+12.<a> </a>
+
+13.style
+
+    - used to apply the css style to the HTML Elements
+
+    - we can apply the styles in 2 ways.
+
+        - inline css style
+
+        - external css style
