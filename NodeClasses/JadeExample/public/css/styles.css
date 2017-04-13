@@ -1,0 +1,34 @@
+.errMsg {
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+}
+
+.header {
+	background: #ccc;
+	padding: 20px 10px;
+	border: 2px solid;
+	border-radius: 5px;
+}
+
+.footer {
+	background: #ccc;
+	text-align: center;
+	font-size: 10px;
+	color: #fff;
+	padding: 10px 0;
+	font-weight: bold;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.productDetails {
+	width: 300px;
+	border: 1px solid;
+	margin: 5px auto;
+	overflow: auto;
+	height: 350px;
+}

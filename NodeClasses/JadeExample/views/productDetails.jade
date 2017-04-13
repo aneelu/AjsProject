@@ -1,0 +1,21 @@
+-var titlemsg = "welcome to our page"
+html
+	head
+		link(rel="stylesheet" type="text/css" href="/css/styles.css")
+		title
+			| Product details page
+	body
+		div.header=titlemsg
+		div.productDetails
+			span=test
+			ul
+				each item in data
+					li
+						div
+							|Name is
+							span=item.name
+						div
+							|Price is
+							span=item.price
+		div.footer
+			| @copy 2106 Node classes
