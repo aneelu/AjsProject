@@ -1,0 +1,98 @@
+Syllabus.
+
+1.Introduction
+    1.AngularJS.
+    2.Advantages Of AngularJS
+    3.Disadvantages Of AngularJS
+    4.Key Features Of AngularJS
+    5.Comparision Of AngularJS - Angular2
+                     AngularJS - Angular4
+                     AngularJS - reactJS
+                     AngularJS - NodeJS
+
+
+2.Environmental Setup.
+    1.GitHub
+    2.CDN
+    3.IDE'S - WebStrom , Ecilipse , Visual Studio , Brackets , Sublime Text Editor,...
+    4.Automation Tools : Bower
+                         Grunt
+                         Gulp
+
+
+3.Angular Applications
+    1.Dynamic Angular Application
+    2.Static Angular Application
+
+
+4. MVC In AngularJS
+
+
+5. Dependency Injection In AngularJS
+
+
+6. Two Way Data Binding
+
+
+7. Directives
+    1.Predefined Directives
+    2.Custom Directives
+
+
+8. Communication Between Controllers
+
+9.Filters
+    1.Predefined Filters
+    2.Custom Filters
+
+10.Services
+    1.Predefined Services
+    2.Custom Services
+
+
+11.Single Page Applications
+
+
+12.Routing in Single Page Applications.
+    1.ngRoute
+    2.ui.router
+
+
+13.Storages in AngularJS
+
+    1.localStorage
+    2.sessionStorage
+
+
+14.Validations
+
+
+15.NodeJS
+
+    1.MySQL DB Communication.
+    2.MongoDB Communication
+
+
+16.MeanStack Development
+
+17.Mini Project
+
+    - SPA
+
+    - Node
+
+    - MongoDB
+
+    - JQuery
+
+    - BootStrap
+
+        --
+        --
+        --
+
+
+18.Angular2
+
+
+
