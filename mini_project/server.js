@@ -16,8 +16,9 @@ app.use(bodyparser.json());
 
 
 //import the mysql.
-var mysql=require("mysql");
+//var mysql=require("mysql");
 //create connection object.
+/*
 var connection = mysql.createConnection({
    host:'localhost',
     user:'root',
@@ -26,6 +27,7 @@ var connection = mysql.createConnection({
 });
 //connect to database.
 connection.connect();
+*/
 
 
 var jwt = require("jwt-simple");
@@ -34,14 +36,14 @@ var jwt = require("jwt-simple");
 //create the post url.
 app.post("/login/authenicate",function(req,res){
     var uname = req.body.u_name;
-    connection.query("select uname from user_details where uname='"+uname+"'",function (err,records,fields) {
+    /*connection.query("select uname from user_details where uname='"+uname+"'",function (err,records,fields) {
         if(records.length>0){
             var token = jwt.encode({uname:uname},"123456ABCDEF");
             res.send({login:"success",token:token});
         }else{
             res.send({login:"failure"});
         };
-    });
+    });*/
 });
 
 
@@ -67,11 +69,11 @@ var mongodb = require("./server_files/mongo");
 app.use("/mongodb",mongodb);
 
 
-app.get("/mysql",function (req,res) {
+/*app.get("/mysql",function (req,res) {
     connection.query("select * from emp",function (err,records,fields) {
         res.send(records);
     });
-});
+});*/
 
 
 
