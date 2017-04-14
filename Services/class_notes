@@ -1,0 +1,55 @@
+Custom Services.
+    - The Services Developed by Developer Based on Application Requirement Called as Custom Service.
+
+    - In AngularJS We Can Create Custom Services in 5 ways.
+
+        1.provider()
+
+        2.factory()
+
+        3.value()
+
+        4.constant()
+
+        5.service()
+
+
+Creating the Custom Service By using provider().
+-
+
+app.config(my_fun);
+my_fun.$inject=["my_serviceProvider"];
+function my_fun(my_serviceProvider){
+    my_serviceProvider.var_one = "root_two";
+}
+
+
+
+app.provider("my_service" , my_service);
+function my_service(){
+    this.var_one = "root_one";
+    this.$get = function(){
+        return this.var_one;
+    }
+}
+
+
+
+app.controller("ctrl_one" , ctrl_one);
+ctrl_one.$inject = ["$scope" , "my_service"];
+function ctrl_one($scope,my_service){
+    $scope.var_one = my_service;
+}
+
+
+app.controller("ctrl_two" , ctrl_two);
+ctrl_two.$inject = ["$scope" , "my_service"];
+function ctrl_two($scope,my_service){
+    $scope.var_two = my_service;
+}
+
+
+
+
+
+
