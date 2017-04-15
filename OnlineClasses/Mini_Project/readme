@@ -1,0 +1,15 @@
+Step 1.
+    Create the Single Page Application with Following Main Templates.
+
+    1. login.html
+    2. home.html
+
+
+Step 2.
+
+    Pass the loginDetails from "loginController" to "loginService"
+
+
+Step 3.
+
+    Pass the loginDetails to the "loginService" to "Node Server" by using "post" request
