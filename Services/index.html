@@ -21,7 +21,7 @@
         };*/
         
 
-        var objFunction = function(data){
+        /*var objFunction = function(data){
             this.var_one = data;
             this.my_fun = function () {
               return this.var_one;
@@ -33,19 +33,36 @@
         app.factory("my_service" , my_service);
         function my_service() {
             return new objFunction("I am from factory").my_fun();
+        }*/
+
+
+        /*app.value("my_service","First Value");
+        app.value("my_service","Second Value");*/
+
+
+        /*app.constant("my_service","First Value");
+        app.constant("my_service","Second Value");*/
+
+        app.service("my_service",my_service);
+        function my_service() {
+            this.fun_one = function () {
+                return "For Controller One";
+            };
+            this.fun_two = function () {
+              return "For Controller Two";
+            };
         }
-        
 
         app.controller("ctrl_one",ctrl_one);
         ctrl_one.$inject=["$scope","my_service"];
         function ctrl_one($scope,my_service) {
-            $scope.var_one=my_service;
+            $scope.var_one=my_service.fun_one();
         }
 
         app.controller("ctrl_two",ctrl_two);
         ctrl_two.$inject=["$scope","my_service"];
         function ctrl_two($scope,my_service) {
-            $scope.var_two=my_service;
+            $scope.var_two=my_service.fun_two();
         }
     </script>
 </html>
