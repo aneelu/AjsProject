@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <label><b><i><font color = "red">Enter number one.</font></i></b></label>&emsp;&emsp;
+    <input type = "number" id ="unum">
+
+    <br><br>
+    <label><b><i><font color = "red">Enter number two.</font></i></b></label>&emsp;&emsp;
+    <input type = "number" id ="uone">
+    <br><br>
+
+    <button onclick="add()">Add</button>&emsp;&emsp;&emsp;
+    <button onclick="sub()">Sub</button>&emsp;&emsp;&emsp;
+    <button onclick="Mul()">Mul</button>
+
+
+    <script>
+        function add() {
+            var a = document.getElementById("unum").value;
+            var b = document.getElementById("uone").value;
+
+            alert( parseInt(a) + parseInt(b) );
+
+
+
+
+
+        }
+
+
+        function sub(){
+            alert(parseInt((document.getElementById("unum").value)) -
+                  parseInt((document.getElementById("uone").value)));
+        }
+
+        function Mul() {
+            alert(parseInt((document.getElementById("unum").value)) *
+                parseInt((document.getElementById("uone").value)));
+
+
+        }
+    </script>
+
+
+</html>

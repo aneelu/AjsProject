@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <button onclick="clickMe()">ClickMe</button>
+
+    <br><br>
+
+    <input type="text" id="my_input"><br><br>
+
+    <button onclick="reverse()">Reverse</button>
+    <h1 style="color:red" id="my_h1"></h1>
+    <script>
+        function clickMe() {
+            var my_array = ["Sowmya","Hita"];
+            for(var i=0;i<my_array.length;i++){
+                if(my_array[i]=="Sowmya"){
+                    document.getElementById("my_h1").innerHTML=my_array[i];
+                }
+
+            }
+        }
+
+
+        function reverse(arg1) {
+            var result="";
+            var arg1 = document.getElementById("my_input").value;
+            for(var i=0;i<arg1.length;i++){
+                result = arg1[i] + result;
+            }
+
+            document.getElementById("my_h1").innerHTML=result;
+        }
+
+    </script>
+</html>

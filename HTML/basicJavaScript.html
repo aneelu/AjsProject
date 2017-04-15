@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <button onclick="my_fun()">Click Me</button>
+
+    <br><br>
+    <button onclick="fun_two('Welcome to JavaScript','HitaShree','Sowmya')">Fun Two</button>
+
+
+    <br><br>
+    <button onclick="add(10,20)">Addition</button>
+
+
+
+    <br><br>
+    <label>Uname.</label>&emsp;&emsp;&emsp;
+    <input type="text" id="uname">
+
+    <br><br>
+    <label>Password.</label>&emsp;
+    <input type="password" id="upwd">
+
+    <br><br>
+    <button onclick="login()">Login</button>
+
+
+
+    <script>
+        function my_fun() {
+            console.log("Welcome to JavaScript !");
+        }
+
+        function fun_two(arg1,arg2,arg3) {
+            console.log(arg1+"...."+arg2+"..."+arg3);
+        }
+
+        function add(arg1,arg2){
+            alert(arg1+arg2);
+        }
+
+        function login(){
+            var s = document.getElementById("uname").value;
+            var p = document.getElementById("upwd").value;
+
+            if(s=='admin' && p=='admin'){
+                alert("Login Success !");
+            }else{
+                alert("Invalid Credentials !");
+            }
+        }
+    </script>
+</html>

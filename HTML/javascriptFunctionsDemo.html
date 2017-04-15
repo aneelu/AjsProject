@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <button onclick="fun_one('Hita','sowmya')">Click Me</button>
+    <h1 style="color: red" id="my_h1"></h1>
+    <h1 style="color: green" id="my_h2"></h1>
+    <script>
+        function fun_one(arg1,arg2) {
+            fun_two(arg1,arg2);
+        }
+
+        function fun_two(arg1,arg2) {
+            document.getElementById("my_h1").innerHTML=arg2;
+            document.getElementById("my_h2").innerHTML=arg1;
+        }
+    </script>
+</html>
