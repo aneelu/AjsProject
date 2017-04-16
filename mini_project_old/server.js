@@ -23,7 +23,7 @@ var connection = mysql.createConnection({
    host:'localhost',
     user:'root',
     password:'root',
-    database:'mini_project'
+    database:'mini_project_old'
 });
 //connect to database.
 connection.connect();
