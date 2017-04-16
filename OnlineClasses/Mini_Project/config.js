@@ -11,5 +11,17 @@ function config($stateProvider,$urlRouterProvider) {
             url:"/home",
             templateUrl:"templates/home.html",
             controller:"homeController"
+        })
+
+        .state("home.static",{
+            url:"/static",
+            templateUrl:"templates/static.html",
+            controller:"staticController"
+        })
+
+        .state("home.mongo",{
+            url:"/mongo",
+            templateUrl:"templates/mongo.html",
+            controller:"mongoController"
         });
 }

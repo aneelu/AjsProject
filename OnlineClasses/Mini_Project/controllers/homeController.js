@@ -1,5 +1,7 @@
 app.controller("homeController",homeController);
-homeController.$inject=["$scope"];
-function homeController($scope) {
-    $scope.var_one = "Welcome to Home Page";
-}
+homeController.$inject=["$scope","$location"];
+function homeController($scope,$location) {
+    $scope.logout = function () {
+        $location.path("/login");
+    };
+};
