@@ -1,0 +1,122 @@
+Introduction.
+
+1.What is AngularJS.
+
+2.Advantages of AngularJS.
+
+3.Disadvantages Of AngularJS.
+
+4.Key Features Of AngularJS.
+
+5.Comparision Of AngularJS - Angular2
+
+                 AngularJS - NodeJS
+
+                 AngularJS - reactJS
+
+
+
+1.What is AngularJS.
+
+    - AngularJS is a client side javascript framework.
+
+    - AngularJS Follow the MVC Design Pattern
+
+        M - Model (JavaScript Variables)
+
+        V - View (HTML / HTML5)
+
+        C - Controller (JavaScript Functions)
+
+    - AngularJS Framework contains so many predefined Modules, As a
+      Angular Developer we can reuse the predefined Modules.
+
+      1.ngAnimate
+
+      2.ngMessages
+
+      3.ngStorage
+
+      4.ngRoute
+
+      5.ui.router
+
+        --
+        --
+
+    ngAnimate.
+        - used to develop the Animations in Angular Applications.
+
+    ngMessages.
+        - used to handle the client side form validations.
+
+    ngStorage.
+        - used to work with the storages.
+
+        - we have two types of storages.
+
+            1.localStorage
+
+            2.sessionStorage
+
+    ngRoute.
+
+        - used to develop the single page applications.
+
+        - it is native module.
+
+        - now a days no project using ngRoute Module , because of it's limitations.
+
+    ui.router.
+
+        - used to develop the single page applications.
+
+        - it is a 3rd party module.
+
+        - now a days all most all the projects , they are using ui.router module in SPA.
+
+    Example.
+
+           //Develop the Angular Application with the Following Features.
+
+            1.Animations Support
+
+            2.Storages Support
+
+            3.SPA Support - ui.router
+
+            4.Form Validations
+
+
+
+    index.html
+    -
+    <!DOCTYPE html>
+    <html ng-app="app">
+
+       //We Can Develop the Animations.
+
+       //We Can work with the Storages
+
+       //We Can Handle the Client Side Validations.
+
+       //We Can Develop the SPA - ui.router
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+        <script>
+            angular.module("app",["ngAnimate","ngStorage","ui.router","ngMessages"]);
+            (class) (function)
+        </script>
+    </html>
+
+    - Predefined Modules eliminates much of the code to write.
+
+
+Advantages Of AngularJS.
+
+1.We Can Directly work with the HTML DOM.
+
+    DOM Stands for Document Object Model.
+
+
