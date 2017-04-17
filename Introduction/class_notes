@@ -1,0 +1,98 @@
+Advantages Of AngularJS.
+-
+
+     - We Can Directly (As An Angular Developer) work with the HTML DOM.
+
+     - DOM Stands for Document Object Model.
+
+Ex.
+
+      Copy the Data from one "div" to another "div" by using HTML & JavaScript.
+
+      index.html
+      -
+
+      <html>
+        <div id="div_one">Hello</div>
+        <div id="div_two"></div>
+        <button onClick="copy()">Copy</button>
+
+
+        <script>
+            function copy(){
+                document.getElementById("div_two").innerHTML =
+                document.getElementById("div_one").value;
+            }
+        </script>
+      </html>
+
+      [Note. we can work with the HTML DOM By using External JavaSCript ]
+
+
+      Ex.
+
+        Copy The Data From One Div to Another Div By using AngularJS.
+
+        <html ng-app="app">
+
+            <div ng-model="div_one">Hello</div>
+            <div ng-bind="div_one"></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        </html>
+
+        [Note. We Can Directly Work with the HTML DOM without JavaScript ] .
+
+
+        - framework starts the execution from ng-app directive.
+
+        - ng-model directive internally creates the object with data.
+
+        - ng-bind directive binds the model data to the HTML Elements.
+
+
+- AngularJS Supports the Two Way Data Binding.
+
+    - Automatic Data Synchronization Between Model and View Called as Two Way Data Binding.
+
+
+
+    1. http get request.
+
+        - used to fetch the data from server.
+
+    2. http post request.
+
+        - used to delete a perticular record from database.
+
+    3. data sync request
+
+        - used to sync the model data(database data) with the view.
+
+
+
+    [Note 1. As a Programming Language Developers (Java , dot net) , we must make above three server hits
+
+             to meet application requirement ]
+
+    [Note 2. As a Angular Developer We Can Make only two server hits to meet application requirement].
+
+    [Note. Two Way Data Binding also Reduces the Burden on the Server]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
