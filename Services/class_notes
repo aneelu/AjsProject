@@ -84,6 +84,30 @@ function ctrl($scope,my_service){
 
 
 
+$timeout.
+
+    - used to execute a perticular function after "specified time".
+
+Syntax.
+    $timeout(my_fun,5000);
+    function my_fun(){
+        //Logic Goes Here
+    }
+
+
+
+
+$interval.
+    - used to execute a perticular function repetedely with a  given interval of time.
+
+Syntax.
+    $interval(my_fun,5000);
+    function my_fun(){
+        //Logic Goes Here
+    }
+
+$location.
+    - used to find the absolute path of web application.
 
 
 
