@@ -1,0 +1,27 @@
+Create the Schema.
+>create schema node_services;
+
+Switch to node_services
+>use node_services;
+
+Create the Table.
+>create table user_details(uname varchar(20),upwd varchar(20));
+
+Insert the Data.
+>insert into user_details values('admin','admin');
+
+Fetch the Data.
+>select * from user_details;
+
+
+--------------------------------
+host:'localhost',
+
+user:'root'
+
+password:'root'
+
+database:'node_services'
+
+table name : 'user_details'
+--------------------------------
