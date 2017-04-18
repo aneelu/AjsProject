@@ -1,0 +1,150 @@
+Introduction.
+
+1.What is AngularJS.
+
+2.Advantages Of AngularJS.
+
+3.Disadvantages Of AngularJS.
+
+4.Key Features Of AngularJS.
+
+5.Comparision Of AngularJS - Angular2
+                 AngularJS - reactJS
+                 AngularJS - NodeJS
+
+
+What is AngularJS.
+
+    - AngularJS is Client Side JavaScript Framework.
+
+    - AngularJS Follows the MVC Design Pattern.
+
+        M - Model   (JavaScript Variables)
+
+        V - View    (HTML / HTML5)
+
+        C - Controller (JavaScript Functions)
+
+
+        Ex.
+
+            Var s = "Angular2";
+
+            function my_fun(){
+
+                document.getElementById("my_paragraph").innerHTML = s;
+            }
+
+            <p id="my_paragraph"></p>
+
+    - AngularJS have a so many predefined Modules , As a Angular Developer we can use the Predefined
+      Modules.
+
+
+      1.ngAnimate
+            - used to develop the Animations in Angular Applications.
+
+
+      2.ngMessages
+            - used to develop the Client Side Form Validations.
+
+
+      3.ngStorage.
+            - used to develop the Storages Related Applications in AngularJS.
+
+            - we have two types of Storages
+
+                    1.localStorage
+                    2.sessionStorage
+
+      4.ngRoute
+
+            - used to develop the Single Page Applications.
+
+            - ngRoute Module is the Native Module.
+
+            - No Body using the ngRoute Module now a days becuase of it's limitations.
+
+
+      5.ui.router
+
+            - used to develop the Single Page Applications.
+
+            - it is a 3rd party Module.
+
+            - Now a days all  all the Projects Using ui.router Module in Single Page Application Development.
+
+
+    Ex.
+
+            - Please Develop the Angular Application with Following Features
+
+                1.SPA - ui.router
+
+                2.Storages
+
+                3.Client Side Validations.
+
+                4.Animations
+
+
+            index.html
+            -
+            <!DOCTYPE html>
+            <html ng-app="app">
+
+                    //Logic Goes Here
+
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+                <script>
+                   angular.module("app" , ["ui.router","ngStorage","ngMessages","ngAnimate"]);
+                </script>
+            </html>
+
+
+Advantages Of AngularJS.
+
+
+1.We Can Directly work with the HTML DOM.
+    DOM - Document Object Model.
+
+
+Ex.
+
+    Copy the Data From One Div to Another Div by using HTML & JavaScript.
+
+
+    <!DOCTYPE html>
+    <html>
+        <div id="div_one">Hello</div>
+        <div id="div_two"></div>
+        <button onClick="copy()">Copy</button>
+        <script>
+            function copy(){
+                document.getElementById("div_one").innerHTML =
+                document.getElementBuid("div_two").value;
+            }
+        </script>
+    </html>
+
+
+
+
+    Copy the Data from One Div to Another Div By using AngularJS.
+
+    <!DOCTYPE html>
+    <html ng-app="app">
+        <div ng-model="div_one">Hello</div>
+        <h1 ng-bind="div_one"></h1>
+        <script src=".../angular.min.js"></script>
+    </html>
+
+
+    - Framework starts the execution from ng-app directive.
+
+    - ng-model stores the application data in a object.
+
+    - ng-bind "binds" the model data to the HTML Elements.
+
+
+    [Note. we can work with the HTML DOM without javascript ].
