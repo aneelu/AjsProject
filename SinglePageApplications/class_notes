@@ -103,3 +103,150 @@ index.html
 
 <div ng-view></div>
 
+
+Passing the Data by using ngRoute Module (URL Parameters)
+-
+
+index.html
+-
+<a href="#page_one/1/hello/true"><b>Page_One</b></a>
+
+
+config.js
+-
+$routeProvider.when("/page_one/:param1/:param2/:param3" , {
+    templateUrl:"templates/page_one.html",
+    controller:"page_one"
+});
+
+
+page_one.js
+-
+app.controller("page_one",page_one);
+page_one.$inject=["$scope","$routeParams"];
+function page_one($scope,$routeParams){
+    $scope.var_one = $routeParams.param1+"...."+$routeParams.param2+"...."+$routeParams.param3;
+}
+
+Single Page Applications By using ui.router module.
+-
+
+1. ui.router module is the 3rd party module.
+
+2. ui.router module supports Nested Routing.
+
+3. ui.router module supports named Views.
+
+4. ui.router module supports JSON Objects as URL Parameters.
+
+
+Steps to Create the Basic SPA by using ui.router module.
+-
+
+Step 1.
+
+    Download the ui.router module by using bower.
+
+        "angular-ui-router" : "~0.2.18"
+
+
+Step 2.
+
+    Add the ui.router module depenedency.
+
+    var app = angular.module("app",["ui.router"]);
+
+
+Step 3.
+
+    Create the Templates
+
+Step 4.
+
+    Create the Controllers
+
+Step 5.
+
+    Done the Mapping.
+
+
+config.js
+-
+app.config(config);
+config.$inject=["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+    $stateProvider.state("page_one" , {
+        url:"/page_one",
+        templateUrl:"templates/page_one.html",
+        controller:"page_one"
+    })
+    .state("page_two" , {
+            url:"/page_two",
+            templateUrl:"templates/page_two.html",
+            controller:"page_two"
+        });
+    $urlRouterProvider.otherwise("/page_one");
+}
+
+
+Step 6.
+
+    Create the Source Template. (index.html)
+
+
+
+index.html
+-
+
+<a ui-sref="page_one"><b>Page_One</b></a>
+<a ui-sref="page_two"><b>Page_Two</b></a>
+
+<div ui-view></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
