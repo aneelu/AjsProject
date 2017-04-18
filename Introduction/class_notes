@@ -1,0 +1,106 @@
+5. By using AngularJS We Can Create the Reusable Components in the Form of a
+
+    Custom Directives
+
+    Custom Services
+
+    Custom Filters
+
+        --
+        --
+        --
+
+6.We Can Develop the Single Page Applications.
+
+
+Disadvantages Of AngularJS.
+
+1.Secuirity.
+
+2.Client Should Enable the JavaScript then only angular applications will execute.
+
+3. No coding Standards in AngularJS , so understanding the angular applications are difficult.
+
+
+Environmental Setup.
+-
+    - The Softwares Required to develop angular application called as Environmental Setup.
+
+1.bower
+
+    - bower is the automation tool / plugin used to download the required resources(Softwares) to
+
+      build web application.
+
+    - bower is the automation tool / plugin given by nodejs.
+
+bower components.
+
+1.bower.json
+
+    - used to indicate the (write) required resources to develop web application.
+
+{
+
+    "name":"nareshit",
+
+    "dependencies":{
+
+        "angular":"~1.6.0",
+
+        "bootstrap":"~3.3.6"
+    }
+
+}
+
+2. .bowerrc.json
+
+    - used to locate the path to softwares (resources) downloading by using bower.
+{
+    "directory":"bower_components"
+}
+
+
+
+    - we can run the bower components by using nodejs command
+
+    > bower install
+
+    - when ever we run the bower , automatically bower will interact with the "nodejs".
+
+    - "nodejs" automatically interacts with "git" repository for required resources.
+
+    - git will download the required resources to "target folder" we mentioned on ".bowerrc.json" file.
+
+    - "~" symbol used to download the latest versions of required resources.
+
+    - "^" symbol used to download the exact version of required resources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
