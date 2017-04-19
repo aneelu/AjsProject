@@ -1,0 +1,9 @@
+{
+  "name": "API_Example_One",
+  "version": "0.0.1",
+  "dependencies": {
+    "express":"^4.15.2",
+    "mongodb":"^2.2.26",
+    "body-parser": "^1.17.1"
+  }
+}

@@ -1,0 +1,17 @@
+1. Start the MongoServer.
+>mongod
+
+2. connect to server.
+>mongo
+
+3. create the database.
+>use api_project;
+
+4. create the collection.
+>db.createCollection("emp");
+
+5. insert the data.
+>db.emp.insert({"id":1,"name":"satya","salary":50000});
+
+6. fetch the data from the database.
+> db.emp.find();
