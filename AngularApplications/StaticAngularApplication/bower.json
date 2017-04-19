@@ -1,0 +1,6 @@
+{
+  "name":"sun-it",
+  "dependencies":{
+    "angular":"~1.6.0"
+  }
+}

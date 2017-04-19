@@ -148,3 +148,42 @@ Ex.
 
 
     [Note. we can work with the HTML DOM without javascript ].
+
+
+
+Environmental Setup.
+
+1.Download and Install the NodeJS.
+
+    Website : https://nodejs.org/en/download/
+
+    file name : node-v6.10.2-x64.msi
+
+2.Download and Install the GIT.
+
+    Website : https://git-scm.com/downloads
+
+    file name : Git-2.12.2.2-32-bit.exe
+
+3. Have the Account with the GitHub.
+
+    website : https://www.github.com/join
+
+4. Download and Install the IDE (WebStrom IDE) / Ecilipse / Visual Studio
+
+    WebSite : https://www.jetbrains.com/webstorm/download/#section=windows
+
+    file name : WebStorm-2017.1.1.exe
+
+5. Download and Install the Postman (Rest Client)
+
+    Website : https://www.getpostman.com/apps
+
+    File Name : Postman-win64-4.10.7-Setup.exe
+
+
+6.Download and Install the MongoDB  & MySQL
+
+    website : https://www.mongodb.com/download-center#community
+
+    file name : mongodb-win32-x86_64-2008plus-ssl-3.4.3-signed.exe
