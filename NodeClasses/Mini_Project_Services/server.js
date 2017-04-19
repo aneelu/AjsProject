@@ -13,6 +13,7 @@ var connection=mysql.createConnection({
     database:config.database
 });
 
+
 connection.connect();
 
 app.get("/login",function (req,res) {var host = config.host;
