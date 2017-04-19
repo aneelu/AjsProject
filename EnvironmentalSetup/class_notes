@@ -1,0 +1,80 @@
+1.Download and Install the NodeJS.
+
+    Website : https://nodejs.org/en/download/
+
+    file name : node-v6.10.2-x64.msi
+
+
+2. Download and Install the GIT.
+
+    Website : https://git-scm.com/downloads
+
+    file name : Git-2.12.2.2-64-bit.exe
+
+
+3. Register with GitHub.
+
+    Website : https://github.com/join
+
+
+4. Download the IDE (WebStrom)
+
+    Website : https://www.jetbrains.com/webstorm/download/#section=windows
+
+    file name : WebStrom-2017.1.1.exe
+
+
+5. Add the Bower plugin to WebStrom IDE.
+
+    - Open the Integrated Terminal in WebStrom IDE.
+
+        (Alt + F12)
+
+    - Execute the Following NodeJS Command
+
+      >npm install -g bower
+
+
+6. Download and Install the MongoDB.
+
+    WebSite : https://www.mongodb.com/download-center#community
+
+    file name : mongodb-win32-x86_64-2008plus-ssl-3.4.3-signed.exe
+
+
+    - Create the Following Folder Structure in "C Drive" After Successful Installation Of MongoDB
+
+    C:\data\db
+
+
+7. Download and Install the Rest Client (Postman)
+
+    Website : https://app.getpostman.com/app/download/win64
+
+    file name : Postman-win64-4.10.7-Setup.exe
+
+
+8. Checkout the Code From the Following URL.
+
+    https://github.com/ajsnaresh/AJS_Classes.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
