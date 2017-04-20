@@ -1,0 +1,10 @@
+{
+  "name": "QueryParametersExample",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.15.2",
+    "body-parser": "^1.17.1",
+    "mongodb": "^2.2.26"
+  }
+  
+}
