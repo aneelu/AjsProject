@@ -1,0 +1,24 @@
+    - Directives will enhance the HTML Capabilities.
+
+    - we have a Two Types Of Directives.
+
+        1.Predefined Directives.
+
+        2.Custom Directives.
+
+    Predefined Directives.
+    -
+         - The Directives Given By the Framework called as Predefined Directives.
+
+
+1.ng-app.
+
+    - Framework (Angular Framework) Starts the Execution From ng-app directive.
+
+    - ng-app directive called as root directive.
+
+    - ng-app directive will take the logical name of the web application, if our application is static then logical name is the optional otherwise manadatory.
+
+    - Running the Angular Application Forcefully with out ng-app directive called as Manual Bootstrap.
+
+    - we can have only one ng-app directive per web application.

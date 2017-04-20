@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div ng-app="app" ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+
+    <br><br>
+    <div id="div_two" ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_two}}</h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "I am from Auto BootStrap";
+        }
+
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "I am from Manual BootStrap";
+        }
+
+        var div_two = document.getElementById("div_two");
+        angular.bootstrap(div_two,["app"]);
+
+    </script>
+
+</html>
