@@ -307,6 +307,128 @@ function config($stateProvider,$urlRouterProvider){
 Step 6.
     Create the Source Template (index.html)
 
+NamedViews in Single Page Application by using ui.router module.
+-
+    - Creating the View with More Than One SubView Called as NamedViews
+
+
+Steps to Implement the NamedViews.
+
+1.Download the ui.router module by using bower.
+
+
+2.Add the ui.router module dependency.
+
+
+3.Create the Templates
+
+------------------
+templates
+
+    page_one.html
+
+    page_two.html
+
+    calc.html
+
+    graph.html
+
+    chart.html
+
+    summary.html
+---------------------
+page_one.html
+-
+{{var_one}}
+<div ui-view="calc"></div>
+<div ui-view="graph"></div>
+
+
+page_two.html
+-
+{{var_two}}
+<div ui-view="chart"></div>
+<div ui-view="summary></div>
+
+
+4.Create the Controllers.
+-----------------------------
+controllers
+
+    page_one.js
+
+    page_two.js
+
+    calcController.js
+
+    graphController.js
+
+    chartController.js
+
+    summaryController.js
+--------------------------------
+
+
+5.Create the Custom Service.
+
+-----------------------
+services
+    my_service.js
+-----------------------
+
+
+6.Done the Mapping
+
+config.js
+-
+app.config(config);
+config.$inject=["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+    $stateProvider.state("page_one",{
+        url:"/page_one",
+        views:{
+            '':{
+                        templateUrl:"templates/page_one.html",
+                        controller:"page_one"
+            },
+            'calc@page_one':{
+                        templateUrl:"templates/calc.html",
+                        controller:"calcController"
+            },
+            'graph@page_one':{
+                        templateUrl:"templates/graph.html",
+                        controller:'graphController'
+            }
+        }
+    })
+    .state("page_two",{
+            url:"/page_two",
+            views:{
+                '':{
+                            templateUrl:"templates/page_two.html",
+                            controller:"page_two"
+                },
+                'chart@page_two':{
+                            templateUrl:"templates/chart.html",
+                            controller:"chartController"
+                },
+                'summary@page_two':{
+                            templateUrl:"templates/summary.html",
+                            controller:'summaryController'
+                }
+            }
+        });
+        $urlRouterProvider.otherwise("/page_one");
+}
+
+
+Step 7.
+    Create the Source Template(index.html)
+
+
+
+
+
 
 
 
