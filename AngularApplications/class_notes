@@ -1,0 +1,229 @@
+Angular Applications.
+
+    - By using AngularJS We can Create the Two Types Of Angular Applications.
+
+    1.Static Angular Application.
+
+    2.Dynamic Angular Application.
+
+Static Angular Application.
+      - If View Won't Interacts with the Controller for Dynamic Data Then Such Type Of Angular Application
+        Called as Static Angular Application.
+
+Dynamic Angular Application.
+    - If View Interacts With the Controller for Dynamic data then such type of Angular Application
+      Called as Dynamic Angular Application.
+
+
+Steps to Create the Static Angular Application.
+-
+
+Step 1.
+    Download the Angular Framework by using bower.
+
+bower.json
+-
+{
+    "name":"nareshit",
+    "dependencies":{
+        "angular":"~1.6.0"
+    }
+}
+
+
+.bowerrc.json
+-
+{
+    "directory":"bower_components"
+}
+
+
+>bower install
+
+
+
+Step 2.
+    Create the View.
+
+index.html
+-
+
+<!DOCTYPE html>
+
+<html ng-app>
+
+    <input type="number" ng-model="model_one"> <br><br>
+    <input type="number" ng-model="model_two"> <br><br>
+    <h1 style="color:red" ng-bind="model_one+model_two">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+- Framework (angular.min.js) starts the execution from ng-app directive.
+
+- if our application is static , then logical name of web application is optional.
+
+- ng-model directive will creates the objects in heap memory with application data (Dynamic Data).
+
+- ng-bind directive will binds the model data to the HTML Output Elements.
+
+--------------------------------------
+AngularApplications
+    StaticAngularApplication
+        bower.json
+        .bowerrc.json
+        index.html
+---------------------------------------
+
+
+Dynamic Angular Application.
+
+Step 1.
+    Download the Angular Framework by using bower.
+
+Step 2.
+    Load the Angular Framework.
+
+Step 3.
+    Declare the Logical Name for the Web Application.
+
+Step 4.
+    Declare the Controller by using "ng-controller" directive
+
+
+Step 5.
+    Instantiate the Module (Getting the Whole Page Control)
+
+Step 6.
+    Implement the Controller
+
+                ********************************************
+
+Step 1.
+
+    Create the Directory Structure.
+
+
+DynamicAngularApplication
+
+        bower.json
+
+        .bowerrc.json
+
+        index.html
+
+        app.js
+
+        controllers (folder)
+
+             ctrl.js
+
+
+
+
+Step 2.
+    Instantiate the Module
+
+app.js
+-
+var app = angular.module("app",[]);
+
+
+Step 3.
+    Create the Controller.
+
+controllers / ctrl.js
+-
+
+app.controller("ctrl" , ctrl);
+
+ctrl.$inject=["$scope"];
+
+function ctrl($scope){
+
+    $scope.var_one = "Data From MySQL....";
+}
+
+
+Step 4.
+    Create the View.
+
+<!DOCTYPE html>
+<html ng-app="app">
+    <div ng-controller="ctrl">
+        <h1 style="color:red">{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/ctrl.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
