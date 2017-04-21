@@ -1,0 +1,83 @@
+
+    - NodeJS is the Server Side Scripting Language.
+
+    - By using NodeJS We Can Create Our Own http (or) tcp servers.
+
+    - As a Node Developer we can assign the port numbers to the server.
+
+    - Application itself acting as "Server" as well as "Business Component".
+
+Modules in NodeJS.
+
+1.express
+    - used to implement the Rest API in NodeJS.
+
+2.body-parser
+    - used to set the MIME.
+    Ex.
+        json
+        xml
+        text
+        csv
+        -
+        -
+        -
+3.fs
+      - fs stands for file system.
+      - used to read the data from the statci files.
+      - fs is a predefined module in nodejs
+
+4.http
+      - used to create the http servers by using nodejs.
+      - http also predefined module in nodejs.
+
+5.mysql
+    - used to interact with the mysql database.
+
+6.mongodb
+    - used to interact with the mingodb.
+
+7.jwt-simple
+    - used to maintain the token based authenication system.
+
+
+Ex_1.
+    Launch the Angular Application by using Node Server.
+
+Ex_2.
+    Read the Data from the Static File.
+
+    emp.json
+    -
+    {
+        "emp":[
+                {'id':1,'name':'Hello_1','age':20},
+                {'id':2,'name':'Hello_2','age':22},
+                {'id':3,'name':'Hello_3','age':24},
+                {'id':4,'name':'Hello_4','age':26},
+                {'id':5,'name':'Hello_5','age':28}
+         ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
