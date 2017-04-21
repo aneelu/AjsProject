@@ -1,0 +1,246 @@
+Directives.
+    - Directives in AngularJS Enhances the HTML Capabilities.
+    - we have two types of directives.
+        1.predefined directives
+        2.custom directives
+
+Predefined Directives.
+    - The Directives Given By the Framework called as Predefined Directives.
+
+1.ng-app
+
+    - This Directive Called as Root Directive.
+
+    - Framework Stars the Execution from ng-app directive.
+
+    - ng-app directive taking the logical name of the web application,
+      and it's optional when ever our application is static otherwise mandatory(Dynamic).
+
+    - we can have only one ng-app directive per web application.
+
+    - we can run the angular application forcefully without ng-app directive called as Manual Bootstrap.
+
+ngAppDemo_1.html
+-
+<!DOCTYPE html>
+<html>
+    <div ng-app>
+        <h1 style="color:red">Addition.{{10+10}}</h1>
+        <div>
+            <h1 style="color:green">Subtraction.{{20-10}}</h1>
+        </div>
+    </div>
+
+    <div>
+        <h1 style="color:red">Multiplication.{{10*10}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+O/P:
+    Addition.20
+
+    Subtraction.10
+
+    Multiplication.{{10*10}}
+
+
+
+ngAppDemo_2.html
+-
+<!DOCTYPE html>
+<html>
+    <h1 style="color:red">Addition.{{10+10}}</h1>
+    <h1 style="color:green">Subtraction.{{20-10}}</h1>
+    <h1 style="color:blue">Multiplication.{{10*10}}</h1>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        angular.bootstrap(document);
+    </script>
+</html>
+
+O/P:
+    Addition.20
+    Subtraction.10
+    Multiplication.100
+
+
+ngAppDemo_3.html
+-
+<!DOCTYPE html>
+<html>
+    <div ng-controller="ctrl">
+        <h1>{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope){
+            $scope.var_one = "I am from Manual Bootstrap";
+        }
+        angular.bootstrap(document,["app"]);
+    </script>
+</html>
+
+O/P:
+       I am from Manual Bootstrap
+
+
+
+ngAppDemo_4.html
+-
+<!DOCTYPE html>
+<html>
+    <div ng-app="app" ng-controller="ctrl_one">
+        <h1>{{var_one}}</h1>
+    </div>
+    <div id="div_two" ng-controller="ctrl_two">
+        <h1>{{var_two}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope){
+            $scope.var_one = "I am from Auto BootStrap";
+        }
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope){
+            $scope.var_two="I am from Manual Bootstrap";
+        }
+        var div_two = document.getElementById("div_two");
+        angular.bootstrap(div_two,["app"]);
+    </script>
+</html>
+
+
+O/P:
+    I am from Auto BootStrap
+
+    I am from Manual Bootstrap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
