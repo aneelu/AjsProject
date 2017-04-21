@@ -1,0 +1,6 @@
+{
+  "name":"sunit",
+  "dependencies":{
+    "angular":"~1.6.0"
+  }
+}

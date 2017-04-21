@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-controller="ctrl">
+        <h1>{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);  // "angular" is the predefined class in "angular.min.js"
+                                             // "module" is the function in "angular" class.
+                                             // "module" function taking the two arguments.
+                                                 //arg1 - logical name of web application
+                                                 //arg2 - dependencies with array
+                                            // "module" function returning the object.(app)
+
+        app.controller("ctrl",ctrl);  // arg1 - name of the controller
+                                     //arg2 - name of the function to implement the controller
+
+        ctrl.$inject=["$scope"];
+        function ctrl($scope){
+            $scope.var_one = "Data From the MongoDB Soon...";
+        }
+    </script>
+</html>
