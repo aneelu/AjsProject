@@ -22,3 +22,30 @@
     - Running the Angular Application Forcefully with out ng-app directive called as Manual Bootstrap.
 
     - we can have only one ng-app directive per web application.
+
+
+2.ng-controller.
+
+    - used to declare the controllers.
+
+    - we can have more than one controller.
+
+    - in genaral we will declare the controllers in view.
+
+    - in genaral we will implement the controllers in javascript
+
+
+3.ng-repeat
+    - used to iterate the list of elements from collection.
+
+Syntax.
+    ng-repeat = "iteration_variable" in "collection"
+
+
+4.ng-click
+
+     - when ever we click the user interface elements automatically ng-click directive
+       will execute one user defined event.
+
+Syntax.
+    ng-click="expression"/"user defined function"/"user defined function with optional parameters"
