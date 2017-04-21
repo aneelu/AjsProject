@@ -82,3 +82,27 @@ index.html
 
 
 
+Dynamic Angular Application.
+
+    - If View Interacts with the Controller for Dynamic Data , then Such Type Of Angular Application
+      called as Dynamic Angular Application.
+
+
+Step 1.
+    Download the Angular Framework by using bower.
+
+
+Step 2.
+    Load The Angular Framework.
+
+Step 3.
+    Declare the logical name for the web application by using "ng-app" directive
+
+Step 4.
+    Declare the Controller
+
+Step 5.
+    Instantiate the Module (Getting the Whole Page Control)
+
+Step 6.
+    Implement the Controller
