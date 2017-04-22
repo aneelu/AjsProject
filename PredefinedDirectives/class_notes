@@ -49,3 +49,100 @@ Syntax.
 
 Syntax.
     ng-click="expression"/"user defined function"/"user defined function with optional parameters"
+
+
+5.ng-options.
+
+    - used tp populate the values to the dropdown.
+
+    Syntax.
+
+        ng-options = "model_values as dropdown_values for iteration_variable in collection"
+
+    Ex_1.
+
+        $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+
+    Use Case 1.
+
+            Drop Down --->  Hello_1  to  Hello_5
+
+            model     --->  Hello_1  to  Hello_5
+
+
+
+    <select ng-model="my_model" ng-options="x as x for x in data"></select>
+
+
+
+    Ex_2.
+
+        $scope.data=[
+                        {'id':1,'name':'Hello_1'},
+                        {'id':2,'name':'Hello_2'},
+                        {'id':3,'name':'Hello_3'},
+                        {'id':4,'name':'Hello_4'},
+                        {'id':5,'name':'Hello_5'}
+                    ];
+
+
+
+        Use Cases.
+
+        Test Case 1.
+
+                Model ---- 1 to 5
+
+                dropdown --- Hello_1 to Hello_5
+
+
+        <select ng-model="my_model" ng-options="x.id as x.name for x in data"></select>
+
+
+
+        Test Case 2.
+
+                Model  ---- Hello|_1  to Hello_5
+
+                dropdown  ----  1 to 5
+
+
+        <select ng-model="my_model" ng-options="x.name as x.id for x in data"></select>
+
+
+        Test Case 3.
+
+                Model ----  Hello_1  to Hello_5
+
+                dropdown  ---- Hello_1  to Hello_5
+
+
+        <select ng-model="my_model" ng-options="x.name as x.name for x in data"></select>
+
+
+
+        Test Case 4.
+
+                        Model ----  1  to  5
+
+                        dropdown  ---- 1    to   5
+
+
+                <select ng-model="my_model" ng-options="x.id as x.id for x in data"></select>
+
+
+6.ng-init
+
+    - used to declare the application data statically.
+
+    - we can declare the application data in the form of a "key&value" pairs.
+
+    - each "key&value" pair separated with the help of ";"
+
+
+
+7.ng-dblclick
+
+    - when ever we double the user interface elements , automatically perticular
+
+     event will be fired by framework with the help of ng-dblclick  directive.
