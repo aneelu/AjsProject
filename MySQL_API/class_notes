@@ -1,0 +1,14 @@
+Create the Schema
+>create schema satyadb;
+
+Switch the satyadb.
+>use satyadb;
+
+Create table.
+>create table emp(eno integer,ename varchar(20),esal interger);
+
+insert the data.
+>insert into emp values(1,'Hello_1',5000);
+
+Fetch the Data.
+>select * from emp;
