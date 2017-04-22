@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div class="my_class">
+        <div ng-controller="parent">
+            {{parent}}
+            <div ng-controller="child">
+                {{child}}
+                <div ng-controller="sub_child">
+                    {{sub_child}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        div.my_class div{
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+            font-weight: bolder;
+            color: seagreen;
+        }
+    </style>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <script>
+
+        angular.module("app",[]).controller("parent",function ($scope) {
+
+            $scope.parent = "I am from parent controller";
+
+        }).controller("child",function ($scope) {
+
+            $scope.child="I am from Child Controller";
+
+        }).controller("sub_child",function ($scope) {
+
+           $scope.sub_child="I am from sub child controller";
+
+        });
+    </script>
+
+</html>

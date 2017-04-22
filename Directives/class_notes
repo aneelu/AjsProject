@@ -124,9 +124,74 @@ O/P:
     I am from Manual Bootstrap
 
 
+2.ng-controller
+     - used to declare the controllers.
+     - in genaral we will declare the controllers in view.
+
+        Ex.
+
+            ng-controller="name of the controller"
+
+     - in genaral we will implement controllers in javascript.
+
+        Ex.
+
+            app.controller("name of the controller", user defined function to implement controller);
+
+                            "ctrl",                     ctrl
+
+            ctrl.$inject = ["$scope"];
+            function ctrl($scope){
+                  //Logic Goes Here
+            }
+
+
+        - We Can Have More Than one Controller per web application.
 
 
 
+Ex_1.
+
+    Create the Angular Application with the Following Controllers
+
+
+    1.ctrl_one
+
+    2.ctrl_two
+
+    3.ctrl_three
+
+         - "ctrl_one" should binds the "var_one" variable
+
+         - "ctrl_two" should binds the "var_two" variable
+
+         - "ctrl_three" should binds the "var_three" variable
+
+
+
+
+
+Ex_2.
+    Create the Following Controllers with the "parent & child" relations
+
+    1.parent
+
+    2.child
+
+    3.sub_child
+
+        - parent controller should binds the "parent" variable.
+
+        - child controller should binds the "child" variable.
+
+        - sub_child controller should binds the "sub_child" variable.
+
+
+Ex_3.
+
+    Implement the Sample Angular Application with $rootScope.
+
+        - rootScope members we can access in entire web application.
 
 
 

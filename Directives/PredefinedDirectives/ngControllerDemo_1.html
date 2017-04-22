@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+
+    <br><br>
+
+    <div ng-controller="ctrl_two">
+        <h1 style="color: red">{{var_two}}</h1>
+    </div>
+
+    <br><br>
+
+    <div ng-controller="ctrl_three">
+        <h1 style="color: red">{{var_three}}</h1>
+    </div>
+
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border: 2px solid darkgrey;
+            text-align: center;
+        }
+    </style>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "Data From MySQL DataBase";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "Data From MongoDB DataBase";
+        }
+
+        app.controller("ctrl_three",ctrl_three);
+        ctrl_three.$inject=["$scope"];
+        function ctrl_three($scope) {
+            $scope.var_three = "Data From BigDataBase";
+        }
+
+    </script>
+
+
+
+</html>
