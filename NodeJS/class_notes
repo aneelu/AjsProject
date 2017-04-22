@@ -35,7 +35,7 @@ Modules in NodeJS.
     - used to interact with the mysql database.
 
 6.mongodb
-    - used to interact with the mingodb.
+    - used to interact with the mongodb.
 
 7.jwt-simple
     - used to maintain the token based authenication system.
@@ -58,6 +58,48 @@ Ex_2.
                 {'id':5,'name':'Hello_5','age':28}
          ]
     }
+
+
+
+Ex_3.
+    Reading the Data from the MYSQL DataBase.
+
+
+1.Create the Schema.
+mysql> create schema demo;
+
+2.Switch to demo database.
+mysql> use demo;
+
+
+3.Create the Table.
+mysql> create table emp(eno integer,ename varchar(20),esal integer);
+
+
+4.Insert the Data into emp table.
+mysql> insert into emp values(1,'Hello_1',20);
+
+5.Fetch the Data From the emp table.
+mysql> select * from emp;
+
+
+            ****************************
+            user : root
+
+            password : root
+
+            database : demo
+
+            table name : emp
+
+            ******************************
+
+
+
+
+
+
+
 
 
 
