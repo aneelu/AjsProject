@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div class="my_class">
+        <div ng-controller="parent">
+            {{parent}}
+            <div ng-controller="child">
+                {{child}}
+                <div ng-controller="sub">
+                    {{sub}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        div.my_class div{
+            border: 2px solid red;
+            padding: 10px;
+            text-align: center;
+            color: green;
+            font-weight: bolder;
+        }
+    </style>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent",parent);
+        parent.$inject=["$scope"];
+        function parent($scope) {
+            $scope.parent="I am from parent controller";
+        }
+
+        app.controller("child",child);
+        child.$inject=["$scope"];
+        function child($scope) {
+            $scope.child="I am from child controller";
+        }
+
+        app.controller("sub",sub);
+        sub.$inject=["$scope"];
+        function sub($scope) {
+            $scope.sub="I am from sub controller";
+        }
+
+    </script>
+</html>

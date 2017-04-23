@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <h1  ng-controller="ctrl_one" ng-bind="var_one"></h1>
+    <h1  ng-controller="ctrl_two" ng-bind="var_two"></h1>
+    <h1  ng-controller="ctrl_three" ng-bind="var_three"></h1>
+
+
+
+    <style>
+        h1{
+            width: 300px;
+            height: 200px;
+            border: 2px solid red;
+            color: #8c8c8c;
+            text-align: center;
+        }
+    </style>
+
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "I am from Controller One";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "I am from Controller Two";
+        }
+
+
+        app.controller("ctrl_three",ctrl_three);
+        ctrl_three.$inject=["$scope"];
+        function ctrl_three($scope) {
+            $scope.var_three = "I am from Controller Three";
+        }
+
+
+    </script>
+
+</html>
