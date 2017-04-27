@@ -34,3 +34,18 @@ Predefined Directives.
     - in genaral we will declare controllers in view.
 
     - in genaral we will implement the controllers in javascript.
+
+
+3.ng-repeat.
+
+    - used to iterate the list of elements from an collection.
+
+Syntax.
+
+    ng-repeat = "iteration_variable in collection"
+
+Ex.
+
+    ng-repeat="x in ["Hita","Sowmya","samba","Vishal"]"
+
+    {{x}}
