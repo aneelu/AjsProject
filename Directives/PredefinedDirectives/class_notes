@@ -146,3 +146,55 @@ Syntax.
     - when ever we double the user interface elements , automatically perticular
 
      event will be fired by framework with the help of ng-dblclick  directive.
+
+
+8.ng-if.
+
+    - used to write the conditions in angular applications.
+
+Syntax.
+
+    ng-if="condition"
+
+
+9.ng-switch.
+
+    - used to write the switch cases in angular applications.
+
+Syntax.
+
+    <div ng-switch="expression">
+        <div ng-switch-when="value1">
+            //Code
+        </div>
+
+        <div ng-switch-when="value2">
+            //Code
+        </div>
+
+        ---
+        ---
+        ---
+
+        <div ng-switch-default>
+            //Code
+        </div>
+    </div>
+
+
+10.ng-submit.
+    - used to submit the whole form at a time to the controller.
+
+Syntax.
+
+    <form  ng-submit="user defined function">
+
+           //Form Elements
+
+        <input type="submit">
+    </form>
+
+
+11.ng-cloak
+
+    - used to avoid the flickering effect before displaying the application data.
