@@ -194,6 +194,57 @@ Ex_3.
         - rootScope members we can access in entire web application.
 
 
+3.ng-repeat.
+
+       - used to iterate the list of elements from an collection.
+
+Syntax.
+
+    ng-repeat = "iteration_variable in collection"
+
+Ex.
+
+    ng-repeat="x in [10,20,30,40,50]"
+
+    {{x}}
+
+
+Predefined Objects with ng-repeat directive.
+
+1.$index.
+
+    - it will return the indexes of all the elements in collection.
+
+2.$first
+
+    - it will return first index of an collection as true.
+
+
+3.$last
+
+    - it will return last index of an collection as true.
+
+
+4.$middle
+
+    - it will return all the middle indexes of an collection as true.
+
+5.$even
+
+    - it will return even indexes of an collection as true.
+
+6.$odd
+
+    - it will return odd indexes of an collection as true.
+
+
+
+4.ng-if
+    - used to write the conditions in angular applications.
+
+Syntax.
+
+    ng-if= "true" / "false"
 
 
 
