@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <div ng-controller="ctrl">
-        <h1>{{var_one}}</h1>
+        <h1 style="color: red">{{var_one}}</h1>
     </div>
+
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
@@ -10,9 +12,11 @@
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope"];
         function ctrl($scope) {
-            $scope.var_one = "I am from Manulan Bootstrap";
+            $scope.var_one = "I am from Manual Bootstrap";
         }
 
         angular.bootstrap(document,["app"]);
     </script>
+
+
 </html>
