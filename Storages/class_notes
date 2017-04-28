@@ -1,0 +1,46 @@
+- AngularJS Supports the Following Two Types Of Storages.
+
+    1.local storage
+
+    2.session storage
+
+local storage.
+
+    As a Developer explicitely we must delete the local Storage.
+
+session storage.
+
+    when ever we close the browser automatically data will be erased from session storage.
+
+
+- ngstorage is the predefined module used to work the storages.
+
+- ngstorage module have following predefined objects.
+
+    1.$localStorage
+
+    2.$sessionStorage
+
+- $localStorage used to work with the local storage.
+
+- $sessionStorage used to work with the session storage.
+
+- we can store the data in the form of a key & value pairs.
+
+
+Ex.
+
+$localStorage.mini_project = {"uname":"admin","token":"safhafkjhfkhfk"}; // storing the data in local storage
+
+$scope.var_one = $localStorage.mini_project.uname+"...."+$localStorage.mini_project.token; // Reading the data from the local storage.
+
+delete $localStorage.mini_project;  // deleting the Data from the local storage.
+
+
+
+$sessionStorage.mini_project = {"uname":"admin","token":"safhafkjhfkhfk"}; // storing the data in session storage
+
+$scope.var_one = $sessionStorage.mini_project.uname+"...."+$sessionStorage.mini_project.token; // Reading the data from the session storage.
+
+delete $sessionStorage.mini_project;  // deleting the Data from the session storage.
+
