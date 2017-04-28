@@ -1,0 +1,86 @@
+1.Introduction
+
+    1.What is AngularJS
+
+    2.Advantages Of AngularJS
+
+    3.Disadvantages Of AngularJS
+
+    4.Key Features of AngularJS
+
+    5.Comparision Of AngularJS - Angular2
+
+                     AngularJS - reactJS
+
+                     AngularJS - NodeJS
+
+
+2. Environmental Setup.
+
+    1.GitHub
+
+    2.IDE'S - WebStrom,Visual Studio,Ecilipse
+
+    3.Automation Tools --    Bower
+
+                             Grunt
+
+                             Gulp
+
+                             Karma
+
+                             Jasmine
+
+
+3.Angular Applications
+
+    1.Static Angular Application
+
+    2.Dynamic Angular Application
+
+
+4.Directives
+
+    1.Predefined Directives
+
+    2.Custom Directives
+
+
+5.Services
+
+    1.Predefined Services
+
+    2.Custom Services
+
+
+6.Single Page Applications
+
+
+7.Routing in Single Page Application
+
+    1.ngRoute
+
+    2.ui.router
+
+
+8.NodeJS
+
+    1.AngularJS -- NodeJS -- MySQL
+
+    2.AngularJS -- NodeJS -- MongoDB
+
+    3.AngularJS - NodeJS (Token Based Authenication System)
+
+
+9.Filters
+
+10.Validations
+
+11.Storages
+
+    1.local storage
+
+    2.session storage
+
+
+12.Mini Project
