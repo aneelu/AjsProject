@@ -1,0 +1,6 @@
+{
+  "name":"online_class",
+  "dependencies":{
+    "angular":"~1.6.0"
+  }
+}
