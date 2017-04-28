@@ -198,3 +198,21 @@ Syntax.
 11.ng-cloak
 
     - used to avoid the flickering effect before displaying the application data.
+
+
+12.ng-include.
+
+    - We Can Divide the View Into Number Of Sub Views by using ng-include directive.
+
+   Syntax.
+
+        ng-include="target view"
+
+
+13.ng-show / ng-hide
+
+    - used to show / hide the HTML Elements Based on Conditions.
+
+     Syntax.
+
+        ng-show / ng-hide = "true" / "false"
