@@ -49,3 +49,14 @@ Ex.
     ng-repeat="x in ["Hita","Sowmya","samba","Vishal"]"
 
     {{x}}
+
+
+4.ng-options.
+
+    - used to populate the values to the dropdown.
+
+
+Syntax.
+
+    ng-options = "model_values as dropdown_values for iteration_variable in collection"
+

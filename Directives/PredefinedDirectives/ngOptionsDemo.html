@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <select ng-model="my_model" ng-options="x as x for x in data">
+        <option value="">--Select One--</option>
+    </select>
+
+    <h1>{{my_model}}</h1>
+
+    <br><br>
+    <select ng-model="my_model_one" ng-options="x.id as x.name for x in data_one">
+        <option value="">--Select One--</option>
+    </select>
+
+    <h1>{{my_model_one}}</h1>
+
+
+    <br><br>
+    <select ng-model="my_model_two" ng-options="x.name as x.id for x in data_one">
+        <option value="">--Select One--</option>
+    </select>
+
+    <h1>{{my_model_two}}</h1>
+
+    <br><br>
+    <select ng-model="my_model_three" ng-options="x.name as x.name for x in data_one">
+        <option value="">--Select One--</option>
+    </select>
+
+    <h1>{{my_model_three}}</h1>
+
+
+
+    <br><br>
+    <select ng-model="my_model_four" ng-options="x.id as x.id for x in data_one">
+        <option value="">--Select One--</option>
+    </select>
+
+    <h1>{{my_model_four}}</h1>
+
+
+
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data=["Hita","Sowmya","Samba","Vishal"];
+
+            $scope.data_one = [{'id':1,'name':'AngularJS'},
+                                {'id':2,'name':'Angular2'},
+                                {'id':3,'name':'NodeJS'},
+                                {'id':4,'name':'reactJS'},
+                                {'id':5,'name':'underscoreJS'}
+            ];
+        }
+    </script>
+</html>
