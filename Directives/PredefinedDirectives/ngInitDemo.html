@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="dbuser='root';
+                                dbpassword='root';
+                                frequent_changes=true;
+                                list_of_tables=['product','report','emp']">
+
+
+
+        <h1 style="color: red">{{dbuser}}</h1>
+        <h1 style="color: green">{{dbpassword}}</h1>
+        <h1 style="color: blue">{{frequent_changes}}</h1>
+        <h1 style="color: #3c3c3c" ng-repeat="x in list_of_tables">
+            {{x}}
+        </h1>
+
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+
+</html>

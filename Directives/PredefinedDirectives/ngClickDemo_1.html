@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+<button class="glyphicon glyphicon-plus" ng-click="count=count+1"></button>
+<button class="btn btn-primary">{{count}}</button>
+<button class="glyphicon glyphicon-minus" ng-click="count=count-1"></button>
+
+
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<script src="bower_components/angular/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+
+    app.controller("ctrl",ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl($scope) {
+        $scope.count = 0;
+    }
+</script>
+
+</html>

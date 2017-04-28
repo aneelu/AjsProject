@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <p style="color: red" ng-repeat="x in data">
+        <!--<span ng-if="x!='Hello_1' && x!='Hello_5'">
+            {{x}}
+        </span>-->
+
+        <span ng-if="$middle">
+            {{x}}
+        </span>
+    </p>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope){
+            $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+        }
+    </script>
+</html>
