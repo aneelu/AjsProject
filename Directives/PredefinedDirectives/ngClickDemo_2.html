@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <button ng-click="clickMe()">ClickMe</button>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+
+            $scope.clickMe = function () {
+               alert("You Clicked Button !");
+            };
+
+        }
+    </script>
+</html>

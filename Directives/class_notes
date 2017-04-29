@@ -278,6 +278,125 @@ Syntax.
 
 
 
+8.ng-dblclick
+
+    - when ever we double click the user interface elements , automatically angular framework
+      will execute ng-dblclick directive.
+
+      Syntax.
+
+        ng-dblclick = "Expression" / "user defined function" / "user defined function with optional paramerers"
+
+
+
+    app.controller("ctrl" , ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl($scope){
+        $scope.data=["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+        $scope.my_fun = function(arg1){
+            alert(arg1);
+        }
+    }
+
+
+
+
+    <html ng-app="app" ng-controller="ctrl" ng-init="my_model=data[1]">
+        <select ng-model="my_model" ng-options="x as x for x in data">
+            <option value="">--Select One--</option>
+        </select>
+        <button ng-dblclick="my_fun(my_model)">Double Click</button>
+    </html>
+
+
+9.ng-switch
+    - used to write the switch cases in angular application.
+
+
+Syntax.
+
+<div ng-switch="Expression">
+    <div ng-switch-when="value1">
+          //Code
+    </div>
+    <div ng-switch-when="value2">
+          //Code
+    </div>
+        ---
+        ---
+        ---
+    <div ng-switch-default>
+          //Code
+    </div>
+</div>
+
+
+
+Ex.
+
+<html ng-app ng-init="my_number=0">
+    <input type="number" ng-model="my_number">
+    <div ng-switch="my_number">
+        <div ng-switch-when="1" class="btn btn-primary" ng-bind="my_number"></div>
+        <div ng-switch-when="2" class="btn btn-success" ng-bind="my_number"></div>
+        <div ng-switch-when="3" class="btn btn-danger"  ng-bind="my_number"></div>
+        <div ng-switch-default  class="btn btn-default" ng-bind="my_number"></div>
+    </div>
+</html>
+
+
+10.ng-submit
+    - used to submit the whole form at a time to the controller.
+
+Syntax.
+
+    <form ng-submit="user defined function">
+
+        //Form Elements
+
+        <input type="submit"/>
+
+    </form>
+
+
+
+Ex.
+    <html ng-app="app" ng-controller="ctrl">
+        <form ng-submit="register({'uname':uname,'upwd':upwd})">
+             <label>Uname.</label>&emsp;&emsp;&emsp;
+             <input type="text" ng-model="uname">
+             <br><br>
+             <label>Password.</label>&emsp;&emsp;
+             <input type="password" ng-model="upwd">
+             <br><br>
+             <input type="submit">
+        </form>
+        <script>
+            angular.module("app",[]).controller("ctrl",function($scope){
+                $scope.register = function(obj){
+                    console.log(obj.uname+"...."+obj.upwd);
+                }
+            });
+        </script>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
