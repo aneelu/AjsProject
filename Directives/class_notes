@@ -60,3 +60,51 @@ Syntax.
 
     ng-options = "model_values as dropdown_values for iteration_variable in collection"
 
+
+5.ng-click
+
+    - when ever we click the user interface elements , automatically ng-click
+
+     directive will execute by angular framework.
+
+
+Syntax.
+
+    ng-click = "expression"/
+                "user defined function"/
+                 "user defined function with optional parameters"
+
+
+6.ng-switch.
+
+    - used to write the switch cases in angular applications.
+
+Syntax.
+
+    <div ng-switch="expression">
+
+        <div ng-switch-when="value1">
+            //Code
+        </div>
+
+        <div ng-switch-when="value2">
+            //Code
+        </div>
+
+        <div ng-switch-default>
+            //Code
+        </div>
+    </div>
+
+7.ng-submit
+    - used to submit the whole form at a time to the controller.
+
+Syntax.
+
+    <form ng-submit="user defined function">
+
+        //Form Elements
+
+        <input type="submit"/>
+
+    </form>
