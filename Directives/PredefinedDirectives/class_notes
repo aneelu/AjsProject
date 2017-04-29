@@ -216,3 +216,156 @@ Syntax.
      Syntax.
 
         ng-show / ng-hide = "true" / "false"
+
+
+
+14.ng-mousedown / ng-mouseup
+                                    = "user defined function"
+   ng-mouseover / ng-mouseout
+
+
+    - when ever we perform the mouse opearations automatically these directives will be
+
+      executed by angular framework.
+
+
+
+Custom Directives.
+
+    - Creating Our Own Directive Based on Application Requirement Called as Custom Directive
+
+    - In AngularJS We Can Use Custom Directives in 3 ways.
+
+        1. As an Element
+
+        2. As an Attribute
+
+        3. As an CSS Class
+
+
+    Ex.
+
+        Custom Directive    ---  my_directive
+
+        <my_directive></my_directive>     // Element Leval Usage
+
+        <div my_directive></div>          // Attribute Leval Usage
+
+        <div class="my_directive"></div>    // CSS Class Leval Usage
+
+
+
+Properties Of Custom Directives.
+
+1.restrict
+
+    - it will describe the usage of custom directive.
+
+Ex.
+
+    app.directive("my_directive" , my_directive);
+
+    function my_directive(){
+        return{
+                restrict : "AEC"
+        }
+    }
+
+
+2.template
+
+    - used to add the HTML to the Custom Directive.
+
+Ex.
+
+    app.directive("my_directive", my_directive);
+
+    function my_directive(){
+
+        return{
+                restrict:'E',
+                template:'<b>This is Custom Directive</b>'
+        }
+    }
+
+
+    <my_directive></my_directive>  //This is Custom Directive
+
+
+3.templateUrl.
+
+    - used to link the external templates to the Custom Directives.
+
+
+Ex.
+
+sample.html
+-
+<b>This is Custom Directive</b>
+
+
+app.directive('my_directive' , my_directive);
+
+function my_directive(){
+
+    return{
+
+         restrict:'A',
+
+         templateUrl:'sample.html'
+
+    }
+}
+
+
+<div my_directive></div>   //This is Custom Directive
+
+
+
+
+4.controller.
+
+    - used to declare the controller to the template of a custom directive.
+
+
+Ex.
+
+sample.html
+-
+
+{{var_one}}
+
+
+sample.js
+-
+app.controller('sample',sample);
+sample.$inject=['$scope'];
+function sample($scope){
+    $scope.var_one = 'I am from Custom Directive';
+}
+
+
+app.directive('my_directive',my_directive);
+function my_directive(){
+
+    return{
+            restrict:'C',
+            templateUrl:'sample.html',
+            controller:'sample'
+    }
+}
+
+<div class='my_directive'></div>    //I am from Custom Directive
+
+
+
+
+
+
+
+
+
+
+
+
+
