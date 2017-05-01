@@ -1,0 +1,139 @@
+AngularJS.
+
+    - AngularJS is a Client Side JavaScript Framework.
+
+    - AngularJS Follows the MVC Design Pattern.
+
+        M - Model (JavaScript Variables)
+
+        V - View  (HTML / HTML5)
+
+        C - Controller (JavaScript Functions)
+
+
+    - AngularJS Have a So Many Predefined Modules, As a Angular Developer We Can Reuse the Predefined Modules.
+
+        1.ngAnimate
+
+            - used to develop the Animations in Angular Applications.
+
+
+        2.ngMessages
+
+            - used to handle the client side form validations.
+
+
+        3.ngStorage
+
+            - used to work with the Storages.
+
+            - we have two types of Storages.
+
+                1.localStorage
+
+                2.sessionStorage
+
+
+        4.ngRoute
+
+            - used to achieve the Routing in  Single Page Application.
+
+            - ngRoute Module is the Predefined  Module, now a days no body using the ngRoute Module
+
+              because of it's limitations.
+
+
+        5.ui.router
+
+
+            - used to handle the Routings in Single Page Applications.
+
+            - ui.router module is the 3rd party module, now a days all most all the projects they are using
+
+              ui.router module in SPA.
+
+
+
+        //Develop One Angular Application with the Following Features.
+
+            1.Animations
+
+            2.Storages
+
+            3.Routing (ui.router)
+
+            4.Validations
+
+
+
+        index.html
+        -
+
+        <!DOCTYPE html>
+
+
+        <html ng-app="myApp">
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+            <script>
+                angular.module("myApp",["ngAnimate","ngStorage","ngMessages","ui.router"]);
+            </script>
+
+        </html>
+
+
+
+Advantages Of AngularJS.
+
+1.As a Angular Developer We Can Directly Work With the HTML DOM.
+
+    DOM Stands for Document Object Model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
