@@ -381,71 +381,143 @@ Ex.
     </html>
 
 
+11.ng-include
 
+    - used to divide the view into number of sub views
 
+    - when ever we divide view into number of sub views automatically readability of the application
 
+      will be increased.
 
 
+Syntax.
 
+    ng-include = "path of the external template"
 
+Ex_1.
 
+sample.html
+-
+<b>{{var_one}}</b>
 
 
+ngIncludeDemo_1.html
+-
+<html ng-app="app" ng-contoller="ctrl">
+    <div ng-include="sample.html"></div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl" , ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope){
+            $scope.var_one = "ngInclude Demo";
+        }
+    </script>
+</html>
 
+O/P: This is ngInclude Demo
 
+-------------------------------
 
+app.controller("ctrl",ctrl);
+ctrl.$inject=["$scope"];
+function ctrl($scope){
+    $scope.data = [
+                    {'id':1,'name':'Hello_1','age':22},
+                    {'id':2,'name':'Hello_2','age':24},
+                    {'id':3,'name':'Hello_3','age':26},
+                    {'id':4,'name':'Hello_4','age':28},
+                    {'id':5,'name':'Hello_5','age':30}
 
+                  ];
+}
 
 
+table.html
+-
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+    </tr>
+    <tr ng-repeat="x in data">
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.age}}</td>
+</table>
 
+ngIncludeDemo_2.html
+-
+<div ng-include="'table.html'"></div>
 
 
 
+12.ng-class-odd
 
+    - used to apply the "css classes" to the "odd rows" of table.
 
+ Syntax.
+    <table>
+        <tr ng-repeat = "x in data" ng-class-odd="my_class">
 
+                //Logic Goes Here
+         </tr>
+    <table>
 
 
 
+13.ng-class-even
 
+    - used to apply the "css classes" to the "even rows" of table.
 
+ Syntax.
+    <table>
+        <tr ng-repeat = "x in data" ng-class-even="my_class">
 
+                //Logic Goes Here
+         </tr>
+    <table>
 
 
+--------------------------
 
+<style>
+    .even{
+        color:red;
+    }
 
+    .odd{
+        color:green;
+    }
+</style>
 
 
+$scope.data = [
+                    {'id':1,'name':'Hello_1','age':22},
+                    {'id':2,'name':'Hello_2','age':24},
+                    {'id':3,'name':'Hello_3','age':26},
+                    {'id':4,'name':'Hello_4','age':28},
+                    {'id':5,'name':'Hello_5','age':30}
+                  ];
 
 
+<table border="1">
+    <tr ng-repeat="x in data" ng-class-odd="odd" ng-class-even="even">
+        //Logic
+    </tr>
+</table>
 
 
 
+14.ng-show / ng-hide
 
+    - used to show / hide the HTML Elements Based on the Condition.
 
+Syntax.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ng-show / ng-hide = "true" / "false"
 
 
 
