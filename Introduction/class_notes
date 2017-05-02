@@ -164,7 +164,14 @@ Ex.
 
 
 
+2.Angular Applications are Cross Browser Compatable Applications.
 
+    - Framework will identifies the Required Plugin and Installs based on type of browser
+
+
+3.Open Source Code
+
+    - we can customize the framework accroding to application requirement.
 
 
 
