@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
-    <table border="1">
+    <!--<table border="1">
         <tr>
             <th>id</th>
             <th>sub</th>
@@ -10,19 +10,20 @@
             <td>{{x.id}}</td>
             <td>{{x.sub}}</td>
         </tr>
-    </table>
+    </table>-->
 
+    <div ng-include="'ngCSSEffects.html'"></div>
 
-    <style>
+    <!--<style>
         .odd{
             color: rebeccapurple;
         }
         .even{
             color: #3c763d;
         }
-    </style>
+    </style>-->
 
-
+    <link rel="stylesheet" href="my_style.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);

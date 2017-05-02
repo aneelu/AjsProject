@@ -521,11 +521,60 @@ Syntax.
 
 
 
+15. ng-mousedown / ng-mouseup
+
+    ng-mouseenter / ng-mouseleave   = "user defined function"
+
+    ng-mouseover / ng-mouseout
 
 
 
+16.ng-cloak
+
+    - used to avoid the blinking before displaying the application output.
 
 
+
+-----------------------
+ngCloakDemo
+    index.html
+    app.js
+    controllers
+        ctrl_one.js
+        ctrl_two.js
+-------------------------
+
+index.html
+-
+    <div ng-cloak ng-controller="ctrl_one">
+        <h1>{{var_one}}</h1>
+    </div>
+    <div ng-cloak ng-controller="ctrl_two">
+        <h1>{{var_two}}</h1>
+    </div>
+
+
+app.js
+-
+var app = angular.module("app",[]);
+
+
+ctrl_one.js
+-
+app.controller("ctrl_one",ctrl_one);
+ctrl_one.$inject=["$scope"];
+function ctrl_one($scope) {
+    $scope.var_one = "I am from controller one";
+}
+
+
+ctrl_two.js
+-
+app.controller("ctrl_two",ctrl_two);
+ctrl_two.$inject=["$scope"];
+function ctrl_two($scope) {
+    $scope.var_two="I am from controller two";
+}
 
 
 
