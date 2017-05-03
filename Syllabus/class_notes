@@ -130,3 +130,14 @@ GitHub Opearations.
     press enter
 
 
+
+
+
+5.create the Branch.
+
+    $git branch sai_branch
+
+
+6.checkout the Branch
+
+    $git checkout sai_branch
