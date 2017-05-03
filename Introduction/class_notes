@@ -92,6 +92,123 @@ Advantages Of AngularJS.
     DOM Stands for Document Object Model
 
 
+2.AngularJS Supports The MVC Design Pattern.
+
+3.AngularJS Supports the Two Way Data Binding
+
+    - Automatic Data Synchronization Between Model and View with the Supervision of Controller
+
+       Called as Two Way Data Binding.
+
+    [Note . Two Way Data Binding also Reduces the Burden on the Server ]
+
+4.AngularJS Supports the Single Page Applications.
+
+    - Loading the Target Templates to Source Template without refreshing the whole source template
+      called as Single Page Application.
+
+    - Framework will cache the Templates in Single Page Applicatons , called as Template Cache
+
+
+5.Open Source Code.
+
+    - As a Developer we can Customize the Framework Accroding to Application Requirement.
+
+
+Disadvantages Of AngularJS.
+
+1.Secuirity
+
+    By using AngularJS We Are Missing the Secuirity , because we are implementing Business Components
+
+    at client side.
+
+
+2. Client Should Enable the JavaScript.
+
+
+3. Understanding the Angular Applications are Difficult , Because of No Coding Standards.
+
+
+
+Automation Tools.
+
+1.Bower
+
+    - Bower is the Automation tool , used to download the Dependencies Based on the Application Requirement.
+
+    - Bower Given By The NodeJS.
+
+
+bower components.
+
+1.bower.json
+
+        - used to maintain the Required Resources to develop web application.
+
+2. .bowerrc
+
+        - used to indicate the path to the resources downloading by using bower.
+
+Ex.
+
+bower.json
+-
+{
+    "name":"durgasoft",
+    "dependencies":{
+        "angular":"~1.6.0",
+        "bootstrap":"~3.3.6"
+    }
+}
+
+
+
+
+.bowerrc
+-
+{
+    "directory":"bower_components"
+}
+
+
+
+
+>bower install
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
