@@ -174,6 +174,128 @@ Ex.
     - we can customize the framework accroding to application requirement.
 
 
+4. AngularJS Supports the MVC Design Pattern
+
+    M - Model
+
+    V - View
+
+    C - Controller
+
+
+5.AngularJS Supports the Two Way Data Binding.
+
+    - Automatic data synchronization between model and view with the supervision of controller called as
+
+      Two Way Data Binding.
+
+    Note . Two Way data binding also reduces the Burden on the Server.
+
+    1. in the Above Architecture we have following server requests
+
+        1.http get request
+
+                - used to fetch the data from the DataBase
+
+        2.http post request
+
+                - used to delete the data from database based to user input.
+
+        3.Async Call (AJAX Call)
+
+                - used to sync the data between DataBase and View
+
+
+        [Note . As a Programming Languages Developer we must make above all requests to meet
+
+                application requirement
+
+                    Ex.
+
+                        Java
+
+                        dot net
+
+                        php ]
+
+
+        [Note . As a ui developer we can make only two calls to meet application requirement, because
+
+                of two way data binding
+
+                    Ex.
+
+                        AngularJS
+
+                        Angular2
+
+                        reactJS ]
+
+
+
+
+        6.We can Develop Single Page Applications by using Angular Framework
+
+            - Loading the Target Templates to Source Template without Refreshing the Whole Source Template
+
+             called as Single Page Application
+
+            - Cacheing the Templates by Angular Framework Called as Template Cache.
+
+
+Disadvantages Of AngularJS.
+
+    1. Secuirity
+
+        By using AngularJS We Can Implement the Business Components at client side, so we are missing
+
+        the Secuirity
+
+
+    2. Client Should Enable the JavaScript, then only angular applications will execute
+
+
+    3. AngularJS Won't Have Any Coding Standards , so understanding the Angular Applications are difficult.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
