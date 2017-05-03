@@ -108,3 +108,9 @@ Syntax.
         <input type="submit"/>
 
     </form>
+
+8.ng-include.
+
+    - it is used to divide the view into number of subviews.
+
+    - if we divide view into number of subviews automatically readability will be incresed.
