@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-controller="parent_controller">
+        <h1>{{var_one}}</h1>
+        <div ng-controller="child_controller">
+            <input type="text" ng-model="my_model"> &emsp;&emsp;&emsp;
+            <button ng-click="emit(my_model)">Emit</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope) {
+            $scope.emit = function (data) {
+                $scope.$emit("key1",data);
+            };
+        };
+
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.$on("key1",function (event,res) {
+                $scope.var_one = res;
+            });
+        };
+    </script>
+
+
+</html>
