@@ -1,0 +1,6 @@
+{
+  "name":"durgasoft",
+  "dependencies":{
+      "angular":"~1.6.0"
+  }
+}
