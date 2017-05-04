@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div ng-controller="parent_controller">
+
+        <button ng-click="clickMe()">BroadCast</button>
+
+        <div ng-controller="child_one">
+            <h1>{{var_one}}</h1>
+        </div>
+
+        <div ng-controller="child_two">
+            <h1>{{var_two}}</h1>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.clickMe = function () {
+                $scope.$broadcast("key1",{"child_one":"For Child One","child_two":"For Child Two"});
+            };
+        };
+
+
+        app.controller("child_one",child_one);
+        child_one.$inject=["$scope"];
+        function child_one($scope) {
+            $scope.$on("key1",function(event,res){
+                $scope.var_one = res.child_one;
+            });
+        }
+
+
+        app.controller("child_two",child_two);
+        child_two.$inject=["$scope"];
+        function child_two($scope) {
+            $scope.$on("key1",function(event,res){
+                $scope.var_two = res.child_two;
+            });
+        }
+
+
+
+    </script>
+
+
+</html>

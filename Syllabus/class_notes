@@ -1,0 +1,90 @@
+1.Basics Of JavaScript.
+
+    - What is JavaScript.
+
+    - Why JavaScript.
+
+    - What are the Differences Between JavaScript - AngularJS
+
+                                       JavaScript  - Angular2
+
+                                       JavaScript  - reactJS
+
+                                       JavaScript  - Programming Languages
+
+
+    - JavaScript Program Structure.
+
+
+2. Variables in JavaScript
+
+3. Functions
+
+4. Classes
+
+5. OOPS
+
+6. Clumsy Code
+
+7. JSON
+
+8. API'S - Interaction
+
+9. Mini_Project
+
+    200 Sample Examples  -- With Mini_Project.
+
+
+
+Example_1.
+
+    - Execute One Function by using button click.
+
+    - Make the Application as Nested Function Calls.
+
+ Ex.
+
+    <button onClick = "my_fun()">Click Me</button>
+
+
+
+    function my_fun(){
+
+        this.fun_one("Satya");    // Function Calling
+
+
+    }
+
+
+    function fun_one(arg1){
+
+        this.fun_two(arg1+"   "+"Dev");
+    }
+
+
+    function fun_two(data){
+
+        this.fun_three(data+"   K");
+
+    }
+
+
+    function fun_three(Data){
+
+        console.log(Data);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

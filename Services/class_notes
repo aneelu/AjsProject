@@ -1,0 +1,32 @@
+Services.
+    - Services are used to maintain the common business logic.
+
+    - Services Can Share the Common Business Logic to all the Controllers.
+
+    - By using Services We Can Achieve the Code Reusability.
+
+    - We Have Two Types Of Services.
+
+        1.Custom Services
+
+        2.Predefined Services
+
+
+Custom Service.
+
+    - The Services Developed By the Developer Called As Custom Services.
+
+    - we can develop the Custom Services By using the following predefined function.
+
+        1.provider()
+
+        2.factory()
+
+        3.service()
+
+        4.value()
+
+        5.constant()
+
+
+
