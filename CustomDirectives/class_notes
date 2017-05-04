@@ -132,3 +132,89 @@ index.html
 -
 <my_directive></my_directive> //I am from Custom Directive
 
+
+
+Example_2.
+
+-----------------------
+templates
+    header.html
+-----------------------
+<div class="dropdown">  //Making the Div as the DropDown
+
+    <button class="btn btn-primary dropdown-caret" data-toggle="dropdown">Click Me</button>
+            //Applying the Style to the Button     //jQuery Event
+
+    <ul class="dropdown-menu">
+        <li>Option_1</li>
+        <li>Option_2</li>
+        <li>Option_3</li>
+        <li>Option_4</li>
+        <li ng-click="logout()">Logout</li>
+    </ul>
+</div>
+
+
+-------------------
+controllers
+    header.js
+-------------------
+
+app.controller("header" , header);
+header.$inject=["$scope"];
+function header($scope){
+    $scope.logout = function(){
+        console.log("Logged Out Successfully !");
+    }
+}
+
+
+-----------------
+directives
+    header.js
+----------------
+
+app.directive("header" , header);
+function header(){
+    return{
+        restrict:"E",
+        templateUrl:"templates/header.html",
+        controller:"header"
+    }
+}
+
+
+
+index.html
+-
+
+<html ng-app="app">
+
+    <header></header>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/jquery.min.js">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js">
+     ----angular.min.js----
+     ---- app.js ----------
+     ---- controllers / header.js -----
+     ----- directives / header.js ----
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
