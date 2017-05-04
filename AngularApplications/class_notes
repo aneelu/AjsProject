@@ -39,6 +39,151 @@ bower components
     - used to give the path for resources downloading by bower.
 
 
+bower.json
+-
+{
+    "name":"nareshit",
+    "dependencies":{
+            "angular" : "~1.6.0",
+            "bootstrap" : "~3.3.6"
+    }
+}
+
+
+
+.bowerrc
+-
+
+{
+    "directory":"bower_components"
+}
+
+
+
+> bower install
+
+
+ - When evee we run the bower , automatically bower will interact with the Server (NodeJS).
+
+ - Node Server Automatically Interacts with the Git Repository for Resources.
+
+ - Git Repository will download the Required Resources for Web Application Development based on "bower.json component"
+
+ - "~" will downloads the latest version of resources.
+
+ - "^" will download the exact version of resources
+
+
+
+Steps to Create the Static Angular Application.
+-
+
+Step 1.
+
+    Download the Angular Framework by using bower.
+
+
+
+Step 2.
+
+     Create the View.
+
+ Ex.
+     index.html
+
+
+index.html
+-
+
+<!DOCTYPE html>
+
+<html ng-app>
+
+    <input type="number" ng-model="model_one">
+
+    <input type="number" ng-model="model_two">
+
+    <h1 style="color:red" ng-bind="model_one+model_two">
+
+
+    <script src="/.........../angular.min.js"></script>
+</html>
+
+
+    ********************************
+AngularApplications
+
+    StaticAngularApplication
+
+        bower.json
+
+        .bowerrc
+
+        index.html
+    *********************************
+
+
+Steps to Create Dynamic Angular Application
+-
+
+    - If View  Interacts with the Controller for Dynamic Data , then Such type Of Angular Application
+
+      Called as Dynamic Angular Application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
