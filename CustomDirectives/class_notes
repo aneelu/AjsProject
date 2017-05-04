@@ -1,0 +1,134 @@
+Custom Directives.
+
+    - Creating our own Directive Based on Application Requirement Called as Custom Directive.
+
+    - In AngularJS We Can Use the Custom Directives in 3 ways.
+
+        1. As an Element
+
+        2. As an Attribute
+
+        3. As an CSS Class
+
+     Ex.
+
+        my_directive
+
+
+        <my_directive></my_directive> // Element Level Usage
+
+        <div my_directive></div>      // Attribute Leval Usage
+
+        <div class="my_directive"></div> // CSS Class Leval Usage
+
+
+Properties Of Custom Directive.
+
+1.restrict
+
+    - used to describe the usage of custom directive.
+
+    Ex.
+
+        restrict : "E"   // we can use like Element
+        restrict : "A"   // we can use like Attribute
+        restrict : "C"   // we can use like CSS Class
+        restrict : "AEC"   // we can use like Element , Attribute and CSS Class
+
+
+    app.directive("my_directive",my_directive);    // arg1 - name of the Custom Directive
+
+                                                  // arg2  - user defined function to implement custom directive
+
+
+
+    function my_directive(){
+        return{
+            restrict : "E"
+        }
+    }
+
+    <my_directive></my_directive>
+
+
+2.template.
+
+    - used to add the html to the Custom Directive.
+
+
+    app.directive("ex_directive",ex_directive);
+    function ex_directive(){
+        return{
+            restrict:"A",
+            template:"<html><body>Welcome to the Custom Directives</body></html>"
+        }
+    }
+
+
+    <div ex_directive></div> //Welcome to the Custom Directives
+
+
+3.templateUrl.
+        - used to add the external templates to the custom directives.
+--------------
+templates
+        sample.html
+---------------
+
+<html>
+
+    <b>Welcome to Custom Directives</b>
+
+</html>
+
+
+app.directive("my_directive",my_directive);
+function my_directive(){
+    return{
+        restrict:"C",
+        templateUrl:"templates/sample.html"
+    }
+}
+
+<div class = "my_directive"></div> //Welcome to Custom Directives
+
+
+4.controller
+    - used to define the controller to the template of a custom directive.
+Ex.
+-----------------------
+templates
+    sample.html
+-----------------------
+
+sample.html
+-
+<h1>{{var_one}}</h1>
+
+-------------------
+controllers
+    sample.js
+-------------------
+app.controller("sample",sample);
+sample.$inject=["$scope"];
+function sample($scope){
+    $scope.var_one = "I am from Custom Directive";
+}
+
+----------------------
+directives
+    my_directive.js
+----------------------
+app.directive("my_directive",my_directive);
+function my_directive(){
+    return{
+        restrict:"E",
+        templateUrl:"templates/sample.html",
+        controller:"sample"
+    }
+}
+
+index.html
+-
+<my_directive></my_directive> //I am from Custom Directive
+
