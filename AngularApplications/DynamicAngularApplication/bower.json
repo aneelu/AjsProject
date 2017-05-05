@@ -1,0 +1,6 @@
+{
+  "name":"nareshit",
+  "dependencies":{
+      "angular":"~1.6.0"
+  }
+}

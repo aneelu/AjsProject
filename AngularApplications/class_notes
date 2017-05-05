@@ -133,6 +133,122 @@ Steps to Create Dynamic Angular Application
 
 
 
+Step 1.
+    Download Angular Framework by using bower.
+
+
+Step 2.
+    Load the Angular Framework.
+
+
+Step 3.
+    Declare the logical name of application with ng-app directive
+
+Step 4.
+    Declare the Controller by using ng-controller directive
+
+Step 5.
+    Instantiate the Module (Getting the Whole page Control Ex. index.html)
+
+
+Step 6.
+        Implement the Controller
+
+
+Creating the Dynamic Angular Application with Coding Standards.
+
+Step 1.
+
+    Create the Directory Structure.
+
+    *************************************
+ DynamicAngularApplication
+
+        bower.json
+
+        .bowerrc.json
+
+        index.html
+
+        app.js
+
+        controllers
+
+            ctrl.js
+
+    **************************************
+
+
+Step 2.
+
+    Instantiate the Module.
+
+app.js
+-
+var app = angular.module("app" , []);
+
+   (Object)              (Logical Name)
+
+
+
+
+Step 3.
+    Implement the Controller.
+
+
+app.controller("ctrl" , ctrl);   // arg1 - name of the controller
+                                    arg2 - name of the user defined function to implement controller
+
+
+ctrl.$inject=["$scope"];       // Indicating the Relation Between User Defined Function and Predefined Objects
+
+
+function ctrl($scope){
+    $scope.var_one = "AngularJS";
+    $scope.var_two = "NodeJS";
+    $scope.var_three = "MySQL";
+
+}
+
+
+Step 4.
+    Create the View
+
+    <html ng-app = "app">
+        <div ng-controller="ctrl">
+            <h1>{{var_one+"...."+var_two+"...."+var_three}}</h1>
+        </div>
+        <script src="bower_components / angular / angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers / ctrl.js"></script>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
