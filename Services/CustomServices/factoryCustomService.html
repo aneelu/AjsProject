@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+
+    <div ng-controller="ctrl_two">
+        <h1 style="color: red">{{var_two}}</h1>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+
+
+        var objFunction = function(data){
+            this.var_one = data;
+            this.my_fun = function () {
+                return this.var_one;
+            };
+        }
+
+
+
+        var app = angular.module("app",[]);
+
+        app.factory("my_service",my_service);
+        function my_service() {
+            return new objFunction("Data From The MongoDB Soon....").my_fun();
+        };
+        
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope","my_service"];
+        function ctrl_one($scope,my_service) {
+            $scope.var_one = my_service;
+        }
+
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope","my_service"];
+        function ctrl_two($scope,my_service) {
+            $scope.var_two = my_service;
+        }
+
+    </script>
+
+
+
+</html>
