@@ -1,0 +1,158 @@
+
+    - In AngularJS We Can Provide the Communication Between Controllers in four ways.
+
+    1.broadcast
+
+    2.emit
+
+    3.rootScope
+
+    4.custom services Communication
+
+
+
+broadcast.
+
+    - Sharing the Data from "Parent Controller" to "Child Controllers" Called as Broadcast Communication.
+
+<html ng-app="app">
+     <div ng-controller="parent_controller">
+        <button ng-click="clickMe()">BroadCast</button>
+
+        <div ng-controller="child_one">
+            <h1>{{var_one}}</h1>
+        </div>
+
+        <div ng-controller="child_two">
+               <h1>{{var_two}}</h1>
+        </div>
+     </div>
+
+     <script src = "bower_components / angular / angular.min.js"></script>
+     <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller" , parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope){
+            $scope.clickMe = function(){
+                $scope.$broadcast("key1","Data From MySQL....");
+                $scope.$broadcast("key2","Data From MongoDB....");
+            }
+        }
+
+
+        app.controller("child_one" , child_one);
+        child_one.$inject=["$scope"];
+        function child_one($scope){
+            $scope.$on("key1",function(event, res){
+                 $scope.var_one = res;
+            });
+        }
+
+
+        app.controller("child_two" , child_two);
+        child_two.$inject=["$scope"];
+        function child_two($scope){
+              $scope.$on("key2",function(event, res){
+                    $scope.var_two = res;
+               });
+        }
+
+    </script>
+</html>
+
+
+
+Example_2.
+
+<input type="text" ng-model="model_one"> <br><br>
+<input type="text" ng-model="model_two"> <br><br>
+<button ng-click="clickMe({'model_one':model_one,'model_two':model_two})">BroadCast</button>
+
+
+
+$scope.clickMe = function(data){
+        $scope.$broadcast("key1",data);
+}
+
+
+
+function child_one($scope) {
+        $scope.$on("key1",function(event,res){
+              $scope.var_one = res.model_one;
+        });
+}
+
+
+function child_two($scope) {
+        $scope.$on("key1",function(event,res){
+              $scope.var_two = res.model_two;
+        });
+}
+
+
+
+
+emit communication.
+-
+    Sharing the data from child controllers to parent controllers called as emit communication.
+
+
+Ex.
+    <div ng-controller="parent_controller">
+        <h1>{{var_one}}</h1>
+            <div ng-controller="child">
+                 <button ng-click="clickMe()">Emit</button>
+            </div>
+    </div>
+
+    app.controller("child",child);
+    child.$inject=["$scope"];
+    function child($scope){
+        $scope.clickMe = function(){
+            $scope.$emit("key1","Emit Example");
+        }
+    }
+
+    app.controller("parent_controller",parent_controller);
+    parent_controller.$inject=["$scope"];
+    function parent_controller($scope){
+        $scope.$on("key1",function(event,res){
+            $scope.var_one = res;
+        });
+    }
+
+
+Communication Between Controllers by using rootScope.
+
+
+ - we can provide the communication between the controllers by using $rootScope also.
+
+ - in genaral we will use $rootScope communication for "sibling relation controllers"
+
+
+<div ng-controller="ctrl_one">
+    <button ng-click="clickMe('For Controller Two')">ClickMe</button>
+</div>
+
+<div ng-controller="ctrl_two">
+   <h1 style="color:red" ng-bind="var_one"></h1>
+</div>
+
+
+app.controller("ctrl_one",ctrl_one);
+ctrl_one.$inject=["$scope"];
+function ctrl_one($scope){
+    $scope.clickMe = function(data){
+      $scope.my_fun(data);
+    }
+}
+
+app.controller("ctrl_two",ctrl_two);
+ctrl_two.$inject=["$scope","$rootScope"];
+function ctrl_two($scope,$rootScope){
+    $rootScope.my_fun = function(data){
+        $scope.var_one = data;
+    }
+}
