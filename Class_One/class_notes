@@ -1,0 +1,104 @@
+Variable:
+- Variables are used to store the data.
+    ex. var i = 10;
+   Note: (i) variable stores the value as 10.
+  var s = "Data from service call soon".
+
+  Ingeneral we will declare the variables by using var keyword.
+
+Function:
+
+- functions are used to write the business logic.
+  Ingeneral we will create the functions by using function keyword.
+    ex, function function_name(){
+            //Logic
+        }
+
+        //Creting the Function / "Implemeting the Function"
+        function add(){
+            var x=5;
+            var y=10;
+            var z= x+y;
+            console.log(z);
+        }
+
+        add() // Calling the Function "add"
+
+        sub() // Calling teh Function "sub"
+
+        function sub(){
+            var x = 10;
+            var y = 5;
+            console.log(x-y);
+        }
+
+
+
+    Ex.
+
+        var x = add();
+
+        function add(){
+                     var i= 10;
+                     var y = 20;
+                     return i+y;
+                 }
+    Ex.
+
+        console.log(add(10,10));
+
+        function add(a,b){
+            return a+b;
+        }
+
+
+
+Class.
+
+    - Class is the collection of variables and functions.
+    - Ingeneral we will create the class by using class keyword.
+
+    Ex.
+
+        class obj{
+
+              var x = 10;
+
+              var y = 20;
+
+              function sum(){
+                return x+y;
+              }
+        }
+
+
+
+       var for_myfriend = new obj();
+
+
+        var x=new obj();
+
+        var a = for_myfriend.x;
+
+        var b = for_myfriend.y;
+
+        var c = for_myfriend.sum();
+
+
+        Ex.
+
+            var for_myfrined = function(){
+
+                var x = 10;
+
+                var y = 20;
+
+                function sum(){
+
+                    return x+y;
+                }
+            }
+
+
+            new for_myfriend().x
+
