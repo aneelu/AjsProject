@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <select ng-model="my_model" ng-options="x as x for x in data">
+        <option value="">--Select One--</option>
+    </select>
+
+    <h1>{{my_model}}</h1>
+
+            /************************************/
+    <select ng-model="case_one" ng-options="x.id as x.sub for x in data_one">
+        <option value="">--Choose Subject--</option>
+    </select>
+    <h1 style="color: red">{{case_one}}</h1>
+            /*********************************/
+
+            /*********************************/
+    <select ng-model="case_two" ng-options="x.sub as x.id for x in data_one">
+        <option value="">--Choose ID--</option>
+    </select>
+    <h1 style="color: red">{{case_two}}</h1>
+            /*******************************/
+
+            /********************************/
+    <select ng-model="case_three" ng-options="x.sub as x.sub for x in data_one">
+        <option value="">--Choose Sub--</option>
+    </select>
+    <h1 style="color: red">{{case_three}}</h1>
+            /**********************************/
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+           $scope.data = ["Option_1","Option_2","Option_3","Option_4","Option_5"];
+
+            $scope.data_one = [
+                    {'id':1,'sub':'AngularJS'},
+                    {'id':2,'sub':'Angular2'},
+                    {'id':3,'sub':'Angular4'},
+                    {'id':4,'sub':'NodeJS'},
+                    {'id':5,'sub':'reactJS'}
+            ];
+
+        });
+    </script>
+
+
+</html>

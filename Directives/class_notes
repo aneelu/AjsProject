@@ -1,0 +1,228 @@
+Directives.
+
+    - Directives will enhance the HTML Capabilities.
+
+    - We Have Two Types Of Directives.
+
+        1.Predefined Directives
+
+        2.Custom Directives
+
+Predefined Directives.
+
+    - The Directives Given by the Framework Called as Predefined Directives.
+
+1.ng-app
+
+2.ng-controller
+
+3.ng-repeat
+
+4.ng-click
+
+    Syntax.
+
+        ng-click = "Expression" /
+
+                    "user defined function"/
+
+                    "user defined function with optional parameters"
+
+
+5.ng-options.
+
+    - used to populate the values to the dropdown.
+
+
+    Syntax.
+
+        ng-options="'model_values' as 'dropdown_values' for 'iteration_variable' in 'collection/array'"
+
+
+
+6.ng-submit.
+
+    - used to submit the whole form at a time to the controller.
+
+ Syntax.
+
+        <form ng-submit="register()">
+            //Form Elements
+            <input type="submit"></input>
+        </form>
+
+
+
+Custom Directives.
+
+    - Creating Our own directive called as Custom Directive.
+
+    - In AngularJS We Can Use Custom Directives in 3 ways.
+
+        1. Element
+
+        2. CSS Class
+
+        3. Attribute
+
+
+
+    Ex.  Directive ---->  myDirective.
+
+       <my-directive></my-directive>   // Element Leval Usage.
+
+       <div class="my-directive"></div>  // CSS Class Level Usage
+
+       <div my-directive></div>          // Attribute Leval Usage
+
+
+Properties of Custom Directives.
+
+1.restrict.
+    it will describe the usage of custom directive.
+
+Ex.
+        restrict : "AEC"
+
+
+2.template
+    used to add the html to the custom directive.
+
+Ex.
+
+    app.directive("myDirective",myDirective);
+    function myDirective(){
+        return{
+            restrict : "A",
+            template: "<div>Welcome to Custom Directives</div>"
+        }
+    }
+
+
+    <div my-directive></div> //Welcome to Custom Directives
+
+
+
+3.templateUrl.
+
+    - used to add the external template to the custom directive.
+
+--------------
+templates
+    sample.html
+--------------
+
+sample.html
+-
+<h1>Welcome to Custom Directives
+
+------------------
+directives
+    my_directive.js
+-----------------
+app.directive("myDirective",myDirective);
+function myDirective(){
+    return{
+        restrict:"E",
+        templateUrl:"templates/sample.html"
+    }
+}
+
+index.html
+-
+<my-directive></my-directive>
+
+
+4.controller.
+
+    used to define the controller to the template of a custom directive.
+
+
+----------------------
+templates
+    sample.html
+----------------------
+
+<h1>{{var_one}}</h1>
+
+
+--------------------
+controllers
+    sample.js
+--------------------
+
+app.controller("sample",sample);
+sample.$inject=["$scope"];
+function sample($scope){
+    $scope.var_one = "I am from Custom Directives";
+}
+
+
+-----------------
+directives
+    sample.js
+-----------------
+app.directive("sample",sample);
+function sample(){
+    return{
+        restrict:"C",
+        templateUrl : "templates/sample.html",
+        controller  : "sample"
+    }
+}
+
+index.html
+-
+
+<div class = "sample"></div>  // I am from Custom Directives
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
