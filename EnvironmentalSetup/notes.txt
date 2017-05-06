@@ -1,0 +1,75 @@
+1. Download and Install the NodeJS.
+
+	Website : https://nodejs.org/en/download/
+
+	file name : node-v6.10.3-x64.msi
+
+	Open the Command Prompt.
+
+	>node -v
+
+		will gives the version of nodejs
+
+	>npm -v 
+
+		will gives the node packaging manager version.
+
+
+2. Download and Install the GIT.
+
+	Website : https://git-scm.com/download
+
+	File name : Git-2.12.2.2-64-bit.exe
+
+3. Have the Account with the GitHub.
+
+	Website : https://github.com/join
+
+4. Download IDE
+	Ex.
+
+	Webstrom
+
+	Website : https://www.jetbrains.com/webstorm/download/#section=windows
+
+	file name : WebStorm-2017.1.2.exe
+
+
+
+5. Checkout the Code from the GitHub.
+
+	URL : https://github.com/ajsnaresh/AJS_Classes.git
+
+	Branch : Workshop
+
+
+6. Install the bower.
+
+	Open the Terminal in WebStrom (Alt + F12)
+
+	Execute the Following Node Command.
+
+	> npm install -g bower
+
+
+7. Download and Install the MongoDB.
+
+	Website : https://www.mongodb.com/download-center#community
+
+	file name : mongodb-win32-x86_64-2008plus-ssl-3.4.4-signed.msi
+
+	Set the Class path .
+
+	path = C:\Program Files\MongoDB\Server\3.4\bin
+
+	Create the DB path.
+
+	C:\data\db
+
+	Start the Server.
+	>mongod
+
+	>how to connect to server
+	>mongo
+
+	>show dbs;
