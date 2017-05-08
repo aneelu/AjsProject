@@ -1,0 +1,52 @@
+- In general we will read the data from Database by using servers.
+
+- Json is called Network Data carrier.
+
+- Json is used to carry the data from FrontEnd to BackEnd and BackEnd to FrontEnd.
+
+- Json stands for Javascript Object Notation.
+
+- Json is network friendly format.
+
+Notations in Json:
+
+    1) Objects -- {}
+    2) Arrays --- []
+    3) Data --- key and value pairs.
+
+- Data is sent to Server and in this Server API prepares the Json and sends to FrontEnd.
+
+- API is acting as interface between FrontEnd and server
+
+- Json has the capability to talk with multiple Technologies.
+    ex: Javascript, ReactJs, AngularJs etc..
+
+-- We can place objects into Arrays and viceverca.
+
+-- We can place data into either in Objects or in Arrays.
+
+
+   {"name":"satya" } //Anonymous Object
+   var obj = {"name":"satya"}; //Named Object and name is obj
+
+   var x = obj.name;
+   console.log(x); //satya
+
+
+
+  var obj =  {"name":"satya", "age":25, "education":"M.s"}
+  console.log(obj.name +" "+obj.age+" "+obj.education);
+  var name= obj.name;
+  var age = obj.age;
+  var eduaction = obj.education;
+  console.log(name+" "+ age+" " +education)
+
+  var obj = {
+                "emp":["name":"satya", "age":25, "education":"M.s" ]
+            };
+            var x = obj.emp;
+
+            x[0].name;
+            x[1].age;
+            x[2].education;
+            console.log(x[0].name +" "+"x[1].age+" " +x[2].education);
