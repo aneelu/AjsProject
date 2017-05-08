@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-    <h1 style="color: red" ng-controller="ctrl_one" ng-bind="var_one"></h1>
+    <h1 style="color: darkred" ng-controller="ctrl_one" ng-bind="var_one"></h1>
     <h1 style="color: green" ng-controller="ctrl_two" ng-bind="var_two"></h1>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
 
-
         /*app.config(config);
         config.$inject=["my_serviceProvider"];
         function config(my_serviceProvider) {
-            my_serviceProvider.var_one = "root_two";
+            my_serviceProvider.var_one="new password";
         }
 
         app.provider("my_service",my_service);
         function my_service() {
-            this.var_one="root_one";
+            this.var_one="old password";
             this.$get = function () {
                 return this.var_one;
             };
         };*/
 
 
-
-       /* var objFunction = function (data) {
+        /*var objFunction = function (data) {
             this.var_one = data;
             this.my_fun = function () {
-              return this.var_one;
+                return this.var_one;
             };
         };
-
 
 
         app.factory("my_service",my_service);
@@ -38,34 +35,39 @@
         }*/
 
 
+
         /*app.value("my_service","First Value");
         app.value("my_service","Second Value");*/
 
-        /*app.constant("my_service","Old Value");
-        app.constant("my_service","New Value");*/
-
+        /*app.constant("my_service","First Value");
+        app.constant("my_service","Second Value");*/
+        
+        
         app.service("my_service",my_service);
         function my_service() {
+
             this.fun_one = function () {
-                return "Data From MongoDB Soon...";
+                return "data from the mongodb soon...";
             };
 
             this.fun_two = function () {
-                return "Data From MySQL DataBase Soon...";
+                return "data from the mysql soon...";
             };
         };
+
+
 
 
         app.controller("ctrl_one",ctrl_one);
         ctrl_one.$inject=["$scope","my_service"];
         function ctrl_one($scope,my_service) {
-            $scope.var_one = my_service.fun_one();
+            $scope.var_one=my_service.fun_one();
         }
 
         app.controller("ctrl_two",ctrl_two);
         ctrl_two.$inject=["$scope","my_service"];
         function ctrl_two($scope,my_service) {
-            $scope.var_two = my_service.fun_two();
+            $scope.var_two=my_service.fun_two();
         }
 
     </script>
