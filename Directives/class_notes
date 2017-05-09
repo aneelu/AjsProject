@@ -115,6 +115,25 @@ ngAppDemo_4.html
 </html>
 
 
+2.ng-controller.
+    - used to declare the controllers.
+    - we can have more than one controller per web application.
+    - in genaral we will declare controllers in view.
+
+        Ex.
+
+            <div ng-controller="ctrl">
+                //Logic Goes Here
+            </div>
+
+    - in genaral we will implement controllers in javascript.
+
+        Ex.
+            app.controller("ctrl" , ctrl);
+            ctrl.$inject=["$scope"];
+            function ctrl($scope){
+                //Logic Goes Here
+            }
 
 
 
