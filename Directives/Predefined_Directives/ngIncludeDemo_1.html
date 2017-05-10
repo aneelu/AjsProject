@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+
+    <div ng-include="'include_one.html'"></div>
+
+
+    <div ng-include="'include_demo.html'"></div>
+
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        angular.module("app" , []).controller("ctrl",function ($scope) {
+           $scope.var_one = "I am from nginclude demo";
+
+           $scope.var_two = [{'id':1,'name':'Hello_1','age':20},{'id':1,'name':'Hello_1','age':20},{'id':1,'name':'Hello_1','age':20},{'id':1,'name':'Hello_1','age':20},{'id':1,'name':'Hello_1','age':20}];
+        });
+    </script>
+</html>
