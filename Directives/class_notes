@@ -136,12 +136,52 @@ ngAppDemo_4.html
             }
 
 
+4.ng-options.
+    - used to populate the values to the dropdown.
+
+
+Syntax.
+
+<select
+    ng-model="my_model"
+    ng-options="model_values as dropdown_values for iteration_variable in array"></select>
+
+
+Ex.
+
+data = ["Hello_1" , "Hello_2" , "Hello_3" , "Hello_4" , "Hello_5"];
+
+<select ng-model="my_model" ng-options = "x as x for x in data"></select>
+
+
+
+data_one  = [{'id':1,'name':'Hello_1'},
+            {'id':2,'name':'Hello_2'},
+            {'id':3,'name':'Hello_3'},
+            {'id':4,'name':'Hello_4'},
+            {'id':5,'name':'Hello_5'}];
 
 
 
 
+<slect ng-model="model_one" ng-options="x.id as x.name for x in data_one">
 
 
+<select ng-model="model-two" ng-options = "x.name as x.id for x in data_one">
+
+
+<select ng-model="model-two" ng-options = "x.id as x.id for x in data_one">
+
+
+<select ng-model="model-two" ng-options = "x.name as x.name for x in data_one">
+
+
+5.ng-init.
+    - used to declare the static data in the form of a "key&value" pairs.
+
+    - each key&value pair separated with the ";"
+
+    - key & value separated with the help of "="
 
 
 
