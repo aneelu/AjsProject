@@ -255,6 +255,209 @@ function page_one($scope,$stateParams){
 
 
 NestedRouting in SinglePageApplication by using ui.router module.
+-
+
+Step 1.
+    Download the ui.router module.
+
+
+Step 2.
+    Add the ui.router module dependency.
+
+Step 3.
+    Create the Templates
+------------
+templates
+    page_one.html
+    page_two.html
+    child_one.html
+    child_two.html
+--------------
+
+page_one.html
+-
+
+<h1>{{var_one}}</h1>
+<a ui-sref=".child_one">Child_One</a>
+<div ui-view></div>
+
+
+page_two.html
+-
+<h1>{{var_two}}</h1>
+<a ui-sref=".child_two">Child_Two</a>
+<div ui-view></div>
+
+child_one.html
+-
+<h1>{{child_one}}</h1>
+
+child_two.html
+-
+<h1>{{child_two}}</h1>
+
+
+Step 4.
+    Create the Controllers.
+
+--------------------
+controllers
+    page_one.js
+    page_two.js
+    child_one.js
+    child_two.js
+--------------------
+
+
+Step 5.
+    Done the Mapping.
+
+app.config(config);
+config.$inject=["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+    $stateProvider.state("page_one",{
+        url:"/page_one",
+        templateUrl:"templates/page_one.html",
+        controller:"page_one"
+    })
+    .state("page_one.child_one",{
+            url:"/child_one",
+            templateUrl:"templates/child_one.html",
+            controller:"child_one"
+    })
+    .state("page_two",{
+            url:"/page_two",
+            templateUrl:"templates/page_two.html",
+            controller:"page_two"
+    })
+    .state("page_two.child_two",{
+                url:"/child_two",
+                templateUrl:"templates/child_two.html",
+                controller:"child_two"
+    });
+    $urlRouterProvider.otherwise("/page_one");
+}
+
+
+Step 6.
+    Create the Source Template (index.html)
+
+
+NamedViews in Single Page Application by using ui.router module.
+-
+    - Building the Target Webpages with more than one subview called as NamedViews in
+      Single Page Application
+
+
+Step 1.
+    Download the ui.router module.
+
+
+Step 2.
+    Add the ui.router module dependency.
+
+
+Step 3.
+    Create the Templates
+
+--------------------
+templates
+    page_one.html
+    page_two.html
+    calc.html
+    summary.html
+--------------------
+
+page_one.html
+-
+<h1>{{var_one}}</h1>
+<div ui-view="calc"></div>
+<div ui-view="summary"></div>
+
+Step 4.
+    Create the Controllers.
+
+Step 5.
+    Done the Mapping.
+
+
+    $stateProvider.state("page_one",{
+            url:"/page_one",
+            views:{
+                '':{
+                    templateUrl:'templates/page_one.html',
+                    controller:'page_one'
+                },
+                'calc@page_one':{
+                     templateUrl:'templates/calc.html',
+                     controller:'calcController'
+                 },
+                 'summary@page_one':{
+                      templateUrl:'templates/summary.html',
+                      controller:'summaryController'
+                 }
+            }
+    });
+
+
+Step 6.
+    Create the Source Template (index.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
