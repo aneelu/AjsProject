@@ -1,0 +1,23 @@
+
+    - Loading Target Webpages to Source Webpage without refreshing the whole webpage called as Single Page Application.44
+
+    - Loading the Target Webpages to the Source Webpage called as Routing.
+
+    - In AngularJS We Can Achieve the Routing in 2 ways.
+
+        1.ngRoute Module
+
+        2.ui.router Module.
+
+
+Steps to Design the Single Page Application By using ngRoute Module.
+
+1.download the ngRoute Module.
+
+2.Add the ngRoute Module Depenedency.
+
+3.Create the Target Templates.
+
+4.Create the Controllers.
+
+5.Done the Mapping.
