@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
-    <h1>{{var_six}}</h1>
     <h1>{{var_four}}</h1>
 
     <h1 style="color: red">{{var_five}}</h1>
-    <table class="table table-responsive">
+
+    <h1 style="color: blue">{{var_six}}</h1>
+
+    <table border="1">
         <tr>
             <th>Name</th>
             <th>City</th>
@@ -18,106 +20,100 @@
         </tr>
     </table>
 
-    <h1 style="color: red">{{var_two}}</h1>
-    <h1 style="color: blue">{{var_three}}</h1>
+    <br>
+    <h1>{{var_two}}</h1>
 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <br>
+    <h1>{{var_three}}</h1>
+
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
-
         app.service("my_service",my_service);
         my_service.$inject=["$http","$q"];
-        function my_service($http,$q) {
+        function my_service($http,$q){
+
+
 
             var deffered_one = $q.defer();
-            var deffered_two = $q.defer();
-            var deffered_three = $q.defer();
-
-            this.fun_one = function () {
-                return $http.get("https://www.w3schools.com/angular/customers.php").then(function (posResponse) {
-                    deffered_one.resolve(posResponse.data.records);
+            this.fun_one = function(){
+                return $http.get("https://www.w3schools.com/angular/customers.php").then(function (response) {
+                    deffered_one.resolve(response.data.records);
                     return deffered_one.promise;
-                },function (negResponse) {
-                    deffered_one.reject(negResponse);
+                },function(response){
+                    deffered_one.reject(response);
                     return deffered_one.promise;
                 });
             };
 
 
 
+
+            var deffered_two = $q.defer();
             this.fun_two = function () {
                 return $http.get("http://test-routes.herokuapp.com/test/hello").then(function (response) {
                     deffered_two.resolve(response.data.message);
                     return deffered_two.promise;
                 },function (response) {
-                    deffered_two.reject(response)
+                    deffered_two.reject(response);
                     return deffered_two.promise;
                 });
             };
 
 
+            var deffered_three = $q.defer();
             this.fun_three = function () {
-              return $http.post("http://test-routes.herokuapp.com/test/uppercase",{'message':'hello'}).then(function (response) {
-                  deffered_three.resolve(response.data.message);
-                  return deffered_three.promise;
-              },function (response) {
-                  deffered_three.reject(response);
-                  return deffered_three.promise;
-              });
+                return $http.post("http://test-routes.herokuapp.com/test/uppercase",{'message':'hello'}).then(function (response) {
+                    deffered_three.resolve(response.data.message);
+                    return deffered_three.promise;
+                },function (response) {
+                    deffered_three.reject(response);
+                    return deffered_three.promise;
+                });
             };
 
 
-
-        };
-
+        }
 
 
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope","my_service","$q","$timeout","$interval","$location"];
         function ctrl($scope,my_service,$q,$timeout,$interval,$location) {
-           /* my_service.fun_one().then(function (response) {
+            /*my_service.fun_one().then(function (response) {
                 $scope.var_one = response;
             });
 
-
             my_service.fun_two().then(function (response) {
-               $scope.var_two= response;
+               $scope.var_two = response;
             });
-
 
             my_service.fun_three().then(function (response) {
                $scope.var_three = response;
             });*/
 
-
-            $q.all([my_service.fun_one(),my_service.fun_two(),my_service.fun_three()]).then(function(response){
-                $scope.var_one=response[0];
-                $scope.var_two=response[1];
-                $scope.var_three=response[2];
+            $q.all([my_service.fun_one(),my_service.fun_two(),my_service.fun_three()]).then(function (response) {
+               $scope.var_one = response[0];
+               $scope.var_two = response[1];
+               $scope.var_three = response[2];
             });
 
-
-            $scope.var_four = "Before Timeout Service";
-            $timeout(my_fun,5000);
-            function my_fun() {
-                $scope.var_four = "After Timeout Service";
+            $scope.var_four = "Before Timeout Service !";
+            $timeout(fun_one,5000);
+            function fun_one() {
+                $scope.var_four = "After Timeout Service !";
             }
 
-
             $scope.var_five = new Date().toLocaleTimeString();
-            $interval(time_service,1000);
-            function time_service() {
+            $interval(fun_two,1000);
+            function fun_two() {
                 $scope.var_five = new Date().toLocaleTimeString();
             }
 
-
             $scope.var_six = $location.absUrl();
 
-
         };
-
-
     </script>
+
+
 
 </html>
