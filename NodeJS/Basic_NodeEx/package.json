@@ -1,0 +1,9 @@
+{
+  "name": "Basic_NodeEx",
+  "version": "0.0.1",
+  "description": "Basic Node Example",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
+
