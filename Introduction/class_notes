@@ -1,0 +1,90 @@
+AngularJS ?
+    - AngularJS is the Framework.
+
+            **************************************
+library & framework ?
+
+library .
+    As a Developer we must call library while implementing the software application.
+
+    Ex.
+
+        jQuery
+
+framework.
+    - Framework will call our application.
+    - While Implemeting The Software Application we must follow rules and regulations then only framework
+      will call our application.
+
+        Ex.  MVC
+
+        ********************************************
+
+
+      - AngularJS Follows MVC Design Pattern.
+
+        M - Model
+        V - View
+        C - Controller
+
+
+      - AngularJS Have a so many predefined modules, as a angular developer we can reuse the predefined modules.
+
+        1.ngAnimate
+              - used to develop the Animations in Angular Applications.
+
+
+        2.ngStorage
+
+                - it is used to work with the storages.
+
+                - we have two types of storages.
+
+                    1.localStorage
+                    2.sessionStorage
+
+        3.ngMessages
+                - used to handle the client side form validations.
+
+        4.ngRoute
+
+            - used to implement the Routing in Single Page Applications.
+
+        5.ui.router
+
+            - used to implement the Routing in Single Page Applications.
+
+            - ui.router module is the 3rd party module.
+
+
+       Ex.
+
+        index.html
+        -
+        <!DOCTYPE html>
+        <html ng-app = "app">
+
+            //Develop Angular Application with the Following Features
+            // 1. Animations
+            // 2. Validations
+            // 3. Storages
+            // 4. routing with the latest module.
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+            <script>
+                angular.module("app",["ngAnimate","ngMessages","ngStorage","ui.router"]);
+            </script>
+
+        </html>
+
+
+
+
+
+
+
+
+
+
