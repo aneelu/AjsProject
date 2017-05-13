@@ -214,10 +214,32 @@ Syntax.
 </form>
 
 
+8.ng-dblclick.
+    - when ever we double click the user interface elements , automatically ng-dblclick directive will
+      be executed by angular framework.
 
 
+Syntax.
+
+    ng-dblclick = "Expression" / "user defined function" / "user defined function with optional parameteters"
 
 
+9.ng-if
+
+    - used to write the conditions in angular applications.
+
+Syntax.
+    ng-if = "true" / "false"
+
+
+10. ng-show / ng-hide.
+
+    - used to show / hide the HTML Elements Based on the Condition.
+
+
+Syntax.
+
+    ng-show / ng-hide = "true" / "false"
 
 
 
