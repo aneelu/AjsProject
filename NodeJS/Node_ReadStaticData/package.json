@@ -1,8 +1,0 @@
-{
-  "name": "Node_ReadStaticData",
-  "version": "0.0.1",
-  "description": "reading the data from the emp.json",
-  "dependencies": {
-    "express": "^4.15.2"
-  }
-}

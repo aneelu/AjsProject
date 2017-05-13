@@ -1,6 +1,6 @@
 {
-  "name":"nareshit",
+  "name":"durgasoft",
   "dependencies":{
-    "angular":"~1.6.0"
+      "angular":"~1.6.0"
   }
 }
