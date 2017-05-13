@@ -1,0 +1,111 @@
+1.Introduction.
+    What is AngularJS.
+    Why AngularJS.
+
+2. Environmental Setup.
+
+        GitHub
+        bower
+        IDE'S - Ecilipse , WebStrom , Visual Studio
+
+
+3. Angular Applications.
+
+    1. Static Angular Application.
+    2. Dynamic Angular Application.
+
+
+4. Directives.
+
+    1.Predefined Directives.
+    2.Custom Directives.
+
+
+
+5. Services.
+
+    1. Predefined Services
+
+    2. Custom Services
+
+
+
+6. Single Page Applications
+
+
+7.NodeJS
+
+    AngularJS -- NodeJS -- MySQL
+
+    AngularJS -- NodeJS -- MongoDB
+
+
+
+AngularJS.
+
+    - AngularJS is the JavaScript Framework.
+
+    - AngularJS Follows the MVC Design Pattern.
+
+        M - Model (JavaScript Variables)
+
+        V - View  (HTML / HTML5)
+
+        C - Controller (JavaScript Functions)
+
+    - AngularJS Have a so many predefined Modules , As a Angular Developer we can use the Predefined Modules.
+
+        1.ngAnimate
+             used to develop the animations in angular applications.
+
+
+        2.ngMessages
+            used to develop the client side form validations.
+
+
+        3.ngStorage
+            - used to work with the Storages.
+
+            - we have two types of storages.
+
+                1.localStorage
+                2.sessionStorage
+
+
+        4.ngRoute
+
+            - used to implement the Routing in Single Page Application.
+
+
+        5.ui.router
+
+            - used to implement the Routing in Single Page Application.
+
+            - it is a 3rd party module.
+
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app="app">
+
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",["ngAnimate","ngMessages","ngStorage","ui.router"]);
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

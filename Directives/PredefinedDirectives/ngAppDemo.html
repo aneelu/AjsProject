@@ -1,0 +1,180 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+    <div ng-app>
+        <h1 style="color: red">Addition.{{10+10}}</h1>
+        <div>
+            <h1 style="color: green">Subtraction.{{20-10}}</h1>
+        </div>
+    </div>
+
+    <div>
+        <h1 style="color: blue">Multiplication.{{10*10}}</h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>-->
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+    <h1 style="color: red">Addition.{{10+10}}</h1>
+    <h1 style="color: green">Subtraction.{{20-10}}</h1>
+    <h1 style="color: blue">Multiplication.{{10*10}}</h1>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        angular.bootstrap(document);
+    </script>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html>
+    <div ng-controller="ctrl">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.var_one = "I am from Manual Bootstrap !";
+        }
+
+        angular.bootstrap(document,["app"]);
+    </script>
+</html>-->
+
+
+<!DOCTYPE html>
+<html>
+    <div ng-app="app" ng-controller="ctrl_one">
+        <h1 style="color: darkred">{{var_one}}</h1>
+    </div>
+
+    <div id="my_div" ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_two}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "I am from Auto Bootstrap !";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "I am from Manual Bootstrap !";
+        }
+
+        angular.bootstrap((document.getElementById("my_div")),["app"]);
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
