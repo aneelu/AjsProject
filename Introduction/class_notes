@@ -80,6 +80,85 @@ framework.
         </html>
 
 
+Advantages Of AngularJS.
+
+1. As a Angular Developer We Can Directly work with the HTML DOM.
+
+    DOM Stands for Document Object Model
+
+index.html
+-
+<!DOCTYPE html>
+<html>
+    <div id="div_one">Hello</div>
+    <div id="div_two"></div>
+
+    <script>
+       document.getElementByid("div_two").innerHTML = document.getElementById("div_one").value;
+    </script>
+
+</html>
+
+
+
+------------------------------
+
+index.html
+-
+
+<!DOCTYPE html>
+<html ng-app>
+
+    <div ng-model="model_one">Hello</div>
+    <div ng-bind="model_one"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>
+
+
+
+2. AngularJS Supports Two Way Data Binding.
+
+    - Automatic Data Synchronization Between Model and View with the SuperVision Of Controller
+
+     Called as Two way Data Binding.
+
+
+[Note. Two Way Data Binding Reduces the Burden On The Server ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
