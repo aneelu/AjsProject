@@ -1,0 +1,61 @@
+
+    - MongoDB Supports the JSON.
+
+    - As a Developer we store / retrive / update / delete the JSON Objects from MongoDB.
+
+    - MongoDB is the ligth weigth DataBase Compared to Other DataBases.
+
+    - MongoDB Follows Client Server Architecture.
+
+
+Start the Mongo Server.
+
+>mongod
+
+
+Client Should Connect to MongoServer.
+
+>mongo
+
+
+MongoDB Commands.
+-
+
+1. Create and Switch to DataBase.
+
+> use demo;
+
+    switched to db demo
+
+
+2. Create the Collection.
+
+    db.createCollection("emp");
+
+
+3. Insert the JSON Objects.
+
+> db.emp.insert({'id':1,'name':'Hello_1','age':20});
+
+
+
+4. Fetch the Data.
+
+> db.emp.find();
+
+
+
+5. chech the Databases.
+
+> show dbs;
+
+
+
+
+
+
+
+
+
+
+

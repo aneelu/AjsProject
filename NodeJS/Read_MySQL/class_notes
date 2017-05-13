@@ -1,0 +1,57 @@
+1.Create the Schema.
+
+mysql> create schema demo;
+
+    - Query OK, 1 row affected (0.00 sec)
+
+
+2. Switch to demo.
+
+mysql> use demo;
+
+    - Database changed
+
+
+3.create table.
+
+mysql> create table emp(eno integer,ename varchar(20),eage integer);
+
+    - Query OK, 0 rows affected (0.16 sec)
+
+
+4.Insert the Data.
+
+mysql> insert into emp values(555,'Hello_5',28);
+
+    - Query OK, 1 row affected (0.05 sec)
+
+
+5.Fetch the Data.
+
+mysql> select * from emp;
++------+---------+------+
+| eno  | ename   | eage |
++------+---------+------+
+|  111 | Hello_1 |   20 |
+|  222 | Hello_2 |   22 |
+|  333 | Hello_3 |   24 |
+|  444 | Hello_4 |   26 |
+|  555 | Hello_5 |   28 |
++------+---------+------+
+5 rows in set (0.00 sec)
+
+
+    ***************************
+
+    database : demo
+
+    table    : emp
+
+    host     : localhost / 127.0.0.1
+
+    ****************************
+
+
+
+
+

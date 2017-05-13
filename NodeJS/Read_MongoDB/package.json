@@ -1,0 +1,9 @@
+{
+  "name": "Read_MongoDB",
+  "version": "0.0.1",
+  "description": "reading the data from mongodb",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26"
+  }
+}
