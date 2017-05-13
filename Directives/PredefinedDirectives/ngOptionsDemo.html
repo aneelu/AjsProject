@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <select ng-model="my_model" ng-options="x.id as x.name for x in data">
+        <option value="">--Select Subject--</option>
+    </select>
+    <h1>{{my_model}}</h1>
+
+
+    <select ng-model="model_two" ng-options="x.name as x.id for x in data">
+        <option value="">--Select ID--</option>
+    </select>
+    <h1>{{model_two}}</h1>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [ {'id':1,'name':'AngularJS'},
+                            {'id':2,'name':'Angular2'},
+                            {'id':3,'name':'NodeJS'},
+                            {'id':4,'name':'reactJS'},
+                            {'id':5,'name':'Angular4'}
+            ];
+        }
+    </script>
+
+</html>

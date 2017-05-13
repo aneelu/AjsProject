@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+
+    <!--<div class="container my-directive"></div>-->
+
+        <!--<div class="container">
+            <my-directive></my-directive>
+        </div>-->
+
+        <div class="container" my-directive></div>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        
+        app.directive("myDirective",myDirective);
+        function myDirective() {
+            return{
+                    restrict:"A",
+                    template:"<div class='jumbotron'>Welcome to Custom Directive !</div>"
+            }
+        }
+        
+        
+    </script>
+</html>

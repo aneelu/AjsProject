@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-controller="parent_controller">
+        <input type="text" ng-model="my_model"> &emsp;&emsp;
+        <button ng-click="clickMe(my_model)">BroadCast</button>
+        <div ng-controller="child_controller">
+            <h1 style="color: rebeccapurple">{{var_one}}</h1>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.clickMe = function (data) {
+                $scope.$broadcast("key1",data);
+            };
+        };
+
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope) {
+            $scope.$on("key1",function (event, res) {
+                $scope.var_one = res;
+            });
+        };
+
+    </script>
+</html>

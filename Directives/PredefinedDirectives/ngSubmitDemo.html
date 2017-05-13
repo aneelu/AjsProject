@@ -6,21 +6,17 @@
         <br><br>
         <label>Password.</label>&emsp;&emsp;
         <input type="password" ng-model="user_details.upwd">
-
         <br><br>
         <input type="submit">
     </form>
 
-
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
-
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope"];
         function ctrl($scope) {
             $scope.user_details = {uname:'Hello',upwd:'Hello'};
-
             $scope.login = function () {
                 alert($scope.user_details.uname+"...."+$scope.user_details.upwd);
             };
