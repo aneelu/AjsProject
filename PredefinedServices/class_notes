@@ -1,0 +1,26 @@
+$timeout.
+    - used to execute user defined function after some specified time.
+
+    Syntax.
+
+        $timeout(my_fun , 5000);
+
+        function my_fun(){
+            //Logic Goes Here
+        }
+
+
+$interval
+    - used to execute the function repeatedely with a given interval of time.
+
+   Syntax.
+
+    $interval(my_fun,1000);
+
+    function my_fun(){
+        //Logic Goes Here
+    }
+
+
+$location.
+    - used to find the absolute path of web application.
