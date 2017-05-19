@@ -1,0 +1,113 @@
+Introduction.
+    - Angular , Angular1.x , Angular2.x
+
+    - Components/"Main Building Blocks" of Angular2.
+
+    - Architecture of Angular2.
+
+    - Creating the First Angular2 Application.
+
+
+Angular.
+    Angular is the Platform used for developing web and mobile applications.
+
+
+Angular1.x.
+    - Angular1.x called as AngularJS.
+
+    - By using AngularJS We Can Develop web applications.
+
+
+Angular2.x
+    - Angular2 will helpful to develop web, mobile applications.
+
+
+Angular2 Main Building Blocks.
+
+1. Components
+
+2. Modules
+
+3. Services
+
+4. Dependency Injection
+
+5. Routing
+
+6. Directives
+
+7. Templates
+
+
+Component.
+
+    - Encapsulates the "Template" , "data" and "behaviour of View"
+
+    - Collection of "Business Logic" with "Metadata" Technically Called as Component.
+
+    - Genarally we will implement the Business Logic in TypeScript.
+
+    - Genarally we will provide the MetaData by using Decorators in TypeScript.
+
+    - Angular2 Application Must Contain At Least One Component.
+
+    - As a Angular2 Developer We can take more than one Component per Application
+
+    - We can Place One Component into Another Component.
+
+    - As a Angular2 Developer we can provide Communication Between Components.
+
+
+Ex.
+   first.ts.
+   -
+
+   import {  Component } from 'angular2/core'
+
+    @Component({
+        selector : "my_app",
+        template : "<div [name]></div>"
+    })
+   export class Test{
+        var name : string = "Welcome to First Component";
+   }
+
+
+   boot.ts
+   -
+   import { bootstrap } form 'angular2/platform/browser'
+   import { Test } from 'first'
+   bootstrap(Test)
+
+   index.html
+   -
+    <html>
+       <my_app></my_app>
+       <script>
+            System.import(" boot.js").then(err,res);
+        </script>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
