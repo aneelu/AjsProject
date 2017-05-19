@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+    <form name="myForm">
+
+        <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="text"
+               ng-model="uname"
+               name="uname"
+               ng-minlength="3"
+               ng-maxlength="6"
+               required>
+
+        <h5 style="color: red" ng-if="myForm.uname.$error.minlength">***Minimum 3 characters are required***</h5>
+        <h5 style="color: red" ng-if="myForm.uname.$error.maxlength">***Maximum 6 characters are Allowed***</h5>
+        <h5 style="color: red" ng-if="myForm.uname.$error.required && myForm.uname.$dirty">***Can't Left Blank***</h5>
+
+
+        <br><br>
+        <label>Email.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="email"
+                ng-model="uemail"
+                name="uemail"
+                required>
+        <h5 style="color: red" ng-if="myForm.uemail.$error.required && myForm.uemail.$dirty">***Can't Left Blank</h5>
+        <h5 style="color: red" ng-if="myForm.uemail.$error.email">***Please Enter The Valid Email</h5>
+
+
+
+        <br><br>
+        <label>Phone.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="text"
+                ng-model="uphone"
+                name="uphone"
+                ng-pattern="/^\d{0,9}(\.\d{1,9})?$/"
+                required>
+
+        <h5 style="color: red" ng-if="myForm.uphone.$error.required && myForm.uphone.$dirty">***Can't Left Blank***</h5>
+        <h5 style="color: red" ng-if="myForm.uphone.$error.pattern">***Please Enter Valid Phone Number***</h5>
+
+    </form>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>

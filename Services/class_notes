@@ -1,0 +1,131 @@
+Custom Services.
+    - The Services Developed by Developer Based on Application Requirement Called as Custom Service.
+
+    - In AngularJS We Can Create Custom Services in 5 ways.
+
+        1.provider()
+
+        2.factory()
+
+        3.value()
+
+        4.constant()
+
+        5.service()
+
+
+Creating the Custom Service By using provider().
+-
+
+app.config(my_fun);
+my_fun.$inject=["my_serviceProvider"];
+function my_fun(my_serviceProvider){
+    my_serviceProvider.var_one = "root_two";
+}
+
+
+
+app.provider("my_service" , my_service);
+function my_service(){
+    this.var_one = "root_one";
+    this.$get = function(){
+        return this.var_one;
+    }
+}
+
+
+
+app.controller("ctrl_one" , ctrl_one);
+ctrl_one.$inject = ["$scope" , "my_service"];
+function ctrl_one($scope,my_service){
+    $scope.var_one = my_service;
+}
+
+
+app.controller("ctrl_two" , ctrl_two);
+ctrl_two.$inject = ["$scope" , "my_service"];
+function ctrl_two($scope,my_service){
+    $scope.var_two = my_service;
+}
+
+
+Predefined Services.
+
+    - The Services Provided by framework called as Predefined Services.
+
+1.$http
+    - used to connect to servers via http protocol.
+
+
+
+my_service.js
+-
+app.service("my_service" , my_service);
+my_service.$inject=["$http"];
+function my_service($http){
+    this.fun_one = function(){
+        return $http.get("https://www.w3schools.com/angular/customers.php").then(function(response){
+            return response;
+        },function(response){
+            return response;
+        });
+    }
+}
+
+ctrl.js
+-
+app.controller("ctrl" , ctrl);
+ctrl.$inject = ["$scope" , "my_service"];
+function ctrl($scope,my_service){
+    my_service.fun_one().then(function(response){
+        $scope.var_one = response;
+    });
+};
+
+
+
+$timeout.
+
+    - used to execute a perticular function after "specified time".
+
+Syntax.
+    $timeout(my_fun,5000);
+    function my_fun(){
+        //Logic Goes Here
+    }
+
+
+
+
+$interval.
+    - used to execute a perticular function repetedely with a  given interval of time.
+
+Syntax.
+    $interval(my_fun,5000);
+    function my_fun(){
+        //Logic Goes Here
+    }
+
+$location.
+    - used to find the absolute path of web application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

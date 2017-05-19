@@ -1,0 +1,92 @@
+ - If View Interacting With Controller for Dynamic Data ,
+such type of Angular Application called as Dynamic Angular Application.
+
+Steps to Create the Dynamic Angular Application.
+
+1.Download the Angular By using bower.
+
+--------------------
+DynamicAngularApplication
+    bower.json
+    .bowerrc.json
+--------------------
+bower.json
+-
+{
+    "dependencies":{
+        "angular":"~1.6.0"
+    }
+}
+
+.bowerrc.json
+-
+{
+    "directory":"bower_components"
+}
+
+
+> bower install
+
+
+Step 2.
+    Load the Angular Framework
+
+Step 3.
+
+    Declare the ng-app directive with logical name of web application.
+
+Step 4.
+
+    Declare the Controller by using "ng-controller" directive.
+
+Step 5.
+    Instantiate the Module
+
+Step 6.
+    Implement the Controller.
+
+
+Steps to Create the Dynamic Angular Application with Coding Standards.
+-
+
+DynamicAngularApplication
+    bower.json
+    .bowerrc.json
+    app.js
+    controllers
+        ctrl.js
+    index.html
+
+
+ctrl.js
+-
+app.controller("ctrl",ctrl);  // arg1  -  name of the controller
+                              // arg2  - name of the function to implement controller
+
+ctrl.$inject=["$scope"];      //Single line Comment
+
+function ctrl($scope) {
+
+    $scope.var_one="AngularJS";
+    $scope.var_two="NodeJS";        //Function Body (68 - 74)
+    $scope.var_three="MongoDB";
+
+}
+
+app.js
+-
+var app = angular.module("app",[]);// Getting the "index.html" control
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app="app">
+    <div ng-controller="ctrl">
+        <h1 style="color: red">
+            {{var_one+"<==>"+var_two+"<==>"+var_three}}
+        </h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/ctrl.js"></script>
+</html>

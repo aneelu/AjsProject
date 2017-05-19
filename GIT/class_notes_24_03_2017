@@ -1,0 +1,263 @@
+3.By using AngularJS We Can Create
+  Reusable Components By using
+
+    1.Custom Directives
+
+    2.Custom Services
+
+    3.Custom Filters
+
+
+
+4.AngularJS is a Open Source
+
+    We Can Customize the Framework Accroding to Application Requirement.
+
+5.By using AngularJS We Can Develop Single Page Applications.
+
+6.AngularJS Reduces the Burden on the Server
+
+  by implementing the Business
+
+  components client side by using MVC.
+
+
+7. Angular Applications are
+
+  Cross Browser Compatable Applications.
+
+
+Disadvantages Of AngularJS
+-
+1.Secuirity.
+
+2.Client Should Enable the JavaScript
+
+  then only angular applications will execute.
+
+3.No Coding Standards in AngularJS ,
+
+  so Undestanding the Angular Applications Are Difficult.
+
+
+
+GitHub.
+
+    - GitHub is the Repository.
+
+    - GitHub is the Open Source.
+
+    - All the Developers Collabratively Connect
+
+      to GitHub while Working with the Project.
+
+GitHub Operations.
+
+1.Creating the Repository.
+
+2.Add the Files to the Repository.
+
+3.Save the Changes in files / Commit the Files.
+
+4.Branching in GitHub.
+
+5.Merge in GitHub.
+
+6.Integrating the GitHub to the IDE'S
+
+        WebStrom
+
+        Visual Studio
+
+        Ecilipse
+
+7.Push the Code to the Remote Repository.
+
+8.Pull the Code from the Remote Repository.
+
+9.Merge Conflicts
+
+
+Creating the Repository (Locally).
+
+
+Step 1.
+
+    Download and Install the GIT
+
+    WebSite: https://git-scm.com/downloads
+
+    file name : Git-2.12.1-64-bit.exe
+
+
+
+    Create the Folder in any Drive.
+
+    Ex.
+            ------------------------------
+      d:\githubdemo.
+
+          rigth click on the githubdemo --->
+
+                            select Git Bash Here -->
+
+                                        $git init.
+
+              ------------------------------
+
+
+     set user credentials to the GitHub.
+
+     $git config --global user.name "XXX"
+
+     $git config --global user.email "XXXXXXX"
+
+
+2.Add the files to the Repository.
+
+$ touch index.html
+
+
+3.Commit the files to repository.
+
+$git add index.html
+
+$git commit
+
+Press i
+
+Type : initial commit
+
+Press Esc
+
+Type :wq
+
+Press Enter
+
+
+
+From Second Commit Onwards follow the Below Git Commands.
+
+
+$git add .
+
+$git commit -m "Message"
+
+
+Creating the Branch.
+
+$ git branch my_branch
+
+$ git checkout my_branch
+
+
+Merging the Branches.
+
+$git merge my_branch
+
+
+------------------
+Softwares Required to Build UI Applications
+
+1. Download and Install the NodeJS.
+
+    Website : https://nodejs.org/en/download/
+
+    file name : node-v6.10.1-x64.msi
+
+
+2.Download and Install the GIT.
+
+    website : https://git-scm.com/downloads
+
+    file name : Git-2.12.1-64-bit.exe
+
+3.Download WebStrom IDE.
+
+    Website : https://www.jetbrains.com/webstorm/download/#section=windows
+
+    file name : Webstrom-2017.1.exe
+
+
+4.Install the Bower Plugin
+
+    Open the Terminal in WebStrom IDE.
+
+            (Alt+F12)
+
+    Execute the Following Command.
+
+        npm install -g bower
+
+5. Create the GitHub Account.
+
+    Website : https://github.com/join
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

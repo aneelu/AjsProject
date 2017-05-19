@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-controller="parent_controller">
+        <label>For Child One.</label>&emsp;&emsp;&emsp;
+        <input type="text" ng-model="model_one">
+
+        <br><br>
+        <label>For Child Two.</label>&emsp;&emsp;&emsp;
+        <input type="text" ng-model="model_two">
+
+        <br><br>
+        <button ng-click="clickMe(model_one , model_two)">ClickMe</button>
+
+        <br><br>
+        <div ng-controller="child_one">
+            <h1 style="color: red">{{var_one}}</h1>
+        </div>
+
+        <br><br>
+        <div ng-controller="child_two">
+            <h1 style="color: green">{{var_two}}</h1>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller" ,parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope){
+            $scope.clickMe = function (arg1,arg2) {
+               $scope.$broadcast("my_obj" , {"key1":arg1 , "key2":arg2});
+            };
+        };
+
+
+        app.controller("child_one" ,child_one);
+        child_one.$inject = ["$scope"];
+        function child_one($scope){
+            $scope.$on("my_obj" , function(event,res){
+                $scope.var_one = res.key1;
+            });
+        };
+
+
+        app.controller("child_two" ,child_two);
+        child_two.$inject = ["$scope"];
+        function child_two($scope){
+            $scope.$on("my_obj" , function(event,res){
+                $scope.var_two = res.key2;
+            });
+        };
+
+    </script>
+
+
+</html>

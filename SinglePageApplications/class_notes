@@ -1,0 +1,479 @@
+Single Page Applications.
+
+    - Loading the Target Resources to Source Page without Refreshing the Whole Web Page(Source Page) called as Single Page Application.
+
+    - Loading the Target Pages to Source Page Called as Routing.
+
+    - In AngularJS we can achieve the Routings in 2 ways.
+
+        1.ngRoute
+
+        2.ui.router
+
+Development Of Single Page Application  By using ngRoute Module.
+-
+
+Step 1.
+
+    Download the ngRoute Module By using bower.
+
+        "angular-route" : "~1.5.0"
+
+
+Step 2.
+
+    Add the ngRoute Depenedency.
+
+    var app = angular.module("app",["ngRoute"]);
+
+
+Step 3.
+    Create the Traget Templates for Single Page Application.
+
+--------------------
+Basic_ngRoute
+        templates
+            page_one.html
+            page_two.html
+---------------------
+
+page_one.html
+-
+<h1>{{var_one}}</h1>
+
+
+page_two.html
+-
+<h1>{{var_two}}</h1>
+
+
+Step 4.
+    Create the Controllers
+
+------------------
+Basic_ngRoute
+    controllers
+        page_one.js
+        page_two.js
+------------------
+
+page_one.js
+-
+$scope.var_one = "I am from page one controller";
+
+
+page_two.js
+-
+$scope.var_two="I am from page two controller";
+
+
+Step 5.
+
+    Done the Mapping.
+
+config.js
+-
+
+app.config(config);
+
+config.$inject = ["$routeProvider"];
+function config($routeProvider){
+    $routeProvider.when("/page_one", { templateUrl:"templates/page_one.html",
+                                        controller:"page_one"
+                   })
+
+                   .when("/page_two", {templateUrl:"templates/page_two.html",
+                                       controller:"page_two"
+                   })
+
+                   .otherwise("/page_one", {templateUrl:"templates/page_one.html",
+                                            controller:"page_one"
+                   });
+}
+
+
+Step 6.
+    Declare the keys in main template
+
+index.html
+-
+
+<a href="#page_one">Page_One</a>
+<a href="#page_two">Page_Two</a>
+
+<div ng-view></div>
+
+
+Passing the Data by using ngRoute Module (URL Parameters)
+-
+
+index.html
+-
+<a href="#page_one/1/hello/true"><b>Page_One</b></a>
+
+
+config.js
+-
+$routeProvider.when("/page_one/:param1/:param2/:param3" , {
+    templateUrl:"templates/page_one.html",
+    controller:"page_one"
+});
+
+
+page_one.js
+-
+app.controller("page_one",page_one);
+page_one.$inject=["$scope","$routeParams"];
+function page_one($scope,$routeParams){
+    $scope.var_one = $routeParams.param1+"...."+$routeParams.param2+"...."+$routeParams.param3;
+}
+
+Single Page Applications By using ui.router module.
+-
+
+1. ui.router module is the 3rd party module.
+
+2. ui.router module supports Nested Routing.
+
+3. ui.router module supports named Views.
+
+4. ui.router module supports JSON Objects as URL Parameters.
+
+
+Steps to Create the Basic SPA by using ui.router module.
+-
+
+Step 1.
+
+    Download the ui.router module by using bower.
+
+        "angular-ui-router" : "~0.2.18"
+
+
+Step 2.
+
+    Add the ui.router module depenedency.
+
+    var app = angular.module("app",["ui.router"]);
+
+
+Step 3.
+
+    Create the Templates
+
+Step 4.
+
+    Create the Controllers
+
+Step 5.
+
+    Done the Mapping.
+
+
+config.js
+-
+app.config(config);
+config.$inject=["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+    $stateProvider.state("page_one" , {
+        url:"/page_one",
+        templateUrl:"templates/page_one.html",
+        controller:"page_one"
+    })
+    .state("page_two" , {
+            url:"/page_two",
+            templateUrl:"templates/page_two.html",
+            controller:"page_two"
+        });
+    $urlRouterProvider.otherwise("/page_one");
+}
+
+
+Step 6.
+
+    Create the Source Template. (index.html)
+
+
+
+index.html
+-
+
+<a ui-sref="page_one"><b>Page_One</b></a>
+<a ui-sref="page_two"><b>Page_Two</b></a>
+
+<div ui-view></div>
+
+Passing the Objects as URL Parameters in ui.router module
+-
+
+index.html
+-
+<a ui-sref = "page_one({'id':1,'name':'Hello_1','age':20})">Page_One</a>
+
+config.js
+-
+$stateProvider.state("page_one" , {
+    url:"/page_one/:id/:name/:age",
+    templateUrl:"templates/page_one.html",
+    controller:"page_one"
+});
+
+page_one.js
+-
+app.controller("page_one",page_one);
+page_one.$inject=["$scope","$stateParams"];
+function page_one($scope,$stateParams){
+    $scope.var_one = $stateParams.id+"...."+$stateParams.name+"..."+$stateParams.age;
+}
+
+
+
+Steps to Implement the Nested Routing Application.
+-
+
+Step 1.
+    Download the ui.router module by using bower.
+
+
+
+Step 2.
+    Add the ui.router module dependency.
+
+
+Step 3.
+    Create Templates.
+
+--------------------------
+templates
+    page_one.html
+    page_two.html
+    child_one.html
+    child_two.html
+-------------------------
+
+page_one.html
+-
+
+<h1>{{var_one}}</h1>
+
+<a ui-sref=".child_one">Child_One</a>
+
+<div ui-view></div>
+
+
+page_two.html
+-
+
+<h1>{{var_two}}</h1>
+
+<a ui-sref=".child_two">Child_Two</a>
+
+<div ui-view></div>
+
+
+Step 4.
+    Create the Controller
+
+
+Step 5.
+    Done the Mapping.
+
+app.config(config);
+config.$inject = ["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+    $stateProvider.state("page_one" , {
+          url:"/page_one",
+          templateUrl:"templates/page_one.html",
+          controller:"page_one"
+    })
+    .state("page_two" , {
+              url:"/page_two",
+              templateUrl:"templates/page_two.html",
+              controller:"page_two"
+    })
+    .state("page_one.child_one" , {
+                  url:"/child_one",
+                  templateUrl:"templates/child_one.html",
+                  controller:"child_one"
+    })
+    .state("page_two.child_two" , {
+                  url:"/child_two",
+                  templateUrl:"templates/child_two.html",
+                  controller:"child_two"
+    });
+    $urlRouterProvider.otherwise("/page_one");
+}
+
+Step 6.
+    Create the Source Template (index.html)
+
+NamedViews in Single Page Application by using ui.router module.
+-
+    - Creating the View with More Than One SubView Called as NamedViews
+
+
+Steps to Implement the NamedViews.
+
+1.Download the ui.router module by using bower.
+
+
+2.Add the ui.router module dependency.
+
+
+3.Create the Templates
+
+------------------
+templates
+
+    page_one.html
+
+    page_two.html
+
+    calc.html
+
+    graph.html
+
+    chart.html
+
+    summary.html
+---------------------
+page_one.html
+-
+{{var_one}}
+<div ui-view="calc"></div>
+<div ui-view="graph"></div>
+
+
+page_two.html
+-
+{{var_two}}
+<div ui-view="chart"></div>
+<div ui-view="summary></div>
+
+
+4.Create the Controllers.
+-----------------------------
+controllers
+
+    page_one.js
+
+    page_two.js
+
+    calcController.js
+
+    graphController.js
+
+    chartController.js
+
+    summaryController.js
+--------------------------------
+
+
+5.Create the Custom Service.
+
+-----------------------
+services
+    my_service.js
+-----------------------
+
+
+6.Done the Mapping
+
+config.js
+-
+app.config(config);
+config.$inject=["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+    $stateProvider.state("page_one",{
+        url:"/page_one",
+        views:{
+            '':{
+                        templateUrl:"templates/page_one.html",
+                        controller:"page_one"
+            },
+            'calc@page_one':{
+                        templateUrl:"templates/calc.html",
+                        controller:"calcController"
+            },
+            'graph@page_one':{
+                        templateUrl:"templates/graph.html",
+                        controller:'graphController'
+            }
+        }
+    })
+    .state("page_two",{
+            url:"/page_two",
+            views:{
+                '':{
+                            templateUrl:"templates/page_two.html",
+                            controller:"page_two"
+                },
+                'chart@page_two':{
+                            templateUrl:"templates/chart.html",
+                            controller:"chartController"
+                },
+                'summary@page_two':{
+                            templateUrl:"templates/summary.html",
+                            controller:'summaryController'
+                }
+            }
+        });
+        $urlRouterProvider.otherwise("/page_one");
+}
+
+
+Step 7.
+    Create the Source Template(index.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

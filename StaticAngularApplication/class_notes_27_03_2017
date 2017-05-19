@@ -1,0 +1,52 @@
+Angular Applications.
+
+    We Can Create Two Types Of Angular Applications.
+
+1.Static Angular Application.
+
+2.Dynamic Angular Application.
+
+
+Static Angular Application.
+
+    If View Not Interacting With Controller for Dynamic Data , such type
+
+    angular application called as Static Angular Application.
+
+Dynamic Angular Application.
+
+    - If View Interacting with the Controller for Dynamic Data ,
+
+      such type of Application called as Dynamic Angular Application.
+
+Steps to Create the Static Angular Application.
+
+Step 1.
+
+    Download the Angular Framework by using bower.
+
+-------------------
+Lecture@5
+    bower.json
+    .bowerrc.json
+--------------------
+
+
+Step 2.
+
+    Create the View.
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app>
+    <input type="number" ng-model="model_one">
+    <br><br>
+    <input type="number" ng-model="model_two">
+    <br><br>
+    <h1 style="color:red" ng-bind="model_one+model_two"></h1>
+    <script src = "bower_components/angular/angular.min.js"></script>
+</html>
+
+
+

@@ -1,0 +1,25 @@
+Step 1.
+    Create the DataBase.
+
+    mysql> create schema mini_project;
+    mysql> use mini_project;
+    mysql> create table login_details(uname varchar(20),upwd varchar(20));
+    mysql> insert into login_details values('admin','admin');
+    mysql> select * from login_details;
+
+            xxxxxxxxxxxxxxxxxxxxxxxxx
+
+            database : mini_project
+            table    : login_details
+
+            xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ Step 2.
+    Create the "login" service in NodeJS by using Connection Pooling
+
+
+ Step 3.
+    Create the Single Page Application
+
+

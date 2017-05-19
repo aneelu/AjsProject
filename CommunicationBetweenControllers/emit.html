@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-controller="parent_controller">
+        <h1 style="color: red">{{var_one}}</h1>
+        <div ng-controller="child_controller">
+            <h1 style="color: green">{{var_two}}</h1>
+            <div ng-controller="sub_controller">
+                <button ng-click="clickMe()">ClickMe</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("sub_controller",sub_controller);
+        sub_controller.$inject=["$scope"];
+        function sub_controller($scope) {
+            $scope.clickMe = function () {
+                $scope.$emit("key1","For Child Controller");
+                $scope.$emit("key2" , "For Parent Controller");
+            }
+
+        }
+
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope) {
+            $scope.$on("key1",function (event,res) {
+                $scope.var_two = res;
+            });
+
+
+        };
+
+
+        app.controller("parent_controller" , parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.$on("key2",function (event,res) {
+                $scope.var_one=res;
+            });
+        };
+
+
+    </script>
+</html>

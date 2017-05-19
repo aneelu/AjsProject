@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+
+    <header ng-repeat-start="x in data"
+            style="width: 100px;height: 50px;border: 1px solid;text-align: center">
+        {{x.head}}
+    </header>
+    <div style="width: 100px;height: 50px;border: 1px solid;text-align: center">
+        {{x.body}}
+    </div>
+    <div ng-repeat-end style="width: 100px;height: 50px;border: 1px solid;text-align: center">
+        {{x.footer}}
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [{"head":"Header_1","body":"Body_1","footer":"Footer_1"},
+                            {"head":"Header_2","body":"Body_2","footer":"Footer_2"},
+                            {"head":"Header_3","body":"Body_3","footer":"Footer_3"}];
+        }
+    </script>
+</html>
