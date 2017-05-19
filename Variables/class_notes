@@ -1,0 +1,130 @@
+Variables.
+    - Variables are used to store the values / data.
+    - by using JavaScript Variables We Can Store All Types Of Data.
+
+    Ex.
+
+        Integer Data
+        Boolean Data
+        String Data
+        Objects
+            --
+            --
+            --
+
+    - In general we will declare the variables by using "var" keyword.
+
+    Ex.
+        var i = 100;
+        var y = obj;
+
+    - javaScript Variables are Case Sensitive.
+    - var keyword also optional , it's recomended to take the var keyword.
+
+
+Rules Of javascript variables.
+
+
+1. variables should use [A-Z or a-z] , [0-9] , $ , _
+2. variables should not start with the numbers.
+3. don't use reserved words as the variables in javascript.
+
+
+Ex.
+
+var myVar = "it's valid";
+var my123 = "it's a valid"
+var my_var = "it's a valid"
+var my_var$ = "it's valid"
+var $_$ = "it's valid";
+
+
+----------------------------------
+
+
+var var = "it's invalid"
+var class = "it's a invalid"
+var function = "it's a invalid"
+var 2var="it's a invalid"
+var var@ = "it's a invalid"
+
+
+                    Reserved Words.
+
+1.break
+2.case
+3.catch
+4.const
+5.continue
+6.debugger
+7.default
+8.delete
+9.do
+10.else
+11.export
+12.extends
+13.finally
+14.for
+15.function
+16.if
+17.import
+18.in
+19.instanceof
+20.new
+21.return
+22.super
+23.switch
+24.this
+25.throw
+26.try
+27.typeof
+28.var
+29.void
+30.while
+31.with
+32.yield
+
+    -------------------------
+
+1.let
+2.public
+3.private
+4.protected
+5.implements
+6.package
+7.static
+8.interface
+
+    ----------------------
+
+1.await
+
+1.byte
+2.short
+3.int
+4.long
+5.float
+6.double
+7.char
+8.boolean
+9.String
+10.synchronized
+11.volatile
+12.native
+13.throws
+14.goto
+15.transient
+
+
+
+
+
+
+
+
+
+
+
+
+
+
