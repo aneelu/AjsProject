@@ -1,0 +1,26 @@
+Environmental Setup.
+1. Download and Install the NodeJS
+
+2. Download and Install the GIT
+
+3. Download WebStrom
+
+4. Create the GitHub Account.
+	https://github.com/join
+
+5.Checkout the Code From the GitHub.
+	https://github.com/ajsnaresh/AJS_Classes.git
+
+6.Pull the Code from the Branch.
+	name : AnjularJS_11AM
+
+7.Install the bower 
+	> npm install -g bower
+
+8.Install the MongoDB.
+
+
+
+
+
+
