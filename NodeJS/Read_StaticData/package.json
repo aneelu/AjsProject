@@ -1,8 +1,0 @@
-{
-  "name": "Read_StaticData",
-  "version": "0.0.1",
-  "description": "reading the data from the flat file",
-  "dependencies": {
-    "express": "^4.15.2"
-  }
-}
