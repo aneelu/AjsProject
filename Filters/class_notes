@@ -1,0 +1,58 @@
+Filter.
+    - used to format the data before "appending the View" based on application requirement.
+    - In general we will apply the filters by using " | ".
+    - we can apply more than one filter at a time to the view.
+    - we have two types og filters.
+
+        1.Custom Filters.
+
+        2.Predefined Filters.
+
+
+Custom Filters.
+    - Creating our own filter based on application requirement called as Custom Filter.
+
+Syntax.
+
+       app.filter("name of filter" , "function to implement filter");
+
+            //Implementation
+
+
+       Ex.
+
+            app.filter("reverse" , reverse);
+            function reverse(){
+                return function(arg1,arg2,arg3,......argn){
+                        //Logic
+                }
+            }
+
+Predefined Filters.
+
+       - The Filters Given by the framework called as Predefined Filters.
+
+1. orderBy.
+    used to arrange the data either assending / decending order.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

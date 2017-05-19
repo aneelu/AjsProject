@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+
+        <tr ng-repeat="x in data | orderBy:'-id'"> // + --> Assending , "-" -->Decending
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+        </tr>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+           $scope.data = [  {'id':1,'name':'AngularJS'},
+                            {'id':5,'name':'NodeJS'},
+                            {'id':2,'name':'Angular2'},
+                            {'id':4,'name':'Angular4'},
+                            {'id':3,'name':'reactJS'}];
+        });
+    </script>
+</html>
