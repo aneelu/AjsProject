@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+
+        <tr ng-repeat="x in var_one">
+            <td>{{x.Name}}</td>
+            <td>{{x.City}}</td>
+            <td>{{x.Country}}</td>
+        </tr>
+    </table>
+
+    <br />
+
+    <table border="2">
+        <tr>
+            <th>id</th>
+            <th>fname</th>
+            <th>fsubject</th>
+        </tr>
+
+        <tr ng-repeat="x in var_two">
+            <td>{{x.post.id}}</td>
+            <td>{{x.post.fname}}</td>
+            <td>{{x.post.fsubject}}</td>
+        </tr>
+    </table>
+
+    <br />
+    <h1>{{var_three}}</h1>
+
+    
+
+    <script src="Scripts/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+
+        app.service("my_service", my_service);
+        my_service.$inject = ["$http","$q"];
+        function my_service($http, $q) {
+
+            var deffered_one  = $q.defer();
+            this.fun_one = function () {
+                return $http.get("https://www.w3schools.com/angular/customers.php").then(function (response) {
+                    deffered_one.resolve(response.data.records);
+                    return deffered_one.promise;
+                }, function (response) {
+                    deffered_one.reject(response);
+                    return deffered_one.promise;
+                });
+            }
+
+
+            var deffered_two = $q.defer();
+            this.fun_two = function () {
+                return $http.get("http://demosoft.highgrowth.in/test/jsonexample.php").then(function (response) {
+                    deffered_two.resolve(response.data.posts);
+                    return deffered_two.promise;
+                }, function (response) {
+                    deffered_two.reject(response);
+                    return deffered_two.promise;
+                });
+            }
+
+
+            var deffered_three = $q.defer();
+            this.fun_three = function () {
+                return $http.post("http://test-routes.herokuapp.com/test/uppercase", { "message": "hi" })
+                            .then(function (response) {
+                    deffered_three.resolve(response.data.message)
+                    return deffered_three.promise;
+                }, function (response) {
+                    deffered_three.reject(response);
+                    return deffered_three.promise;
+                });
+            }
+
+        }
+
+        app.controller("ctrl", ctrl);
+        ctrl.$inject = ["$scope", "my_service","$q"];
+        function ctrl($scope, my_service, $q) {
+
+            /*my_service.fun_one().then(function (response) {
+                $scope.var_one = response;
+            });
+
+            my_service.fun_two().then(function (response) {
+                $scope.var_two = response;
+            });
+
+            my_service.fun_three().then(function (response) {
+                $scope.var_three = response;
+            });*/
+
+       
+            $q.all([my_service.fun_one(), my_service.fun_two(), my_service.fun_three()])
+                    .then(function (response) {
+                $scope.var_one = response[0];
+                $scope.var_two = response[1];
+                $scope.var_three = response[2];
+            });
+
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>
