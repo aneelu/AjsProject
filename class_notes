@@ -72,6 +72,17 @@ index.html
         </script>
     </html>
 
+bower.
+    bower used to download the required resources to develop the web application.
+
+bower components.
+1.bower.json
+2. .bowerrc
+
+
+
+
+
 
 
 
