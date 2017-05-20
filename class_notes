@@ -80,6 +80,20 @@ bower components.
 2. .bowerrc
 
 
+Directives.
+    1. Directives will enhance the HTML Capabilities.
+    2. We Have Two Types Of Directives
+        1. Predefined Directives.
+        2. Custom Directives.
+
+Predefined Directives.
+    - The Directives Given By the Framework Called as Predefined Directives.
+
+1.ng-controller
+
+
+
+
 
 
 
