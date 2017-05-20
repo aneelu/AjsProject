@@ -1,0 +1,100 @@
+1. Introduction
+    What is AngularJS ?
+    Why AngularJS ?
+
+2. Environmental Setup
+    GitHub
+    bower
+    IDE'S - WebStrom , Visual Studio, Ecilipse
+
+3.Angular Applications
+    1.Static Angular Application
+    2.Dynamic Angular Application
+
+
+4.Directives
+    1.Predefined Directives
+    2.Custom Directives
+
+5.Services
+    1.Predefined Services
+    2.Custom Services
+
+6. Single Page Applications
+    1.ngRoute
+    2.ui.router
+
+7.NodeJS
+        AngularJS -- NodeJS -- MySQL
+        AngularJS -- NodeJS -- MongoDB
+
+What is AngularJS.
+      - AngularJS is the JavaScript MVC Framework.
+      - AngularJS Have a so many predefined Modules, As a Angular Developer we can reuse
+        the Predefined Modules.
+
+      Ex.
+            1. ngAnimate.
+                    - used to develop the Animations in Angular Applications.
+
+            2. ngMessages.
+                    - used to perform the client side form validations.
+
+            3.ngStorage.
+                    - used to work with the storages.
+                    - we have two types of storages.
+                            1.localStorage
+                            2.sessionStorage
+
+            4.ngRoute
+                    - used to implement the Routing in SPA
+
+            5.ui.router
+                    - used to implement the Routing in SPA
+                    - it is a 3rd party module
+                    - This Module Have so many advantages Compared to ngRoute Module.
+
+
+Ex.
+
+index.html
+-
+    <html ng-app="app">
+
+        //Support the Animations
+        //Supports the SPA (ui.router)
+        //Form Validations
+        //Storages
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+        <script>
+            var app = angular.module("app",["ngAnimate","ui.router","ngStorage","ngMessage"]);
+        </script>
+    </html>
+
+Why AngularJS ?.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
