@@ -1,0 +1,49 @@
+Services.
+    - Services are meant for writing the common business logic.
+
+    - Services Can provide "Common Business Logic" to controllers.
+
+    - By using Services We Can Achieve the Code Reusability.
+
+    - We Have Two Types Of Services.
+
+        1. Custom Services
+        2. Predefined Services
+
+
+
+Custom Services.
+    - The Services Developed By Developer Based On Application Requirement Called as Custom Services.
+
+    - In AngularJS We Can Create the Custom Services in 5 ways.
+
+        1.provider()
+
+        2.factory()
+
+        3.value()
+
+        4.constant()
+
+        5.service()
+
+
+Predefined Services.
+
+    - The Services Provided by the framework called as Predefined Services.
+
+
+1.$http
+
+2.$q
+
+3.$timeout
+
+4.$interval
+
+5.$location
+
+
+
+
+
