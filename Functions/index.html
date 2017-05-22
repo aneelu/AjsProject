@@ -1,0 +1,63 @@
+<!--
+<script>
+    function my_fun() {
+        alert("Function Called");
+    }
+    my_fun();
+</script>-->
+
+
+<!--<script>
+    function my_fun(arg1,arg2) {
+        alert(arg1+"..."+arg2);
+    }
+    my_fun('admin','admin');
+</script>-->
+
+
+<!--<script>
+    function fun_one(arg1,arg2){
+        return arg1+"  "+arg2;
+    }
+
+    function fun_two(){
+        var x = fun_one("admin","admin");
+        document.write(x);
+    }
+
+    fun_two();
+
+</script>-->
+
+
+<script>
+    function fun_one(arg1,arg2) {
+
+        function fun_two(x){
+            return x*x;
+        }
+
+        return arg1+"..."+arg2;
+    }
+
+    //x = fun_one('admin','admin');
+    //document.write(x);
+
+    var x = fun_two(10);
+
+    document.write(x);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
