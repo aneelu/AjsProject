@@ -1,0 +1,8 @@
+{
+  "name": "durgasoft",
+  "dependencies": {
+    "angular": "~1.6.0",
+    "angular-ui-router": "~0.2.18",
+    "ngstorage": "^0.3.11"
+  }
+}
