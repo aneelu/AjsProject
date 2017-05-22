@@ -1,52 +1,136 @@
 <!--
-<script>
-    function my_fun() {
-        alert("Function Called");
-    }
-    my_fun();
-</script>-->
-
-
-<!--<script>
-    function my_fun(arg1,arg2) {
-        alert(arg1+"..."+arg2);
-    }
-    my_fun('admin','admin');
-</script>-->
-
-
-<!--<script>
-    function fun_one(arg1,arg2){
-        return arg1+"  "+arg2;
-    }
-
-    function fun_two(){
-        var x = fun_one("admin","admin");
-        document.write(x);
-    }
-
-    fun_two();
-
-</script>-->
 
 
 <script>
-    function fun_one(arg1,arg2) {
+    function fun1(){
+        console.log("i am a function")
+    }
 
-        function fun_two(x){
-            return x*x;
+    fun1();
+</script>-->
+
+
+
+
+
+
+<!--
+<script>
+    function fun1(arg1, arg2){
+        console.log(arg1 +" "+ arg2);
+    }
+    fun1(1,"satya");
+</script>
+-->
+
+<!--
+<script>
+    function fun1(){
+        return 1;
+    }
+
+    console.log(fun1());
+</script>-->
+
+<!--<script>
+    function fun1(arg1, arg2){
+        return arg1 +" "+ arg2
+    }
+   var x= fun1("satya","dev");
+    console.log(x);
+</script>-->
+<!--
+<script>
+    function fun1(arg1,arg2){
+        return arg1+""+arg2;
+    }
+    function fun2(){
+        return fun1(1,2);
+    }
+   var x= fun2();
+    console.log(x);
+</script>-->
+<!--
+
+<script>
+    function fun1(arg1,arg2){
+        console.log(arg1+","+ arg2);
+    }
+    function fun2(arg1,arg2){
+        fun1(arg1,arg2);
+    }
+    fun2(1,2)
+</script>-->
+<!--
+<script>
+    function fun1(){
+        function fun2(){
+            return "i am from fun2";
         }
 
-        return arg1+"..."+arg2;
+        return "i am from fun1";
+        console.log(fun2());
     }
 
-    //x = fun_one('admin','admin');
-    //document.write(x);
+    console.log(fun1());
+</script>-->
 
-    var x = fun_two(10);
+<!--<script>
+   var fun1= function (){
+        return "hi";
+    }
 
-    document.write(x);
+   fun1();
+
+   var x = fun1;
+   var y = x();
+   console.log(y);
+</script>-->
+
+<!--<script>
+    function add(arg1) {
+        console.log(arg1);
+    }
+    add(fun_one());
+    
+    function fun_one() {
+        return "hello";
+    }
+</script>-->
+
+
+<!--
+<script>
+
+    var my_fun = function () {
+      return "hello";
+    };
+
+    add(my_fun());
+
+    function add(arg1){
+        console.log(arg1);
+    }
+
 </script>
+-->
+
+
+<script>
+    var i =10;
+
+    function fun_one() {
+        i = 20;
+    }
+
+    /*if(true){
+        i = 20;
+    }*/
+
+    console.log(i);
+</script>
+
+
 
 
 
