@@ -1,0 +1,5 @@
+    - By Default AngularJS Supports the Validations.
+
+    - We Can Perform the Client Side form Validations By using AngularJS Framework.
+
+    - When ever error raised in Form Automatically Coresponding Error will be stored into $error object.

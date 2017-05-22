@@ -1,0 +1,24 @@
+Filters.
+    - Filters are used to format the data accroding to application requirement.
+
+     - we have two types of filter.
+
+        1.predefined filters
+        2.custom filters.
+
+predefined filter.
+
+    - the filters given by the framework called as predefined filters.
+
+
+1. uppercase
+
+2. lowercase
+
+3. orderBy
+
+4. currency
+
+5. filter
+
+6. limitTo
