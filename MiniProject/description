@@ -1,0 +1,71 @@
+Step 1.
+
+    Download [ "angular-ui-router" ,    by using bower.
+                "angular"
+                "ngstorage"
+                "angular-messages" ]
+
+
+Step 2.
+
+    Download [
+                mysql,              by using package.json file
+                express,
+                body-parser,
+                mongodb
+                jwt-simple
+            ]
+
+
+3. Implement the Single Page Application.
+
+----------------
+MiniProject
+        templates
+            login.html
+            home.html
+
+        controllers
+             loginController.js
+             homeController.js
+
+        config.js
+
+        index.html
+
+        app.js
+--------------------
+
+4. Create the Service "loginService" and accepts the User Credentials from "loginController" by using
+   Dependency Injection.
+
+
+----------
+services
+    loginService.js
+---------
+
+app.service("loginService",loginService);
+loginService.$inject = ["$http"];
+function loginService($http){
+    this.authenicate = function(data){
+        alert(data);
+    }
+}
+
+
+app.controller("loginController" ,loginController);
+loginController.$inject=["$scope","loginService"];
+function loginController($scope,loginService){
+    $scope.login_details = function(data){
+        loginService.authenticate(data);
+    }
+}
+
+
+Step 5.
+    Make the index.html as the Default Page by using Node Server.
+
+
+Step 6.
+    Create the POST Request  in NodeJS to Accept the User Details from loginService.
