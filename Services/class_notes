@@ -1,0 +1,91 @@
+- Services are used to maintain the "common business logic"
+
+- Services are used to share the "Services" to the Controllers.
+
+- By using Services we Can Achieve the Code Reusability.
+
+- It's Recomended to Maintain the Business Logic in Services.
+
+- We Have Two Types of Services.
+
+    1.Custom Services.
+
+    2.Predefined Services.
+
+
+Custom Services.
+
+    - The Services Developed By Developer Based on Application Requirement Called as
+      Custom Services.
+
+    - In AngularJS We Can Create Custom Services in five ways.
+
+        1.factory()
+        2.provider()
+        3.value()
+        4.constant()
+        5.service()
+
+
+Creating the Custom Service By using factory().
+-
+
+Ex.
+    app.factory("my_service",my_service);
+    function my_service(){
+        return new my_class("Data From Server Soon...").my_fun();
+    }
+
+            *************************
+    var my_class = function(arg1){
+        this.my_fun = function(){
+            return arg1;
+        }
+    }
+           ***************************
+
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject=["$scope","my_service"];
+    function ctrl_one($scope,my_service){
+        $scope.var_one = my_service;
+    }
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject=["$scope","my_service"];
+    function ctrl_two($scope,my_service){
+         $scope.var_two = my_service;
+    }
+
+
+Creating the Custom Service by using provider().
+
+    - used to change the properties values in configuration phase.
+
+    - provider will dependent on "$get" predefined function to return services
+      to the controllers.
+
+
+
+Ex.
+        app.provider("my_service",my_service);
+
+        function my_service(){
+            this.db_password="root_one";
+            this.$get = function(){
+                return this.db_password;
+            }
+        }
+
+
+        app.config(config);
+        function config(my_serviceProvider){
+            my_serviceProvider.db_password="root_two";
+        }
+
+
+
+
+
+
+
+
