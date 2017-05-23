@@ -171,6 +171,114 @@ Ex.
 
 
 
+2. AngularJS Supports the Two Way Data Binding.
+
+    - Automatic Data Synchronization Between Model and View with the SuperVision Of Controller
+      called as Two Way Data Binding.
+
+Ex.
+
+        - In the Above Diagram we have following Server Calls.
+
+1. http - (get request)
+    - used to fetch the data from the database.
+
+
+2. http - (delete request)
+    - used to delete a perticular record from the database.
+
+
+3. ajax (Asynchrous Request)
+    - used to Sync the Data Between View & DataBase.
+
+
+[Note.
+
+1. As a Programming Languages Developer (Java, dot net, php,Android,...) we must make
+   above all the requests to meet application requirement.
+
+2. As a AngularJS , Angular2 Developer , we can make only two Requests to meet application requirement
+
+3. Two Way Data Binding Reduces the Burden on the Server ]
+
+
+3. AngularJS Reduces the Burden on the Server.
+
+    - We Can Implement the Business Components At Client Side By using MVC ,
+      Automatically Burden will be Reduced on Server.
+
+
+
+4. Open Source Code.
+    We Can Customize Framework accroding to application requirement.
+
+
+5. Single Page Applications.
+    - Loading the "Target Resources" to "Source Template" without refreshing the whole
+      webpage called as Single Page Applications.
+
+    - By Using AngularJS , Angular2 & Angular4 we can develop the Single Page Applications.
+
+
+6. Angular Applications are Cross Browser Compatable Applications.
+
+    - Angular Applications can Run in "all the Platforms" and "all the browsers" without
+      adding the addional plugins to the web applications.
+
+    - Latest Version of IE Also Supports Angular Applications.
+
+
+Disadvantages Of AngularJS.
+-
+    - No Coding Standards in AngularJS, so Understanding the Angular Applications
+      are Difficult.
+
+
+    - Secuirity
+
+        [We Are Implementing the Business Components at Client Side , So we are missing
+        the Secuirity]
+
+    - Client Should Enable the JavaScript , then only Angular Application Can Run in Browsers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
