@@ -1,0 +1,35 @@
+By Using AngularJS We Can Create Two Types Of Applications.
+
+1.Static Angular Application
+
+2.Dynamic Angular Application
+
+
+Static Angular Application.
+
+    - If View won't intercts with the Controller for Dynamic data ,
+
+      then such type of Angular Application called as Static Angular Application.
+
+
+
+Dynamic Angular Application.
+
+    - If View Interacts with the Controller for Dynamic Data , then such type of
+
+      Angular Application Called as Dynamic Angular Application.
+
+
+bower.
+
+    - bower is the Automation Tool Provided By NodeJS , used to download the Required Resources
+
+      to develop Angular Applications.
+
+
+bower components.
+
+
+1.bower.json
+
+2. .bowerrc
