@@ -1,24 +1,11 @@
-- AngularJS Supports Two Types Of Storages.
+Storages.
 
-1.localStorage
-2. sessionStorage
+    - AngularJS Supports the Two Types Of Storages.
 
-localStorage.
-    localStorages we must delete explicitely.
+        1.localStorage
+        2.sessionStorage
 
-sessionStorage.
-    when we close the "browser / session" automatically session will be expaired (data will be lost).
+    - when ever we close the browser , automatically we are losting the session data.
 
+    - localStorage we must delete explicitely.
 
-- we can work withe storages by using "ngstorage" module.
-
-- ngstorage module contains two predefined objects.
-
-    1.$localStorage
-
-    2.$sessionStorage
-
-
-- $localStorage used to work with the localStorage.
-
-- $sessionStorage used to work with the sessionStorage.
