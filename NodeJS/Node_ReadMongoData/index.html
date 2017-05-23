@@ -2,49 +2,46 @@
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
    <table border="1">
-       <tr>
-           <th>eno</th>
-           <th>ename</th>
-           <th>eage</th>
-       </tr>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr ng-repeat="x in var_one">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    </table>
 
-       <tr ng-repeat="x in var_one">
-           <td>{{x.eno}}</td>
-           <td>{{x.ename}}</td>
-           <td>{{x.eage}}</td>
-       </tr>
-   </table>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
 
-
         app.service("my_service",my_service);
         my_service.$inject=["$http"];
         function my_service($http) {
-
             this.my_fun = function () {
-              return $http.get("http://localhost:8080/mysql").then(function (response) {
-                    return response.data;
-              },function (response) {
-                    return response;
-              });
+                return $http.get("http://localhost:8080/mongodb").then(function (res) {
+                    return res.data;
+                },function (res) {
+                    return res;
+                });
             };
-
-        }
-
+        };
 
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope","my_service"];
         function ctrl($scope,my_service) {
             my_service.my_fun().then(function (response) {
-                $scope.var_one = response;
+                $scope.var_one=response;
             });
         };
 
 
     </script>
+
 
 </html>
