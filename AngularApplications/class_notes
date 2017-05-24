@@ -33,3 +33,34 @@ bower components.
 1.bower.json
 
 2. .bowerrc
+
+
+
+Steps to Create the Dynamic Angular Application.
+-
+
+
+Step 1.
+
+    Download angular by using bower.
+
+
+Step 2.
+    Load the Angular Framework.
+
+
+Step 3.
+    Declare the ng-app directive with the logical name of web application
+
+
+Step 4.
+    Declare the Controller
+
+
+Step 5.
+    Get the Whole Page Control (index.html)
+    (Instantiate the Module)
+
+
+Step 6.
+    Implement the Controller.

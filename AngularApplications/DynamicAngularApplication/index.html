@@ -1,0 +1,68 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-controller="ctrl">
+        <h1 style="color: red" ng-bind="data"></h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+       /* app.controller("ctrl",function ($scope) {
+            $scope.data = "Data From MongoDB Soon...";
+        });*/
+
+       app.controller("ctrl",ctrl);
+       ctrl.$inject=["$scope"];
+       function ctrl($scope) {
+           $scope.data = "Data From MongoDB Soon...";
+       }
+    </script>
+</html>-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <div ng-controller="ctrl_one">
+       <h1 style="color: rosybrown" ng-bind="var_one+'<==>'+var_two+'<==>'+var_three"></h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "AngularJS+Angular2";
+            $scope.var_two = "NodeJS";
+            $scope.var_three = "MongoDB";
+        }
+
+    </script>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
