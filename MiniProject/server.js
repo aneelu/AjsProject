@@ -5,6 +5,7 @@ var app = express();
 app.use(express.static(__dirname+"/../MiniProject"));
 app.use(bodyparser.json());
 var jwt=require("jwt-simple");
+var fs = require("fs");
 app.get("/",function (req,res) {
    res.redirect("/index.html");
 });
@@ -33,6 +34,28 @@ app.post("/login",function (req,res) {
     });
 
 });
+
+
+app.post("/static",function (req,res) {
+    if(req.body.token == tokens[0]){
+        fs.readFile(__dirname+"/emp.json",function (err,data) {
+            res.send(data.toString());
+        });
+    }else{
+        res.send({"404":"Authentication Error !"});
+    }
+});
+
+
+app.post("/mysql",function (req,res) {
+    if(req.body.token == tokens[0]){
+
+    }else{
+        res.send({"404":"Authentication Error !"});
+    }
+});
+
+
 
 app.listen(8080);
 console.log("Server Listening the Port No.8080");
