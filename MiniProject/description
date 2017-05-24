@@ -69,3 +69,40 @@ Step 5.
 
 Step 6.
     Create the POST Request  in NodeJS to Accept the User Details from loginService.
+
+    app.post("/login",function (req,res) {
+        var uname = req.body.uname;
+        var upwd = req.body.upwd;
+        connection.query("select * from login_details where uname='"+uname+"'",
+                        function (err,records,fields) {
+           if(records.length>0){
+               res.send({'login':'success'});
+           } else{
+               res.send({'login':'failure'});
+           }
+        });
+    });
+
+
+Step 7.
+    Create the Token By using jwt-simple module.
+
+
+var jwt = require("jwt-simple");
+var token = jwt.encode({'uname':uname}, 'hr@nareshit.in');
+tokens.push(token);
+
+if(records.length > 0){
+    res.send({'login':'success' , 'token':token});
+}
+
+
+Step 8.
+    Persist the Token into localStorage.
+
+    $localStorage.poc = res;
+
+
+
+
+

@@ -1,0 +1,20 @@
+- AngularJS Supports the Following Storages.
+
+    1.localStorage
+    2.sessionStorage
+
+- ngstorage is the predefined module , used to work with the storages.
+
+- ngstorage module contains two predefined Objects.
+
+    1.$localStorage
+
+    2.$sessionStorage
+
+        $localStorage used to work with the localStorage.
+                (Explicitely we must delete)
+        $sessionStorage used to work with the sessionStorage.
+                (When ever we close the Broeser automatically data will be lost)
+
+
+- we can save the data in the form of a "key & value" pairs.
