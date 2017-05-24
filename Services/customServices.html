@@ -24,7 +24,7 @@
         }*/
 
 
-        app.config(config);
+        /*app.config(config);
         config.$inject=["my_serviceProvider"];
         function config(my_serviceProvider) {
             my_serviceProvider.db_password="root_two";
@@ -36,7 +36,32 @@
             this.$get = function () {
                 return this.db_password;
             };
-        };
+        };*/
+
+
+        /*app.value("my_service","First Value");
+        app.value("my_service","Second Value");*/
+
+
+        /*app.constant("my_service","First Value");
+        app.constant("my_service","Second Value");*/
+        
+        
+        app.service("my_service",my_service);
+        function my_service() {
+            this.fun_one = function () {
+              return "Data from MongoDB...";
+            };
+
+            this.fun_two = function () {
+              return "Data From Hadoop With Spark Interface";
+            };
+        }
+
+
+
+
+
 
 
 
@@ -46,13 +71,13 @@
         app.controller("ctrl_one",ctrl_one);
         ctrl_one.$inject=["$scope","my_service"];
         function ctrl_one($scope,my_service) {
-            $scope.var_one=my_service;
+            $scope.var_one=my_service.fun_one();
         }
 
         app.controller("ctrl_two",ctrl_two);
         ctrl_two.$inject=["$scope","my_service"];
         function ctrl_two($scope,my_service) {
-            $scope.var_two=my_service;
+            $scope.var_two=my_service.fun_two();
         }
 
 
