@@ -1,0 +1,28 @@
+{
+  "name": "NareshIT",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",     //typescript compiler in watch mode
+    "lite": "lite-server", //angular2 using lite-server
+    "typings": "typings",  // standards to convert ts to js
+    "postinstall": "typings install" // installing after package.json file installation
+  },
+  "license": "ISC",
+  "dependencies": {
+    "angular2": "2.0.0-beta.7",   // core angular2
+    "bootstrap": "^3.3.6",        // boostrap framework
+    "es6-promise": "^3.0.2",      // Ajax Calls
+    "es6-shim": "^0.33.3",        // class , interface , absract,..... usage in ts
+    "reflect-metadata": "0.1.2",  // metadata for typescript classes
+    "rxjs": "5.0.0-beta.2",       // reactive syntaxes in Angular2
+    "systemjs": "0.19.22",        // Loader
+    "zone.js": "0.5.15"           // Observable promises , new module for angular2
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
+    "typescript": "^1.7.5"
+  }
+}
