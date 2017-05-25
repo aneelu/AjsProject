@@ -1,0 +1,96 @@
+ - Encapsulation of View , Data  and View Behaviour Called as Components.
+
+ - Every Angular2 Application Must Contain At least one Component(Root Component).
+
+ - Angular2 Application May Contain More than one Component.
+
+ - As a Angular2 Developer We Can Provide the Communication Between Components.
+
+ - Collection Of TypeScript Class with Decorator(MetaData) Called as Component.
+
+Ex_1.
+
+    import { Component } from 'angular2/core';
+    @Component({
+        selector : "first-app",
+        template : "UserName : {{uname}} <br>
+                   User Email: {{uemail}} <br>
+                   Address   : {{address.city}} &emsp; {{address.area}} &emsp; {{address.state}}"
+    })
+    export class Test{
+        uname : string = "";
+        uemail : string = "";
+        address : my_address;
+        constructor(){
+            this.uname = "admin";
+            this.uemail = "hr@nareshit.in";
+            this.my_address = {
+                this.city : "Hyderabad",
+                this.area : "Ameerpet"
+                this.state : "TS"
+            }
+        }
+        interface my_address{
+            city : string;
+            area : string;
+            state : string;
+        }
+    }
+
+ Ex_2.
+    template : <ul>
+                    <li *ngFor = "let x in data">{{x}}</li>
+               </ul>
+        --
+        --
+    data : string[];
+    constructor(){
+        this.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+    }
+       --
+       --
+    Hello_1
+    Hello_2
+    Hello_3
+    Hello_4
+    Hello_5
+
+
+
+Ex_3.
+
+    template : <button (click) = "my_fun()">ClickMe</button>
+    export class Test{
+        --
+        --
+        my_fun(){
+            console.log("You Clicked Button !");
+        }
+
+    }
+
+
+Ex_4.
+
+
+    template : "<div *ngIf = flag>
+                   <h1>Welcome to ngIf</h1>
+               </div>
+               <br>
+               <button (click)='toggle(flag)'>Toggle</button>"
+
+    export class Test{
+         flag:boolean;
+         constructor(){
+            this.flag = false;
+         }
+         toggle(data){
+            if(data){
+                flag=false;
+            }else{
+                flag=true;
+            }
+         }
+    }
+
+
