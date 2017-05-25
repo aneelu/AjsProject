@@ -141,7 +141,46 @@ Predefined Services.
     - used to connect with servers by using http protocol.
 
 
+NodeJS.
+-
+    - NodeJS is the Server Side Scripting Language.
+    - By using NodeJS We Can Create WebServers.
+    - In NodeJS "Application" itself Behaves like "Server" as well as "Business Component".
+    - As a Node Developer we can assign the port numbers to the server.
 
+Modules in NodeJS.
+
+1.mysql
+    - used to interact with the mysql database.
+
+2.mongodb
+    - used to interact with the mongodb.
+
+3.fs
+     - fs stands for "file system"
+     - used to interact with the static files.
+
+4.http
+    - used to create the http servers.
+
+5.express
+    - used to develop the REST API.
+
+6.jwt-simple
+    - used to maintain the token based authenication system.
+
+7.body-parser
+    - used to set the MIME Type.
+    Ex.
+        json
+        xml
+        text
+        doc
+        docx
+        html
+        --
+        --
+        --
 
 
 

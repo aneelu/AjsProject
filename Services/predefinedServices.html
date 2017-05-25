@@ -15,6 +15,21 @@
     </table>
 
 
+    <br>
+
+    <table border="2">
+        <tr>
+            <th>eno</th>
+            <th>ename</th>
+            <th>eage</th>
+        </tr>
+        <tr ng-repeat="x in var_two">
+            <td>{{x.eno}}</td>
+            <td>{{x.ename}}</td>
+            <td>{{x.eage}}</td>
+        </tr>
+    </table>
+
 
 
 
@@ -33,6 +48,18 @@
                     return negRes;
                 });
             };
+
+
+            this.fun_two = function () {
+              return $http.get("http://localhost:8080/mysql").then(function (res) {
+                  return res.data;
+              },function (res) {
+                  return res;
+              });
+            };
+
+
+
         };
 
 
@@ -42,6 +69,11 @@
           my_service.fun_one().then(function (res) {
               $scope.var_one = res;
           });
+
+          my_service.fun_two().then(function (res) {
+              $scope.var_two = res;
+          });
+
         };
 
 

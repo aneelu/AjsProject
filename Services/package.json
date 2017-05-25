@@ -1,0 +1,9 @@
+{
+  "name": "Services",
+  "version": "0.0.1",
+  "description": "Interacting with the MySQL",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mysql": "^2.13.0"
+  }
+}
