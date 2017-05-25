@@ -35,32 +35,63 @@ bower components.
 2. .bowerrc
 
 
-
 Steps to Create the Dynamic Angular Application.
 -
 
 
 Step 1.
 
-    Download angular by using bower.
+    Download Angular Framework by using bower.
 
 
 Step 2.
+
     Load the Angular Framework.
 
 
 Step 3.
-    Declare the ng-app directive with the logical name of web application
+    Declare the Logical Name for the Web Application.
 
 
 Step 4.
-    Declare the Controller
+    Declare the Controller.
+
 
 
 Step 5.
-    Get the Whole Page Control (index.html)
-    (Instantiate the Module)
+    Get the Whole Page Control (index.html) / Instantiate the Module.
 
 
 Step 6.
     Implement the Controller.
+
+
+Directives.
+
+        - By using Directives we can perform the Manipulations on DOM.
+
+        - Directives Will Enhance the HTML Capabilities.
+
+        - We Have Two Types Of Directives.
+
+        1.Predefined Directives.
+
+        2.Custom Directives.
+
+
+Predefined Directives.
+
+    - The Directives Given by the Framework Called as Predefined Directives.
+
+
+
+
+
+
+
+
+
+
+
+
+
