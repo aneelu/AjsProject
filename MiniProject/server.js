@@ -49,7 +49,24 @@ app.post("/static",function (req,res) {
 
 app.post("/mysql",function (req,res) {
     if(req.body.token == tokens[0]){
+        connection.query("select * from emp",function (err,records,fields) {
+           res.send(records);
+        });
+    }else{
+        res.send({"404":"Authentication Error !"});
+    }
+});
 
+var mongodb = require("mongodb");
+var durga = mongodb.MongoClient;
+
+app.post("/mongodb",function (req,res) {
+    if(req.body.token == tokens[0]){
+        durga.connect("mongodb://localhost:27017/mini_project",function (err,db) {
+           db.collection("emp").find().toArray(function (err, array) {
+               res.send(array);
+           });
+        });
     }else{
         res.send({"404":"Authentication Error !"});
     }

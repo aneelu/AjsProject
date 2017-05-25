@@ -6,6 +6,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.27",
     "mysql": "^2.13.0"
   }
 }
