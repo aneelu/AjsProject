@@ -200,6 +200,49 @@ Modules in NodeJS.
 
 
 
+MongoDB
+-
+    - As a MongoDB Developer , we can store / retrive , update and delete the JSON Objects from MongoDB
+    - MongoDB is ligth weigth database compared to other databases.
+    - MongoDB Follows the Client Server Archiecture.
+
+MongoDB Commands.
+
+1. start the server
+-
+>mongod
+
+
+2. client connect to server.
+-
+>mongo
+
+
+3.show the databases.
+-
+>show dbs;
+
+
+4.Create and switch the database.
+-
+> use demo;
+
+5.create the collection.
+>db.createCollection("emp");
+
+6.Insert the JSON Objects into emp collection.
+-
+>db.emp.insert({'id':1,'name':'Hello_1','age':20});
+
+7.Fetch the data from Collection.
+> db.emp.find();
+
+
+
+
+
+
+
 
 
 
