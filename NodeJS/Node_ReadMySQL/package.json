@@ -1,7 +1,7 @@
 {
-  "name": "Read_MySQLData",
+  "name": "Node_ReadMySQL",
   "version": "0.0.1",
-  "description": "Reading the Data From MySQL",
+  "description": "reading the data from the mysql",
   "dependencies": {
     "express": "^4.15.3",
     "mysql": "^2.13.0"

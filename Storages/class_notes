@@ -1,0 +1,11 @@
+Storages.
+
+    - AngularJS Supports the Two Types Of Storages.
+
+        1.localStorage
+        2.sessionStorage
+
+    - when ever we close the browser , automatically we are losting the session data.
+
+    - localStorage we must delete explicitely.
+
