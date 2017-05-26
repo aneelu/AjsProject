@@ -1,0 +1,205 @@
+<!--
+    - ng-controller used to declare the controllers in view.
+        Ex.
+             ng-controller="ctrl"
+
+    - in genaral we will implement controllers by using javascript
+        Ex.
+            app.controller("ctrl",ctrl);
+            ctrl.$inject=["$scope"];
+            function ctrl($scope){
+                Logic Goes Here
+            }
+     - we can have more than one controller per web application.
+-->
+
+<!-- Ex1. Create Two Controllers -->
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <h1 style="color: red" ng-controller="ctrl_one" ng-bind="var_one"></h1>
+    <h1 style="color: green" ng-controller="ctrl_two" ng-bind="var_two"></h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "Data From Controller One";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "Data From Controller Two";
+        }
+    </script>
+</html>-->
+
+
+<!--Ex2.  - $scope&$rootScope
+          - $rootScope Members are available entire web application scope
+          - we can accesss the $rootScope Members either in controllers scope and out of controllers scope -->
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<h2 style="color: blue" ng-bind="var_one"></h2>
+<h1 style="color: red" ng-controller="ctrl_one" ng-bind="var_two"></h1>
+<h1 style="color: green" ng-controller="ctrl_two" ng-bind="var_one"></h1>
+<h2 style="color: blue" ng-bind="var_two"></h2>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+
+    app.controller("ctrl_one",ctrl_one);
+    ctrl_one.$inject=["$rootScope"];
+    function ctrl_one($rootScope) {
+
+        $rootScope.var_one = "Data From Controller One";
+    }
+
+    app.controller("ctrl_two",ctrl_two);
+    ctrl_two.$inject=["$rootScope"];
+    function ctrl_two($rootScope) {
+        $rootScope.var_two = "Data From Controller Two";
+    }
+</script>
+</html>
+-->
+
+
+<!-- Ex3. Access the user defined functions with $rootScope-->
+<!--<!DOCTYPE html>
+<html ng-app="app">
+    <h1 style="color: red" ng-bind="my_fun()"></h1>
+
+    <div ng-controller="ctrl">
+        <h1 style="color: green" ng-bind="my_fun()"></h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$rootScope","$scope"];
+        function ctrl($rootScope,$scope) {
+
+            $scope.var_one = "AngularJS+Angular2";
+            $scope.var_two="NodeJS+Java+DotNet";
+            $scope.var_three = "MongoDB+MySQL+Hadoop";
+
+            $rootScope.my_fun = function () {
+                return $scope.var_one+"<==>"+$scope.var_two+"<==>"+$scope.var_three;
+            };
+        };
+
+    </script>
+</html>-->
+
+
+
+
+
+
+<!-- Ex4.Maintain the Nested Controllers in Angular Application-->
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <div class="my_class">
+        <div ng-controller="parent_controller">
+            {{parent}}
+            <div ng-controller="child_controller">
+                {{child}}
+                <div ng-controller="sub_controller">
+                    {{sub}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        div.my_class div{
+            border: 1px solid tomato;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: darkgreen;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.parent = "From Parent Controller";
+        }
+
+
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope) {
+            $scope.child = "From Child Controller";
+        }
+
+
+        app.controller("sub_controller",sub_controller);
+        sub_controller.$inject=["$scope"];
+        function sub_controller($scope) {
+            $scope.sub = "From Sub Controller";
+        }
+    </script>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
