@@ -94,3 +94,171 @@ Ex_4.
     }
 
 
+
+
+import {Component} from 'angular2/core';
+
+@Component({
+    selector: 'my-app',
+    template: '<h1>Address:</h1>&emsp;&emsp;&emsp; {{address.city}}<br>&emsp;&emsp;&emsp;{{address.state}}<br>&emsp;&emsp;&emsp;{{address.area}}'
+
+})
+export class AppComponent {
+    uname:string="";
+    email:string="";
+    address:address;
+    flag:boolean;
+    constructor(){
+        this.uname = "admin";
+        this.email = "hr@nareshit.in";
+        this.address={
+            city:'Hyderabad',
+            state:'Telangana',
+            area:'Ameerpet'
+        }
+        this.flag=false;
+    }
+}
+
+interface address{
+    city:string;
+    state:string;
+    area:string;
+}
+
+Properties for Components.
+-
+
+1.selector.
+    - used to give the logical name for Component , which will directly Interacting with the View.
+
+Ex.
+
+      @Component({
+        selector : 'my-app'
+      })
+
+[Note . Selector Property is the Mandatory Property ].
+
+
+2. providers.
+        - used to create the Dependency Injection Between Angular Components.
+
+
+Ex.
+        export class MyService{
+            getData(){
+                return "Data From MongoDB Soon...";
+            }
+        }
+
+       @Component({
+            selector : "my-app",
+            providers : ['MyService']
+       })
+
+3.template.
+         - used to add the inline html to the Component.
+         - it's better to take to external template while developing the Component.
+
+ Ex.
+         @Component({
+            selector:'my-app',
+            template:'<b>Welcome to Components</b>'
+         })
+
+4.templateUrl.
+
+    - used to add the external templates to the custom components.
+
+    - it's recomended to maintain the separate templates while developing the components,
+      automatically reusability of templates will be incresed.
+
+
+sample.html
+-
+<table class='table table-responsive'>
+    <tr>
+        <td>{{address.city}}</td>
+        <td>{{address.state}}</td>
+        <td>{{address.area}}</td>
+    </tr>
+</table>
+
+@Component({
+    selector : 'my-app',
+    templateUrl:'sample.html'
+})
+export class Test{
+    address={
+        state:'TS',
+        city:'Hyd',
+        area:'Ameerpet'
+    }
+}
+
+
+5.directives.
+
+    - used to configure the custom directives.
+
+    - directives are used to perform the manipulations on DOM.
+
+    - we have two types of directives.
+
+        1.Predefined Directives.
+
+        2.Custom Directives.
+
+    Predefined directives.
+
+        The Directives Given By the Angular2 UI Framework called as Predefined Directives.
+
+        We Can Directly use the Predefined Directives without Configuring in Components.
+
+        Ex.
+            *ngIf
+            *ngFor
+            *ngModel
+            *ngBind
+                -
+                -
+                -
+    Custom Directives.
+        - The Directives Developed By Angular2 Developer Called as Custom Directives.
+        - We Must Register Custom Directives in Custom Components in order use the
+          Custom Directives.
+
+        export class Reverse{
+            constructor(arg1:string){
+                let data = "";
+                for(let x=0; x < arg1.length ; x++){
+                    data = arg1[x] + data;
+                }
+                return data;
+            }
+        }
+        @Component({
+            selector:'my-app',
+
+            directives : ['Reverse'];
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
