@@ -1,0 +1,12 @@
+    - Directives Enhances the HTML Capabilities.
+    - By using Directives we can manipulate the DOM.
+    - DOM Stands for document Object Model
+    - We Have Two Types Of Directives.
+
+        1.Predefined Directives.
+        2.Custom Directives.
+Predefined Directives.
+    The directives Given By The Framework Called as Predefined Directives.
+
+Custom Directives.
+    The Directives Developed By the Developer Called as Custom Directives.

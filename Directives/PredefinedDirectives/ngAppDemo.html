@@ -1,0 +1,118 @@
+<!--ng-app
+-
+    - it is a root directive in angular application.
+    - framework starts the execution from ng-app directive.
+    - ng-app directive takes the logical name of web application.
+    - logical name of web application is optional , when ever our application is static
+      otherwise mandatory(Dynamic Application).
+    - Framework "bootstraps" the application from ng-app directive, called as AutoBootStrap.
+    - Executing Angular Application forcefully without ng-app directive called as Manual Bootstrap.
+    - we can have only one ng-app directive per web application. -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+    <div ng-app>
+        <h1 style="color: red">Addition.{{10+10}}</h1>
+        <div>
+            <h1 style="color: green">Subtraction.{{20-10}}</h1>
+        </div>
+    </div>
+    &lt;!&ndash; This Block is out of ng-app scope, so it won't executes&ndash;&gt;
+    <div>
+        <h1 style="color: blue">Multiplication.{{10*10}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+     <h1 style="color: red">Addition.{{10+10}}</h1>
+     <h1 style="color: green">Subtraction.{{20-10}}</h1>
+     <h1 style="color: blue">Multiplication.{{10*10}}</h1>
+     <script src="bower_components/angular/angular.min.js"></script>
+     &lt;!&ndash; Manual Bootstrap of Static Angular Application&ndash;&gt;
+     <script>
+         angular.bootstrap(document);
+     </script>
+</html>
+-->
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+    <div ng-controller="ctrl">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        //app object wont creates because of no 'ngapp' directive
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.var_one = "I am from Manual BootStrap";
+        }
+        //Manual Bootstrap Of Dynamic Angular Application
+        angular.bootstrap(document,["app"]);
+    </script>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+    <div ng-app="app" ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+
+    <!-- out of ng-app scope-->
+    <div id="my_div" ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_two}}</h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "I am from Auto Bootstrap !";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "I am from Manual Bootstrap !";
+        }
+
+        //executing the perticular element with manual bootstrap
+        angular.bootstrap((document.getElementById("my_div")),["app"]);
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
