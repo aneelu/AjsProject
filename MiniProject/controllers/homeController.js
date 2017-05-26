@@ -1,5 +1,8 @@
 app.controller("homeController",homeController);
-homeController.$inject=["$scope"];
-function homeController($scope) {
-    $scope.var_one = "Welcome to Home Page";
-}
+homeController.$inject=["$scope","$location","$localStorage"];
+function homeController($scope,$location,$localStorage) {
+    $scope.logout = function () {
+        delete $localStorage.poc;
+        $location.path("/login");
+    };
+};
