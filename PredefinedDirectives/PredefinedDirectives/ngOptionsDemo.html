@@ -1,0 +1,32 @@
+<!--
+    - ngOptions Directive used to populate the data in dropdown.
+    Syntax.
+            ng-options = "model_values as dropdown_values for iteration_variable in array"
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <!-- 'dropdown - subjects' && 'model - numbers' -->
+    <select ng-model="model_one" ng-options="x.id as x.name for x in data">
+        <option value="">---Choose Subject---</option>
+    </select>
+    <h1>{{model_one}}</h1>
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [ {'id':1,'name':'AngularJS'},
+                            {'id':2,'name':'Angular2'},
+                            {'id':3,'name':'Angular4'},
+                            {'id':4,'name':'reactJS'},
+                            {'id':5,'name':'MongoDB'}
+            ];
+        }
+    </script>
+</html>
