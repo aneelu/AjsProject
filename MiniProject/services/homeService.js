@@ -3,14 +3,26 @@ homeService.$inject=["$http","$localStorage"];
 function homeService($http,$localStorage) {
 
     this.static = function () {
-        return "Data From Static Page Soon....";
+        return $http.post("/static",{"token":$localStorage.poc.data.token}).then(function (posRes) {
+            return posRes;
+        },function (errRes) {
+            return errRes;
+        });
     }
 
     this.mysql = function () {
-        return "Data From MySQL DB Soon....";
+        return $http.post("/mysql",{"token":$localStorage.poc.data.token}).then(function (posRes) {
+            return posRes;
+        },function (errRes) {
+            return errRes;
+        });
     }
 
     this.mongo = function () {
-        return "Data From MongoDB Soon....";
+        return $http.post("/mongodb",{"token":$localStorage.poc.data.token}).then(function (posRes) {
+            return posRes;
+        },function (errRes) {
+            return errRes;
+        });
     }
 }
