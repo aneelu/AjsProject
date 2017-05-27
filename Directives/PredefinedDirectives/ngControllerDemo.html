@@ -19,15 +19,16 @@
        - As a Developer we can maintain the parent & child relation ship between controllers
 -->
 
+<!--
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 
-    <!-- Declaration Of Controller One-->
+    &lt;!&ndash; Declaration Of Controller One&ndash;&gt;
     <div ng-controller="ctrl_one">
         <h1 style="color: red" ng-bind="var_one"></h1>
     </div>
 
-    <!-- Declaration Of Controller Two-->
+    &lt;!&ndash; Declaration Of Controller Two&ndash;&gt;
     <div ng-controller="ctrl_two">
         <h1 style="color: green" ng-bind="var_two"></h1>
     </div>
@@ -47,4 +48,158 @@
             $scope.var_two = "I am from Controller Two";
         }
     </script>
+</html>-->
+
+<!--
+<!DOCTYPE html>
+<html ng-app="app">
+<div class="my_class">
+    <div ng-controller="parent_controller">
+            {{parent}}
+            <div ng-controller="child_controller">
+                {{child}}
+                <div ng-controller="sub_controller">
+                    {{sub}}
+                </div>
+            </div>
+    </div>
+</div>
+
+    <style>
+        div.my_class div{
+            border: 1px solid tomato;
+            text-align: center;
+            color: green;
+            font-size: large;
+            font-weight: bolder;
+            padding: 10px;
+        }
+    </style>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.parent = "I am from parent controller";
+        }
+
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope) {
+            $scope.child = "I am from child controller";
+        }
+
+        app.controller("sub_controller",sub_controller);
+        sub_controller.$inject=["$scope"];
+        function sub_controller($scope) {
+            $scope.sub = "I am from sub controller";
+        }
+
+
+    </script>
+
 </html>
+-->
+
+<!--
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <h1 style="color: red">{{var_two}}</h1>
+    <div ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_two}}</h1>
+    </div>
+
+    <div ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_one}}</h1>
+    </div>
+    <h1 style="color: green">{{var_one}}</h1>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$rootScope"];
+        function ctrl_one($rootScope) {
+            $rootScope.var_one = "I am from Controller One";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$rootScope"];
+        function ctrl_two($rootScope) {
+            $rootScope.var_two = "I am from Controller Two";
+        }
+    </script>
+
+
+
+
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <h1>{{fun_one()}}</h1>
+    <h1 style="color: red" ng-controller="ctrl" ng-bind="fun_one()"></h1>
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$rootScope","$scope"];
+        function ctrl($rootScope,$scope) {
+            $scope.var_one = "Hello";
+            $rootScope.fun_one = function () {
+              return $scope.var_one;
+            };
+        }
+
+    </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
