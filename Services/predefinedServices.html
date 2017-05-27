@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
+<h1>{{my_var_one}}</h1>
+
+<h1 style="color: red">{{time}}</h1>
+
+<h1 style="color: black">{{location}}</h1>
+
 <table border="4">
     <tr>
         <th>id</th>
@@ -70,8 +76,7 @@
         app.service("my_service",my_service);
         my_service.$inject=["$http","$q"];
         function my_service($http,$q) {
-
-            var deffered_one  = $q.defer();
+        var deffered_one  = $q.defer();
             this.fun_one = function () {
                 return $http.get("https://www.w3schools.com/angular/customers.php")
                     .then(function (posRes) {
@@ -123,8 +128,48 @@
 
 
         app.controller("ctrl",ctrl);
-        ctrl.$inject=["$scope","my_service","$q"];
-        function ctrl($scope,my_service,$q) {
+        ctrl.$inject=["$scope","my_service","$q","$timeout","$interval","$location"];
+        function ctrl($scope,my_service,$q,$timeout,$interval,$location) {
+
+            /*$timeout
+                - used to execute a user defined function after a specifies interval of time.
+                Syntax.
+                     $timeout(timeout , 5000);
+                    //it will execute after 5 sec
+                    function timeout(){
+                        //Logic Goes Here
+                    }
+             **/
+
+            $scope.my_var_one= "Before Timeout Service !";
+            $timeout(timeout , 5000);
+            function timeout(){
+                $scope.my_var_one= "After Timeout Service !";
+            }
+
+
+            /*
+                $interval - used to execute a perticular function repetedely with a given interval of time.
+                Syntax.
+                    $interval(interval , 1000);
+                    function interval(){
+                        //Logic Goes Here
+                    }
+            */
+
+            $scope.time = new Date().toLocaleTimeString();
+            $interval(interval,1000);
+            function interval() {
+                $scope.time = new Date().toLocaleTimeString();
+            }
+
+
+            /*$location
+                -used to find the absolute path of web application.
+            */
+
+            $scope.location = $location.absUrl();
+
             $q.all([my_service.fun_one(),
                     my_service.fun_two(),
                     my_service.fun_three(),
