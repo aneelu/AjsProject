@@ -1,0 +1,18 @@
+<!--
+    ngInit . used to represent the static data in the form of a 'key&value' pairs
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="db_user='root';
+                                db_password='root';
+                                change_password=true;
+                                list_of_tables=3;
+                                name_of_tables=['emp','product','results']">
+    <h1 style="color: red">DB User: {{db_user}}</h1>
+    <h1 style="color: green">DB Pwd: {{db_password}}</h1>
+    <h1 style="color: black">Freq Changes: {{change_password}}</h1>
+    <h1 style="color: #00b3ee">List Of Tables:{{list_of_tables}}</h1>
+    <h1 ng-repeat="x in name_of_tables">
+        {{x}}
+    </h1>
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>

@@ -1,0 +1,75 @@
+<!--
+    ngOptions - used to populate the values to the dropdown
+    Syntax.
+    ng-options = "model_values as dropdown_values for iteration_variable in array"
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <!--
+        dropdown -  sub
+        model    -  id's
+    -->
+    <select ng-model="model_one" ng-options="x.id as x.sub for x in data">
+        <option value="">---Choose One Subject---</option>
+    </select>
+    <h1>{{model_one}}</h1>
+    <br><br>
+
+    <!--
+        dropdown - id's
+        model    - sub
+    -->
+    <select ng-model="model_two" ng-options="x.sub as x.id for x in data">
+        <option value="">--Choose ID--</option>
+    </select>
+    <h1>{{model_two}}</h1>
+    <br><br>
+
+
+    <!--
+        model - id's
+        dropdown - id's
+    -->
+    <select ng-model="model_three" ng-options="x.id as x.id for x in data">
+        <option value="">--Choose ID--</option>
+    </select>
+    <h1>{{model_three}}</h1>
+    <br><br>
+
+
+    <!--
+        model - sub's
+        dropdown - sub's
+    -->
+    <select ng-model="model_four" ng-options="x.sub as x.sub for x in data">
+        <option value="">--Choose Sub--</option>
+    </select>
+    <h1>{{model_four}}</h1>
+    <br><br>
+
+
+    <select ng-model="model_five" ng-options="y as y for y in data_one">
+        <option value="">--Greeting--</option>
+    </select>
+    <h1>{{model_five}}</h1>
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [{'id':1,'sub':'AngularJS'},
+                            {'id':2,'sub':'Angular2'},
+                            {'id':3,'sub':'Angular4'},
+                            {'id':4,'sub':'reactJS'},
+                            {'id':5,'sub':'MongoDB'}
+            ];
+            $scope.data_one = ["India","USA","UK","Australia","Japan"];
+        }
+    </script>
+</html>
