@@ -4,12 +4,13 @@
             ng-options = "model_values as dropdown_values for iteration_variable in array"
 -->
 
+<!--
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
-    <!-- 'dropdown - subjects' && 'model - numbers' -->
+    &lt;!&ndash; 'dropdown - subjects' && 'model - numbers' &ndash;&gt;
     <select ng-model="model_one" ng-options="x.id as x.name for x in data">
-        <option value="">---Choose Subject---</option>
+        <option value="">-&#45;&#45;Choose Subject-&#45;&#45;</option>
     </select>
     <h1>{{model_one}}</h1>
 
@@ -29,4 +30,133 @@
             ];
         }
     </script>
+</html>-->
+
+
+
+
+
+
+
+<!-- ngOptions
+           - used to populate the data to the dropdown
+           Syntax.
+    ng-options = "model_values as dropdown_values for iteration_variable in array"
+    -->
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <!--
+        Model - id's
+        dropdown - sub
+    -->
+    <select ng-model="model_one" ng-options="x.id as x.sub for x in data">
+        <option value="">Select Subject</option>
+    </select>
+    <h1>{{model_one}}</h1>
+    <br><br>
+
+    <!--
+        dropdown - id's
+        model    - sub's
+    -->
+    <select ng-model="model_two" ng-options="x.sub as x.id for x in data">
+        <option value="">Select ID</option>
+    </select>
+    <h1>{{model_two}}</h1>
+
+
+
+    <!--
+        Dropdown - id's
+        Model    - id's
+    -->
+    <select ng-model="model_three" ng-options="x.id as x.id for x in data">
+        <option value="">Choose ID</option>
+    </select>
+    <h1>{{model_three}}</h1>
+
+
+
+    <!--
+        dropdown - sub's
+        model    - sub's
+    -->
+    <select ng-model="model_four" ng-options="x.sub as x.sub for x in data">
+        <option value="">Select Subject</option>
+    </select>
+    <h1>{{model_four}}</h1>
+
+
+
+
+    <!--
+        dropdown - Hello_1 to Hello_5
+        Model    - Hello_1 to Hello_5
+    -->
+
+    <select ng-model="model_five" ng-options="x as x for x in data_one">
+        <option value="">Choose Value</option>
+    </select>
+    <h1>{{model_five}}</h1>
+
+
+
+
+
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [{'id':1,'sub':'AngularJS'},
+                            {'id':2,'sub':'Angular2'},
+                            {'id':3,'sub':'Angular4'},
+                            {'id':4,'sub':'reactJS'},
+                            {'id':5,'sub':'MongoDB'}
+            ];
+
+
+            $scope.data_one = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+        }
+    </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
