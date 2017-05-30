@@ -1,0 +1,115 @@
+GitHub.
+
+    - GitHub is the Repository.
+
+    - GitHub Repository is the Open Source Repository and Maintained By Google.
+
+    - Git is the Tool used to interact with the GitHub.
+
+GitHub Operations.
+
+1.Create the Repository (Locally)
+
+2.Set the User Credentials to the Local Repository.
+
+3.Create the Files in Local Repository.
+
+4.Commit the Files to the Repository.
+
+5.Creating the Branch
+
+6.Merging the Code
+
+7.Merge Conflicts
+
+8.Working the Cloud Repositories
+
+9.Integration Of GitHub to IDE'S - WebStrom , Ecilipse , Visual Studio.
+
+10.Commit the Code to Cloud Repository
+
+11.Push the Code
+
+12.Pull the Code
+
+13.Code Comparision in IDE'S
+
+            ***************************************
+1.Create the Repository (Locally)
+-
+    Download and Install the Git.
+    -
+    website : https://git-scm.com/download/win
+    file name : Git-2.13.0-64-bit.exe
+
+    Create Folder in any drive.
+    -
+    E:/githubdemo
+
+    Execute the Following Command by using Git Bash
+    -
+    >git init
+
+  [ Note . automatically 'githubdemo' converted as local repository ]
+
+                *******************************
+2. Add the User Credentials to the Local Repository.
+
+>git config --global user.name "NareshIT"
+>git config --global user.email "hr@nareshit.in"
+
+                **********************************
+
+3. Create the Files to the Repository.
+
+>touch demo.js
+
+[Note . automatically "demo.js" file will be created in repository]
+
+                ************************************
+
+4.Commit the Files to the Repository.
+
+>git add demo.js
+>git commit
+>press "i"
+>type "initial commit"
+>press "esc"
+>type ":wq"
+>press "enter"
+
+
+From 2nd Commit Onwards.
+-
+>git add demo.js
+>git commit -m "Custom Message"
+
+
+Status Of Git.
+-
+>git status
+
+log of Git
+-
+>git log
+
+            *****************************
+5.Create the Branch.
+-
+>git branch developer_one
+>git checkout developer_one
+
+
+            *****************************
+
+6. Merge the Code.
+
+>git merge developer_one
+
+
+
+
+
+
+
+
