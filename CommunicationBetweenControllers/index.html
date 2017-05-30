@@ -78,7 +78,7 @@
     </script>
 </html>-->
 
-<!-- Ex3. Communication Between Controller by using Custom Services.-->
+<!--&lt;!&ndash; Ex3. Communication Between Controller by using Custom Services.&ndash;&gt;
 <!DOCTYPE html>
 <html ng-app="app">
     <div ng-include="'ctrl_one.html'"></div>
@@ -116,7 +116,67 @@
             };
         };
     </script>
+</html>-->
+
+
+
+
+
+
+
+
+
+<!-- EX 4.Communication Between Controllers by using rootScope -->
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <div ng-controller="ctrl_one">
+        <input type="text" ng-model="my_model"> <br>
+        <button ng-click="clickMe(my_model)">ClickMe</button>
+    </div>
+
+    <div ng-controller="ctrl_two">
+        <h1>{{var_one}}</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.clickMe = function (arg1) {
+                $scope.fun_one(arg1);
+            };
+        };
+        
+        
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$rootScope","$scope"];
+        function ctrl_two($rootScope,$scope) {
+            $rootScope.fun_one = function (arg1) {
+                $scope.var_one = arg1;
+            };
+        };
+        
+    </script>
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
