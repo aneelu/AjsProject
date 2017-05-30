@@ -1,7 +1,0 @@
-{
-  "name": "durgasoft",
-  "dependencies": {
-    "angular": "~1.6.0",
-    "angular-messages": "^1.6.4"
-  }
-}
