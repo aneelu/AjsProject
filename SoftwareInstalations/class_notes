@@ -1,0 +1,44 @@
+Software Installations.
+-
+
+1. Download and Install the NodeJS.
+
+    Website : https://nodejs.org/en/download/
+    file name : node-v6.10.3-x64.msi
+
+
+2. Download and Install the Git
+
+    website : https://git-scm.com/download/win
+    file name : Git-2.13.0-64-bit.exe
+
+
+3. Download and Install the WebStrom IDE.
+    website :
+https://www.jetbrains.com/webstorm/download/download-thanks.html?platform=windows
+
+    file name : Webstrom-2017.1.3.exe
+
+
+4. Create the Account with the GitHub.
+    website : https://github.com/join
+
+
+5. Checkout the Code from the GitHub
+URL : https://github.com/ajsnaresh/AJS_Classes.git
+
+
+6. Install the "bower" plugin
+    - we can install bower by using nodejs commands.
+        >npm install -g bower
+
+7. Download and Install the mongoDB.
+    website : https://www.mongodb.com/download-center#community
+    file name : mongodb-win32-x86_64-2008plus-ssl-3.4.4-signed.msi
+
+8. Download and Install  the "Postman"
+    - Postman is the Software used to test the API Calls
+
+    website : https://www.getpostman.com/
+
+    file name : Postman-win64-4.10.7-Setup.exe
