@@ -1,0 +1,33 @@
+    - GitHub is the Open Source Repository maintained by google.
+
+GitHub Operations.
+
+    1. Create the Repository Locally.
+
+    2. Set the User Credentials to the Repository.
+
+    3. Add the Files to the Repository.
+
+    4. Commit the Files to the Repository.
+
+    5. Create the Branch
+
+    6. Merge the Branch
+
+    7. Integration of GitHub to the IDE
+
+    8. Commit the Code in IDE
+
+    9. Push the Code to the Cloud Repository.
+
+    10. Pull the Code from the Cloud Repository.
+
+
+
+Download and Install the Git.
+-
+
+    website : https://git-scm.com/download/win
+    file name : Git-2.13.0-64-bit.exe
+
+
