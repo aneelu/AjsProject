@@ -1,0 +1,38 @@
+<!--
+    ng-switch.
+        used to write the switch cases in view.
+
+        Syntax.
+           <div ng-switch="expression">
+                <div ng-switch-when="value_one">
+                     //Business Logic
+                 </div>
+
+                 <div ng-switch-when="value_two">
+                     //Business Logic
+                 </div>
+
+                 <div ng-switch-when="value_three">
+                     //Business Logic
+                 </div>
+                    ---
+                    ---
+                 <div ng-switch-default>
+                     //Business Logic
+                 </div>
+           </div>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="my_model=1">
+    <input type="number" ng-model="my_model"> <br><br>
+    <div ng-switch="my_model">
+        <div ng-switch-when="1" class="btn btn-primary" ng-bind="my_model"></div>
+        <div ng-switch-when="2" class="btn btn-success" ng-bind="my_model"></div>
+        <div ng-switch-when="3" class="btn btn-danger" ng-bind="my_model"></div>
+        <div ng-switch-default class="btn btn-default" ng-bind="my_model"></div>
+    </div>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>

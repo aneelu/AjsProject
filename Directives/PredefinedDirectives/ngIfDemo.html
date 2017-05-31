@@ -1,0 +1,67 @@
+<!--
+    ng-if.
+         used to write the conditions in view
+    Syntax.
+          ng-if = "true" / "false"
+
+    ** ng-if directive will add / remove the elements from DOM Dynamically.
+-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+    <h1 style="color: red" ng-repeat="x in data">
+        &lt;!&ndash;<span ng-if="x!='AngularJS' && x!='MongoDB'">
+            {{x}}
+        </span>&ndash;&gt;
+
+        <span ng-if="$middle">
+            {{x}}
+        </span>
+
+    </h1>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = ["AngularJS","Angular2","Angular4","NodeJS","MongoDB"];
+        }
+
+    </script>
+</html>-->
+
+
+<!DOCTYPE html>
+<html ng-app>
+
+    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uname">
+
+    <br><br>
+    <span ng-if="uname!=null && uname!=''">
+       <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
+       <input type="password" ng-model="upwd">
+    </span>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
