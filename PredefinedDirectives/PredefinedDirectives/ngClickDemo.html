@@ -1,21 +1,21 @@
 <!--
-    ngClickDemo.
+    ng-click.
+        - when ever we click the user interface elements , automatically
+          ng-click directive will be executed by angular framework.
 
-        when ever we click the user interface elements , automatically ng-click directive executed
-        by angular framework.
-
-        Syntax.
+          Syntax.
+          -
             ng-click = "Expression" /
                        "user defined function" /
                        "user defined function with optional parameters"
 -->
-
 <!--
 <!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="ctrl">
+<html ng-app="app" ng-controller="ctrl">
     <button class="glyphicon glyphicon-plus" ng-click="count=count+1"></button>
     <button class="btn btn-primary">{{count}}</button>
     <button class="glyphicon glyphicon-minus" ng-click="count=count-1"></button>
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
@@ -28,19 +28,12 @@
     </script>
 </html>-->
 
-
-
-
-
 <!--<!DOCTYPE html>
 <html ng-app="app" ng-controller="ctrl">
-
     <button ng-click="clickMe()">ClickMe</button>
-
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
-
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope"];
         function ctrl($scope) {
@@ -49,36 +42,51 @@
             };
         };
     </script>
-
 </html>-->
-
-
-
-
-
 
 <!DOCTYPE html>
 <html ng-app="app" ng-controller="ctrl">
-    <label>Uname.</label>&emsp;&emsp;&emsp;
-    <input type="text" ng-model="uname">
+
+    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="text" ng-model="var_one.uname">
     <br><br>
-    <label>Upwd.</label>&emsp;&emsp;&emsp;
-    <input type="password" ng-model="upwd">
+    <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="password" ng-model="var_one.upwd">
     <br><br>
-    <input type="button" ng-click="login(uname,upwd)" value="Login">
+    <!--<button ng-click="login(uname,upwd)">Login</button>-->
+    <!--<button ng-click="login({'uname':uname,'upwd':upwd})">Login</button>-->
+    <button ng-click="login()">Login</button>
+
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
+
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope"];
+
+
         function ctrl($scope) {
-            $scope.login = function (arg1,arg2) {
+            $scope.var_one = {};
+
+            /*$scope.login = function (arg1,arg2) {
                 alert(arg1+"...."+arg2);
-            }
+            }*/
+
+            /*$scope.login = function (obj) {
+                alert(obj);
+            };*/
+
+            $scope.login = function () {
+                alert($scope.var_one.uname+"...."+$scope.var_one.upwd);
+            };
         }
     </script>
+
 </html>
+
+
+
 
 
 
