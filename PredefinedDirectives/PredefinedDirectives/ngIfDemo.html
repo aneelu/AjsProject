@@ -1,0 +1,80 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <h1 ng-repeat="x in data">
+        &lt;!&ndash;<span ng-if="x!='Hello_1'&& x!='Hello_5'">
+            {{x}}
+        </span>&ndash;&gt;
+        <span ng-if="$middle">
+            {{x}}
+        </span>
+    </h1>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+        }
+    </script>
+</html>-->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html ng-app>
+    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uname">
+
+    <br><br>
+    <span ng-if="uname!=null && uname!=''">
+        <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="password" ng-model="upwd">
+    </span>
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
