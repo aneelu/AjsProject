@@ -89,6 +89,67 @@ index.html
 <div ng-view></div>
 
 
+Passing the URL Parameters by using ngRoute Module
+-
+index.html
+-
+<a href="#page_one/1/hello/true"><b>Page_One</b></a>
+
+config.js
+-
+$routeProvider.when("/page_one/:param1/:param2/:param3" , {
+    templateUrl : "templates/page_one.html",
+    controller  : "page_one"
+});
+
+page_one.js
+-
+app.controller("page_one",page_one);
+page_one.$inject=["$scope","$routeParams"];
+function page_one($scope,$routeParams){
+    console.log($routeParams.param1+"...."+$routeParams.param2+"...."+
+                                            $routeParams.param3);
+}
+
+
+
+ui.router
+-
+1.ui.router module is the 3rd party module used to implement the Routing in SPA.
+
+2.ui.router supports the JSON as the URL Parameter.
+
+3.ui.router module supports the Nested Routing
+
+4.ui.router module supports Named Views in SPA
+
+
+Steps to Create the SinglePage Application by using ui.router module.
+-
+
+1.download the ui.router module by using bower.
+
+
+2. add the ui.router module dependency.
+
+
+3. Create the Templates
+
+
+4. Create the Target Controllers
+
+
+5. Do the mapping by using ui.router module.
+
+
+6. Create source template.
+
+
+
+
+
+
+
 
 
 
