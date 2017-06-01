@@ -1,0 +1,155 @@
+Introduction.
+
+    1.What is AngularJS.
+
+    2.Advantages Of AngularJS.
+
+    3.Disadvantages Of AngularJS.
+
+    4.Comparision Of AngularJS - Angular2
+
+                     AngularJS - NodeJS
+
+    5.key features of AngularJS.
+
+
+What is AngularJS ?
+
+
+    - AngularJS is the client side java script framework.
+
+    - AngularJS Follows th MVC Design Pattern.
+
+        M - Model (JavaScript Variables).
+
+            Ex.
+                var i = 100;
+
+                var data = [{'id':1,'name':'Hello_1','age':20},
+                            {'id':2,'name':'Hello_2','age':22},
+                            {'id':3,'name':'Hello_3','age':24},
+                            {'id':4,'name':'Hello_4','age':26},
+                            {'id':5,'name':'Hello_5','age':28}
+                ];
+
+        V - View (HTML / HTML5 / JADE).
+
+        C - Controller (JavaScript Functions)
+
+            Ex.
+
+                function ctrl(){
+
+                    //Code
+                }
+
+
+
+        - AngularJS Have a so many predefined Modules,
+          As a Angular Developer we can use the Predefined Modules.
+
+
+         1.ngAnimate
+
+            - used to develop the Animations in Angular Applications.
+
+         2.ngStorage
+
+            - used to work with the Browser Storages.
+
+            - we have two types of Storages.
+
+                    1.localStorage.
+                    2.sessionStorage.
+
+         3.ngMessages.
+
+             - used to perform the client side form validations.
+
+
+         4.ngRoute.
+
+                - used to implement the Routing in Single Page Applications.
+
+                - ngRoute Module is the Deprecated Module , now a days no body
+                  using ngRoute Module.
+
+
+         5. ui.router
+
+                - used to implement the Routing in Single Page Applications.
+
+                - ui.router module is the 3rd party module.
+
+                - now a days all most all the projects using the ui.router module.
+
+Ex.
+
+     Implement the Angular Application by using following Features.
+
+        1.Animations
+
+        2.SPA - Routing (ui.router)
+
+        3.Validations
+
+        4.Storages
+
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app="app">
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+
+        var app = angular.module("app",["ngAnimate","ngMessages","ngStorage","ui.router"]);
+    </script>
+</html>
+
+
+
+Advantages Of AngularJS.
+-
+
+1. Two Way Data Binding
+
+    - Automatic Data Sync Between Model and view with the Supervision of Controller
+
+      called as Two Way databinding.
+
+
+    - Two way Data binding reduces the burden on the Server.
+
+
+2. We Can Directly work with the HTML DOM.
+
+    - We can work with the HTML DOM By using Directives.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
