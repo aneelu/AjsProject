@@ -1,0 +1,59 @@
+﻿<!--
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-include="'demo.html'"></div>
+    <script src="Scripts/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ctrl);
+        ctrl.$inject = ["$scope"];
+        function ctrl($scope) {
+            $scope.var_one = "I am from nginclude demo";
+        }
+    </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+    <head></head>    
+    <body>
+       <div ng-include="'table.html'"></div>
+       <link href="Content/bootstrap.min.css" rel="stylesheet" />
+       <script src="Scripts/angular.min.js"></script>
+       <script>
+            var app = angular.module("app", []);
+            app.controller("ctrl", ctrl);
+            ctrl.$inject = ["$scope"];
+            function ctrl($scope) {
+                $scope.data = [
+                                {'id':1,'sub':'AngularJS','years':2},
+                                { 'id': 2, 'sub': 'Angular2', 'years': 1 },
+                                { 'id': 3, 'sub': 'Angular4', 'years': 1 },
+                                { 'id': 4, 'sub': 'reactJS', 'years': 2 },
+                                { 'id': 5, 'sub': 'Kotlin', 'years': 1 }
+                ];
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

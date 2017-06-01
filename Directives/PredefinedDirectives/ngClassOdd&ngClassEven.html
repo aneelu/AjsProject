@@ -1,0 +1,67 @@
+﻿<!-- 
+    ng-class-odd.    
+         used to apply the "css classes" to the odd rows of table.   
+
+    ng-class-even.
+        used to apply the "css classes" to the even rows of table.
+    Ex.
+    <style>
+        .odd{
+            color : red;
+        }
+        .even{
+            color :green;
+        }
+    </style>
+    <table>
+        <tr ng-repeat="x in data" ng-class-odd="odd" ng-class-even="even">
+            //Logic Goes Here
+        </tr>
+    </table>
+-->
+<!DOCTYPE html>
+<html ng-app 
+      ng-init="arrayData=[
+            {'id':1,'name':'Hello_1','age':20},
+            {'id':2,'name':'Hello_2','age':22},
+            {'id':3,'name':'Hello_3','age':24},
+            {'id':4,'name':'Hello_5','age':26},
+            {'id':5,'name':'Hello_5','age':28}]">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <table border="1">
+        <tr class="header">
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr ng-repeat="x in arrayData" ng-class-odd="'odd'" ng-class-even="'even'">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    </table>
+  <style>
+        .header{
+            color:gray;
+            font-size:larger;
+        }
+        .odd{
+            color:red;
+            font-size:medium;
+            text-align:center;
+            font-weight:bolder;
+        }
+        .even{
+            color:dimgrey;
+            font-size:medium;
+            text-align:center;
+            font-weight:bolder;
+        }
+    </style>
+    <script src="Scripts/angular.min.js"></script>
+</body>
+</html>
