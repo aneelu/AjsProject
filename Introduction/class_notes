@@ -1,0 +1,66 @@
+Advantages Of AngularJS.
+-
+1. AngularJS Supports the "Two Way Data Binding".
+    - Automatic Data Synchronization Between "Model and View" with the SuperVision
+      Of Controller Called as Two Way data binding.
+
+
+     -Two way Data Binding Reduces the Burden On the Server.
+
+
+In the Above Diagram we have following http server Requests.
+-
+
+1. http - get request
+    - used to fetch the data from database.
+
+2. http - delete request
+      - used to delete a particular record from the database.
+
+3. Ajax Call
+      - used to Sync the Data Between Model (DataBase) and View (HTML).
+
+    - As a Programming languages developer (Java, dot net, Php...), we must make the
+      above all requests to meet application requirement.
+
+    - As a AngularJS / Angular2 Developer we can make only two calls to meet application
+      requirement.
+
+    - Two way Data Binding  Eliminates the "Making the 3rd Server Hit(Ajax call)"
+
+
+2. As a Angular Developer We Can Directly work with the HTML DOM.
+
+    - DOM Stands for Document Object Model.
+
+ Ex.
+     Copy the Data From One Div to Another Div by using HTML&JavaScript.
+
+    [Note . As a HTML & JavaScript Developer we can dependent on JavaScript to
+            work with Document Object Model]
+
+
+ Ex.
+    Copy the Data From One Div to Another Div Bu using AngularJS.
+
+    [Note. As a Angular Developer we can work with the HTML DOM By using Angular
+           Directives
+
+           Ex.
+
+            ng-app
+
+            ng-model
+
+            ng-bind ]
+
+
+
+
+
+
+
+
+
+
+
