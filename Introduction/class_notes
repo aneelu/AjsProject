@@ -55,6 +55,136 @@ In the Above Diagram we have following http server Requests.
             ng-bind ]
 
 
+3. By using AngularJS , we can reduce the Burden on the Server.
+
+    - As a "AngularJS / Angular2" Developer we can implement the Business Components
+      at client side , automatically burden will be reduced on server.
+
+
+4. By using AngularJS , we Can Develop Single Page Applications.
+
+      - Loading the Target Webpage to Source Webpage without refreshing the
+        whole webpage called as "Single Page Application".
+
+
+5. Angular Applications are Cross Browser Compatable Applications.
+
+    "AngularJS / Angular2" Application Can Run in all the Browsers, without adding the
+     additional plugins except IE.
+
+     AngularJS / Angular2 Applications will run in latest version of IE.
+
+
+6. Open Source Code.
+    - As a Developer we can Customize the Framework accroding to
+      application requirement.
+
+
+Disadvantages Of AngularJS
+-
+1. By using AngularJS , we are missing the Secuirity.
+
+2. We Must Enable the JavaScript in Browser, then only Angular Applications will
+   be executed.
+
+3. understanding the Angular Applications are Difficult , because of lack of coding standards.
+
+bower.
+-
+    - bower is the automation tool used to download the required resources
+      to develop web application.
+
+    - bower is the automation tool given by the NodeJS.
+
+bower components
+-
+1.bower.json
+2. .bowerrc
+
+bower.json
+-
+    - used to write the required dependencies to develop the Web Applications.
+
+.bowerrc
+-
+    - used to indicate the path for resources downloading by bower.
+bower.json
+-
+{
+    "name":"nareshit",
+    "dependencies":{
+        "bootstrap":"~3.3.6",
+        "angular":"~1.6.0"
+    }
+}
+.bowerrc
+-
+{
+    "directory":"bower_components"
+}
+
+
+- we can execute the bower files by using folowing nodejs command.
+
+>bower install
+
+    - when ever we run the bower , automatically "GitHub" will download the Required
+      softwares to develop web application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
