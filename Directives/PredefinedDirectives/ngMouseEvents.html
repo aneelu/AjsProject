@@ -1,0 +1,60 @@
+<!--
+    ngMouseEvents - when ever we operate the mouse with some operations , automatically
+                    coresponding events will be executed by angular framework.
+    Syntax.
+           ng-mousedown /
+           ng-mouseup
+
+          ng-mouseover/           = "Expression" /
+          ng-mouseout               "user defined function" /
+                                    "user defined function with optional parameters"
+          ng-mouseenter/
+          ng-mouseleave
+
+          ng-mousemove
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <div ng-mousedown="down()" ng-mouseup="up()">
+        ngMouseDown & ngMouseUp Events
+    </div>
+
+    <br><br>
+    <div ng-mouseenter="enter()" ng-mouseleave="leave()">
+        ngMouseEnter & ngMouseLeave Events
+    </div>
+
+<style>
+    div{
+        border: 2px solid tomato;
+        width: 300px;
+        height: 150px;
+        color: #00b3ee;
+        text-align: center;
+        font-size: larger;
+    }
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.down = function () {
+              console.log("MouseDown Event Fired !");
+            };
+            $scope.up= function () {
+                console.log("MouseUp Event Fired !");
+            };
+
+            $scope.enter = function () {
+              console.log("Mouse Enter Event Fired !");
+            };
+
+            $scope.leave = function () {
+                console.log("Mouse Leave Event Fired !");
+            };
+        }
+    </script>
+</html>

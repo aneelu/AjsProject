@@ -1,0 +1,21 @@
+Angular Storages.
+     - AngularJS Supports the Following Browser Storages.
+        1.localStorage
+        2.sessionStorage
+
+     - localStorage Should be deleted explicitely.
+
+     - when ever we close the browser , automatically data will be lost in sessionStorage.
+
+     - ngStorage is the Predefined Module , used to work with the Storages.
+
+     - ngStorage Module Provides Two Predefined Objects.
+
+        1.$localStorage
+        2.$sessionStorage
+
+     - $localStorage used to work with the local storage.
+
+     - $sessionStorage used to work with the session storage.
+
+     - we can Store the Data in the Form of a key&value pairs.
