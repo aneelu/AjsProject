@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="ctrl">
-    <form ng-submit="login_details({'uname':uname,'upwd':upwd})">
-        <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
-        <input type="text" ng-model="uname">
+<!--
+    ng-submit.
+        used to submit the whole form at a time to the controller
 
+    Syntax.
+        <form ng-submit="login_details()">
+            //Form Elements
+            <input type="submit">
+        </form>
+-->
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+    <form ng-submit="login_details()">
+        <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="text" ng-model="login.uname">
         <br><br>
         <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
-        <input type="password" ng-model="upwd">
-
+        <input type="password" ng-model="login.upwd">
         <br><br>
         <input type="submit">
-
     </form>
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
@@ -19,11 +26,15 @@
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope"];
         function ctrl($scope) {
-            $scope.login_details = function (arg1) {
-                alert(arg1);
+            $scope.login = {};
+
+            $scope.login_details = function () {
+                alert($scope.login);
             };
-        };
+        }
     </script>
 
 
 </html>
+
+

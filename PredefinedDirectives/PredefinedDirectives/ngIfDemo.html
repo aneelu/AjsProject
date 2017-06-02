@@ -1,12 +1,34 @@
 <!--
+    ng-if.
+         used to write the conditions.
+    Syntax.
+        ng-if="true" / "false"
+-->
 <!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="ctrl">
+<html ng-app>
 
-    <h1 ng-repeat="x in data">
-        &lt;!&ndash;<span ng-if="x!='Hello_1'&& x!='Hello_5'">
+    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uname">
+    <br><br>
+    <span ng-if="uname!=null&&uname!=''">
+        <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="password" ng-model="upwd">
+    </span>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+
+<html ng-app="app" ng-controller="ctrl">
+
+    <h1 style="color: red" ng-repeat="x in data">
+        &lt;!&ndash;<span ng-if="$middle">
             {{x}}
         </span>&ndash;&gt;
-        <span ng-if="$middle">
+        <span ng-if="x!='Hello_1'&&x!='Hello_5'">
             {{x}}
         </span>
     </h1>
@@ -22,40 +44,6 @@
         }
     </script>
 </html>-->
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html ng-app>
-    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
-    <input type="text" ng-model="uname">
-
-    <br><br>
-    <span ng-if="uname!=null && uname!=''">
-        <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
-        <input type="password" ng-model="upwd">
-    </span>
-    <script src="bower_components/angular/angular.min.js"></script>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

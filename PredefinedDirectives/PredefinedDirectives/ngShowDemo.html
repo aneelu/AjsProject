@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="ctrl">
+<!--
+    ng-show.
+        - it will show / hide the elements based on condition.
+    Syntax.
+        ng-show = "true" / "false"
 
-    <p ng-repeat="x in data">
+    - ng-show won't work with the HTML DOM Directly.
+-->
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <p style="color: red" ng-repeat="x in data">
         {{x}}
         <button ng-show="$first" ng-click="clickMe(x)">First</button>
         <button ng-show="$last" ng-click="clickMe(x)">Last</button>
     </p>
-
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
@@ -14,11 +21,11 @@
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope"];
         function ctrl($scope) {
-            $scope.data =[10,20,30,40,50];
-
+            $scope.data = [10,20,30,40,50];
             $scope.clickMe = function (arg1) {
                 alert(arg1);
             };
         }
     </script>
 </html>
+
