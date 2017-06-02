@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <div ng-mouseenter="enter()" ng-mouseleave="leave()">
+        ngMouseEnter & ngMouseLeave Events
+    </div>
+
+
+    <div ng-mousedown="down()" ng-mouseup="up()">
+        ngMouseDown & ngMouseUp Events
+    </div>
+
+
+
+
+    <style>
+        div{
+            border: 2px solid tomato;
+            width: 300px;
+            height: 150px;
+            color: rosybrown;
+            text-align: center;
+            font-weight: bolder;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+            $scope.enter = function () {
+                console.log("Mouse Enter Event Fired !");
+            };
+
+            $scope.leave = function () {
+                console.log("Mouse Leave Event Fired !");
+            };
+
+            $scope.down = function () {
+              console.log("Mouse Down Event Fired !");
+            };
+
+            $scope.up = function () {
+              console.log("Mouse Up Event Fired !");
+            };
+        });
+    </script>
+</html>
