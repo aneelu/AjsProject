@@ -1,0 +1,82 @@
+Services.
+    - Services are used to share the "Common Business Logic" to the Controllers.
+
+    - we have two types of Services.
+
+        1. Predefined Services
+        2. Custom Services
+
+Predefined Services.
+
+    - The Services Given By the Framework called as Predefined Services.
+    1.$http
+    2.$q
+    3.$location
+    4.$timeout
+    5.$interval
+
+Custom Services
+-
+
+    - The Services Developed by developer based on application requirement called as
+      Custom Services.
+
+    - In AngularJS We Can Create Custom Services in 5 ways.
+
+        1.provider()
+        2.factory()
+        3.service()
+        4.constant()
+        5.value()
+
+Creating the Custom Service by using provider().
+-
+app.config(config);
+config.$inject=["my_serviceProvider"];
+function config(my_serviceProvider){
+    my_serviceProvider.db_password="new password";
+}
+
+app.provider("my_service",my_service);
+function my_service(){
+    this.db_password = "old password";
+    this.$get = function(){
+        return this.db_password;
+    }
+}
+
+app.controller("ctrl_one",ctrl_one);
+ctrl_one.$inject=["$scope","my_service"];
+function ctrl_one($scope,my_service){
+    $scope.var_one = my_service;
+}
+
+app.controller("ctrl_two",ctrl_two);
+ctrl_two.$inject=["$scope","my_service"];
+function ctrl_two($scope,my_service){
+    $scope.var_two = my_service;
+}
+
+Creating the Custom Service by using factory.
+-
+function my_class(arg1){
+    this.my_fun = function(){
+        return arg1;
+    }
+}
+
+app.factory("my_service",my_service);
+function my_service(){
+    return new my_class("data from db soon...").my_fun();
+}
+
+
+Creating the Custom Service By using constant()
+-
+
+app.constant("my_service","First Value");
+app.constant("my_service","Second Value");
+
+
+
+
