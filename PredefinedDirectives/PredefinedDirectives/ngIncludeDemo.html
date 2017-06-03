@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="app" ng-controller="ctrl">
+<!--
+    ng-include.
 
-
-    <div ng-include="'demo.html'"></div>
-
-
-
-
-    <style>
-        .odd{
-            color: green;
-            size: 100px;
-            font-weight: bolder;
-        }
-
-        .even{
-            color: red;
-            size: 100px;
-            font-weight: bolder;
-        }
-    </style>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
-    <script>
-        var app = angular.module("app",[]);
-
-        app.controller("ctrl",ctrl);
-        ctrl.$inject=["$scope"];
-        function ctrl($scope) {
-            $scope.data = "I am from ngInclude Demo";
-
-            $scope.array = [
-                {'id':1,'name':'Hello_1','age':20},
-                {'id':2,'name':'Hello_2','age':22},
-                {'id':3,'name':'Hello_3','age':24},
-                {'id':4,'name':'Hello_4','age':26},
-                {'id':5,'name':'Hello_5','age':28}];
-        }
-    </script>
-</html>
+-->
