@@ -21,6 +21,26 @@ Step 2.
     Create the View by using ng-app , ng-model , ng-bind directives.
 
 
+Steps tp Create the Dynamic Angular Application.
+-
+
+Step 1.
+    Download Angular Framework by using bower.
+
+Step 2.
+    Load the Angular Framework.
+
+Step 3.
+    Declare the Logical Name for the WebApplication
+
+Step 4.
+    Declare the Controller by using "ng-controller" directive.
+
+Step 5.
+    Instantiate the App Module (Getting the Whole Web page Control)
+
+Step 6.
+    Implement the Controller
 
 
 
