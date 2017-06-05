@@ -1,0 +1,27 @@
+<!--
+    ng-repeat.
+        used to iterate the list of elements from an array
+
+    Syntax.
+        ng-repeat = "variable in array"
+        {{variable}}
+-->
+
+<!--
+    Ex1. Iterate the Array from Static Angular Application.
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <h1 style="color: red" ng-repeat="x in [10,20,30,40,50]">
+        {{x}}...{{$index}}...{{$first}}...{{$last}}...{{$middle}}...{{$even}}...{{$odd}}
+        <!--
+            $index. it will return all the indexes of elements in an array.
+            $first. it will return first index of an array as true
+            $last. it will return last index of an array as true
+            **$middle. it will return middle indexes of an array as true.
+            $even. it will return all the even indexes of an array as true.
+            $odd. it will return all the odd indexes of an array as true
+        -->
+    </h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>

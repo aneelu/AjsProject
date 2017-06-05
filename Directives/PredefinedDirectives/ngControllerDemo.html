@@ -1,0 +1,176 @@
+<!--
+    ng-controller.
+        - used to declare the controller.
+        - we can take more than one controller per web application.
+        - In general we will declare controllers in view.
+         Ex.
+            <div ng-controller="ctrl">
+
+            </div>
+        - In general we will implement controllers in javascript.
+        Ex.
+            app.controller("ctrl",ctrl);
+            ctrl.$inject=["$scope"];
+            function ctrl($scope){
+                //Logic Goes Here
+            }
+-->
+<!-- Create Two Controllers 1.ctrl_one 2.ctrl_two-->
+
+<!--
+<!DOCTYPE html>
+<html ng-app="app">
+    <h1 style="color: red" ng-controller="ctrl_one" ng-bind="var_one"></h1>
+    <h1 style="color: gray" ng-controller="ctrl_two" ng-bind="var_two"></h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope"];
+        function ctrl_one($scope) {
+            $scope.var_one = "I am from Controller One";
+        }
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope"];
+        function ctrl_two($scope) {
+            $scope.var_two = "I am from controller two";
+        }
+
+
+    </script>
+</html>
+-->
+
+<!--Ex2. Create Three Controllers 1.parent_controller
+                                  2.child_controller
+                                  3.sub_controller -->
+<!--<!DOCTYPE html>
+<html ng-app="app">
+    <div class="my_class">
+        <div ng-controller="parent_controller">
+            {{parent}}
+            <div ng-controller="child_controller">
+                {{child}}
+                <div ng-controller="sub_controller">
+                    {{sub}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        div.my_class div{
+            border: 2px solid red;
+            padding: 10px;
+            text-align: center;
+            font-size: large;
+            color: blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        &lt;!&ndash;parent_controller&ndash;&gt;
+        app.controller("parent_controller",parent_controller);
+        parent_controller.$inject=["$scope"];
+        function parent_controller($scope) {
+            $scope.parent="I am from parent controller";
+        }
+        &lt;!&ndash;child_controller&ndash;&gt;
+        app.controller("child_controller",child_controller);
+        child_controller.$inject=["$scope"];
+        function child_controller($scope) {
+            $scope.child="I am from child controller";
+        }
+        &lt;!&ndash;child_controller&ndash;&gt;
+        app.controller("sub_controller",sub_controller);
+        sub_controller.$inject=["$scope"];
+        function sub_controller($scope) {
+            $scope.sub="I am from sub controller";
+        }
+    </script>
+</html>-->
+
+
+
+<!--Ex3. Create Two Controllers 1.ctrl_one 2.ctrl_two -->
+<!--<!DOCTYPE html>
+<html ng-app="app">
+
+    <h1>{{var_two}}</h1>
+    <div ng-controller="ctrl_one">
+        <h1>{{var_two}}</h1>
+    </div>
+    <div ng-controller="ctrl_two">
+        <h1>{{var_one}}</h1>
+    </div>
+    <h1>{{var_one}}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        &lt;!&ndash;Implementation Of Controller One &ndash;&gt;
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$rootScope"];
+        function ctrl_one($rootScope) {
+            $rootScope.var_one = "I am from Controller One";
+        }
+
+        &lt;!&ndash; Implementation Of Controller Two&ndash;&gt;
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$rootScope"];
+        function ctrl_two($rootScope) {
+            $rootScope.var_two = "I am from Controller Two";
+        }
+    </script>
+</html>-->
+
+
+<!-- Ex4. Create Controller 1. ctrl-->
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <h1>{{my_fun()}}</h1>
+    <div ng-controller="ctrl">
+        <h1>{{my_fun()}}</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope","$rootScope"];
+        function ctrl($scope,$rootScope) {
+            $scope.var_one = "AngularJS";
+            $scope.var_two = "Angular2";
+            $scope.var_three = "MongoDB";
+            $rootScope.my_fun = function () {
+                return $scope.var_one+"<==>"+$scope.var_two+"<==>"+$scope.var_three;
+            };
+        };
+
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
