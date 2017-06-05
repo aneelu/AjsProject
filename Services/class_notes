@@ -80,3 +80,52 @@ app.constant("my_service","Second Value");
 
 
 
+1.$http.
+-
+    - used to connect with the servers by using http protocol.
+
+app.service("my_service",my_service);
+my_service.$inject=["$http"];
+function my_service($http){
+    this.fun_one = function(){
+        return $http.get("https://www.w3schools.com/angular/customers.php")
+                .then(function(response){
+            return response;
+        },function(response){
+            return response;
+        });
+    }
+
+
+}
+app.controller("ctrl" , ctrl);
+ctrl.$inject = ["$scope","my_service"];
+function ctrl($scope,my_service){
+    my_service.fun_one().then(function(response){
+        $scope.var_one = response;
+    });
+};
+
+
+Ex_2.
+app.service("my_service",my_service);
+my_service.$inject=["$http"];
+function my_service($http){
+    this.fun_two = function(){
+        return $http.get("http://demosoft.highgrowth.in/test/jsonexample.php")
+                .then(function(response){
+            return response;
+        },function(response){
+            return response;
+        });
+    };
+}
+
+app.controller("ctrl",ctrl);
+ctrl.$inject=["$scope","my_service"];
+function ctrl($scope,my_service){
+    my_service.fun_two().then(function(response){
+        $scope.var_two = response;
+    });
+};
+

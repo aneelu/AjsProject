@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <h1>{{var_three}}</h1>
+
+    <br><br>
+
+    <h1>{{var_four}}</h1>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+
+        <tr ng-repeat="x in var_one">
+            <td>{{x.Name}}</td>
+            <td>{{x.City}}</td>
+            <td>{{x.Country}}</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <table border="2">
+        <tr>
+            <th>id</th>
+            <th>fname</th>
+            <th>fsubject</th>
+        </tr>
+        <tr ng-repeat="x in var_two">
+            <td>{{x.post.id}}</td>
+            <td>{{x.post.fname}}</td>
+            <td>{{x.post.fsubject}}</td>
+        </tr>
+
+    </table>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+       app.service("my_service",my_service);
+       my_service.$inject=["$http"];
+       function my_service($http) {
+            this.fun_one = function () {
+                return $http.get("https://www.w3schools.com/angular/customers.php").then(function (response) {
+                   return response.data.records;
+                },function (response) {
+                    return response;
+                });
+            };
+
+            this.fun_two = function () {
+              return $http.get("http://demosoft.highgrowth.in/test/jsonexample.php").then(function (response) {
+                 return response.data.posts;
+              },function (response) {
+                 return response;
+              });
+            };
+
+
+            this.fun_three = function () {
+              return $http.get("http://test-routes.herokuapp.com/test/hello")
+                  .then(function (response) {
+                 return response.data.message;
+              },function (response) {
+                  return response;
+              });
+            };
+
+
+            this.fun_four = function () {
+              return $http.post("http://test-routes.herokuapp.com/test/uppercase",
+                    {"message":"hi"}).then(function (response) {
+                 return response.data.message;
+              },function (response) {
+                 return response;
+              });
+            };
+       };
+
+       app.controller("ctrl",ctrl);
+       ctrl.$inject=["$scope","my_service"];
+       function ctrl($scope,my_service){
+           my_service.fun_one().then(function (response) {
+                $scope.var_one = response;
+           });
+           my_service.fun_two().then(function (response) {
+              $scope.var_two = response;
+           });
+           my_service.fun_three().then(function (response) {
+              $scope.var_three = response;
+           });
+           my_service.fun_four().then(function (response) {
+               $scope.var_four = response;
+           });
+       };
+    </script>
+</html>
