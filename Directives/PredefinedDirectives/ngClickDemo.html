@@ -1,0 +1,35 @@
+<!--
+    ng-click.
+        - when ever we click the user interface elements, automatically ng-click directive
+          will be executed by angular framework.
+
+    Syntax.
+          ng-click="Expression"/
+                    "user defined function"/
+                    "user defined function with optional parameters"
+
+    Ex.
+        ng-click="count=count+1"
+
+        ng-click="login()"
+
+        ng-click="login(arg1,arg2)"
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <button class="glyphicon glyphicon-plus" ng-click="count=count+1"></button>
+    <button class="btn btn-success">{{count}}</button>
+    <button class="glyphicon glyphicon-minus" ng-click="count=count-1"></button>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.count=0;
+        }
+    </script>
+</html>

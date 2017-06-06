@@ -1,0 +1,75 @@
+<!--
+     ng-options.
+        - used to populate the values to the dropdown.
+     Syntax.
+        ng-options = "model_values as dropdown_values for variable in array"
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+    <!--
+        Model - id's
+        dropdown - sub's
+    -->
+    <select ng-model="model_one" ng-options="y.id as y.sub for y in data">
+        <option value="">Choose Sub</option>
+    </select>
+    <h1>{{model_one}}</h1>
+
+    <!--
+        Model -- sub's
+        dropdown - id's
+    -->
+    <select ng-model="model_two" ng-options="x.sub as x.id for x in data">
+        <option value="">Select ID</option>
+    </select>
+    <h1>{{model_two}}</h1>
+
+
+    <!--
+        dropdown - sub's
+        model    - sub's
+    -->
+    <select ng-model="model_three" ng-options="x.sub as x.sub for x in data">
+        <option value="">Select Sub</option>
+    </select>
+    <h1>{{model_three}}</h1>
+
+
+    <!--
+        dropdown - id's
+        model    - id's
+    -->
+    <select ng-model="model_four" ng-options="x.id as x.id for x in data">
+        <option value="">Select ID</option>
+    </select>
+    <h1>{{model_four}}</h1>
+
+
+    <!--
+        dropdown - Hello_1 to Hello_5
+        model    - Hello_1 to Hello_5
+    -->
+    <select ng-model="model_five" ng-options="x as x for x in names">
+        <option value="">Choose Name</option>
+    </select>
+    <h1>{{model_five}}</h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = [{"id":1,"sub":"AngularJS"},
+                           {"id":2,"sub":"Angular2"},
+                           {"id":3,"sub":"Angular4"},
+                           {"id":4,"sub":"NodeJS"},
+                           {"id":5,"sub":"Kotlin"}];
+
+            $scope.names = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+
+        }
+    </script>
+</html>

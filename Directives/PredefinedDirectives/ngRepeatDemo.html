@@ -10,18 +10,146 @@
 <!--
     Ex1. Iterate the Array from Static Angular Application.
 -->
+<!--
 <!DOCTYPE html>
 <html lang="en" ng-app>
     <h1 style="color: red" ng-repeat="x in [10,20,30,40,50]">
         {{x}}...{{$index}}...{{$first}}...{{$last}}...{{$middle}}...{{$even}}...{{$odd}}
-        <!--
+        &lt;!&ndash;
             $index. it will return all the indexes of elements in an array.
             $first. it will return first index of an array as true
             $last. it will return last index of an array as true
             **$middle. it will return middle indexes of an array as true.
             $even. it will return all the even indexes of an array as true.
             $odd. it will return all the odd indexes of an array as true
-        -->
+        &ndash;&gt;
     </h1>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>-->
+
+
+
+<!--
+    Ex2. Read the Array From Dynamic Angular Application
+-->
+<!--
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <h1 style="color: red" ng-repeat = "x in array">
+        {{x}}
+    </h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.array = ["AngularJS","Angular2","NodeJS","MongoDB","Kotlin","Ionic"];
+        }
+    </script>
 </html>
+-->
+
+<!--
+    Ex3. Read the data from jsonArray
+-->
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr ng-repeat="x in jsonArray">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        <tr ng-repeat="x in data.records">
+            <td>{{x.Name}}</td>
+            <td>{{x.City}}</td>
+            <td>{{x.Country}}</td>
+        </tr>
+    </table>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.jsonArray = [{"id":1,"name":"Hello_1","age":20},
+                                {"id":2,"name":"Hello_2","age":22},
+                                {"id":3,"name":"Hello_3","age":24},
+                                {"id":4,"name":"Hello_4","age":26},
+                                {"id":5,"name":"Hello_5","age":28}];
+
+
+
+
+            $scope.data = {
+                            "records":[
+                                {"Name":"Alfreds Futterkiste","City":"Berlin","Country":"Germany"},
+                                {"Name":"Ana Trujillo Emparedados y helados","City":"México D.F.","Country":"Mexico"},
+                                {"Name":"Antonio Moreno Taquería","City":"México D.F.","Country":"Mexico"},
+                                {"Name":"Around the Horn","City":"London","Country":"UK"},
+                                {"Name":"B's Beverages","City":"London","Country":"UK"},
+                                {"Name":"Berglunds snabbköp","City":"Luleå","Country":"Sweden"},
+                                {"Name":"Blauer See Delikatessen","City":"Mannheim","Country":"Germany"},
+                                {"Name":"Blondel père et fils","City":"Strasbourg","Country":"France"},
+                                {"Name":"Bólido Comidas preparadas","City":"Madrid","Country":"Spain"},
+                                {"Name":"Bon app'","City":"Marseille","Country":"France"},
+                                {"Name":"Bottom-Dollar Marketse","City":"Tsawassen","Country":"Canada"},
+                                {"Name":"Cactus Comidas para llevar","City":"Buenos Aires","Country":"Argentina"},
+                                {"Name":"Centro comercial Moctezuma","City":"México D.F.","Country":"Mexico"},
+                                {"Name":"Chop-suey Chinese","City":"Bern","Country":"Switzerland"},
+                                {"Name":"Comércio Mineiro","City":"São Paulo","Country":"Brazil"}
+                            ]
+            };
+
+
+        }
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
