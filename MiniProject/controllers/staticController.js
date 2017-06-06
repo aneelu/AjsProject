@@ -1,5 +1,7 @@
 app.controller("staticController",staticController);
-staticController.$inject=["$scope"];
-function staticController($scope) {
-    $scope.static = "Data From Static Page Soon...";
+staticController.$inject=["$scope","homeService"];
+function staticController($scope,homeService) {
+    homeService.getStaticData().then(function (res) {
+        $scope.static = res;
+    });
 }

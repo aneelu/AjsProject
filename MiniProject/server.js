@@ -43,5 +43,48 @@ app.post("/login",function (req,res) {
 });
 
 
+
+app.post("/static",function (req,res) {
+
+    if(req.body.token == tokens[0]){
+        fs.readFile(__dirname+"/emp.json",function (err,data) {
+            res.send(data.toString());
+        });
+    }else{
+        res.send({"login":"Auth Failed !"});
+    };
+});
+
+
+
+app.post("/mysql",function (req,res) {
+
+    if(req.body.token == tokens[0]){
+        connection.query("select * from emp",function (err,records,fields) {
+            res.send(records);
+        });
+    }else{
+        res.send({"login":"Auth Failed !"});
+    };
+});
+
+
+var mongoClient = mongodb.MongoClient;
+
+
+app.post("/mongodb",function (req,res) {
+
+    if(req.body.token == tokens[0]){
+        mongoClient.connect("mongodb://localhost:27017/mini_project",function (err,db) {
+            db.collection("emp").find().toArray(function (err, array) {
+                res.send(array);
+            });
+        });
+    }else{
+        res.send({"login":"Auth Failed !"});
+    };
+});
+
+
 app.listen(8080);
 console.log("Server Listening the Port No.8080");
