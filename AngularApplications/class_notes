@@ -1,0 +1,20 @@
+Angular Applications.
+
+    - By using AngularJS we can create Two Types Of Applications.
+
+    1.Static Angular Application
+
+    2.Dynamic Angular Application
+
+
+1.Static Angular Application.
+
+    - if View won't Interacts with the Controller for Dynamic Data , then Such Type Of
+
+      Angular Application Called as Static Angular Application.
+
+
+2.Dynamic Angular Application.
+
+    - If View Interacts with the Controller for Dynamic Data , Then Such Type Of Angular
+      Application Called as Dynamic Angular Application.

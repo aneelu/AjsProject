@@ -1,0 +1,37 @@
+Bower.
+
+    - bower is the Automation tool used to download the Required Resources to Develop web application.
+
+    - bower is the tool given by the nodejs.
+
+
+bower components.
+
+1.bower.json
+2. .bowerrc
+
+
+bower.json
+-
+{
+    "name":"nareshit",
+    "dependencies":{
+        "angular":"~1.6.0",
+        "bootstrap":"~3.3.6"
+    }
+}
+
+
+.bowerrc.
+
+    - used to locate the path to resources downloading by bower.
+
+{
+    "directory":"bower_component"
+}
+
+
+
+
+
+
