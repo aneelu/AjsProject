@@ -1,0 +1,97 @@
+Introduction.
+    1. What is AngularJS.
+    2.Advantages Of AngularJS
+    3.Disadvantages Of AngularJS
+    4.Key Features Of AngularJS
+    5.Comparision Of AngularJS - Angular2
+                     AngularJS - NodeJS
+                     AngularJS - reactJS
+
+
+
+What is AngularJS.
+    - AngularJS is the Client Side JavaScript Framework.
+
+    - AngularJS Follows the MVC Design Pattern.
+
+        M - Model
+            Ex.
+                JavaScript Variables are Called as Model
+                var i = 100;
+        V - View
+            Ex.
+                HTML / HTML5
+        C - Controller
+            Ex.
+                javascript functions
+
+                function my_fun(){
+                    //Code
+                }
+
+
+        - AngularJS Have a So Many Predefined Modules, As a Angular Developer we can
+          use the Predefined Modules.
+
+          1.ngAnimate.
+            - used to develop the Animations in Angular Applications.
+
+          2.ngMessages.
+            - used to develop the Client Side Form Validations.
+
+          3.ngStorage
+            - used to work with the Storages.
+
+            - we have two types of Storages
+
+                1.local Storage
+                2. Session Storage
+
+          4. ngRoute
+
+                - used to implement the Routing in Single Page Application.
+                - ngRoute Module is the Deprecated Module.
+                - now a days no body using the ngRoute Module , in Single Page Applications.
+
+          5.ui.router
+
+                - used to implement the Routing in Single Page Applications.
+
+                - ui.router module is the 3rd party Module.
+
+                - now a days all most all the projects , they are using "ui.router" module inn
+
+                  Single Page Application Development.
+
+
+Ex.
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app="app">
+
+    //App Should Support Animations , Storages , Client Side Form Validations, SPA
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",["ngAnimate","ngStorage","ngMessages","ui.router"]);
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
