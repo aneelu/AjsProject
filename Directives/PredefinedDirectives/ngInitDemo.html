@@ -1,0 +1,22 @@
+<!--
+    ng-init.
+        used to initilize the static data.
+        in general we will initilize the data in the form of a "key"&"value" pairs.
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="db_user='root';
+                                db_password='root';
+                                no_of_tables=3;
+                                names_of_tables=['emp','product','summary']">
+
+
+    <h1>{{db_user}}</h1> <br>
+    <h1>{{db_password}}</h1> <br>
+    <h1>{{no_of_tables}}</h1><br>
+    <h1 style="color: red" ng-repeat="x in names_of_tables">
+        {{x}}
+    </h1>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>

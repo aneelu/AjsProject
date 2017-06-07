@@ -1,0 +1,61 @@
+<!--
+    ng-options.
+        used to populate the values to the dropdown.
+
+   Syntax.
+
+    ng-options="model_values as dropdown_values for variable in array"
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <select ng-model="model_one" ng-options="x.id as x.name for x in array">
+        <option value="">Choose Subject</option>
+    </select>
+    <h1>{{model_one}}</h1>
+
+    <br><br>
+    <select ng-model="model_two" ng-options="x.name as x.id for x in array">
+        <option value="">Choose ID</option>
+    </select>
+    <h1>{{model_two}}</h1>
+
+    <br><br>
+    <select ng-model="model_three" ng-options="x.name as x.name for x in array">
+        <option value="">Choose Subject</option>
+    </select>
+    <h1>{{model_three}}</h1>
+
+
+    <br><br>
+    <select ng-model="model_four" ng-options="x.id as x.id for x in array">
+        <option value="">Choose ID</option>
+    </select>
+    <h1>{{model_four}}</h1>
+
+
+    <br><br>
+    <select ng-model="model_five" ng-options="x as x for x in myarray">
+        <option value="">Select Name</option>
+    </select>
+    <h1>{{model_five}}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",function ($scope) {
+           $scope.array = [{"id":1,"name":"AngularJS"},
+                           {"id":2,"name":"Angular2"},
+                           {"id":3,"name":"Angular4"},
+                           {"id":4,"name":"NodeJS"},
+                           {"id":5,"name":"Kotlin"}];
+
+
+           $scope.myarray=["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+
+        });
+    </script>
+</html>
