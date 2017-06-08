@@ -1,0 +1,39 @@
+<!--
+    ng-show.
+
+        - it is used to show / hide the Elements Based On Condition.
+
+        - this directive won't works with the HTML DOM Directly
+
+    Syntax.
+
+        ng-show = "true" / "false"
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl" ng-init="array=[10,20,30,40,50]">
+
+    <p style="color: red" ng-repeat="x in array">
+        {{x}}
+        <button ng-show="$first" ng-click="clickMe(x)">First</button>
+        <button ng-show="$last" ng-click="clickMe(x)">Last</button>
+    </p>
+
+    <br><br>
+
+    <input type="text" ng-model="model_one">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.clickMe = function (arg1) {
+                $scope.model_one=arg1;
+            };
+        }
+    </script>
+</html>

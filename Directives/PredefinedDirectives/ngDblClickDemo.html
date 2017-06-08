@@ -1,0 +1,31 @@
+<!--
+    ng-dblclick.
+         - when ever we double click the user interface elements , automatically
+           ng-dblclick directive will be executed by angular framework.
+
+    Syntax.
+        ng-dblclick = "Expression" /
+                      "user defined function" /
+                      "user defined function with optional parameters"
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl" ng-init="my_model=array[0]">
+
+    <select ng-model="my_model" ng-options="x as x for x in array">
+        <option value="">Choose Subject</option>
+    </select>
+    <br><br>
+    <button ng-dblclick="my_fun(my_model)">Double Click</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.array = ["AngularJS","Angular2","Angular4","NodeJS","ReactJS"];
+            $scope.my_fun = function (sub) {
+              alert(sub);
+            };
+        }
+    </script>
+</html>
