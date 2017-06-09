@@ -1,0 +1,34 @@
+<!--
+   ng-switch.
+        - used write the switch cases in view.
+
+   Syntax.
+
+    ng-switch="expression"
+
+    ng-switch-when="value_one"
+        //Logic Goes Here
+
+    ng-switch-when="value_two"
+        //Logic Goes Here
+
+    ng-switch-when="value_three"
+        //Logic Goes Here
+
+    ng-switch-default
+        //Logic Goes Here
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app ng-init="my_number=1">
+    <input type="number" ng-model="my_number">
+    <br>
+    <div ng-switch="my_number">
+        <div ng-switch-when="1" class="btn btn-primary" ng-bind="my_number"></div>
+        <div ng-switch-when="2" class="btn btn-success" ng-bind="my_number"></div>
+        <div ng-switch-when="3" class="btn btn-danger" ng-bind="my_number"></div>
+        <div ng-switch-default  class="btn btn-default" ng-bind="my_number"></div>
+    </div>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>

@@ -1,0 +1,67 @@
+<!--
+    ng-include.
+        - used to divide the "View" into number of "SubViews".
+
+        - by using ng-include directive , readability of application will be increased.
+
+    Syntax.
+            ng-include="'target html page'"
+-->
+
+
+
+<!--
+    ng-class-odd.
+        - used to apply the css classes to the odd rows of table.
+
+
+    ng-class-even.
+        - used to apply the css classes to the even rows of table
+
+
+
+    Syntax.
+    <style>
+        .even{
+            color:"red"
+        }
+        .odd{
+            color:"green"
+        }
+    </style>
+
+    <tr ng-repeat="x in array"
+        ng-class-odd="'odd'"
+        ng-class-even="'even'">
+
+        //Logic Goes Here
+    </tr>
+
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <div ng-include="'table.html'"></div>
+
+    <link rel="stylesheet" href="my_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.array=[{'id':1,'name':'Hello_1','age':20},
+                          {'id':2,'name':'Hello_2','age':22},
+                          {'id':3,'name':'Hello_3','age':24},
+                          {'id':4,'name':'Hello_4','age':26},
+                          {'id':5,'name':'Hello_5','age':28}];
+        }
+
+    </script>
+</html>
