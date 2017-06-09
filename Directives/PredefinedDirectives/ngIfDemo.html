@@ -1,0 +1,63 @@
+<!--
+    ng-if.
+        used to write the conditions.
+    Syntax.
+        ng-if="true" / "false".
+
+    - ng-if directive dynamically adds/removes elements from HTML DOM.
+
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+    <label>Uname.</label>&emsp;&emsp;&emsp;&emsp;
+    <input type="text" ng-model="uname">
+
+    <br><br>
+    <span ng-if="uname!=null && uname!=''">
+        <label>Upwd.</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="password" ng-model="upwd">
+    </span>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>-->
+
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <h1 style="color: red" ng-repeat="x in array">
+        <!--<span ng-if="$middle">
+            {{x}}
+        </span>-->
+
+        <span ng-if="x!=10 && x!=50">
+            {{x}}
+        </span>
+
+    </h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.array = [10,20,30,40,50];
+        }
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
