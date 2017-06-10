@@ -1,95 +1,233 @@
-1. Introduction
-    What is AngularJS ?
-    Why AngularJS ?
+1. Introduction.
 
-2. Environmental Setup
-    GitHub
-    bower
-    IDE'S - WebStrom , Visual Studio, Ecilipse
-
-3.Angular Applications
-    1.Static Angular Application
-    2.Dynamic Angular Application
+    1.What is AngularJS ??
+    2. Why AngularJS ??
 
 
-4.Directives
-    1.Predefined Directives
-    2.Custom Directives
+2.Automation Tool.
 
-5.Services
-    1.Predefined Services
-    2.Custom Services
+    1. Bower
 
-6. Single Page Applications
-    1.ngRoute
-    2.ui.router
-
-7.NodeJS
-        AngularJS -- NodeJS -- MySQL
-        AngularJS -- NodeJS -- MongoDB
-
-What is AngularJS.
-      - AngularJS is the JavaScript MVC Framework.
-      - AngularJS Have a so many predefined Modules, As a Angular Developer we can reuse
-        the Predefined Modules.
-
-      Ex.
-            1. ngAnimate.
-                    - used to develop the Animations in Angular Applications.
-
-            2. ngMessages.
-                    - used to perform the client side form validations.
-
-            3.ngStorage.
-                    - used to work with the storages.
-                    - we have two types of storages.
-                            1.localStorage
-                            2.sessionStorage
-
-            4.ngRoute
-                    - used to implement the Routing in SPA
-
-            5.ui.router
-                    - used to implement the Routing in SPA
-                    - it is a 3rd party module
-                    - This Module Have so many advantages Compared to ngRoute Module.
+    2. WebStrom , Visual Studio, Ecilipse
 
 
-Ex.
+3. Angular Applications
+
+    1. Static Angular Application
+    2. Dynamic Angular Application
+
+
+
+4. Directives
+
+    1. ng-app
+
+    2. ng-controller
+
+    3. ng-repeat
+
+    4. ng-click
+
+    5. ng- submit
+
+
+5. Services
+
+    1. Predefined Services
+
+    2. Custom Services
+
+
+6. Single page Applications
+
+    Routing - ngRoute
+
+              ui.router
+
+
+7. NodeJS
+
+    AngularJS -- NodeJS -- MySQL
+
+    AngularJS  -- NodeJS -- MongoDB
+
+
+
+AngularJS ??
+
+    - AngularJS is the Client Side JavaScript Framework.
+
+    - AngularJS Follows the MVC Design Pattern
+
+        M - Model
+
+        V - View
+
+        C - Controller
+
+
+    - AngularJS have a so many predefined modules , as a Angular Developer we can use
+      the Predefined Modules.
+
+      1. ngAnimate.
+            - used to develop the Animations in Angular Applications.
+
+      2. ngMessages.
+            - used to perform the Client Side Form Validations.
+
+
+      3. ngStorage.
+            - used to perform the Operations on Storages.
+
+            - we have Two Types Of Storages.
+
+                    1. local Storage
+
+                    2. session Storage
+
+
+      4. ngRoute
+
+            - used to implement the Routing in Single Page Applications.
+
+            - ngRoute Module is the Deprecated Module.
+
+
+      5. ui.router
+
+            - used to implement the Routing in Single Page Applications.
+
+            - ui.router module is the 3rd party Module.
+
+            - now a days all most all the projects using ui.router module
+
+              in SPA
+
+
+
 
 index.html
 -
-    <html ng-app="app">
 
-        //Support the Animations
-        //Supports the SPA (ui.router)
-        //Form Validations
-        //Storages
+<!DOCTYPE html>
+<html ng-app="app">
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
-        <script>
-            var app = angular.module("app",["ngAnimate","ui.router","ngStorage","ngMessage"]);
-        </script>
-    </html>
+    //Our Application will Supports the 1. Animations 2. Validations 3. Storages 4. Routing
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",["ngAnimate","ui.router","ngMessages","ngStorage"]);
+    </script>
+</html>
+
+
 
 bower.
-    bower used to download the required resources to develop the web application.
+
+    - bower is a automation tool , used to download the required resources
+
+      to develop web application.
+
+    - bower is the automation tool given by the NodeJS.
 
 bower components.
-1.bower.json
+-
+
+1. bower.json
+    - used to maintain the required dependencies to develop web application.
+
+{
+
+    "name":"nareshit",
+
+    "dependencies":{
+
+        "angular":"~1.6.0",
+        "bootstrap":"~3.3.6"
+    }
+
+}
+
+
 2. .bowerrc
 
+    - used to locate the path to "resources" downloading by using bower.
 
-Directives.
-    1. Directives will enhance the HTML Capabilities.
-    2. We Have Two Types Of Directives
-        1. Predefined Directives.
-        2. Custom Directives.
+{
+    "directory":"bower_components"
+}
 
-Predefined Directives.
-    - The Directives Given By the Framework Called as Predefined Directives.
 
-1.ng-controller
+installation of bower.
+
+> bower install
+
+
+
+Angular Applications.
+
+    - we can develop two types of Angular Applications.
+
+    1. Static Angular Application
+
+    2. Dynamic Angular Application.
+
+
+Static Angular Application.
+
+    - If View won't Interacts with the Controller for Dynamic Data then such type
+      of Angular Application Called as Static Angular Application.
+
+
+
+Steps to Create Static Angular Application.
+
+Step 1.
+    Download angular by using bower.
+
+
+Step 2.
+    Create the View.
+
+
+Steps tp Create the Dynamic Angular Application.
+-
+
+1. Load the Angular Framework
+
+2. Assign the Logical Name to Web Application
+
+3. Declare the Controller
+
+4. Instantiate the App Module
+
+5. Implement the Controller
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
