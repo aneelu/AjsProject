@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-controller="ctrl">
 
-    <h1>{{100 | my_currency:"&#8377;"}}</h1>
+
+    <input type="text" ng-model="my_model"> <br><br>
+    <button ng-click="clickMe(my_model)">Show Currency</button>
+
+    <h1>{{100 | my_currency:"+converter+":true}}</h1>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script>
-        var app = angular.module("app",[]);
-
-        app.filter("my_currency",my_currency);
-        function my_currency() {
-            return function (arg1,arg2) {
-                return arg2+" "+arg1;
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+            $scope.clickMe = function (arg1) {
+                if(arg1=='india'){
+                    $scope.converter="&#8377;";
+                }
             };
-        };
+        }).filter("my_currency",function () {
+           return function(arg1,arg2,arg3){
+              if(arg3){
+                  return arg2+" "+arg1;
+              }
+           }
+        });
     </script>
+
 
 </html>

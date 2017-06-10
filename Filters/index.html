@@ -1,9 +1,65 @@
+<!--
+
+    Filters.
+
+        used to format the data accroding to application requirement.
+
+        we have two types of filters.
+
+        1.predefined filters
+
+        2.custom filters
+
+
+        predefined filters.
+             - the filters given by framework called as predefined filters.
+
+        1.uppercase.
+
+            - used to convert the lowercase characters to the uppercase
+
+
+        2.lowercase.
+
+              - used to convert the uppercase characters to lowercase
+
+
+        3.currency
+
+            - it is used to add the $ symbol to the numerical values.
+
+        4.orderBy
+
+             - it is used to arrange the data either assending order or decending order.
+
+
+        5.limitTo.
+
+            - used to display the required number of records.
+
+        6. filter.
+
+            - it is used to filter the data based on the user given keyword.
+
+         7. date
+
+            - used to format the date accroding to application requirement.
+
+
+         Custom Filter.
+
+            Creating our own filter called as Custom Filter.
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
     <h1>{{var_one | uppercase}}</h1>
-    <h1 style="color: red">{{var_two | lowercase}}</h1>
-    <h1 style="color: green">{{var_three | currency}}</h1>
+    <h1>{{var_two | lowercase}}</h1>
+    <h1>{{var_three | currency}}</h1>
+
 
     <input type="text" ng-model="search">
 
@@ -15,21 +71,22 @@
             <th>age</th>
         </tr>
 
-        <tr ng-repeat="x in var_four | orderBy:'-id' | limitTo:3 | filter:search">
+        <tr ng-repeat="x in var_four | orderBy:'id' | limitTo:3 | filter:search">
             <td>{{x.id}}</td>
             <td>{{x.name}}</td>
             <td>{{x.age}}</td>
         </tr>
-
     </table>
 
-    <h1>{{var_five}}</h1>
-    <h1>{{var_five | date:'dd-MM-yy'}}</h1>
-    <h1>{{var_five | date:'MM-dd-yyyy'}}</h1>
+    <br><br>
+
     <h1>{{var_five | date:'short'}}</h1>
     <h1>{{var_five | date:'medium'}}</h1>
     <h1>{{var_five | date:'fullDate'}}</h1>
+    <h1>{{var_five | date:'dd-MM-yy'}}</h1>
+    <h1>{{var_five | date:'MM-dd-yyyy'}}</h1>
     <h1>{{var_five | date:'shortTime'}}</h1>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
@@ -40,21 +97,18 @@
         ctrl.$inject=["$scope"];
         function ctrl($scope) {
             $scope.var_one = "angularjs";
-            $scope.var_two = "NODEJS";
+            $scope.var_two ="NODEJS";
             $scope.var_three = 100;
-
-            $scope.var_four = [
-                                {'id':1,'name':'Hello_1','age':20},
-                                {'id':5,'name':'Hello_5','age':28},
-                                {'id':2,'name':'Hello_2','age':22},
-                                {'id':4,'name':'Hello_4','age':26},
-                                {'id':3,'name':'Hello_3','age':24}
-            ];
-
-
-            $scope.var_five = new Date();
+            $scope.var_four = [{'id':1,'name':'Hello_1','age':20},
+                {'id':5,'name':'Hello_5','age':28},
+                {'id':2,'name':'Hello_2','age':22},
+                {'id':4,'name':'Hello_4','age':26},
+                {'id':3,'name':'Hello_3','age':24}];
+            $scope.var_five=new Date();
 
 
         }
     </script>
+
+
 </html>
