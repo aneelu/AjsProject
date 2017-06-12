@@ -1,0 +1,26 @@
+Open the Visual Studio 2015-->
+
+        New Project -->
+
+                    Web -->
+
+                            ASP .NET Web Application-->(Project Name : AngularDemo)
+
+                                        OK--->
+
+                                                Empty--->
+
+                                                        Ok--->
+
+                                                                Cancel.
+
+
+
+
+ Rigth Click on Solution Explorer View-->
+
+                                          Manage NuGet Packages-->
+
+                                                                    browse : angularjs-->
+
+                                                                                        Download.
