@@ -1,0 +1,19 @@
+<!--
+    ng-cloak.
+        - used to avoid the blinking / flickering the application before displaying the application data.
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <div ng-cloak ng-controller="ctrl_one">
+        <h1 style="color: red">{{var_one}}</h1>
+    </div>
+
+    <div ng-cloak ng-controller="ctrl_two">
+        <h1 style="color: green">{{var_two}}</h1>
+    </div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/ctrl_one.js"></script>
+    <script src="controllers/ctrl_two.js"></script>
+</html>
