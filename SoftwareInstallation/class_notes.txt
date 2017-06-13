@@ -73,6 +73,43 @@ Installation Of Softwares
 
 
 
+ - Checkout the AngularJS_7.30PM Branch as Locally.
+
+ - Pull the Code
+
+                *********************
+        VCS -->
+
+            Git -->
+
+                Pull -->
+
+                     Select AngularJS_7.30PM
+
+                        --> Pull.
+                    ********************
+
+
+6. Install the Bower Plugin
+    >npm install -g bower
+
+    Execute the above command on WebStrom Terminal (Alt+F12)
+
+
+7. Download and Install the MongoDB.
+
+    Website : https://www.mongodb.com/download-center#community
+
+    file name : mongodb-win32-x86_64-2008plus-ssl-3.4.4-signed.msi
+
+
+
+
+
+
+
+
+
 
 
 
