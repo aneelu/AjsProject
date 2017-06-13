@@ -1,0 +1,94 @@
+Installation Of Softwares
+
+1. Download and Install the NodeJS.
+
+	website : https://nodejs.org/en/download/
+
+	file name : node-v6.11.0-x64.msi
+
+	[Note. Majority Of Automation tools Depending on NodeJS Server
+
+	Ex.
+		bower
+		gulp
+		karma
+		protector
+		--
+		--]
+
+	Check the Node & NPM Versions.
+	
+	>node -v
+		v6.11.0
+
+	>npm -v
+		3.10.10
+
+	- npm stands for node packaging maanger
+	- npm used to install the tools & dependencies. 
+
+
+2. Download and Install the GIT.
+
+	Website : https://git-scm.com/downloads
+	file name : Git-2.13.0-64-bit.exe
+
+
+3. Create the Account with the GitHub.
+	website : https://github.com/join
+
+4. Download IDE (WebStrom)
+	website : https://www.jetbrains.com/webstorm/download/#section=windows
+	file name : WebStorm-2017.1.4.exe
+
+
+5. Checkout the Code From Cloud Repository.
+	URL : https://github.com/ajsnaresh/AJS_Classes.git
+
+	- Open the WebStrom IDE
+
+	- Checkout from Version Control
+
+	- GitHub
+
+	- Click the "Create API Token"
+
+	- Enter the Login : 
+
+				password :
+
+	- Login
+	
+	- Enter the Git Repository
+
+							 URL : "https://github.com/ajsnaresh/AJS_Classes.git"
+
+						      Parent Directory : D:\
+
+						      Folder : AJS_Classes
+
+	- clone
+
+	- yes						      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
