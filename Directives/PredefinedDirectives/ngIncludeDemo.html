@@ -1,0 +1,39 @@
+<!--
+    ng-include.
+        - used to divide the view into number of subviews.
+
+        - if we divide view into number of subviews , automatically readability of
+          application will be increased.
+
+    Syntax.
+           ng-include="target web page"
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <div ng-include="'table.html'"></div>
+    <div ng-include="'test.jsp'"></div>
+
+
+    <style>
+        .even{
+            color: red;
+        }
+
+        .odd{
+            color: green;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        angular.module("app",[]).controller("ctrl",function ($scope) {
+           $scope.array = [
+               {'id':1,'name':'Hello_1','age':20},
+               {'id':2,'name':'Hello_2','age':22},
+               {'id':3,'name':'Hello_3','age':24},
+               {'id':4,'name':'Hello_4','age':26},
+               {'id':5,'name':'Hello_5','age':28}
+           ];
+        });
+    </script>
+</html>

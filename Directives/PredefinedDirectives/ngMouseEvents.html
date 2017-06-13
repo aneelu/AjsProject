@@ -1,0 +1,55 @@
+<!--
+
+    ng-mousedown/
+    ng-mouseup
+
+
+    ng-mouseenter/       "Expression" / "User Defined Function" / "User Defined Function with Optional Parameters"
+    ng-mouseleave
+
+    ng-mouseover/
+    ng-mouseout
+
+
+    ng-mousemove
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+    <div ng-mousedown="down()" ng-mouseup="up()">
+        ngMouseDown & ngMouseUp Events
+    </div>
+    <br><br>
+    <div ng-mouseenter="enter()" ng-mouseleave="leave()">
+        ngMouseDown & ngMouseUp Events
+    </div>
+    <style>
+        div{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            color: chocolate;
+            text-align: center;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.down = function () {
+              console.log("MouseDown Event Fired !");
+            };
+            $scope.up = function () {
+                console.log("MouseUp Event Fired !");
+            };
+            $scope.enter = function () {
+               console.log("Mouse Enter Event Fired !");
+            };
+            $scope.leave = function () {
+                console.log("Mouse Leave Event Fired !");
+            };
+        }
+    </script>
+</html>
