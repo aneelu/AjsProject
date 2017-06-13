@@ -29,6 +29,199 @@ Predefined Directives.
 
 
 
+Custom Directives.
+
+
+    - In AngularJS we Can Use Custom Directives in 3 ways.
+
+    1. Element
+
+    2. CSS Class
+
+    3. Attribute
+
+
+    Ex.
+
+        my_directive.
+
+
+        <my_directive></my_directive> //Element
+
+        <div class="my_directive"></div> //CSS Class
+
+        <div my_directive></div>   //Attribute
+
+Properties Of Custom Directive.
+-
+
+1. restrict
+
+    - it will describe usage of custom directive.
+
+Ex.
+
+    restrict : "E" //Element Level Usage
+
+    restrict : "A" // Attribute Level Usage
+
+    restrict : "C" // CSS Class Level Usage
+
+    restrict : "EC" // Element & CSS Class
+
+------------------
+app.directive("attrType",attrType);
+
+function attrType(){
+
+    return{
+        restrict:"A"
+    }
+}
+
+
+<div attr-type></div>
+
+
+2. template
+
+    - used to add the inline HTML to the Custom Directive.
+
+Ex.
+
+    app.directive("classType",classType);
+
+    function classType(){
+
+        return{
+            restrict:"C",
+            template : "<div>Welcome to Custom Directives !</div>"
+        }
+    }
+
+
+    <div class="class-type"></div> //Welcome to Custom Directives !
+
+
+3. templateUrl.
+
+       - used to add the external template to the Custom Directive.
+Ex.
+--------
+templates
+       sample.html
+--------
+sample.html
+-
+<h1>Welcome to Custom Directives !</h1>
+
+app.directive("elemType",elemType);
+function elemType(){
+       return{
+            restrict:"E",
+            templateUrl:"templates/sample.html"
+       }
+}
+<elem-type></elem-type> //Welcome to Custom Directives !
+
+4.controller
+       - used to define the controller to the template of a custom directive.
+Ex.
+-------
+templates
+       sample.html
+-------
+<h1>{{var_one}}</h1>
+
+-------
+controller
+       sample.js
+--------
+sample.js
+-
+app.controller("sample",sample);
+sample.$inject=["$scope"];
+function sample($scope){
+    $scope.var_one="I am from Custom Directive !";
+}
+--------
+directives
+    allType.js
+---------
+app.directive("allType",allType);
+function allType(){
+    return{
+        restrict:"EAC",
+        templateUrl:"templates/sample.html",
+        controller:"sample"
+    }
+}
+<all-type></all-type> //Element
+<div class="all-type"></div> //CSS Class
+<div all-type></div> //Attribute Type Usage
+
+                *************************************
+Example_1
+    bower.json
+    .bowerrc
+    app.js
+    index.html
+    directives(folder)
+         attrType.js
+         classType.js
+         elemType.js
+         allType.js
+                ******************************************
+
+bower.json
+-
+{
+    "name":"nareshit",
+    "dependencies":{
+        "angular":"~1.6.0",
+        "bootstrap":"~3.3.6"
+    }
+}
+
+.bowerrc
+{
+    "directory":"bower_components"
+}
+
+app.js
+-
+var app = angular.module("app",[]);
+
+index.html
+-
+<html ng-app="app">
+    <!-- attrType-->
+    <div class="container" attr-type></div>
+    <!-- elemType -->
+    <div class="container">
+        <elem-type></elem-type>
+    </div>
+    <!-- classType -->
+    <div class="container class-type"></div>
+    <!-- allType-->
+    <div class="container all-type"></div>
+    <div class="container" all-type></div>
+    <div class="container">
+        <all-type></all-type>
+    </div>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_component/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/attrType.js"></script>
+    <script src="directives/classType.js"></script>
+    <script src="directives/elemType.js"></script>
+    <script src="directives/allType.js"></script>
+</html>
+
+
+
+
+
 
 
 
