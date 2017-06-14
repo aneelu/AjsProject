@@ -218,6 +218,115 @@ index.html
     <script src="directives/allType.js"></script>
 </html>
 
+--------------------------
+
+Example_2
+    templates
+        header.html
+
+    controllers
+        header.js
+
+    directives
+        header.js
+
+    app.js
+
+    index.html
+
+-------------
+templates
+    header.html
+------------
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click Me</button>
+    <ul class="dropdown-menu">
+        <li>Option_1</li>
+        <li>Option_2</li>
+        <li>Option_3</li>
+        <li>Option_4</li>
+        <li ng-click="logout()">Logout</li>
+    </ul>
+</div>
+
+-------------
+controllers
+    header.js
+-------------
+app.controller("header",header);
+header.$inject=["$scope"];
+function header($scope){
+    $scope.logout = function(){
+        console.log("Logged Out Successfully !");
+    }
+}
+
+--------------
+directives
+    header.js
+--------------
+app.directive("header",header);
+function header(){
+    return{
+        restrict:"E",
+        templateUrl:"templates/header.html",
+        controller:"header"
+    }
+}
+
+
+index.html
+-
+<html ng-app="app">
+    <header></header>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bower_components/jquery/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js">
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/header.js"></script>
+    <script src="directives/header.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
