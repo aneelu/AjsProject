@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>Country</th>
-        </tr>
-        <tr ng-repeat="x in var_one">
-            <td>{{x.Name}}</td>
-            <td>{{x.City}}</td>
-            <td>{{x.Country}}</td>
-        </tr>
-    </table>
+    <h1>{{var_one}}</h1>
 
+    <h1>{{var_two}}</h1>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script>
@@ -23,19 +13,47 @@
         my_service.$inject=["$http"];
         function my_service($http) {
             this.fun_one = function () {
-                return $http.get("https://www.w3schools.com/angular/customers.php").then(function (posRes) {
-                    return posRes.data.records;
+                /*return $http.post("http://test-routes.herokuapp.com/test/uppercase",{'message':'hi'})
+                        .then(function (posRes) {
+                    return posRes.data.message;
                 },function (negRes) {
                     return negRes;
                 });
+                */
+
+                return $http.post("http://125.16.22.121:8080/oms-ws/walmartServices/userServices/authenticateUser",
+                    {"loginId":"8959592381", "password":"Walmart1","deviceId":"123456789"}, {
+                    headers: { 'Content-Type': 'application/json',
+                                'Access-Control-Allow-Origin':'*',
+                                'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept'}
+                }).then(function(responseData) {
+                    return responseData;
+                });
             };
+
+
+
+            this.fun_two = function () {
+                return $http.get("https://conduit.productionready.io/api/profiles/eric").then(function (response) {
+                   return response;
+                },function (response) {
+                    return response;
+                });
+            };
+
+
         };
+
 
         app.controller("ctrl",ctrl);
         ctrl.$inject=["$scope","my_service"];
         function ctrl($scope,my_service) {
-            my_service.fun_one().then(function (response) {
-                $scope.var_one = response;
+            my_service.fun_one().then(function (res) {
+               $scope.var_one=res;
+            });
+
+            my_service.fun_two().then(function (response) {
+               $scope.var_two=response;
             });
         };
     </script>
