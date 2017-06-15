@@ -1,0 +1,28 @@
+- In AngularJS , we can provide Communication Between Controllers in four ways.
+
+1.broadcast
+
+2.emit
+
+3.rootScope
+
+4.CustomServices
+
+
+broadcast.
+    - sharing the data from parent controller to child controllers called as broadcast communication.
+
+emit.
+    - sharing the data from child controllers to parent controlers called as emit communication.
+
+rootScope.
+
+     - we can provide the communication between controllers by using "$rootScope".
+
+custom Services.
+
+      - we can provide the communication between controllers by using "custom services" also.
+
+
+
+
