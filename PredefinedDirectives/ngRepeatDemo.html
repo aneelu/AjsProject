@@ -1,0 +1,103 @@
+<!--
+    ng-repeat - used to iterate the list of elements from an array.
+
+    Syntax.
+        ng-repeat = "x in array"
+            {{x}}
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <p style="color: darkred" ng-repeat="x in [10,20,30,40,50]">
+        {{x}}...{{$index}}...{{$first}}...{{$last}}...{{$middle}}...{{$even}}...{{$odd}}
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <h1 style="color: darkred" ng-repeat="x in data">
+        {{x}}
+    </h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.data = ["Hello_1","Hello_2","Hello_3","Hello_4","Hello_5"];
+        }
+    </script>
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <table class="table table-responsive">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr ng-repeat="x in data">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.age}}</td>
+        </tr>
+    </table>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script>
+    var app = angular.module("app",[]);
+    app.controller("ctrl",ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl($scope) {
+        $scope.data = [{"id":1,"name":"Hello_1","age":20},
+                       {"id":2,"name":"Hello_2","age":22},
+                       {"id":3,"name":"Hello_3","age":24},
+                       {"id":4,"name":"Hello_4","age":26},
+                       {"id":5,"name":"Hello_5","age":28}];
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
