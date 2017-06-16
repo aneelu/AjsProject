@@ -1,0 +1,53 @@
+Storages.
+
+    - AngularJS Provides Two Types Of Storages.
+
+    1.localStorage
+    2.sessionStorage
+
+    localStorage. As a Developer we must destory / delete the localStorage Programatically.
+
+    sessionStorage. When ever we "close the browser" / "Opens the New Tab" Automatically data will be lost
+                    in sessionStorage.
+
+    - ngStorage is the Predefined Module used to work with the Storages
+
+    - ngStorage Module Provides Two Predefined Objects.
+
+    1.$localStorage
+    2.$sessionStorage
+
+
+    $localStorage - used to work with the localStorage.
+
+    $sessionStorage - used to work with the sessionStorage.
+
+
+    - we can store the data in the form of a key&value pairs.
+
+
+ Ex.
+
+    $localStorage.key1={'uname':'admin','upwd':'admin'};  // Storing the Data into localStorage
+
+    var obj = $localStorage.key1;                        // Reading the Data From localStorage
+
+    console.log(obj.uname+"...."+obj.upwd);
+
+    delete $localStorage.key1;                           // Deleting the data from localStorage
+
+
+
+
+        $sessionStorage.key1={'uname':'admin','upwd':'admin'};  // Storing the Data into sessionStorage
+
+        var obj = $sessionStorage.key1;                        // Reading the Data From sessionStorage
+
+        console.log(obj.uname+"...."+obj.upwd);
+
+        delete $sessionStorage.key1;                           // Deleting the data from sessionStorage
+
+
+
+
+

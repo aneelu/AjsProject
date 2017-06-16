@@ -80,7 +80,7 @@
 </html>
 -->
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html ng-app="app">
 
     <div ng-controller="ctrl_one">
@@ -111,12 +111,58 @@
             };
         };
     </script>
+</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html ng-app="app">
+
+    <div ng-controller="ctrl_one">
+        <input type="text" ng-model="my_model">&emsp;&emsp;&emsp;&emsp;
+        <button ng-click="clickMe(my_model)">ClickMe</button>
+    </div>
+    <hr>
+    <div ng-controller="ctrl_two">
+        <button ng-click="fetch()">Read</button>
+        <h1>{{var_one}}</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.service("my_service",my_service);
+        function my_service() {
+          this.my_var="";
+          this.setMyVar = function (arg1) {
+              this.my_var=arg1;
+          };
+          this.getMyVar = function () {
+              return this.my_var;
+          };
+        };
+
+
+        app.controller("ctrl_one",ctrl_one);
+        ctrl_one.$inject=["$scope","my_service"];
+        function ctrl_one($scope,my_service) {
+            $scope.clickMe = function (arg1) {
+                my_service.setMyVar(arg1);
+            };
+        };
+
+
+        app.controller("ctrl_two",ctrl_two);
+        ctrl_two.$inject=["$scope","my_service"];
+        function ctrl_two($scope,my_service) {
+            $scope.fetch = function () {
+                $scope.var_one = my_service.getMyVar();
+            };
+        };
+
+    </script>
 </html>
-
-
-
-
-
 
 
 
