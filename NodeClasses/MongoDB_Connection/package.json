@@ -1,9 +1,0 @@
-{
-  "name": "MongoDB_Connection",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "^4.15.2",
-    "mongodb": "^2.2.25"
-  }
-  
-}
