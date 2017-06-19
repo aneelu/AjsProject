@@ -1,0 +1,9 @@
+{
+  "name": "Read_MySQL",
+  "version": "0.0.1",
+  "description": "Reading the emp data",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mysql": "^2.13.0"
+  }
+}

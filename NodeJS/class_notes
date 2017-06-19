@@ -1,0 +1,25 @@
+NodeJS
+
+    - NodeJS is the Server Side Scripting Language.
+
+    - By using NodeJS , we can create the Both http & tcp servers.
+
+Modules in NodeJS.
+
+1.express
+    - used to develop the Rest API.
+
+2.http
+    - used to develop the http servers.
+
+3.body-parser
+    - used to set the MIME Type.
+
+4.jwt-simple
+    - used to maintain the token based authenication system.
+
+5.mysql
+     - used to interact with the mysql database.
+
+6.mongodb
+     - used to interact with the mongodb
