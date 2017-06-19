@@ -1,0 +1,142 @@
+Services.
+    - Services are used for Sharing the Common Business Logic to Controllers.
+
+    - By using Services we can reuse the Business Logic.
+
+    - We Have Two Types Of Services.
+
+        1. Custom Services
+
+        2. Predefined Services
+
+
+Custom Services.
+
+        - The Services Developed By Developer Based On Application Requirement Called as Custom Services.
+
+        - In AngularJS We Can Create Custom Services in 5 ways.
+
+            1. provider()
+
+            2. factory()
+
+            3. value()
+
+            4. constant()
+
+            5. service()
+
+
+
+
+Ex.
+
+            app.config(config);
+            config.$inject=["my_serviceProvider"];
+            function config(my_serviceProvider){
+                my_serviceProvider.db_password="root_two";
+            }
+
+
+            app.provider("my_service",my_service);
+            my_service.$inject=[];
+            function my_service(){
+                this.db_password = "root_one";
+                this.$get=function(){
+                    return this.db_password;
+                }
+            }
+
+
+            app.controller("ctrl_one",ctrl_one);
+            ctrl_one.$inject=["$scope","my_service"];
+            function ctrl_one($scope,my_service){
+                $scope.var_one=my_service;
+            }
+
+
+            app.controller("ctrl_two",ctrl_two);
+            ctrl_two.$inject=["$scope","my_service"];
+            function ctrl_two($scope,my_service){
+                    $scope.var_two=my_service;
+            }
+
+
+
+Creating the Custom Service by using factory()
+-
+
+app.factory("my_service",my_service);
+function my_service(){
+    return new my_class("I am from factory !").my_fun();
+}
+
+
+var my_class = function(arg1){
+    this.my_fun = function(){
+        return arg1;
+    }
+}
+
+
+Creating the Custom Service by using value().
+-
+
+app.value("my_service","First Value");
+app.value("my_service","Second Value");
+
+
+O/P:
+
+    Second Value
+    Second Value
+
+[Note .  Overriding will be happend in value() ]
+
+
+Creating the Custom Service by using constant().
+-
+
+app.constant("my_service","First Value");
+app.constant("my_service","Second Value");
+
+
+O/P:
+    First Value
+    First Value
+
+[Note .  Overriding won't be happend in value() ]
+
+
+Creating the Custom Service by using service().
+-
+
+app.service("my_service",my_service);
+function my_service(){
+    this.fun_one = function(){
+        return "Data From DataBase Soon....";
+    }
+    this.fun_two = function(){
+        return "Gulp with Karma Integration Soon...";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
