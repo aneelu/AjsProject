@@ -1,0 +1,25 @@
+Functions.
+    - Functions are used to Write the Business Logic.
+    - Set Of Related Statements Called as Functions.
+
+Syntax.
+-
+
+//Create the Function.
+
+function "name of function"(){
+    // set of statements
+}
+
+Ex.
+function greet(){
+    alert("Good Morning !!!");
+}
+
+//call the function
+greet()
+
+
+
+
+
