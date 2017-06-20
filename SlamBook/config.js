@@ -2,7 +2,7 @@
     "use strict";
 
     app.config(function(socialProvider){
-        socialProvider.setGoogleKey("1071246704138-s3jduierebq267jd4eq0spohbgcuk3o7.apps.googleusercontent.com");
+        socialProvider.setGoogleKey("91oHgdhuNsg0_2Qv9oBuPAiu");
         socialProvider.setLinkedInKey("YOUR LINKEDIN CLIENT ID");
         socialProvider.setFbKey({appId: "YOUR FACEBOOK APP ID", apiVersion: "API VERSION"});
     });
