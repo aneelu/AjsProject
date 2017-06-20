@@ -23,6 +23,164 @@ NodeJS?
 
     - NodeJS is the Open Platform to Develop "Network" & "Server Side" Applications.
 
+Advantages Of NodeJS
+-
+    - Open Source Code
+            - We Can Customize the Server Accroding to Application Requirement.
+
+    - Node Servers are ligth weigth Servers
+
+    - Node Servers supports the Modules.
+
+    - Node will provide so many predefined Modules.
+
+
+Examples.
+
+1. http
+    - used to develop the http servers.
+
+2. fs
+    - fs stands for "file system".
+
+    - this module used to interact with the flat files.
+
+        Ex.
+
+            Static Text Files
+
+            Static JSON Files
+
+            Static XML Files
+
+                --
+                --
+                --
+
+3. mutler
+        - used to handle the multimedia files.
+
+
+4. jwt-simple
+        - used to maintain the token based authenication system.
+
+5. mysql
+         - used to interact with the mysql database.
+
+6. mongodb
+        - used to interact with the mongodb.
+
+7. mssql
+        - used to interact with the sql server.
+
+8.express
+        - used to develop the web services in node applications.
+
+9.body-parser.
+        - used to set the MIME Type.
+
+
+        Ex.
+
+            JSON
+
+            XML
+
+            Text
+
+            doc
+
+            docx
+                --
+                --
+
+10. jsonToken
+
+         - This Module is the Latest Module and used to maintain the
+           Token Based Authentication System.
+
+- We Can Implement the MiddleWare Services by using Node Server
+
+
+
+Disadvantages Of NodeJS
+-
+1. Secuirity
+
+2. No Middleware Services By Default.
+
+3. Node Engines By Default Mono Threaded , because in general we will
+   create the Servers by using javascript.
+
+
+Key Features Of NodeJS.
+
+1. clustering
+
+    - we can create the number of child processes under the main process.
+
+    - main process will moniter the number of child processes
+
+    - by using clustering the development will be decreased,
+
+      and application performance will be increased.
+
+
+2. load balancing
+
+    - we can take the multiple servers with internal communication  maintain load
+      equally.
+
+    - we can provide the communication between internal servers.
+
+
+3. DNS
+    - used to add the logical names to servers.
+    - we can deploy the local Servers to public server with the help unique DNS.
+
+
+4. callbacks support.
+
+    - Node By default Supports the Callbacks in order to run the Node Applications
+      Smoothly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
