@@ -122,6 +122,94 @@ function my_service(){
 }
 
 
+Predefined Services.
+-
+    - The Services Provided by angular framework called as Predefined Services.
+
+1. $http
+    - used to connect to servers via http protocol
+
+    app.service("my_service",my_service);
+    my_service.$inject=["$http"];
+    function my_service($http){
+        this.fun_one = function(){
+           return $http.get("https://www.w3schools.com/angular/customers.php").then(function(posRes){
+                return posRes;
+           },function(errRes){
+                return errRes;
+           });
+        };
+    };
+
+
+    app.controller("ctrl",ctrl);
+    ctrl.$inject=["$scope","my_service"];
+    function ctrl($scope,my_service){
+        my_service.fun_one().then(function(response){
+            $scope.var_one = response;
+        });
+    };
+
+
+   ----------------------------------------
+
+    this.fun_two = function(){
+        return $http.get("https://conduit.productionready.io/api/profiles/eric").then(function(res){
+            return res;
+        },function(res){
+            return res;
+        });
+    };
+
+
+
+
+    my_service.fun_two().then(function(res){
+        $scope.var_two=res;
+    });
+
+    ----------------------------------------
+
+ $q.
+
+        - it is a predefined service in angularjs.
+
+        - it is used to make the asynchronus calls.
+
+
+
+
+                    /* Function One*/
+
+                    //starting the async call
+                    var deffered_one = $q.defer();
+                    this.fun_one = function () {
+                        return $http.get("https://www.w3schools.com/angular/customers.php").then(function (posRes) {
+                            //success response
+                            deffered_one.resolve(posRes.data.records);
+                            //disconnecting the async call
+                            return deffered_one.promise;
+                        },function (errRes) {
+                            //error response
+                            deffered_one.reject(errRes);
+                            //disconnecting async call
+                            return deffered_one.promise;
+                        });
+                    };
+
+         - we can eliminate the duplicate code by using $q.
+
+            $q.all([my_service.fun_one(),
+                    my_service.fun_two(),
+                    my_service.fun_three()]).then(function (res) {
+
+                         $scope.var_one = res[0];
+                         $scope.var_two=res[1];
+                         $scope.var_three=res[2];
+             });
+
+
+
 
 
 
