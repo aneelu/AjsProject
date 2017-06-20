@@ -117,6 +117,171 @@ index.html
 
 Advantages Of AngularJS
 -
+1. As a Angular Developer , We Can Directly work with the HTML DOM.
+
+    DOM Stands for Document Object Model
+
+
+Ex.
+
+    Copy the Data From One Div to Another Div By using HTML & JavaScript
+
+index.html
+-
+<!DOCTYPE html>
+
+<html>
+    <div id="div_one">Hello</div>
+    <div id="div_two"></div>
+    <script>
+        document.getElementById("div_two").innerHTML =
+        document.getElementById("div_one").value;
+    </script>
+</html>
+
+[Note . As a HTML & JavaScript Developer we must dependent on JavaScript to work with the HTML DOM ]
+
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app>
+	<div ng-model="div_one">Hello</div>
+	<div ng-bind="div_one"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</html>
+
+
+1. Angular Framework (angular.min.js) starts the Execution from "ng-app" directive.
+
+2. "ng-model" directive internally creates the object with application data.
+
+3. "ng-bind" directive binds the application data to html output element.
+
+
+2. AngularJS Supports the Two Way Data Binding
+
+
+    Automatic Data Synchronization Between Model and View with the Supervision Of Controller Called as
+
+    Two Way Data Binding.
+
+
+
+ - In the Above Diagram we have Following Server Calls.
+
+
+  1. http get request
+
+  2. http delete request
+
+  3. Async Call (Ajax Call)
+
+
+
+  - As a Programming Languages Developer We Must Make above three server calls to meet application requirement.
+
+  - As a AngularJS / Angular4 Developer We can only two Server Calls to meet application Requirement because of
+
+    Two Way Data Binding.
+
+
+[Note . Two Way Data Binding Reduces the Burden on the Server ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
