@@ -145,6 +145,240 @@ Key Features Of NodeJS.
       Smoothly.
 
 
+NodeJS Envinronmental Setup
+-
+    - The Softwares Required to run Node Application called as Environmental Setup.
+
+Download and Install the NodeJS.
+-
+Website : https://nodejs.org/en/download/
+Software Name : node-v6.11.0-x64.msi
+
+
+Download and Install the IDE
+1. WebStrom
+2. Ecilipse
+3. Visual Studio Code
+4. Visual Studio
+
+
+Visual Studio Code.
+-
+Website : https://code.visualstudio.com/
+Software : VSCodeSetup-ia32-1.13.1.exe
+
+    - we can download the Node Modules by using "package.json" file
+
+Ex.
+
+{
+    "name":"nareshit",
+    "version":"1.0.0",
+    "description":"Basic package.json file"
+    "dependencies":{
+        //Modules
+    },
+    "devDependencies":{
+        //Frameworks
+        Ex.
+            Karma
+            Jasmine
+            Gulp
+            Grunt
+            --
+            --
+            --
+    }
+}
+
+
+//name : "name of project"
+
+//author : "name of developer"
+
+//licence : "licence information"
+
+//version : "release version"
+
+//repository : "source path of repository for dependencies"
+
+//dependencies : "used to download the required modules to develop node application"
+
+//devDependencies : downloading the 3rd party modules / frameworks to write "test cases"/"automation of tasks"....
+
+
+Ex.
+
+{
+    "name":"demo",
+    "version":"1.0.0",
+    "description":"Basic Node Example",
+    "licence":private,
+    "dependencies":{
+        "express":"^4.15.2"
+    },
+    "devDependencies":{
+        "karma":"^1.1.0"
+    }
+}
+
+
+> npm install
+
+    - Automatically karma & express module downloads to "node_modules" folder.
+
+    - "node_modules" folder created by node engine dynamically.
+
+    - "npm" stands for "node packaging manager"
+
+    - "npm" used to download the required "modules/frameworks" to develop the node applications.
+
+
+Downloading the Required Modules Dynamically.
+-
+
+> npm install gulp --save-devDependencies
+
+> npm install http --save-dependencies
+
+
+list of Modules Downloaded
+-
+
+>npm list
+
+
+
+uninstall the module
+-
+>npm uninstall gulp,express
+
+
+----------------------
+Basic_NodeEnvironment
+    package.json
+
+    server.js
+---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
