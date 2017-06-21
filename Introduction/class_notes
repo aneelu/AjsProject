@@ -190,6 +190,223 @@ index.html
 
 
 
+3. AngularJS(Framework) is the Open Source Code.
+
+    - We Can Customize the Framework accroding to application requirement.
+
+
+4. Angular Applications are Cross Browser Compatable Applications.
+
+    We Can Run Angular Applications in all Browsers (IE 10 onwards) with out adding plugins.
+
+    Angular Applications are "Cross Browser" / "Cross Platform" Compatable Applications.
+
+
+
+5. AngularJS Reduces the Burden on the Server.
+
+    We Can Implement the Business Components at client side by using MVC , automatically burden will be reduced
+
+    on Server.
+
+
+Disadvantages Of AngularJS
+-
+    - Understanding the Angular Applications are Difficult , because of no Coding Standards.
+
+    - Secuirity
+
+    - We Must Enable the JavaScript in Browsers , then only angular applications will execute.
+
+
+Key Features Of AngularJS.
+-
+
+1. Directives
+
+    - Directives in AngularJS, Enhances the HTML Capabilities.
+
+    - We Have Two Types Of Directives.
+
+    1. Predefined Directives
+
+    2. Custom Directives
+
+Predefined Directives.
+
+    - The Directives Given by the Angular Framework called as Predefined Directives.
+
+    Ex.
+
+        ng-app
+        ng-repeat
+        ng-options
+
+        --
+        --
+        --
+
+
+Custom Directives.
+
+    - Creating Our Own Directive , Based on application requirement called as Custom Directive.
+
+    Ex.
+     my_header
+
+    - by using custom directives , we can reuse the "business logic"
+
+
+
+
+2. Controllers.
+
+    - Controllers acting as glue between "Model & View"
+    - We Can have More Than One Controller Per Web Application.
+
+
+3. Services
+
+    - Services are used to maintain the Common Business Logic.
+
+    - By using Services , we can reuse the "Business Logic"
+
+    - it's recomended to create the services with "Common Business Logic" instead of controllers.
+
+    - Services Can Provide the "Common Services" to the Controllers.
+
+    - We Have Two Types Of Services.
+
+        1. Predefined Services
+
+            Ex.
+
+                $http
+
+
+        2. Custom Services
+
+            Ex.
+
+                my_service
+
+
+
+4. Single Page Applications
+
+        - AngularJS Supports the Single Page Applications.
+
+        - Loading the "Target Web Page" to "Source Web page" without refreshing the whole web page called as
+
+          Single Page Application.
+
+
+
+5. Filters
+
+    - we can format the data accroding to application requirement.
+
+    - We have Two Types Of Filters.
+
+        1. Predefined Filters
+
+        2. Custom Filters
+
+
+
+6. Modules
+
+    - We Can have Multiple Modules in Angular Applications.
+
+    - We Can Provide the Communication Between Modules.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
