@@ -1,0 +1,204 @@
+- NodeJS is the Server Side Scripting Language.
+
+- By using NodeJS, we can create Web Servers.
+
+- As a Node Developer , we can assign the port numbers to the Server.
+
+- In NodeJS, Application itself acting as a "Server" as well as "Business Logic"
+
+- In general we will create Node Applications by using JavaScript.
+
+
+Modules in NodeJS
+
+
+1. mysql
+    - used to interact with the mysql database.
+
+
+2. mongodb
+     - used to interact with the mongodb.
+
+
+3. express
+    - used to develop the webservices (Rest API) in NodeJS.
+
+
+
+4. jwt-simple
+    - used to maintain the token based authentication system.
+
+
+5. mutler
+
+    - used to handle the multimedia files.
+
+
+6. http
+    - used to create the http servers.
+
+
+7. fs
+    - fs stands for "file system".
+    - used to interact with the flat files.
+
+     Ex.
+
+        XML Files
+        Text Files
+        JSON Files
+        --
+        --
+        --
+
+8. body-parser
+    - used to set the MIME Type in Node Applications
+
+    Ex.
+
+        XML
+
+        JSON
+
+        Text
+
+        --
+        --
+        --
+
+
+Ex_1.
+
+    Provide the Basic Communication Between AngularJS with NodeJS
+
+
+Step 1.
+
+    Download the express module by using package.json file.
+
+{
+    "name":"nareshit",
+    "version":"1.0.0",
+    "description":"First Node Example !",
+
+    "dependencies":{
+        "express":"^4.15.3"
+    }
+}
+> npm install
+
+[Note. automatically "express" module download to "node_modules" folder]
+
+
+Step 2.
+    Create the Application Directory Structure
+
+---------------------------
+Basic_NodeEx
+
+       index.html      (Angular Application)
+
+       package.json    (Dependencies Requirement File)
+
+       server.js       (Node Application)
+---------------------------
+
+
+
+Step 3.
+    Create the Node Server.
+
+server.js
+-
+
+//import the express
+var express = require("express");
+
+
+//create the server instance
+var app = express();
+
+
+//Deploy the Client Location to the Server
+app.use(express.static(__dirname+"/../Basic_NodeEx"));
+
+
+//Default Output
+app.get("/" , function(req,res){
+    res.redirect("/index.html");
+});
+
+
+//Assign the Port No.
+app.listen(8080);
+console.log("Server Listening the Port No.8080");
+
+
+
+Step 4.
+    Start the Node Server
+
+>npm start
+  (or)
+>node server.js
+
+
+
+Step 5.
+
+Execute the Following URL in Browser.
+
+https://localhost:8080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
