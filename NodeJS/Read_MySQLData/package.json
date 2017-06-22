@@ -1,0 +1,10 @@
+{
+  "name": "Read_MySQLData",
+  "version": "0.0.1",
+  "description": "reading the data from the mysql",
+  "dependencies": {
+    "mysql": "^2.13.0",
+    "express": "^4.15.3"
+  }
+  
+}
