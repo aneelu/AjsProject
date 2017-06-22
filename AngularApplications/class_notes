@@ -1,0 +1,35 @@
+Angular Applications.
+
+    - By using AngularJS we can develop two types of Applications.
+
+    1. Static Angular Application
+
+    2. Dynamic Angular Application.
+
+
+ Static Angular Application.
+
+        - If View won't interacts with the Controller for dynamic data , then such type of Angular Application
+
+           Called as Static Angular Application.
+
+
+ Dynamic Angular Application.
+
+        - If Angular Application Follows MVC Design Pattern , Then Such Type Of Application called as Dynamic Angular Application
+
+                                 (or)
+
+        - If View Interacts with the Controller for Dynamic Data Then Such Type Applications also called as DAA.
+
+
+Steps to Create the Static Angular Application.
+
+
+Step 1.
+
+        Download the Angular Framework by using bower.
+
+
+
+
