@@ -1,0 +1,10 @@
+{
+  "name": "Read_MongoDB",
+  "version": "0.0.1",
+  "description": "reading the emp collection from demo database",
+  "dependencies": {
+    "mongodb": "^2.2.29",
+    "express": "^4.15.3"
+  }
+  
+}
