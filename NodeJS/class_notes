@@ -251,6 +251,72 @@ app.get("/mysql",function(req,res){
 });
 
 
+Ex_4. Reading the Data From MongoDB.
+
+    - MongoDB Supports the JSON Objects.
+
+    - As a MongoDB Developer , We Can Perform the CRUD Opeartions on JSON.
+
+    - MongoDB Follows the Client Server Architecture.
+
+
+Start the Mongo Server.
+-
+    >mongod
+
+Connect to Server
+-
+    >mongo
+
+Queries
+-
+1. show dbs;
+    - it will show available databases in mongodb.
+
+2. use demo;
+    - it will create & switch to demo database.
+
+3. db.createCollection("emp");
+    - Automatically "emp" collection will be created in "demo" database.
+
+4. db.emp.insert({"id":1,"name":"Hello_1","age":20});
+    - JSON Object will insert into emp collection.
+
+5. db.emp.find()
+     - it will query the "emp" collection for "JSON" Objects
+
+
+
+
+server.js
+-
+var express = require("express");
+var mongodb = require("mongodb");
+var app = express();
+app.use(express.static(__dirname+"/../Read_MongoDB"));
+app.get("/" , function(req,res){
+    res.redirect("/index.html");
+});
+
+var nareshIT = mongodb.MongoClient;
+app.get("/mongo" , function(req,res){
+    nareshIT.connect("mongodb://127.0.0.1:27017/demo" , function(err,db){
+        db.collection("emp").find().toArray(function(err,array){
+            res.send(array);
+        });
+    });
+});
+
+app.listen(8080);
+
+
+
+
+
+
+
+
+
 
 
 

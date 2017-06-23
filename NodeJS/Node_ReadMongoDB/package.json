@@ -1,0 +1,9 @@
+{
+  "name": "Node_ReadMongoDB",
+  "version": "0.0.1",
+  "description": "reading the data from demo database",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29"
+  }
+}
