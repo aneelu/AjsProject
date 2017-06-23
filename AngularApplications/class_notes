@@ -30,6 +30,137 @@ Step 1.
 
         Download the Angular Framework by using bower.
 
+------------------------
+StaticAngularApplication
+
+    bower.json
+
+    .bowerrc
+------------------------
+
+bower.json
+-
+{
+    "name":"nareshit",
+     "dependencies":{
+        "angular":"~1.6.0"
+     }
+}
+
+
+.bowerrc
+-
+{
+    "directory":"bower_components"
+}
+
+
+> bower install
+[Note. StaticAngularApplication/bower_components/angular/angular.min.js]
+
+
+
+Step 2.
+
+Create the View by using "ng-app" , "ng-model" and "ng-bind" directives.
+
+index.html
+-
+
+<!DOCTYPE html>
+<html ng-app>
+
+    <input type="number" ng-model="num_one"> <br><br>
+
+    <input type="number" ng-model="num_two"> <br><br>
+
+    <!-- <h1 style="color:red" ng-bind="num_one + num_two"></h1> -->
+
+    <h1 style="color:green">{{num_one + num_two }} </h1>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+</html>
+
+
+    - Angular Framework starts the Execution from ng-app directive.
+
+    - ng-app directive takes the logical name of web application
+
+    - logical name is optional for "static angular applications"
+
+    - logical name is mandatory for "dynamic angular applications"
+
+    - "ng-model" directive internally creates the objects with dynamic data.
+
+    - "ng-bind" directive binds the model data to the view.
+
+    - we can bind the model data to the view by using "Expressions"
+
+
+    Syntax.
+
+    {{ }}
+
+    - expressions by default displays the "unparsed / uncompiled" model data before binding.
+
+    - in general we will use expressions in devEnvironment and "ng-bind" in production environment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
