@@ -1,0 +1,102 @@
+
+    - Filters in AngularJS used to format the Application Data.
+
+    - We Have Two Types Of Filters
+
+        1. Predefined Filters
+
+        2. Custom Filters
+
+Predefined Filters.
+
+        - The Filters Given by the Framework Called as Predefined Filter.
+
+
+1. uppercase
+
+    - used to convert the lowercase characters to uppercase.
+
+Ex.
+
+    {{'hello' | uppercase}} //HELLO
+
+
+2. lowercase
+
+    - used to convert uppercase characters to lowercase.
+
+Ex.
+
+    {{"HEELO" | lowercase }}  //hello
+
+
+3. currency
+
+    - it is used to append the "$" symbol to the numerical value.
+
+
+    {{100 | currency}}    //$100.00
+
+
+4. limitTo
+
+
+
+
+
+
+
+
+    <table border="1">
+
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>rank</th>
+        </tr>
+
+
+        <tr ng-repeat="x in arry | orderBy:'-id' | limitTo:2">
+
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.rank}}</td>
+
+        </tr>
+    </table>
+
+
+
+6. filter
+
+    - This Filter used to search the table based on user input
+
+
+ <tr ng-repeat="x in array | orderBy:'id' |
+                             limitTo:2 |
+                             filter:'AngularJS'">
+
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.rank}}</td>
+
+        </tr>
+
+
+
+7. date
+
+        - used to format the Date Accroding to Application Requirement
+
+        {{new Date() | date:'dd-MM-yy'}}
+
+        {{new Date() | date:'MM-dd-yyyy'}}
+
+        {{new Date() | date:'short'}}
+
+        {{new Date() | date:'medium'}}
+
+        {{new Date() | date:'fullDate'}}
+
+
+
