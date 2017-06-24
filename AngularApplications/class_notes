@@ -106,6 +106,80 @@ index.html
     - in general we will use expressions in devEnvironment and "ng-bind" in production environment.
 
 
+Steps to Create the Dynamic Angular Application.
+
+
+1. Download angular framework by using bower.
+
+
+2. Load the Angular Framework.
+
+
+3. Declare the Logical name for web application
+
+
+4. Declare the Controller by using "ng-controller".
+
+    Ex.
+        ng-controller="ctrl"
+        ["ctrl" is the name of custom controller]
+
+
+5. Add the Required Dependencies to Applications [Modules]
+
+
+6. Implement the Controller.
+
+       Syntax.
+       app.controller("name of controller" , annonymus function);
+
+       Ex.
+       app.controller("ctrl" , function(){} );
+
+
+
+
+<!DOCTYPE html>
+
+<html ng-app="app">
+    <div ng-controller="ctrl">
+        <h1 style="color:red">{{var_one}}</h1>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl" , function($scope){
+            $scope.var_one = "Data From DB Soon....";
+        });
+    </script>
+</html>
+
+
+--------------------------
+DynamicAngularApplication
+    bower.json
+    .bowerrc
+    index.html
+    app.js
+    controllers (folder)
+        ctrl.js
+--------------------------
+
+
+
+1. How to Many Types Of Applications can we create by using AngularJS ??
+
+
+2. Explain the MVC ??
+
+
+
+3. Syntax of App Instantiation ??
+
+
+
+4. What is "$scope" ??
+
 
 
 
