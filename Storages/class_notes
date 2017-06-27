@@ -1,0 +1,23 @@
+Storages in AngularJS
+-
+
+    - AngularJS Supports the Two Types of Storages.
+
+    1. localStorage
+
+    2. sessionStorage
+
+
+    - ngStorage is the predefined module used to with the Storages.
+
+    - ngStorage Module Supports Two Objects.
+
+        1.$localStorage
+
+        2.$sessionStorage
+
+    - "$localStorage"  used to work with the localStorage
+
+    - $sessionStorage used to work with the sessionStorage
+
+   - we can store the data in the form key&value pairs.
