@@ -1,0 +1,12 @@
+Communication Between Controllers
+-
+
+    - In AngularJS , we can provide the Communication Between Controllers in four ways.
+
+    1. $broadcast
+
+    2. $emit
+
+    3. $rootScope
+
+    4. Custom Services
