@@ -1,7 +1,7 @@
 {
   "name": "Read_MongoDB",
   "version": "0.0.1",
-  "description": "reading the data from mongodb",
+  "description": "reading the data from the mongodb",
   "dependencies": {
     "express": "^4.15.3",
     "mongodb": "^2.2.29"
