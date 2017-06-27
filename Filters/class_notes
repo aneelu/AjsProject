@@ -100,3 +100,24 @@ Ex.
 
 
 
+CustomFilters
+-
+
+    - Creating Our own filter, based on Application Requirement Called as Custom Filter.
+
+
+Ex.
+
+    {{"welcome" | reverse }}
+
+    app.filter("reverse" , reverse);
+    function reverse(){
+        return function(arg1}{
+            var data="";
+            for(var i=0;i<8;i++){
+                data = arg1[i]+data;
+            }
+            return data;
+        }
+    }
+
