@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en" ng-app="app" ng-controller="ctrl">
 
@@ -17,7 +18,7 @@
     </table>
 </span>
 
-    <!--<h1>{{var_one}}</h1>-->
+    &lt;!&ndash;<h1>{{var_one}}</h1>&ndash;&gt;
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script>
         var app = angular.module("app",[]);
@@ -47,4 +48,120 @@
             });
         };
     </script>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html ng-app="app" ng-controller="ctrl">
+
+
+        <h1>{{var_one}}</h1>
+
+        <h1>{{var_two}}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+    <script>
+
+        var app = angular.module("app",[]);
+
+        app.service("my_service",my_service);
+        my_service.$inject=["$http","$q"];
+
+        function my_service($http,$q) {
+            /*
+                $q - used to make the async calls
+                start the async call - $q.defer()
+                positive res         - resolve()
+                negative res         - reject()
+                terminate the async  - promise
+            */
+            var deffered_one = $q.defer();
+            this.fun_one = function () {
+                return $http.get("https://conduit.productionready.io/api/profiles/eric").then(function (posRes) {
+                    deffered_one.resolve(posRes.data.profile.bio);
+                    return deffered_one.promise;
+                },function (errRes) {
+                    deffered_one.reject(errRes);
+                    return deffered_one.promise;
+                });
+             };
+
+
+             var deffered_two = $q.defer();
+             this.fun_two = function () {
+                return $http.post("http://test-routes.herokuapp.com/test/uppercase",{'message':'welcome'}).then(function (posRes) {
+                    deffered_two.resolve(posRes.data.message);
+                    return deffered_two.promise;
+                },function (errRes) {
+                    deffered_two.reject(errRes);
+                    return deffered_two.promise;
+                });
+             };
+
+        };
+
+
+
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope","my_service","$q"];
+        function ctrl($scope,my_service,$q) {
+
+           /* my_service.fun_one().then(function (res) {
+               $scope.var_one = res;
+            });
+
+
+            my_service.fun_two().then(function (res) {
+               $scope.var_two = res;
+            });*/
+
+
+           /*
+                $q -  it is a predefined service in AngularJS
+                    - it is used to eliminate the data redundency
+                    - $q call gives the consolidated response in the form of a array
+            */
+
+          $q.all([my_service.fun_one(), my_service.fun_two()]).then(function (res) {
+                $scope.var_one=res[0];
+                $scope.var_two=res[1];
+          });
+
+
+        };
+
+
+    </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
