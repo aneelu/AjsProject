@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="ctrl">
+
+    <h1>{{var_one | uppercase}}</h1> <!-- Convert the lowercase characters to uppercase-->
+    <h1>{{var_two | lowercase}}</h1> <!-- Converting the uppercase characters to lowercase-->
+    <h1>{{var_three | currency}}</h1> <!-- used to append the "$" symbol to the numerical values-->
+
+    <input type="text" ng-model="search"> <br><br>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>rank</th>
+        </tr>
+
+        <tr ng-repeat="x in var_four | orderBy:'id' | limitTo:3 | filter:search"> <!-- orderBy : used to arrange the data either in assending / decending order-->
+            <td>{{x.id}}</td>                                     <!-- limitTo : used to display required number of records from an array-->
+            <td>{{x.name}}</td>
+            <td>{{x.rank}}</td>
+        </tr>
+    </table>
+
+    <h1>{{todayDate}}</h1>                 <!-- date : used to format the data accroding to application requirement-->
+    <h1>{{todayDate | date:'short'}}</h1>
+    <h1>{{todayDate | date:'medium'}}</h1>
+    <h1>{{todayDate | date:'fullDate'}}</h1>
+    <h1>{{todayDate | date:'dd-MM-yy'}}</h1>
+    <h1>{{todayDate | date:'MM-dd-yyyy'}}</h1>
+    <h1>{{todayDate | date:'shortTime'}}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope"];
+        function ctrl($scope) {
+            $scope.var_one = "angularjs";
+            $scope.var_two ="ANGULAR2";
+            $scope.var_three = 100;
+            $scope.var_four=[{"id":1,"name":"AngularJS","rank":1},
+                             {"id":5,"name":"reactJS", "rank":5},
+                             {"id":2,"name":"Angular2","rank":2},
+                             {"id":4,"name":"NodeJS","rank":4},
+                             {"id":3,"name":"reactJS","rank":3}];
+
+            $scope.todayDate = new Date();
+        }
+    </script>
+</html>
