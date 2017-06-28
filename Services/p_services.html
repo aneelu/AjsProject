@@ -61,7 +61,7 @@
 
 
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 
 <html ng-app="app" ng-controller="ctrl">
 
@@ -144,7 +144,78 @@
 
 
     </script>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="ctrl">
+
+    <h1>{{var_one}}</h1>
+    <h1>{{var_two}}</h1>
+    <h1>{{var_three}}</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+    <script>
+        var app =angular.module("app",[]);
+        app.controller("ctrl",ctrl);
+        ctrl.$inject=["$scope","$timeout","$interval","$location"];
+        function ctrl($scope,$timeout,$interval,$location) {
+            /*
+                $timeout service used to execute a perticular function with a given time.
+             */
+            $timeout(fun_one,5000);
+            $scope.var_one="Before Timeout Service !";
+            function fun_one() {
+                $scope.var_one="After Timeout Service !";
+            }
+
+
+            /*
+                $interval used to execute a user defined function repeatedely with a given interval of time.
+             */
+            $interval(fun_two,1000);
+            $scope.var_two=new Date().toLocaleTimeString();
+            function fun_two() {
+                $scope.var_two=new Date().toLocaleTimeString();
+            }
+
+            /*
+                $location used to return the absolute path of web application.
+             */
+            $scope.var_three = $location.absUrl();
+        }
+    </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
