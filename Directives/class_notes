@@ -64,5 +64,31 @@ AutoBootstrap.
 
 
 
+3. ng-repeat.
+    - this directive used to iterate the list of elements from an array.
+
+
+Syntax.
+-
+    ng-repeat = "ite_var in array" ng-bind="ite_var"
+
+
+Ex.
+
+    <h1 ng-repeat="x in [10,20,30,40,50]">
+            {{x}}
+    </h1>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
