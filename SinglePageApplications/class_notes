@@ -142,6 +142,102 @@ function page_one($scope,$routeParams){
 
 
 
+ui.router module
+-
+
+    - ui.router module is the 3rd party module
+
+    - ui.router module supports Nested Routing.
+
+    - ui.router module supports Named Views.
+
+    - ui.router module supports JSON as the URL Parameters.
+
+
+Steps to Design Basic Single Page Application By using ui.router Module.
+-
+
+Step 1.
+    Download ui.router module by using bower with the key.   (angular-ui-router)
+
+Step 2.
+    Add the ui.router Module Dependency.
+
+app.js
+-
+var app = angular.module("app",["ui.router"]);
+
+Step 3.
+    Create the Target Templates
+
+Step 4.
+    Create the Controllers
+
+Step 5.
+    Mapping
+
+config.js
+-
+app.config(config);
+config.$inject=["$stateProvider","$urlRouterProvider"];
+function config($stateProvider,$urlRouterProvider){
+
+    $stateProvider.state("page_one",{
+        url:"/page_one",
+        templateUrl:"templates/page_one.html",
+        controller:"page_one"
+    })
+
+    .state("page_two",{
+            url:"/page_two",
+            templateUrl:"templates/page_two.html",
+            controller:"page_two"
+     });
+
+     $urlRouterProvider.otherwise("/page_one");
+}
+
+Step 6.
+    Create the Source Template (index.html)
+
+index.html
+-
+
+<a ui-sref="page_one">Page_One</a>
+<a ui-sref="page_two">Page_Two</a>
+<div ui-view></div>
+
+
+
+Passing the JSON Objects as the URL Parameters in ui.router Module.
+-
+
+index.html
+-
+<a ui-sref="page_one({'id':1,'name':'Hello_1','age':20})"><b>Page_One</b></a>
+
+
+config.js
+-
+$stateProvider.state("page_one",{
+    url:"/page_one/:id/:name/:age",
+    templateUrl:"templates/page_one.html",
+    controller:"page_one"
+});
+
+
+page_one.js
+-
+app.controller("page_one",page_one);
+page_one.$inject=["$scope","stateParams"];
+function page_one($scope,$stateParams){
+    $scope.var_one = $stateParams.id+"..."+$stateParams.name+"..."+$stateParams.age;
+}
+
+
+
+
+
 
 
 
