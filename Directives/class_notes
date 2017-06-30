@@ -81,6 +81,74 @@ Ex.
 
 
 
+4. ng-options.
+    This Directive Used to Populate the Values to the Dropdown
+
+
+Syntax.
+    ng-options = "model_values as dropdown_values for iteration_variable in array"
+
+
+Ex.
+    $scope.data = [{"id":1,"sub":"AngularJS"},
+                   {"id":2,"sub":"NodeJS"},
+                   {"id":3,"sub":"reactJS"},
+                   {"id":4,"sub":"Angular2"},
+                   {"id":5,"sub":"d3js"}];
+
+     Dropdown - sub
+     Model - No'S
+
+
+    <select ng-model="model_one" ng-options="x.id as x.sub for x in data">
+            <options value="">Select Sub</option>
+    </select>
+
+
+5. ng-if
+
+    - this directive used to write the conditions.
+
+
+Syntax.
+
+       ng-if="true" / "false"
+
+
+6. ng-init
+
+    - this directive used to inilize the members while launching the angular applications.
+
+    - ng-init members are available to application scope.
+
+    - we can initilize the members in the form of a "key&value" pairs.
+
+    - "key&value"  are separated with the help of "="
+
+
+
+<html ng-app>
+
+    {{db_user}}
+
+    <div ng-init="db_user='root'"></div>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
