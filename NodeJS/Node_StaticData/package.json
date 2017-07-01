@@ -1,8 +1,0 @@
-{
-  "name": "Node_StaticData",
-  "version": "0.0.1",
-  "description": "reading the data from emp.json file !",
-  "dependencies": {
-    "express": "^4.15.3"
-  }
-}

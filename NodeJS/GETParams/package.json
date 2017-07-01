@@ -1,7 +1,7 @@
 {
-  "name": "Basic_NodeEx",
+  "name": "GETParams",
   "version": "0.0.1",
-  "description": "basic node example !",
+  "description": "Get Parameters",
   "dependencies": {
     "express": "^4.15.3"
   }
