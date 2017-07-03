@@ -205,13 +205,93 @@ Ex.
 
 
 
+8. ng-dblclick
+
+    - when ever we double click the user interface elements, automatically ng-dblclick directive
+      will be executed by angular framework.
+
+
+Syntax.
+
+    ng-dblclick = "Expression" /
+
+                  "user defined function" /
+
+                  "user defined function with optional parameters"
 
 
 
+Ex.
+
+<html ng-app ng-init="my_model=array[4]">
+    <select ng-model="my_model" ng-options="x as x for x in array">
+        <option value="">--Select Sub--</option>
+    </select>
+
+    <button ng-dblclick="clickMe(my_model)">Double Click</button>
+
+    app.controller("ctrl" , ctrl);
+    function ctrl($scope){
+        $scope.array = ["AngularJS","Angular4","reactJS","NodeJS","KnockoutJS"];
+        $scope.clickMe = function(data){
+            alert(data);
+        }
+    }
+</html>
 
 
 
+9.ng-show
 
+    - This Directive used to show / hide the elements Based On Condition.
+
+    - This Directive won't works with the HTML DOM.
+
+
+Syntax.
+
+    ng-show = "true" / "false"
+
+
+10. ng-hide
+
+        - This Directive used to show / hide elements Based on Condition.
+
+        Syntax.
+
+            ng-hide="true"      //element will hide
+
+            ng-hide="false"     //element will shown
+
+
+11. ng-include
+
+        - This Directive used to Divide the View into Number Of Sub Views.
+
+        - By using ng-include directive , readability of application will be increased.
+
+Syntax.
+
+        ng-include="target template"
+
+
+12. ng-class-odd
+
+        - This Directive used to apply the CSS Classes to the ODD Rows Of Table.
+
+Syntax.
+    <tr ng-repeat="x in data" ng-class-odd='my_class'>
+        //Logic Goes Here
+    </tr>
+
+
+13. ng-class-even
+    - This Directive used to apply the css classes to Even Rows Of Table.
+
+Syntax.
+    <tr ng-repeat="x in data" ng-class-even='my_class'>
+        //Logic Goes Here
+    </tr>
 
 
 
