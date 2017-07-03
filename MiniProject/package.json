@@ -1,0 +1,13 @@
+{
+  "name": "MiniProject",
+  "version": "0.0.1",
+  "description": "Mini Project",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mysql": "^2.13.0",
+    "body-parser": "^1.17.2",
+    "jwt-simple": "^0.5.1",
+    "mongodb": "^2.2.29"
+  }
+  
+}
