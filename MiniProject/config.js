@@ -1,4 +1,12 @@
-app.config(config);
+app.run(run).config(config);
+run.$inject=["$localStorage","$rootScope","$location"];
+function run($localStorage,$rootScope,$location) {
+    $rootScope.$on("$stateChangeStart",function (event,fromState,fromParams,toState,toParams) {
+        if(!$localStorage.mini_project){
+            $location.path("/login");
+        }
+    });
+};
 config.$inject=["$stateProvider","$urlRouterProvider"];
 function config($stateProvider,$urlRouterProvider) {
     $stateProvider.state("login",{
