@@ -317,3 +317,93 @@ Syntax.
             //Logic
         </div>
     </div>
+
+
+
+15. ng-submit
+        - used to submit the form to the controller.
+
+
+ <form ng-submit="register()">
+
+        //form elements
+
+        <input type="submit">
+ </form>
+
+
+ app.controller("ctrl",ctrl);
+  function ctrl($scope){
+    $scope.register = function(){
+        //Store the Register Values into DataBase
+    }
+ }
+
+ 16. ng-cloak
+
+        - this directive used to avoid the uncompiled / unparsed data while refreshing
+          the Webpage.
+
+
+ Syntax.
+
+          <div ng-controller="ctrl_one" ng-cloak>
+
+               {{var_one}}
+
+          </div>
+
+
+      ****************************
+ ngCloakDemo
+
+          index.html
+
+          app.js
+
+          controllers
+
+                ctrl_one.js
+
+                ctrl_two.js
+
+          bower.json
+
+          .bowerrc
+     *********************************
+
+     index.html
+     -
+    <div ng-controller="ctrl_one" ng-cloak>
+        <h1>{{var_one}}</h1>
+    </div>
+
+    <div ng-controller="ctrl_two" ng-cloak>
+        <h1>{{var_two}}</h1>
+    </div>
+
+Mouse Events.
+-
+    ng-mousedown /
+    ng-mouseup
+
+    ng-mouseover/
+    ng-mouseout                = "Expression" / "user defined function[optional parameters]"
+
+    ng-mouseenter/
+    ng-mouseleave
+
+    ng-mousemove
+
+
+Ex.
+
+<div ng-mousedown="down()" ng-mouseup="up()">
+
+</div>
+
+
+<div ng-mouseenter="enter()" ng-mouseleave="leave()">
+
+</div>
+
