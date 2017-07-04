@@ -295,5 +295,25 @@ Syntax.
 
 
 
+14. ng-switch
+
+        - This Directive used to write the Switch Cases in Angular Application.
 
 
+Syntax.
+
+    <div ng-switch="Expression">
+        <div ng-switch-when="value1">
+              //Logic
+        </div>
+        <div ng-switch-when="value2">
+             //Logic
+        </div>
+
+            ---
+            ---
+
+        <div ng-switch-default>
+            //Logic
+        </div>
+    </div>
