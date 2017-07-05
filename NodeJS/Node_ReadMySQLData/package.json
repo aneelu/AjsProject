@@ -1,9 +1,0 @@
-{
-  "name": "Node_ReadMySQLData",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "^4.15.2",
-    "mysql": "^2.13.0"
-  }
-  
-}
