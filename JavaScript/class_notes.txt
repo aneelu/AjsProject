@@ -1,0 +1,71 @@
+    JavaScript .
+        JavaScript is the Scripting Language.
+        JavaScript used to make the HTML/ HTML5 as the Dynamic Nature.
+        We Can Include the JavaScript to the HTML / HTML5.
+        We Can Include JavaScript to the HTML by using <script></script> tag.
+        Ex.
+        <script>
+            //Business Logic Here
+        </script>
+
+        Variables.
+            - Variables are used to store the Data.
+            - By using Variables we Can Store all Types Of Data
+                Ex.
+                        Primitive Data Types
+                        User Defined Data Types.
+
+             - We can Declare the Variable by using "var" keyword
+
+             Ex.
+                var i = 100;
+                var i ="data from mongodb soon...";
+                var i = {'p_id':1,'p_cost':10000};
+
+Functions in JavaScript.
+    - Set of Statements Called as Function.
+    - Business Logic We can call Function in JavaScript
+    - By using Functions we can reuse the Business Logic.
+
+
+Creating the Function.
+-
+function function_name(){
+    //Business Logic
+}
+
+Calling the Function
+-
+function_name();
+
+
+JavaScript Classes.
+
+    - Collection Of JavaScript Variables and Functions called as Class.
+
+
+syntax.
+
+//Creating the Class
+function my_fun(){
+    this.var_one = "Welcome to JavaScript Class !";
+    this.fun_one = function(){
+        return this.var_one;
+    }
+}
+
+//create the Object to the Class
+var obj = new my_fun();
+obj.var_one;  //Welcome to JavaScript Class !
+obj.fun_one(); //Welcome to JavaScript Class !
+obj.fun_one;  // Function Defination Returned 
+
+
+
+
+
+
+
+
+
+
