@@ -19,7 +19,25 @@ function config($stateProvider,$urlRouterProvider) {
        url:"/home",
        templateUrl:"templates/home.html",
        controller:"homeController"
-    });
+    })
+
+    .state("home.angularjs",{
+        url:"/angularjs",
+        templateUrl:"templates/angularjs.html",
+        controller:"angularjs"
+    })
+
+        .state("home.angular2",{
+            url:"/angular2",
+            templateUrl:"templates/angular2.html",
+            controller:"angular2"
+        })
+
+        .state("home.nodejs",{
+            url:"/nodejs",
+            templateUrl:"templates/nodejs.html",
+            controller:"nodejs"
+        });
 
     $urlRouterProvider.otherwise("/login");
 }
