@@ -1,0 +1,198 @@
+Introduction.
+
+1. What is AngularJS?
+
+2. Advantages Of AngularJS ??
+
+3. Disadvantages Of AngularJS ??
+
+4. Key Features Of AngularJS ??
+
+5. Comparision Of AngularJS - Angular2
+
+                  AngularJS - reactJS
+
+                  AngularJS - NodeJS
+
+
+AngularJS
+
+       - AngularJS is a JavaScript Framework.
+
+       - AngularJS Follows th MVC Design Pattern.
+
+        M - Model
+
+            JavaScript Variables Called as Model.
+
+           Ex.
+
+                var data = "Data From MongoDB Soon...";
+
+           [Note: where "data"  can call Model in AngularJS]
+
+
+        C - Controller
+
+            JavaScript Functions Called as Controllers
+
+        Ex.
+
+            function getData(){
+                //Business Logic Goes Here
+            }
+
+        [Note . where getData() function called as Controller in AngularJS ]
+
+
+        V - View
+
+            - We Can Use HTML , HTML5 (OR) JADE as the View in AngularJS
+
+
+
+
+        - Angular Framework have Predefined Modules , As a Angular Developer we can use the
+
+          Predefined Modules while Developing the Angular Application.
+
+          [Module: Collection Of Classes Implementations ]
+
+
+
+1. ngAnimate
+
+    - This Module used to Develop the Animations in Angular Applications.
+
+
+
+2. ngStorage
+
+    - This Module used to work with the Storages.
+
+    - We Have Two Types Of Client Side Storages.
+
+        1. localStorage
+
+        2. sessionStorage
+
+
+3. ngMessages
+
+     - This Module used to Handle the Client Side Form Validations.
+
+
+4. ngRoute
+
+    - This Module used to Handle the Routing in Single Page Application.
+
+    - ngRoute Module is Deprecated Module.
+
+
+5. ui.router
+
+    - This Module used to Handle the Routing the in Single Page Appliction.
+
+    - ui.router module is the 3rd party module.
+
+    - ui.router module have so many advantages Compared to ngRoute Module, so now a days
+
+      we are using ui.router Module in Single Page Applications.
+
+
+
+Ex.
+
+index.html
+-
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+    //SPA - ui.router
+    //Validations
+    //Storages
+    //Animations
+    <script src = "bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp",["ui.router","ngMessages","ngStorage","ngAnimate"]);
+    </script>
+</html>
+
+Advantages Of AngularJS
+-
+1. As a Angular Developer , We Can Directly work with the HTML DOM.
+
+[DOM Stands for Document Object Model.]
+
+
+Ex.
+
+index.html
+-
+<!DOCTYPE html>
+
+<html>
+
+    <div id="div_one">Hello</div>
+
+    <div id="div_two"></div>
+
+    <script>
+        document.getElementById("div_two").innerHTML = document.getElementById("div_one").value;
+    </script>
+</html>
+
+[Note . As a HTML Developer , we can dependent on JavaScript to perform the DOM Manipulations]
+
+
+
+index.html
+-
+<!DOCTYPE html>
+<html ng-app>
+
+    <div ng-model="div_one">Hello</div>
+
+    <div ng-bind="div_one"></div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+
+</html>
+
+[Note . We can Manipulate the DOM By using Angular Directives
+
+    Ex.
+
+        ng-app
+
+        ng-model
+
+        ng-bind ]
+
+
+    - Angular Framework starts the Execution from root directive (ng-app).
+
+    - ng-app directive takes the logical name of web application.
+
+    - logical name is optional for static angular applications ,
+      and mandatory for Dynamic Angular Applications.
+
+    - ng-model directive creates the object in heap memory with application data.
+
+    - ng-bind directive binds the model data to the view.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
