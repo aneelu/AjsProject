@@ -184,6 +184,100 @@ index.html
 
 
 
+2. AngularJS Supports Two Way Data Binding.
+
+    - Automatic Data Synchronization Between Model and View with the Supervision Of Controller
+      Called as Two Way Data Binding.
+
+
+Ex.
+
+
+        In the Above Diagram we have Following server Calls.
+
+1. http get request
+    - this request used to fetch the data from database.
+
+2. http delete request
+    - this request used to delete the particular record from database.
+
+3. Ajax Request
+     - this request used to avoid the data in consistency problem.
+
+
+[Note. As a programming languages developers , we must make above requests to complete
+       application requirement.]
+
+[Note. As a AngularJS / Angular2 Developer We can make only "Two Server Requests" to complete
+       application requirement
+       1. http get request
+       2. http delete request ]
+
+
+    - when ever record deleted successfully , automatically db will return success notification
+      to controller.
+
+    - controller will delete the specific record from Model when ever receives the Notification
+      from server.
+
+    - When ever we delete the Record from Model Automatically View will reflect with changes.
+        (Two Way Data Binding)
+
+    - Two Way Data Binding Reduces the Burden on the Server.
+
+
+3. Open Source Code
+
+    - We Can Customize the Framework Accroding to Application Requirement
+
+    - We Can Modify the Source Code Accroding to Application Needs.
+
+    - We Can Add the Features , Update the Features and Delete the Features From Framework.
+
+
+4. Angular Applications are "Cross Platform" and "Cross Browser Compatable"  Applications.
+
+    - When ever we develop the Angular Application, automatically compatable with all browser with
+      out adding external plugins.
+
+    - "IE 10" onwards no need to add plugins to run angular applications.
+
+
+5. AngularJS Reduces the Burden on the Server.
+
+    - As a Angular Developer , we can implement the Business Components at Client Side By using
+      MVC automatically Burden will be Reduced on Server.
+
+
+Disadvantages Of AngularJS
+-
+1. Understanding the Angular Applications are Difficult Because of No Coding Standards Provided
+   by Vendor.
+
+2. We are loosing the Secuirity by using Angular Framework.
+
+3. We Must Enable the JavaScript in Browser.
+
+
+Key Features Of AngularJS
+-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
