@@ -1,0 +1,180 @@
+Single Page Applications.
+
+    - Loading the Target Resources to Source Page Without Refreshing
+      the Whole Webpage Called as Single Page Application.\
+
+    - Loading the Target Webpage to Source Webpage Called as Routing.
+
+    - In AngularJS We Can Implement the Routing by using Following Modules.
+
+        1.ngRoute Module
+        2.ui.router Module
+
+Steps to Design the Single Page Application by using ngRoute Module.
+
+
+Step 1.
+    Download ngRoute Module by using bower.        
+
+bower.json
+-
+{
+    "name":"ngRoute Application",
+    "dependencies":{
+        "angular":"~1.5.0",
+        "angular-route":"~1.5.0"
+    }
+}
+
+.bowerrc
+-
+{
+    "directory":"bower_components"
+}
+
+[Note : "angular-route" key in bower used to Download the 
+        ngRoute Module Dependency File.]
+
+
+Step 2.
+    Add the "ngRoute" Dependency
+
+app.js
+-
+var app = angular.module("app",["ngRoute"]);
+
+
+Step 3.
+    Create the Target Templates
+---------
+Basic_ngRoute
+        templates
+            page_one.html
+            page_two.html
+----------
+page_one.html
+-
+<h1>{{var_one}}</h1>
+
+page_two.html
+-
+<h1>{{var_two}}</h1>
+
+Step 4.
+    Create the Controllers.
+
+------------
+controllers
+    page_one.js    
+    page_two.js
+------------
+
+page_one.js
+-
+$scope.var_one = "Data From Java Servlets Soon...";
+
+
+page_two.js
+-
+$scope.var_two = "Data From MVC Application Soon...";
+
+
+Step 5.
+
+    Do the Mapping in Single Page Application
+
+config.js
+-
+
+app.config(my_fun);
+
+function my_fun($routeProvider){
+    $routeProvider.when("/key1",{
+                                    templateUrl:"templates/page_one.html",
+                                    controller:"page_one"})
+                  .when("/key2",{
+                                templateUrl:"templates/page_two.html",
+                                controller:"page_two"})
+                  .otherwise("/key1",{
+                                templateUrl:"templates/page_one.html",
+                                controller:"page_one"});
+}
+
+
+Step 6.
+    Create Source Template.
+
+index.html   
+-
+
+<a href="#key1">Page_One</a>
+<a href="#key2">Page_Two</a>
+<div ng-view></div>
+
+
+[Note. By Default "VisualStudioCode" won't provide Default Http Servers , so we can't
+       Open the Applications like SinglePageApplications by using this IDE]
+
+[Note. It's Recomended to Use Node Server to Launch Single Page Applications
+       with Visual Studio Code]       
+
+
+
+-------------
+Basic_ngRoute
+    package.json (Node Configuration File)
+    server.js    (Server Implementation)
+------------
+
+package.json
+-
+{
+    "name":"nareshit",
+    "version":"1.0.0",
+    "dependencies": {
+        "express":"4.15.3" //Module used to Develop the Rest API
+    }
+}    
+
+server.js
+-
+//import express module
+var express = require("express");
+//create server
+var app = express();
+//deploy the Application
+app.use(express.static(__dirname+"/../Basic_ngRoute"));
+//Assign the Port No.
+app.listen(8080);
+console.log("Server Listening the Port No.8080");
+
+
+-------------
+>npm install   // download the node Modules
+
+>node server.js  (or) npm start  // start the server
+------------
+
+Ex_2.
+    Passing the URL Parameters By using ngRoute Module.
+
+Ex.
+index.html
+-
+<a href="#page_one/111/emp_1/50000">Page_One</a>
+
+config.js
+-
+$routeProvider.when("/page_one/:id/:name/:sal",{
+    templateUrl:"../templates/page_one.html",
+    controller:"page_one"
+});
+
+page_one.js
+-
+app.controller("page_one",page_one);
+function page_one($scope,$routeParams){
+    $scope.var_one = $routeParams.id+"..."+
+                     $routeParams.name+"..."+
+                     $routeParams.sal
+}
