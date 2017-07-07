@@ -1,0 +1,153 @@
+Repository.
+
+    - Repositories are used to Collabrate the Work.
+
+    Ex.
+
+        GitHub
+        SVN
+        CVS
+        ClearCase
+            --
+            --
+    - GitHub is the Open Source Repository Maintained by Google.
+
+
+GitHub Operations:
+-
+1. Installation Of Git.
+
+2. Create the Repository Locally.
+
+3. Add the user credentials to the Repository
+
+4. Create the Files in repository.
+
+5. commit the changes to the repository
+
+6. create the branches
+
+7. commit the changes from branches.
+
+8. merge the branches.
+
+9. Integrating the GitHub to the IDE'S
+
+    Ex.
+        Ecilipse
+        Visual Studio
+        Visula Studio Code
+        WebStrom
+
+10. Working with Cloud Repository
+
+11. Push the Code the Cloud Repository
+
+12. Pull the Code From the Repository.
+
+Installation Of Git.
+--------------------
+
+    - GIT is the Interface used to interact with the GitHub.
+
+WebSite   : https://git-scm.com/downloads
+file name : Git-2.13.2-64-bit.exe
+
+
+Create the Repository Locally
+-----------------------------
+
+Create the directory  (folder)
+    Ex.
+        E:/githubdemo
+
+rigth click on "githubdemo" --->
+
+                                gitbash here---->
+
+                                                git init
+
+[Note : Automatically "githubdemo" converted as local repository]
+
+
+
+Add the User Credentials to Repository
+--------------------------------------
+> git config --global user.name "********"
+> git config --global user.email "**************"
+
+
+Create the files to the Repository
+----------------------------------
+touch sample.js
+[Note. Automatically "sample.js" file created to the Repository]
+
+
+Commit the Changes to the Repository
+------------------------------------
+> git status
+
+    - it will return the status of files in repository.
+
+    - "red color" indicated files representing "untracked" files.
+
+    - as a developer we must commit the files to the repository.
+
+
+
+> git add sample.js
+
+> git commit
+
+> press "i"
+
+> type "initial commit"
+
+> press "esc" key from keypad
+
+> type ":wq"
+
+> press enter
+
+
+From 2nd Commit Onwards
+-
+git add sample.js
+git commit -m "Class Created !"
+
+
+Know the No Of Commits in Repository
+-
+git log
+
+
+Create the Branch
+-----------------
+git branch team_one
+
+
+Checkout the Branch
+--------------------
+git checkout team_one
+
+
+Merge the Branch to the Master.
+-------------------------------
+git merge team_one
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
