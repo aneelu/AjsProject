@@ -1,0 +1,38 @@
+Installation of Github with IDE'S
+
+1. Download and install the NodeJS.
+
+Website : https://nodejs.org/en/download/
+file name : node-v6.11.0-x64.msi
+
+
+2. Download webstrom IDE
+	website : https://www.jetbrains.com/webstorm/download/#section=windows
+
+	file name : WebStrom-2017.1.4.exe
+
+
+3. Create the Account with GitHub.
+	website : https://github.com/join
+	[Note. we need to Authenticate the email receives from github]
+
+4. Checkout the code from the cloud repository.
+	URL : https://github.com/ajsnaresh/AJS_Classes.git
+
+5. install the bower automation plugin
+	>npm install -g bower.
+
+
+6. download and install the mongodb.
+	website  : https://www.mongodb.com/download-center#community
+	filename : mongodb-win32-x86_64-2008plus-ssl-3.4.6-signed.msi
+
+7. Download and install the REST Client (Postman)
+
+	website : https://app.getpostman.com/app/download/win64
+	file name : Postman-win64-5.0.2-Setup.exe
+
+8. Install the gulp
+	> npm install -g gulp
+
+
