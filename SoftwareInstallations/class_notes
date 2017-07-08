@@ -63,3 +63,8 @@ Set the classpath variables for MongoDB Execution.
 path = C:\Program Files\MongoDB\Server\3.4\bin
 
 
+
+Creating the workspace in webstrom IDE to develop Angular Applications.
+-
+
+File ---> New --> Project ---> Location : "D:\PracticeEx" ---> Create --->OK
