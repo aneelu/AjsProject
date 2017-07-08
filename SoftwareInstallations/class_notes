@@ -36,3 +36,30 @@ file name : node-v6.11.0-x64.msi
 	> npm install -g gulp
 
 
+
+Push the Code to the Cloud Repository from WebStrom IDE.
+
+1. ctrl + k
+
+        ---> enter the commit message
+
+            --> Commit & Push.
+
+
+Pull the Code from the Cloud Repository with Webstrom IDE.
+
+    VCS  -->  Git ---> Pull ---> select AngularJS_6PM ---> Pull.
+
+
+
+
+
+Mongodb Installation Steps.
+---------------------------
+C:/data/db
+
+Set the classpath variables for MongoDB Execution.
+--------------------------------------------------
+path = C:\Program Files\MongoDB\Server\3.4\bin
+
+
