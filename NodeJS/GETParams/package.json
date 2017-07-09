@@ -1,8 +1,0 @@
-{
-  "name": "GETParams",
-  "version": "0.0.1",
-  "description": "Get Parameters",
-  "dependencies": {
-    "express": "^4.15.3"
-  }
-}
