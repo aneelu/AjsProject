@@ -1,0 +1,142 @@
+GitHub.
+	- Github is the Open Source Repository Maintained By Google.
+
+GitHub Opearations.
+
+1. Create the Repository Locally.
+
+2. Add the User Credentials to the Repository.
+
+3. Create the Files to the Repository
+
+4. Commit the Changes to the Repository.
+
+5. Create the Branches
+
+6. Commit the Changes From Branches.
+
+7. Merging the Branches.
+
+8. Integration Of GitHub to the IDE'S
+
+	Visula Studio,
+
+	Visual Studio Code
+
+	WebStrom IDE
+
+
+9. Checkout the Code from the Cloud Repository
+
+10. Push the Code to the Cloud Repository.
+
+11. Pull the Code from the Cloud Repository.
+
+
+1. Create the Repository Locally.
+
+Step 1.
+	Download the GIT Tool.
+		- Git is the Interface tool used to interact with the GitGub
+
+Website : https://git-scm.com/download/win
+
+file name : Git-2.13.2-64-bit.exe
+
+
+Step 2.
+	Create the folder.
+
+	Ex.
+
+		githubdemo
+
+
+Step 3.
+	Execute the Following Command on GitBash Here.
+
+	> git init
+
+[ Note . When ever we execute above Command Automatically github demo
+
+         Converted as local repository]
+
+
+Step 2.
+
+	Add the User Credentials to the Repository.
+
+>git config --global user.name "Samba"
+>git config --global user.email "samba.pendela@gmail.com"
+
+
+
+Step 3.
+	Create the Files to the Repository.
+
+>touch sample.js
+
+Step 4.
+	Commit the Files to the Repository.
+
+[Note. As a Developer we must commit the files to the Repository]
+
+>git status
+
+	- it will show status of files
+	[Note : red color files indicating untracked files]
+
+> git add sample.js	
+
+> git commit
+
+> press "i"
+
+> type "initial commit"
+
+> press "ESC"
+
+> type ":wq"
+
+> press "enter"
+
+
+
+From 2nd Commit Onwards we can follow the below commands.
+-
+
+>git add .
+
+>git commit -m "Inner Annonymus Functions Created , More Secured!"
+
+
+
+4. Create the Branch
+	git branch team_one
+
+
+5. checkout the branch
+	git checkout team_one
+
+
+6. Merge the Branches
+	git merge team_one.
+
+
+7. Working with Cloud Repository With IDE.
+
+Download and Install the NodeJS
+-
+Website : https://nodejs.org/en/download/
+
+Create the Account with the GitHub
+-
+website : https://github.com/join
+
+Download Webstrom IDE.
+-
+Website : https://www.jetbrains.com/webstorm/download/download-thanks.html?platform=windows
+
+Checkout the Code from the Cloud Repository(AngularJS_6AM)
+-
+https://github.com/ajsnaresh/AJS_Classes.git
