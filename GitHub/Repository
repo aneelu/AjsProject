@@ -140,3 +140,19 @@ Website : https://www.jetbrains.com/webstorm/download/download-thanks.html?platf
 Checkout the Code from the Cloud Repository(AngularJS_6AM)
 -
 https://github.com/ajsnaresh/AJS_Classes.git
+
+
+
+
+Push the Code.
+-
+
+ctrl + k
+
+
+Pull the Code
+-
+
+VCS --> Git ---> Pull  ---> AngularJS_6AM ---> Pull.
+
+
